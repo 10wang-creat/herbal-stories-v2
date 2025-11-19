@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<article class="story">
+  <header class="story-header">
+    <h1>{{ page.title }}</h1>
+    <p class="formula-name">{{ page.formula }}</p>
+    <div class="meta">
+      <span class="date">{{ page.date | date: "%Y年%m月%d日" }}</span>
+    </div>
+  </header>
+
+  <div class="story-content">
+    {{ content }}
+  </div>
+
+  {% if page.ingredients %}
+  <section class="ingredients">
+    <h2>藥材組成</h2>
+    <ul>
+    {% for ingredient in page.ingredients %}
+      <li><strong>{{ ingredient.name }}</strong> - {{ ingredient.description }}</li>
+    {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if page.effects %}
+  <section class="effects">
+    <h2>功效</h2>
+    <p>{{ page.effects }}</p>
+  </section>
+  {% endif %}
+</article>
