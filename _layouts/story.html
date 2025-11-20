@@ -4,10 +4,11 @@ layout: default
 
 <article class="story">
   <header class="story-header">
+    <div class="story-category">🌿 中藥方劑</div>
     <h1>{{ page.title }}</h1>
-    <p class="formula-name">{{ page.formula }}</p>
+    <p class="formula-name">💊 {{ page.formula }}</p>
     <div class="meta">
-      <span class="date">{{ page.date | date: "%Y年%m月%d日" }}</span>
+      <span class="date">📅 {{ page.date | date: "%Y年%m月%d日" }}</span>
     </div>
   </header>
 
@@ -17,19 +18,230 @@ layout: default
 
   {% if page.ingredients %}
   <section class="ingredients">
-    <h2>藥材組成</h2>
-    <ul>
+    <div class="section-header">
+      <span class="section-icon">🌱</span>
+      <h2>藥材組成</h2>
+    </div>
+    <div class="ingredient-grid">
     {% for ingredient in page.ingredients %}
-      <li><strong>{{ ingredient.name }}</strong> - {{ ingredient.description }}</li>
+      <div class="ingredient-item">
+        <div class="ingredient-name">{{ ingredient.name }}</div>
+        <div class="ingredient-desc">{{ ingredient.description }}</div>
+      </div>
     {% endfor %}
-    </ul>
+    </div>
   </section>
   {% endif %}
 
   {% if page.effects %}
   <section class="effects">
-    <h2>功效</h2>
-    <p>{{ page.effects }}</p>
+    <div class="section-header">
+      <span class="section-icon">✨</span>
+      <h2>功效</h2>
+    </div>
+    <div class="effects-content">
+      <p>{{ page.effects }}</p>
+    </div>
   </section>
   {% endif %}
+
+  <div class="story-footer">
+    <a href="{{ site.baseurl }}/" class="back-link">← 返回首頁</a>
+  </div>
 </article>
+
+<style>
+.story {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.story-category {
+  display: inline-block;
+  background: #4a7c2c;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+.story-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 50px 30px;
+  background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
+  color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.story-header h1 {
+  margin: 20px 0;
+  font-size: 2.8em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.formula-name {
+  font-size: 1.5em;
+  color: #ffd700;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.meta {
+  margin-top: 20px;
+  opacity: 0.95;
+  font-size: 1.1em;
+}
+
+.story-content {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  line-height: 2;
+  font-size: 1.15em;
+  margin-bottom: 30px;
+}
+
+.story-content h2 {
+  color: #2d5016;
+  font-size: 1.8em;
+  margin: 40px 0 20px 0;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #4a7c2c;
+}
+
+.story-content h3 {
+  color: #4a7c2c;
+  font-size: 1.4em;
+  margin: 30px 0 15px 0;
+}
+
+.story-content p {
+  margin-bottom: 1.8em;
+  color: #333;
+}
+
+.story-content strong {
+  color: #2d5016;
+  font-weight: bold;
+}
+
+.story-content ul {
+  margin: 20px 0;
+  padding-left: 30px;
+}
+
+.story-content li {
+  margin: 10px 0;
+  line-height: 1.8;
+}
+
+.ingredients, .effects {
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+  padding: 40px;
+  margin-top: 30px;
+  border-radius: 12px;
+  border-left: 6px solid #4a7c2c;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.section-icon {
+  font-size: 2em;
+}
+
+.section-header h2 {
+  color: #2d5016;
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.ingredient-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.ingredient-item {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  border: 2px solid #e8f5e9;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.ingredient-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(74, 124, 44, 0.15);
+  border-color: #4a7c2c;
+}
+
+.ingredient-name {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #2d5016;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #c9a961;
+}
+
+.ingredient-desc {
+  color: #555;
+  line-height: 1.6;
+  font-size: 1em;
+}
+
+.effects-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  border-left: 4px solid #c9a961;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.effects-content p {
+  color: #333;
+  font-size: 1.15em;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.story-footer {
+  margin-top: 50px;
+  padding: 30px;
+  text-align: center;
+}
+
+.back-link {
+  display: inline-block;
+  padding: 15px 40px;
+  background: #4a7c2c;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(74, 124, 44, 0.3);
+}
+
+.back-link:hover {
+  background: #2d5016;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(74, 124, 44, 0.4);
+}
+</style>
