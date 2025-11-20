@@ -151,4 +151,53 @@ body {
 
 .story-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.story-date {
+  color: #888;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.story-card h3 {
+  margin: 15px 0;
+  color: #2d5016;
+  font-size: 1.5em;
+}
+
+.story-card h3 a {
+  text-decoration: none;
+  color: #2d5016;
+}
+
+.story-card h3 a:hover {
+  color: #4a7c2c;
+}
+
+.formula-name {
+  color: #c9a961;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.story-excerpt {
+  color: #555;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+.read-more {
+  display: inline-block;
+  color: #4a7c2c;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: color 0.2s;
+}
+
+.read-more:hover {
+  color: #2d5016;
+}
+</style>
