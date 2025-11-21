@@ -11,12 +11,16 @@ excerpt: 總是感覺累、說話有氣無力？四位溫和的君子來幫你�
 ingredients:
   - name: 人參
     description: 團長｜大補元氣，給身體充電
+    image: renshen.png
   - name: 白朮
     description: 後勤隊長｜健脾胃，讓營養吸收更好
+    image: baizhu.png
   - name: 茯苓
     description: 淨化大使｜排出多餘水濕
+    image: fuling.png
   - name: 炙甘草
     description: 和事佬｜調和所有藥材
+    image: gancao.png
 effects: 補氣健脾，適用於脾胃氣虛、疲倦乏力、食慾不振
 ---
 
