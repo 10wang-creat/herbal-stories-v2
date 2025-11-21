@@ -27,6 +27,6 @@ defaults:
 
 # 導航欄設定
 header_pages:
-  - about.md
+  - about.markdown
   - tags.html
   - search.html
