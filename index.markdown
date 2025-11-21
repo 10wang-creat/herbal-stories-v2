@@ -32,21 +32,39 @@ title: 首頁
   </div>
 </div>
 
-<div class="stories-section">
-  <h2>📚 最新文章</h2>
+<section class="stories-section">
+  <h2>📚 最新故事</h2>
   
   <div class="story-list">
-  {% for story in site.stories %}
-    <div class="story-card">
-      <div class="story-date">📅 {{ story.date | date: "%Y年%m月%d日" }}</div>
-      <h3><a href="{{ story.url | relative_url }}">{{ story.title }}</a></h3>
-      <p class="formula-name">💊 {{ story.formula }}</p>
-      <p class="story-excerpt">{{ story.excerpt }}</p>
-      <a href="{{ story.url | relative_url }}" class="read-more">閱讀全文 →</a>
-    </div>
-  {% endfor %}
+    {% for story in site.stories limit:6 %}
+      <article class="story-card">
+        <h3>
+          <a href="{{ story.url | relative_url }}">{{ story.title }}</a>
+        </h3>
+        
+        {% if story.formula %}
+          <div class="formula-name">💊 {{ story.formula }}</div>
+        {% endif %}
+        
+        {% if story.excerpt %}
+          <p class="story-excerpt">{{ story.excerpt }}</p>
+        {% endif %}
+        
+        {% if story.effects %}
+          <div class="story-effects">
+            <span class="effect-icon">✨</span>
+            <span>{{ story.effects }}</span>
+          </div>
+        {% endif %}
+        
+        <div class="card-footer">
+          <time class="story-date">📅 {{ story.date | date: "%Y年%m月%d日" }}</time>
+          <a href="{{ story.url | relative_url }}" class="read-more">閱讀全文 →</a>
+        </div>
+      </article>
+    {% endfor %}
   </div>
-</div>
+</section>
 
 <style>
 body {
@@ -139,7 +157,7 @@ body {
 }
 
 .stories-section {
-  margin-top: 60px;
+  margin: 50px 0;
 }
 
 .stories-section h2 {
@@ -151,34 +169,31 @@ body {
 
 .story-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 25px;
+  margin-top: 30px;
 }
 
 .story-card {
   background: white;
-  padding: 30px;
+  padding: 25px;
   border-radius: 12px;
-  border-left: 5px solid #4a7c2c;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-left: 4px solid #4a7c2c;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 
 .story-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-.story-date {
-  color: #888;
-  font-size: 0.9em;
-  margin-bottom: 10px;
-}
-
 .story-card h3 {
-  margin: 15px 0;
+  margin: 0 0 15px 0;
   color: #2d5016;
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 .story-card h3 a {
@@ -194,25 +209,54 @@ body {
   color: #c9a961;
   font-weight: bold;
   font-size: 1.1em;
-  margin: 10px 0;
+  margin-bottom: 15px;
 }
 
 .story-excerpt {
   color: #555;
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 15px 0;
+  flex-grow: 1;
+}
+
+.story-effects {
+  background: #f9f6f0;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  color: #4a7c2c;
+  font-size: 0.95em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.effect-icon {
+  font-size: 1.2em;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e8dcc8;
+}
+
+.story-date {
+  color: #8b7355;
+  font-size: 0.9em;
 }
 
 .read-more {
-  display: inline-block;
   color: #4a7c2c;
-  font-weight: bold;
   text-decoration: none;
-  margin-top: 10px;
-  transition: color 0.2s;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
 .read-more:hover {
-  color: #2d5016;
+  color: #6b9a3e;
 }
 </style>
