@@ -24,3 +24,8 @@ defaults:
       type: "stories"
     values:
       layout: "story"
+
+# 導航欄設定
+header_pages:
+  - tags.html
+  - search.html
