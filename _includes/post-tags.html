@@ -1,0 +1,62 @@
+{% if page.tags and page.tags.size > 0 %}
+<div class="post-tags-container">
+  <h3 class="tags-heading">
+    <span class="tags-icon">🏷️</span> 相關標籤
+  </h3>
+  <div class="tags-list">
+    {% for tag in page.tags %}
+      <a href="{{ '/tags/' | relative_url }}#{{ tag }}" class="post-tag">
+        {{ tag }}
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.post-tags-container {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #f9f6f0;
+  border-radius: 12px;
+  border-left: 4px solid #6b9a3e;
+}
+
+.tags-heading {
+  color: #4a7c2c;
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tags-icon {
+  font-size: 1.3rem;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.post-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 2px solid #6b9a3e;
+  border-radius: 20px;
+  color: #2d5016;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.post-tag:hover {
+  background: #6b9a3e;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(107, 154, 62, 0.2);
+}
+</style>
+{% endif %}
