@@ -106,34 +106,36 @@ body {
 }
 
 .feature-card {
-  background: linear-gradient(135deg, #4a7c2c 0%, #5a8c3c 100%);
-  padding: 35px 25px;
+  background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
+  padding: 40px 30px;
   border-radius: 12px;
   text-align: center;
   color: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .feature-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 30px rgba(45, 80, 22, 0.3);
 }
 
-.feature-icon {
-  font-size: 3em;
-  margin-bottom: 15px;
+.feature-card .icon {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  display: block;
 }
 
 .feature-card h3 {
-  color: #ffd700;
-  margin: 15px 0;
-  font-size: 1.4em;
+  color: #c9a961;
+  margin-bottom: 15px;
+  font-size: 1.6em;
 }
 
 .feature-card p {
-  opacity: 0.95;
-  line-height: 1.6;
+  color: #f5f1e8;
+  line-height: 1.8;
+  font-size: 1.05em;
 }
 
 .stories-section {
