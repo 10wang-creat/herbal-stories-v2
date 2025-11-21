@@ -1,0 +1,368 @@
+---
+layout: default
+title: 搜尋文章
+permalink: /search/
+---
+
+<div class="search-page">
+  <h1>🔍 搜尋草本故事</h1>
+  
+  <div class="search-container">
+    <div class="search-box">
+      <input 
+        type="text" 
+        id="search-input" 
+        placeholder="搜尋文章標題、內容、標籤..." 
+        autocomplete="off"
+      >
+      <button id="search-button">
+        <span class="search-icon">🔍</span>
+      </button>
+    </div>
+    
+    <div class="search-filters">
+      <button class="filter-button active" data-filter="all">全部</button>
+      <button class="filter-button" data-filter="補氣">補氣</button>
+      <button class="filter-button" data-filter="補血">補血</button>
+      <button class="filter-button" data-filter="清熱">清熱</button>
+      <button class="filter-button" data-filter="入門">入門</button>
+      <button class="filter-button" data-filter="進階">進階</button>
+    </div>
+  </div>
+
+  <div id="search-results">
+    <p class="search-hint">請輸入關鍵字開始搜尋...</p>
+  </div>
+</div>
+
+<!-- 將文章數據注入到 JavaScript -->
+<script>
+const posts = [
+  {% for post in site.posts %}
+  {
+    title: {{ post.title | jsonify }},
+    url: {{ post.url | relative_url | jsonify }},
+    date: {{ post.date | date: "%Y年%m月%d日" | jsonify }},
+    excerpt: {{ post.excerpt | strip_html | truncate: 150 | jsonify }},
+    content: {{ post.content | strip_html | jsonify }},
+    tags: {{ post.tags | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+];
+</script>
+
+<script>
+// 搜尋功能
+let currentFilter = 'all';
+
+function performSearch() {
+  const query = document.getElementById('search-input').value.toLowerCase().trim();
+  const resultsContainer = document.getElementById('search-results');
+  
+  if (query.length === 0) {
+    resultsContainer.innerHTML = '<p class="search-hint">請輸入關鍵字開始搜尋...</p>';
+    return;
+  }
+  
+  // 搜尋邏輯
+  let results = posts.filter(post => {
+    const matchesQuery = 
+      post.title.toLowerCase().includes(query) ||
+      post.content.toLowerCase().includes(query) ||
+      post.tags.some(tag => tag.toLowerCase().includes(query));
+    
+    const matchesFilter = 
+      currentFilter === 'all' || 
+      post.tags.includes(currentFilter);
+    
+    return matchesQuery && matchesFilter;
+  });
+  
+  // 顯示結果
+  if (results.length === 0) {
+    resultsContainer.innerHTML = `
+      <div class="no-results">
+        <p>😕 找不到符合「${query}」的文章</p>
+        <p class="search-suggestion">試試其他關鍵字，或使用下方的分類篩選</p>
+      </div>
+    `;
+  } else {
+    resultsContainer.innerHTML = `
+      <p class="results-count">找到 <strong>${results.length}</strong> 篇相關文章</p>
+      <div class="results-grid">
+        ${results.map(post => `
+          <article class="result-card">
+            <h3><a href="${post.url}">${highlightText(post.title, query)}</a></h3>
+            <div class="post-meta">
+              <time>${post.date}</time>
+            </div>
+            <p class="post-excerpt">${highlightText(post.excerpt, query)}</p>
+            ${post.tags.length > 0 ? `
+              <div class="post-tags">
+                ${post.tags.slice(0, 4).map(tag => 
+                  `<span class="tag">${tag}</span>`
+                ).join('')}
+              </div>
+            ` : ''}
+          </article>
+        `).join('')}
+      </div>
+    `;
+  }
+}
+
+// 高亮關鍵字
+function highlightText(text, query) {
+  if (!query) return text;
+  const regex = new RegExp(`(${query})`, 'gi');
+  return text.replace(regex, '<mark>$1</mark>');
+}
+
+// 事件監聽
+document.getElementById('search-input').addEventListener('input', performSearch);
+document.getElementById('search-button').addEventListener('click', performSearch);
+
+// 篩選按鈕
+document.querySelectorAll('.filter-button').forEach(button => {
+  button.addEventListener('click', function() {
+    // 更新按鈕狀態
+    document.querySelectorAll('.filter-button').forEach(btn => 
+      btn.classList.remove('active')
+    );
+    this.classList.add('active');
+    
+    // 更新篩選條件
+    currentFilter = this.dataset.filter;
+    
+    // 重新搜尋
+    performSearch();
+  });
+});
+
+// Enter 鍵搜尋
+document.getElementById('search-input').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    performSearch();
+  }
+});
+</script>
+
+<style>
+.search-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.search-page h1 {
+  color: #2d5016;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.search-container {
+  margin-bottom: 3rem;
+}
+
+.search-box {
+  display: flex;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 4px 12px rgba(107, 154, 62, 0.15);
+  border-radius: 50px;
+  overflow: hidden;
+  background: white;
+}
+
+#search-input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: 2px solid #6b9a3e;
+  border-right: none;
+  font-size: 1.1rem;
+  outline: none;
+  border-radius: 50px 0 0 50px;
+}
+
+#search-button {
+  padding: 1rem 2rem;
+  background: #6b9a3e;
+  border: 2px solid #6b9a3e;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0 50px 50px 0;
+}
+
+#search-button:hover {
+  background: #4a7c2c;
+}
+
+.search-icon {
+  font-size: 1.3rem;
+}
+
+.search-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.filter-button {
+  padding: 0.5rem 1.25rem;
+  background: white;
+  border: 2px solid #e8dcc8;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #4a7c2c;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+  border-color: #6b9a3e;
+  background: #f9f6f0;
+}
+
+.filter-button.active {
+  background: #6b9a3e;
+  color: white;
+  border-color: #6b9a3e;
+}
+
+#search-results {
+  min-height: 300px;
+}
+
+.search-hint {
+  text-align: center;
+  color: #8b7355;
+  font-size: 1.1rem;
+  padding: 3rem;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  background: #f9f6f0;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.no-results p:first-child {
+  font-size: 1.3rem;
+  color: #4a7c2c;
+  margin-bottom: 1rem;
+}
+
+.search-suggestion {
+  color: #8b7355;
+  font-size: 1rem;
+}
+
+.results-count {
+  color: #4a7c2c;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.results-count strong {
+  color: #6b9a3e;
+  font-size: 1.3rem;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.result-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e8dcc8;
+  transition: all 0.3s ease;
+}
+
+.result-card:hover {
+  box-shadow: 0 4px 12px rgba(107, 154, 62, 0.15);
+  transform: translateY(-4px);
+}
+
+.result-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.result-card h3 a {
+  color: #2d5016;
+  text-decoration: none;
+}
+
+.result-card h3 a:hover {
+  color: #6b9a3e;
+}
+
+mark {
+  background: #ffe066;
+  padding: 0.1rem 0.2rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.post-meta {
+  color: #8b7355;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-excerpt {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0.75rem 0;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+  background: #f0e8d8;
+  color: #4a7c2c;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .search-page h1 {
+    font-size: 2rem;
+  }
+  
+  .search-box {
+    max-width: 100%;
+  }
+  
+  #search-input {
+    font-size: 1rem;
+    padding: 0.875rem 1.25rem;
+  }
+  
+  #search-button {
+    padding: 0.875rem 1.5rem;
+  }
+  
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
