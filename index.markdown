@@ -87,14 +87,21 @@ body {
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);  /* 固定三欄 */
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
-/* 在較小螢幕上改成單欄 */
+/* 響應式設計 - 手機螢幕 */
 @media (max-width: 900px) {
   .feature-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* 平板螢幕 - 顯示兩欄 */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
