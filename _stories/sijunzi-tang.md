@@ -3,6 +3,12 @@ layout: story
 title: 四君子湯：身體的補氣天團
 formula: 四君子湯
 date: 2025-11-20
+tags:
+  - 補氣
+  - 入門
+  - 疲勞無力
+---
+
 excerpt: 總是感覺累、說話有氣無力？四位溫和的君子來幫你補回元氣！
 ingredients:
   - name: 人參
