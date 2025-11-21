@@ -223,6 +223,7 @@ layout: default
   animation: fadeInScale 0.6s ease-out;
 }
 
+/* 圖片載入動畫 */
 @keyframes fadeInScale {
   from {
     opacity: 0;
@@ -356,5 +357,39 @@ layout: default
 
 .story-content h3 + ul li a:hover {
   color: #4a7c2c;
+}
+
+  /* 響應式設計 - 平板 */
+@media (max-width: 900px) {
+  .ingredient-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .ingredient-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .ingredient-name {
+    font-size: 1.2em;
+  }
+}
+
+/* 響應式設計 - 手機 */
+@media (max-width: 480px) {
+  .ingredient-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .ingredient-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .ingredient-item {
+    padding: 20px;
+  }
 }
 </style>
