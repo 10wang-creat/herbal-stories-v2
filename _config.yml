@@ -31,3 +31,7 @@ header_pages:
   - about.markdown
   - tags.html
   - search.html
+
+  # Disqus 留言系統
+disqus:
+  shortname: herbal-stories
