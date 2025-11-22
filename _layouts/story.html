@@ -4,13 +4,20 @@ layout: default
 
 <article class="story">
   <header class="story-header">
-    <div class="story-category">🌿 中藥方劑</div>
-    <h1>{{ page.title }}</h1>
-    <p class="formula-name">💊 {{ page.formula }}</p>
-    <div class="meta">
-      <span class="date">📅 {{ page.date | date: "%Y年%m月%d日" }}</span>
-    </div>
-  </header>
+  <div class="story-category">🌿 中藥方劑</div>
+  <h1>{{ page.title }}</h1>
+  <p class="formula-name">💊 {{ page.formula }}</p>
+  <div class="meta">
+    <span class="date">📅 {{ page.date | date: "%Y年%m月%d日" }}</span>
+    {% assign words = content | strip_html | number_of_words %}
+    {% if words < 360 %}
+      {% assign read_time = 1 %}
+    {% else %}
+      {% assign read_time = words | divided_by: 400 %}
+    {% endif %}
+    <span class="reading-time">⏱️ 閱讀時間：約 {{ read_time }} 分鐘</span>
+  </div>
+</header>
 
   <div class="story-content">
     {{ content }}
@@ -103,6 +110,26 @@ layout: default
   margin-top: 20px;
   opacity: 0.95;
   font-size: 1.1em;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.meta .date,
+.meta .reading-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.meta .reading-time {
+  color: #ffd700;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
 }
 
 .story-content {
