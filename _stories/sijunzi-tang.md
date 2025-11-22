@@ -2,7 +2,7 @@
 layout: story
 title: 四君子湯：身體的補氣天團
 formula: 四君子湯
-date: 2024-11-20
+date: 2025-11-20
 tags:
   - 補氣
   - 入門
