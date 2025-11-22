@@ -20,7 +20,6 @@ title: 首頁
       <span>追蹤 @meet.the.herbs</span>
     </a>
   </div>
-</div>
 
 <div class="features">
   <h2>✨ 我們的特色</h2>
