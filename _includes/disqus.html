@@ -1,0 +1,63 @@
+{% if site.disqus.shortname %}
+<div class="comments-section">
+  <div class="comments-header">
+    <h3>💬 讀者留言</h3>
+    <p>歡迎分享你的想法、經驗或提問！</p>
+  </div>
+  
+  <div id="disqus_thread"></div>
+  
+  <script>
+    var disqus_config = function () {
+      this.page.url = '{{ page.url | absolute_url }}';
+      this.page.identifier = '{{ page.id }}';
+      this.page.title = '{{ page.title }}';
+    };
+    
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  
+  <noscript>
+    請啟用 JavaScript 來查看 <a href="https://disqus.com/?ref_noscript" rel="nofollow">Disqus 提供的留言功能</a>。
+  </noscript>
+</div>
+
+<style>
+.comments-section {
+  max-width: 900px;
+  margin: 60px auto 0;
+  padding: 40px 20px 0;
+  border-top: 3px solid #e0e0e0;
+}
+
+.comments-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.comments-header h3 {
+  color: #2d5016;
+  margin: 0 0 10px 0;
+  font-size: 2em;
+}
+
+.comments-header p {
+  color: #666;
+  margin: 0;
+  font-size: 1.1em;
+}
+
+#disqus_thread {
+  margin-top: 30px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+</style>
+{% endif %}
