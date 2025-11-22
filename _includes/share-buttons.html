@@ -1,0 +1,236 @@
+<div class="share-buttons">
+  <div class="share-header">
+    <h4>📤 分享這篇文章</h4>
+    <p>如果你覺得這篇文章有幫助，歡迎分享給朋友！</p>
+  </div>
+  
+  <div class="share-button-group">
+    <!-- Facebook 分享 -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="share-button facebook"
+       title="分享到 Facebook">
+      <svg class="share-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+      </svg>
+      <span>Facebook</span>
+    </a>
+    
+    <!-- LINE 分享 -->
+    <a href="https://social-plugins.line.me/lineit/share?url={{ page.url | absolute_url }}" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="share-button line"
+       title="分享到 LINE">
+      <svg class="share-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+      </svg>
+      <span>LINE</span>
+    </a>
+    
+    <!-- Twitter/X 分享 -->
+    <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title | url_encode }}" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="share-button twitter"
+       title="分享到 Twitter">
+      <svg class="share-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+      </svg>
+      <span>Twitter</span>
+    </a>
+    
+    <!-- 複製連結 -->
+    <button class="share-button copy-link" 
+            onclick="copyToClipboard('{{ page.url | absolute_url }}')"
+            title="複製連結">
+      <svg class="share-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+      </svg>
+      <span>複製連結</span>
+    </button>
+  </div>
+  
+  <div id="copy-notification" class="copy-notification">
+    ✅ 連結已複製！
+  </div>
+</div>
+
+<script>
+function copyToClipboard(text) {
+  // 使用 Clipboard API
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(function() {
+      showCopyNotification();
+    }).catch(function(err) {
+      // 如果失敗，使用舊方法
+      fallbackCopy(text);
+    });
+  } else {
+    // 不支援 Clipboard API，使用舊方法
+    fallbackCopy(text);
+  }
+}
+
+function fallbackCopy(text) {
+  var textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.style.position = "fixed";
+  textArea.style.left = "-999999px";
+  document.body.appendChild(textArea);
+  textArea.select();
+  try {
+    document.execCommand('copy');
+    showCopyNotification();
+  } catch (err) {
+    alert('複製失敗，請手動複製連結');
+  }
+  document.body.removeChild(textArea);
+}
+
+function showCopyNotification() {
+  var notification = document.getElementById('copy-notification');
+  notification.classList.add('show');
+  setTimeout(function() {
+    notification.classList.remove('show');
+  }, 2000);
+}
+</script>
+
+<style>
+.share-buttons {
+  background: linear-gradient(135deg, #f9f6f0 0%, #ffffff 100%);
+  padding: 35px;
+  margin: 40px 0;
+  border-radius: 12px;
+  border: 2px solid #e8f5e9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.share-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.share-header h4 {
+  color: #2d5016;
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.share-header p {
+  color: #666;
+  margin: 0;
+  font-size: 1em;
+}
+
+.share-button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1em;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.share-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.share-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Facebook 按鈕 */
+.share-button.facebook {
+  background: #1877f2;
+}
+
+.share-button.facebook:hover {
+  background: #0d6efd;
+}
+
+/* LINE 按鈕 */
+.share-button.line {
+  background: #06c755;
+}
+
+.share-button.line:hover {
+  background: #00b900;
+}
+
+/* Twitter 按鈕 */
+.share-button.twitter {
+  background: #000000;
+}
+
+.share-button.twitter:hover {
+  background: #333333;
+}
+
+/* 複製連結按鈕 */
+.share-button.copy-link {
+  background: #6c757d;
+}
+
+.share-button.copy-link:hover {
+  background: #5a6268;
+}
+
+/* 複製成功通知 */
+.copy-notification {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #4a7c2c;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.copy-notification.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* 響應式設計 - 手機 */
+@media (max-width: 768px) {
+  .share-button-group {
+    flex-direction: column;
+  }
+  
+  .share-button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .share-buttons {
+    padding: 25px 20px;
+  }
+}
+</style>
