@@ -32,6 +32,29 @@ title: 首頁
   </div>
 </div>
 
+<!-- RSS 訂閱區塊 -->
+<div class="rss-subscribe-box">
+  <div class="rss-icon">📡</div>
+  <div class="rss-content">
+    <h3>📬 訂閱草本故事館</h3>
+    <p>透過 RSS 訂閱，第一時間收到新文章通知，不錯過任何精彩內容！</p>
+    <div class="rss-buttons">
+      <a href="{{ '/feed.xml' | relative_url }}" class="rss-button primary">
+        📡 訂閱 RSS
+      </a>
+      <a href="https://feedly.com/i/subscription/feed/{{ site.url }}{{ site.baseurl }}/feed.xml" 
+         class="rss-button secondary" target="_blank" rel="noopener">
+        🔖 用 Feedly 訂閱
+      </a>
+    </div>
+    <p class="rss-help">
+      <small>💡 不知道如何使用 RSS？
+        <a href="https://feedly.com" target="_blank" rel="noopener">Feedly</a> 是最簡單的入門工具
+      </small>
+    </p>
+  </div>
+</div>
+
 <section class="stories-section">
   <h2>📚 最新故事</h2>
   
@@ -258,5 +281,131 @@ body {
 
 .read-more:hover {
   color: #6b9a3e;
+}
+
+  /* RSS 訂閱區塊 */
+.rss-subscribe-box {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background: linear-gradient(135deg, #f9f6f0 0%, #ffffff 100%);
+  padding: 40px;
+  margin: 50px 0;
+  border-radius: 15px;
+  border: 2px solid #e8f5e9;
+  box-shadow: 0 4px 12px rgba(74, 124, 44, 0.1);
+  transition: all 0.3s ease;
+}
+
+.rss-subscribe-box:hover {
+  box-shadow: 0 6px 20px rgba(74, 124, 44, 0.15);
+  transform: translateY(-2px);
+}
+
+.rss-icon {
+  font-size: 4em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.rss-content {
+  flex: 1;
+}
+
+.rss-content h3 {
+  color: #2d5016;
+  margin: 0 0 15px 0;
+  font-size: 1.8em;
+}
+
+.rss-content > p {
+  color: #555;
+  margin: 0 0 20px 0;
+  line-height: 1.6;
+  font-size: 1.05em;
+}
+
+.rss-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.rss-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+  font-size: 1em;
+}
+
+.rss-button.primary {
+  background: #4a7c2c;
+  color: white;
+}
+
+.rss-button.primary:hover {
+  background: #6b9a3e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 124, 44, 0.3);
+}
+
+.rss-button.secondary {
+  background: white;
+  color: #4a7c2c;
+  border-color: #4a7c2c;
+}
+
+.rss-button.secondary:hover {
+  background: #f0f7ed;
+  transform: translateY(-2px);
+}
+
+.rss-help {
+  margin: 0;
+}
+
+.rss-help small {
+  color: #888;
+  font-size: 0.9em;
+}
+
+.rss-help a {
+  color: #4a7c2c;
+  text-decoration: underline;
+}
+
+.rss-help a:hover {
+  color: #2d5016;
+}
+
+/* 響應式設計 - 手機 */
+@media (max-width: 768px) {
+  .rss-subscribe-box {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .rss-icon {
+    font-size: 3em;
+  }
+  
+  .rss-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .rss-button {
+    justify-content: center;
+    width: 100%;
+  }
 }
 </style>
