@@ -1,0 +1,177 @@
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>🌿 草本故事館</h3>
+      <p>用故事認識中藥方劑，讓傳統醫學變得生動有趣</p>
+      <p class="footer-tagline">每週分享一個中藥故事 ✨</p>
+    </div>
+    
+    <div class="footer-section">
+      <h4>📱 追蹤我們</h4>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/meet.the.herbs" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="footer-social-link instagram"
+           title="Instagram @meet.the.herbs">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+        
+        <a href="{{ '/feed.xml' | relative_url }}" 
+           class="footer-social-link rss"
+           title="RSS 訂閱">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795.001 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.71-7.118-15.758-15.839-15.82zm0-3.368c10.58.046 19.152 8.594 19.183 19.188h4.817c-.03-13.231-10.755-23.954-24-24v4.812z"/>
+          </svg>
+        </a>
+      </div>
+      <p class="footer-ig-name">@meet.the.herbs</p>
+    </div>
+    
+    <div class="footer-section">
+      <h4>📚 快速連結</h4>
+      <ul class="footer-links">
+        <li><a href="{{ '/' | relative_url }}">首頁</a></li>
+        <li><a href="{{ '/tags/' | relative_url }}">標籤分類</a></li>
+        <li><a href="{{ '/search/' | relative_url }}">搜尋</a></li>
+        <li><a href="{{ '/about/' | relative_url }}">關於</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2025 草本故事館 · 用故事傳承中醫智慧 🌿</p>
+  </div>
+</footer>
+
+<style>
+.site-footer {
+  background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
+  color: white;
+  padding: 50px 20px 20px;
+  margin-top: 80px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3 {
+  color: #ffd700;
+  margin: 0 0 15px 0;
+  font-size: 1.5em;
+}
+
+.footer-section h4 {
+  color: #c9a961;
+  margin: 0 0 20px 0;
+  font-size: 1.2em;
+}
+
+.footer-section p {
+  line-height: 1.8;
+  opacity: 0.9;
+  margin: 10px 0;
+}
+
+.footer-tagline {
+  font-style: italic;
+  font-size: 0.95em;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+
+.footer-social-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.footer-social-link svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.footer-social-link.instagram:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.footer-social-link.rss:hover {
+  background: #ff6600;
+}
+
+.footer-ig-name {
+  font-size: 0.9em;
+  opacity: 0.8;
+  margin: 5px 0 0 0;
+  font-family: monospace;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom p {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 0.95em;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .site-footer {
+    padding: 40px 20px 20px;
+    margin-top: 60px;
+  }
+}
+</style>
