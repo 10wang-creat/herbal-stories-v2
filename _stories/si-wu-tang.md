@@ -2,7 +2,7 @@
 layout: story
 title: 四物湯：四姊妹的補血約定
 formula: 四物湯
-date: 2025-11-22
+date: 2025-11-29
 tags:
   - 補血
   - 入門
