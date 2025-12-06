@@ -2,7 +2,7 @@
 layout: story
 title: 八珍湯：氣血雙補的完美組合
 formula: 八珍湯
-date: 2025-11-25
+date: 2025-12-06
 tags:
   - 氣血雙補
   - 入門
