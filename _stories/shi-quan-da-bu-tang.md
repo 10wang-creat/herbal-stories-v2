@@ -2,7 +2,7 @@
 layout: story
 title: 十全大補湯：十位英雄的盛大集結
 formula: 十全大補湯
-date: 2025-12-10
+date: 2025-12-13
 tags:
   - 氣血雙補
   - 中階
