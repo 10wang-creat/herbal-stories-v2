@@ -2,7 +2,7 @@
 layout: story
 title: 十全大補湯：十位英雄的盛大集結
 formula: 十全大補湯
-date: 2025-12-13
+date: 2025-12-10
 tags:
   - 氣血雙補
   - 中階
@@ -330,16 +330,50 @@ David 回到正常工作節奏。
 
 ## 💡 十全大補 vs 八珍湯：如何選擇？
 
-| 比較項目 | 八珍湯 | 十全大補湯 |
-|---------|--------|-----------|
-| **藥材數量** | 8 味 | 10 味 |
-| **主要功效** | 氣血雙補 | 氣血雙補 + 溫陽 |
-| **適合體質** | 氣血兩虛 | 氣血兩虛 + 陽虛畏寒 |
-| **怕冷程度** | 輕度手腳冷 | 明顯畏寒、四肢冰冷 |
-| **補益強度** | 中等 | 較強 |
-| **溫燥程度** | 平和 | 偏溫 |
+<table style="width:100%; border-collapse:collapse; margin:20px 0;">
+  <thead>
+    <tr style="background-color:#2d5016; color:white;">
+      <th style="padding:12px; border:1px solid #c9a961; text-align:left;">比較項目</th>
+      <th style="padding:12px; border:1px solid #c9a961; text-align:left;">八珍湯</th>
+      <th style="padding:12px; border:1px solid #c9a961; text-align:left;">十全大補湯</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color:#f5f1e8;">
+      <td style="padding:12px; border:1px solid #c9a961; font-weight:600; color:#2d5016;">藥材數量</td>
+      <td style="padding:12px; border:1px solid #c9a961;">8 味</td>
+      <td style="padding:12px; border:1px solid #c9a961;">10 味</td>
+    </tr>
+    <tr style="background-color:#ffffff;">
+      <td style="padding:12px; border:1px solid #c9a961; font-weight:600; color:#2d5016;">主要功效</td>
+      <td style="padding:12px; border:1px solid #c9a961;">氣血雙補</td>
+      <td style="padding:12px; border:1px solid #c9a961;">氣血雙補 + 溫陽</td>
+    </tr>
+    <tr style="background-color:#f5f1e8;">
+      <td style="padding:12px; border:1px solid #c9a961; font-weight:600; color:#2d5016;">適合體質</td>
+      <td style="padding:12px; border:1px solid #c9a961;">氣血兩虛</td>
+      <td style="padding:12px; border:1px solid #c9a961;">氣血兩虛 + 陽虛畏寒</td>
+    </tr>
+    <tr style="background-color:#ffffff;">
+      <td style="padding:12px; border:1px solid #c9a961; font-weight:600; color:#2d5016;">怕冷程度</td>
+      <td style="padding:12px; border:1px solid #c9a961;">輕度手腳冷</td>
+      <td style="padding:12px; border:1px solid #c9a961;">明顯畏寒、四肢冰冷</td>
+    </tr>
+    <tr style="background-color:#f5f1e8;">
+      <td style="padding:12px; border:1px solid #c9a961; font-weight:600; color:#2d5016;">補益強度</td>
+      <td style="padding:12px; border:1px solid #c9a961;">中等</td>
+      <td style="padding:12px; border:1px solid #c9a961;">較強</td>
+    </tr>
+    <tr style="background-color:#ffffff;">
+      <td style="padding:12px; border:1px solid #c9a961; font-weight:600; color:#2d5016;">溫燥程度</td>
+      <td style="padding:12px; border:1px solid #c9a961;">平和</td>
+      <td style="padding:12px; border:1px solid #c9a961;">偏溫</td>
+    </tr>
+  </tbody>
+</table>
 
 **簡單判斷：**
+
 - 如果只是累、臉色差 → **八珍湯**
 - 如果累、臉色差、還特別怕冷 → **十全大補湯**
 
