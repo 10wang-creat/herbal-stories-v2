@@ -21,27 +21,47 @@ permalink: /about/
     <section class="approach">
       <div class="section-icon">✨</div>
       <h2>我們的做法</h2>
-      
       <div class="approach-grid">
         <div class="approach-card">
           <h3>📖 故事化</h3>
           <p>將枯燥的方劑變成有情節的故事，讓你在閱讀中自然記住</p>
         </div>
-        
         <div class="approach-card">
           <h3>🎭 擬人化</h3>
           <p>每味藥材都是獨特的角色，有自己的性格和專長</p>
         </div>
-        
         <div class="approach-card">
           <h3>🏥 生活化</h3>
           <p>從真實案例出發，讓你知道什麼時候需要這些方劑</p>
         </div>
-        
         <div class="approach-card">
           <h3>🔬 科學化</h3>
           <p>基於中醫理論，提供準確的藥材資訊和使用建議</p>
         </div>
+      </div>
+    </section>
+
+    <section class="stickers">
+      <div class="section-icon">🎨</div>
+      <h2>LINE 貼圖作品集</h2>
+      <p>草本故事館的角色們，也在 LINE 貼圖裡陪你聊天！</p>
+      <p>從溫治小藥材到人參君，每一組貼圖都延續著中醫養生的溫暖世界觀。在日常對話中，讓這些小藥材提醒你好好照顧自己。</p>
+      <div class="sticker-grid">
+        <div class="sticker-card">
+          <div class="sticker-emoji">💬</div>
+          <h3>貼圖系列</h3>
+          <p>溫治小藥材、中藥世界探險、薑母鴨日常等 30+ 組原創貼圖</p>
+        </div>
+        <div class="sticker-card">
+          <div class="sticker-emoji">😊</div>
+          <h3>表情貼系列</h3>
+          <p>活力人參君、元氣當歸寶寶，用可愛表情點綴你的對話</p>
+        </div>
+      </div>
+      <div class="sticker-cta">
+        <a href="https://line.me/S/shop/sticker/author/5657737" target="_blank" class="sticker-button">
+          👉 瀏覽全部作品
+        </a>
       </div>
     </section>
 
@@ -76,29 +96,6 @@ permalink: /about/
           <div class="target-emoji">🌱</div>
           <p>關心健康，想預防保健的現代人</p>
         </div>
-      </div>
-    </section>
-
-    <section class="line-stickers">
-      <div class="section-icon">🎨</div>
-      <h2>延伸創作：LINE 貼圖</h2>
-      <p>這些中藥角色不只活在故事裡，也在 LINE 裡陪你聊天！</p>
-      <p>我把溫治、人參君、當歸寶寶等角色做成貼圖和表情貼，讓傳統中藥文化融入你的日常對話。</p>
-      
-      <div class="sticker-grid">
-        <a href="https://line.me/S/shop/sticker/author/5657737" target="_blank" class="sticker-card">
-          <div class="sticker-emoji">📦</div>
-          <h3>LINE 貼圖</h3>
-          <p>完整貼圖系列，豐富的表情動作</p>
-          <span class="sticker-link">前往選購 →</span>
-        </a>
-        
-        <a href="https://line.me/S/shop/emoji/author/10936250" target="_blank" class="sticker-card">
-          <div class="sticker-emoji">😊</div>
-          <h3>LINE 表情貼</h3>
-          <p>輕巧表情貼，日常聊天好幫手</p>
-          <span class="sticker-link">前往選購 →</span>
-        </a>
       </div>
     </section>
 
@@ -221,6 +218,75 @@ permalink: /about/
   font-size: 1em;
 }
 
+/* LINE 貼圖區塊樣式 */
+.sticker-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 30px 0;
+}
+
+@media (max-width: 768px) {
+  .sticker-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sticker-card {
+  background: linear-gradient(135deg, #fff8e1 0%, #fffde7 100%);
+  padding: 30px 20px;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #ffe082;
+  transition: transform 0.3s;
+}
+
+.sticker-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(255, 193, 7, 0.2);
+}
+
+.sticker-emoji {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.sticker-card h3 {
+  color: #f57c00;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.sticker-card p {
+  color: #555;
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+.sticker-cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sticker-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #06c755 0%, #00b341 100%);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
+}
+
+.sticker-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(6, 199, 85, 0.4);
+  color: white;
+}
+
 .values-list {
   list-style: none;
   padding: 0;
@@ -283,68 +349,6 @@ permalink: /about/
   margin: 0;
 }
 
-/* LINE 貼圖區塊樣式 */
-.line-stickers {
-  text-align: center;
-}
-
-.sticker-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-  margin-top: 30px;
-}
-
-@media (max-width: 768px) {
-  .sticker-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.sticker-card {
-  display: block;
-  background: linear-gradient(135deg, #fff9e6 0%, #fff5d6 100%);
-  padding: 35px 25px;
-  border-radius: 12px;
-  text-decoration: none;
-  border: 2px solid #ffd93d;
-  transition: all 0.3s ease;
-}
-
-.sticker-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(255, 217, 61, 0.3);
-  border-color: #ffc107;
-}
-
-.sticker-emoji {
-  font-size: 3em;
-  margin-bottom: 15px;
-}
-
-.sticker-card h3 {
-  color: #2d5016;
-  font-size: 1.4em;
-  margin-bottom: 10px;
-}
-
-.sticker-card p {
-  color: #666;
-  font-size: 1em;
-  margin-bottom: 15px;
-}
-
-.sticker-link {
-  display: inline-block;
-  color: #4a7c2c;
-  font-weight: bold;
-  font-size: 1em;
-}
-
-.sticker-card:hover .sticker-link {
-  color: #2d5016;
-}
-
 .disclaimer-box {
   background: #fff3cd;
   border: 2px solid #ffc107;
@@ -366,18 +370,21 @@ permalink: /about/
   text-align: center;
 }
 
-.contact-email, .contact-social {
+.contact-email,
+.contact-social {
   font-size: 1.2em;
   margin: 15px 0;
 }
 
-.contact-email a, .contact-social a {
+.contact-email a,
+.contact-social a {
   color: #4a7c2c;
   text-decoration: none;
   font-weight: bold;
 }
 
-.contact-email a:hover, .contact-social a:hover {
+.contact-email a:hover,
+.contact-social a:hover {
   color: #2d5016;
   text-decoration: underline;
 }
