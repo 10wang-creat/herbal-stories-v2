@@ -79,6 +79,29 @@ permalink: /about/
       </div>
     </section>
 
+    <section class="line-stickers">
+      <div class="section-icon">🎨</div>
+      <h2>延伸創作：LINE 貼圖</h2>
+      <p>這些中藥角色不只活在故事裡，也在 LINE 裡陪你聊天！</p>
+      <p>我把溫治、人參君、當歸寶寶等角色做成貼圖和表情貼，讓傳統中藥文化融入你的日常對話。</p>
+      
+      <div class="sticker-grid">
+        <a href="https://line.me/S/shop/sticker/author/5657737" target="_blank" class="sticker-card">
+          <div class="sticker-emoji">📦</div>
+          <h3>LINE 貼圖</h3>
+          <p>完整貼圖系列，豐富的表情動作</p>
+          <span class="sticker-link">前往選購 →</span>
+        </a>
+        
+        <a href="https://line.me/S/shop/emoji/author/10936250" target="_blank" class="sticker-card">
+          <div class="sticker-emoji">😊</div>
+          <h3>LINE 表情貼</h3>
+          <p>輕巧表情貼，日常聊天好幫手</p>
+          <span class="sticker-link">前往選購 →</span>
+        </a>
+      </div>
+    </section>
+
     <section class="disclaimer">
       <div class="section-icon">⚠️</div>
       <h2>重要聲明</h2>
@@ -161,14 +184,12 @@ permalink: /about/
   margin-top: 30px;
 }
 
-/* 響應式：平板 */
 @media (max-width: 1024px) {
   .approach-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* 響應式：手機 */
 @media (max-width: 768px) {
   .approach-grid {
     grid-template-columns: 1fr;
@@ -227,14 +248,12 @@ permalink: /about/
   margin-top: 30px;
 }
 
-/* 響應式：平板 */
 @media (max-width: 1024px) {
   .target-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* 響應式：手機 */
 @media (max-width: 768px) {
   .target-grid {
     grid-template-columns: 1fr;
@@ -262,6 +281,68 @@ permalink: /about/
   color: #2d5016;
   font-weight: 500;
   margin: 0;
+}
+
+/* LINE 貼圖區塊樣式 */
+.line-stickers {
+  text-align: center;
+}
+
+.sticker-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .sticker-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sticker-card {
+  display: block;
+  background: linear-gradient(135deg, #fff9e6 0%, #fff5d6 100%);
+  padding: 35px 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 2px solid #ffd93d;
+  transition: all 0.3s ease;
+}
+
+.sticker-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 217, 61, 0.3);
+  border-color: #ffc107;
+}
+
+.sticker-emoji {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.sticker-card h3 {
+  color: #2d5016;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.sticker-card p {
+  color: #666;
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.sticker-link {
+  display: inline-block;
+  color: #4a7c2c;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.sticker-card:hover .sticker-link {
+  color: #2d5016;
 }
 
 .disclaimer-box {
