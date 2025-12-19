@@ -2,7 +2,7 @@
 layout: story
 title: 四神湯：健脾養胃的國民食療
 formula: 四神湯
-date: 2025-12-20
+date: 2025-12-19
 tags:
   - 健脾利濕
   - 入門
