@@ -6,7 +6,7 @@
   
   <div class="share-button-group">
     <!-- Facebook 分享 -->
-    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" 
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" 
        target="_blank" 
        rel="noopener noreferrer"
        class="share-button facebook"
@@ -18,7 +18,7 @@
     </a>
     
     <!-- LINE 分享 -->
-    <a href="https://social-plugins.line.me/lineit/share?url={{ page.url | absolute_url }}" 
+    <a href="https://social-plugins.line.me/lineit/share?url={{ page.url | absolute_url | url_encode }}" 
        target="_blank" 
        rel="noopener noreferrer"
        class="share-button line"
@@ -30,7 +30,7 @@
     </a>
     
     <!-- Twitter/X 分享 -->
-    <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title | url_encode }}" 
+    <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}" 
        target="_blank" 
        rel="noopener noreferrer"
        class="share-button twitter"
@@ -71,16 +71,13 @@
 
 <script>
 function copyToClipboard(text) {
-  // 使用 Clipboard API
   if (navigator.clipboard && window.isSecureContext) {
     navigator.clipboard.writeText(text).then(function() {
       showCopyNotification();
     }).catch(function(err) {
-      // 如果失敗，使用舊方法
       fallbackCopy(text);
     });
   } else {
-    // 不支援 Clipboard API，使用舊方法
     fallbackCopy(text);
   }
 }
@@ -171,7 +168,6 @@ function showCopyNotification() {
   fill: currentColor;
 }
 
-/* Facebook 按鈕 */
 .share-button.facebook {
   background: #1877f2;
 }
@@ -180,7 +176,6 @@ function showCopyNotification() {
   background: #0d6efd;
 }
 
-/* LINE 按鈕 */
 .share-button.line {
   background: #06c755;
 }
@@ -189,7 +184,6 @@ function showCopyNotification() {
   background: #00b900;
 }
 
-/* Twitter 按鈕 */
 .share-button.twitter {
   background: #000000;
 }
@@ -198,7 +192,6 @@ function showCopyNotification() {
   background: #333333;
 }
 
-/* 複製連結按鈕 */
 .share-button.copy-link {
   background: #6c757d;
 }
@@ -207,16 +200,14 @@ function showCopyNotification() {
   background: #5a6268;
 }
 
- /* Instagram 按鈕 */
 .share-button.instagram {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
 .share-button.instagram:hover {
   background: linear-gradient(45deg, #d87e2e 0%, #c85a33 25%, #b91f39 50%, #b21d5c 75%, #a01579 100%);
-} 
-  
-/* 複製成功通知 */
+}
+
 .copy-notification {
   position: fixed;
   bottom: 30px;
@@ -239,7 +230,6 @@ function showCopyNotification() {
   opacity: 1;
 }
 
-/* 響應式設計 - 手機 */
 @media (max-width: 768px) {
   .share-button-group {
     flex-direction: column;
