@@ -14,20 +14,28 @@ cover_image: /assets/images/xiao-yao-san-cover.jpg
 ingredients:
   - name: 柴胡
     description: 隊長｜疏肝解鬱，打通情緒的堵塞
+    image: chaihu.png
   - name: 當歸
     description: 補血姐姐｜養血活血，給肝臟營養
+    image: danggui.png
   - name: 白芍
     description: 柔和妹妹｜養血柔肝，緩解緊繃
+    image: baishao.png
   - name: 白朮
     description: 後勤隊長｜健脾益氣，強化消化
+    image: baizhu.png
   - name: 茯苓
     description: 淨化大使｜健脾利濕，排除積水
+    image: fuling.png
   - name: 炙甘草
     description: 和事佬｜補氣和中，調和全隊
+    image: gancao.png
   - name: 煨薑
     description: 暖心使者｜溫中和胃，促進運化
+    image: weijiang.png
   - name: 薄荷
     description: 清新小精靈｜疏散鬱熱，透達肝氣
+    image: bohe.png
 effects: 疏肝解鬱、養血健脾，適用於肝鬱血虛、情緒不暢、月經不調、胸脅脹痛
 source: 《太平惠民和劑局方》
 ---
