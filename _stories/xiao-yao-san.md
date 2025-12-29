@@ -1,6 +1,6 @@
 ---
 layout: story
-title: "逍遙散：壓力山大時的解鬱小隊"
+title: 逍遙散：壓力山大時的解鬱小隊
 formula: 逍遙散
 date: 2025-12-27
 tags:
