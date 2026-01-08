@@ -49,7 +49,8 @@ title: 首頁
   <h2>📚 最新故事</h2>
   
   <div class="story-list">
-    {% for story in site.stories limit:6 %}
+    {% assign sorted_stories = site.stories | sort: 'date' | reverse %}
+    {% for story in sorted_stories limit:6 %}
       <article class="story-card">
         <h3>
           <a href="{{ story.url | relative_url }}">{{ story.title }}</a>
