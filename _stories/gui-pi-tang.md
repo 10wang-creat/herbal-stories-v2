@@ -2,7 +2,7 @@
 layout: story
 title: 歸脾湯：當記憶開始漏水的時候
 formula: 歸脾湯
-date: 2025-01-01
+date: 2026-01-08
 tags:
   - 補氣養血
   - 進階
