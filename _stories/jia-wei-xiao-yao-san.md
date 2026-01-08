@@ -2,7 +2,7 @@
 layout: story
 title: 肝火旺盛的那個月：逍遙散續集
 formula: 加味逍遙散
-date: 2025-01-08
+date: 2026-01-08
 tags:
   - 疏肝解鬱
   - 清熱涼血
