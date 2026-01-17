@@ -1,0 +1,248 @@
+---
+layout: default
+title: 所有故事
+permalink: /stories/
+---
+
+<div class="all-stories-page">
+  <h1>📚 所有故事</h1>
+  <p class="page-subtitle">從最新到最早，探索所有草本故事</p>
+  
+  <div class="story-timeline">
+    {% assign sorted_stories = site.stories | sort: 'date' | reverse %}
+    {% for story in sorted_stories %}
+      <article class="timeline-card">
+        <div class="timeline-date">
+          <span class="date-month">{{ story.date | date: "%m月" }}</span>
+          <span class="date-day">{{ story.date | date: "%d" }}</span>
+          <span class="date-year">{{ story.date | date: "%Y" }}</span>
+        </div>
+        
+        <div class="timeline-content">
+          <h2>
+            <a href="{{ story.url | relative_url }}">{{ story.title }}</a>
+          </h2>
+          
+          {% if story.formula %}
+            <div class="formula-badge">💊 {{ story.formula }}</div>
+          {% endif %}
+          
+          {% if story.excerpt %}
+            <p class="story-excerpt">{{ story.excerpt }}</p>
+          {% endif %}
+          
+          {% if story.effects %}
+            <div class="story-effects">
+              <span class="effect-icon">✨</span>
+              <span>{{ story.effects }}</span>
+            </div>
+          {% endif %}
+          
+          <a href="{{ story.url | relative_url }}" class="read-more-btn">閱讀全文 →</a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.all-stories-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.all-stories-page h1 {
+  color: #2d5016;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.page-subtitle {
+  text-align: center;
+  color: #8b7355;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.story-timeline {
+  position: relative;
+}
+
+.story-timeline::before {
+  content: '';
+  position: absolute;
+  left: 80px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #4a7c2c, #6b9a3e);
+  border-radius: 2px;
+}
+
+.timeline-card {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.timeline-card::before {
+  content: '🌿';
+  position: absolute;
+  left: 68px;
+  top: 10px;
+  width: 28px;
+  height: 28px;
+  background: #f5f1e8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.timeline-date {
+  width: 60px;
+  flex-shrink: 0;
+  text-align: right;
+  padding-top: 5px;
+}
+
+.timeline-date .date-month {
+  display: block;
+  color: #4a7c2c;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.timeline-date .date-day {
+  display: block;
+  color: #2d5016;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.timeline-date .date-year {
+  display: block;
+  color: #8b7355;
+  font-size: 0.85rem;
+}
+
+.timeline-content {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #4a7c2c;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  margin-left: 30px;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.timeline-content h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+}
+
+.timeline-content h2 a {
+  color: #2d5016;
+  text-decoration: none;
+}
+
+.timeline-content h2 a:hover {
+  color: #4a7c2c;
+}
+
+.formula-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #c9a961 0%, #d4b878 100%);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.story-excerpt {
+  color: #555;
+  line-height: 1.7;
+  margin: 12px 0;
+}
+
+.story-effects {
+  background: #f9f6f0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin: 12px 0;
+  color: #4a7c2c;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.effect-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 20px;
+  background: #4a7c2c;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.read-more-btn:hover {
+  background: #6b9a3e;
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .story-timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-card {
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 50px;
+  }
+  
+  .timeline-card::before {
+    left: 8px;
+  }
+  
+  .timeline-date {
+    width: auto;
+    text-align: left;
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+  }
+  
+  .timeline-date .date-day {
+    font-size: 1.3rem;
+  }
+  
+  .timeline-content {
+    margin-left: 0;
+  }
+}
+</style>

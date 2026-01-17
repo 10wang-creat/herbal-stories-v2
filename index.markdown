@@ -122,6 +122,10 @@ title: 首頁
       </article>
     {% endfor %}
   </div>
+  
+  <div class="view-all-container">
+    <a href="{{ '/stories/' | relative_url }}" class="view-all-btn">📖 查看全部故事</a>
+  </div>
 </section>
 
 <!-- RSS 訂閱區塊 -->
@@ -543,6 +547,31 @@ body {
 
 .read-more:hover {
   color: #6b9a3e;
+}
+
+/* 查看全部按鈕 */
+.view-all-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.view-all-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.1em;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(45, 80, 22, 0.3);
+}
+
+.view-all-btn:hover {
+  background: linear-gradient(135deg, #4a7c2c 0%, #6b9a3e 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(45, 80, 22, 0.4);
 }
 
 /* RSS 訂閱區塊 */

@@ -28,9 +28,10 @@ defaults:
 # 導航欄設定
 header_pages:
   - index.markdown
-  - about.markdown
+  - stories.html
   - tags.html
   - search.html
+  - about.markdown
 
   # Disqus 留言系統
 disqus:
