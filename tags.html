@@ -11,7 +11,7 @@ permalink: /tags/
     <section class="tag-section">
       <h2>🌿 依功效分類</h2>
       <div class="tag-group">
-        {% assign efficacy_tags = "補氣,補血,氣血雙補,補氣養血,健脾利濕,疏肝解鬱,清熱涼血,溫陽補氣" | split: "," %}
+        {% assign efficacy_tags = "補氣,補血,氣血雙補,補氣養血,健脾利濕,疏肝解鬱,清熱涼血,溫陽補氣,滋陰補腎" | split: "," %}
         {% for tag in efficacy_tags %}
           {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" %}
           {% if tag_stories.size > 0 %}
@@ -42,6 +42,19 @@ permalink: /tags/
           {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" %}
           {% if tag_stories.size > 0 %}
             <a href="#{{ tag }}" class="tag-button level">{{ tag }} ({{ tag_stories.size }})</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="tag-section">
+      <h2>🏷️ 依方劑類型分類</h2>
+      <div class="tag-group">
+        {% assign type_tags = "經典方,補腎名方" | split: "," %}
+        {% for tag in type_tags %}
+          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" %}
+          {% if tag_stories.size > 0 %}
+            <a href="#{{ tag }}" class="tag-button type">{{ tag }} ({{ tag_stories.size }})</a>
           {% endif %}
         {% endfor %}
       </div>
@@ -177,6 +190,14 @@ permalink: /tags/
 
 .tag-button.level:hover {
   background: #7c9885;
+}
+
+.tag-button.type {
+  border-color: #8b7355;
+}
+
+.tag-button.type:hover {
+  background: #8b7355;
 }
 
 .tag-posts-section {
