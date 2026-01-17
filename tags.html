@@ -11,7 +11,7 @@ permalink: /tags/
     <section class="tag-section">
       <h2>🌿 依功效分類</h2>
       <div class="tag-group">
-        {% assign efficacy_tags = "補氣,補血,補陰,補陽,清熱,溫裡,理氣,活血,化痰,安神" | split: "," %}
+        {% assign efficacy_tags = "補氣,補血,氣血雙補,補氣養血,健脾利濕,疏肝解鬱,清熱涼血,溫陽補氣" | split: "," %}
         {% for tag in efficacy_tags %}
           {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" %}
           {% if tag_stories.size > 0 %}
@@ -22,9 +22,9 @@ permalink: /tags/
     </section>
 
     <section class="tag-section">
-      <h2>💊 依症狀分類</h2>
+      <h2>💊 依適用情況分類</h2>
       <div class="tag-group">
-        {% assign symptom_tags = "疲勞無力,消化不良,失眠多夢,感冒咳嗽,頭痛眩暈,經期不調,婦科調理" | split: "," %}
+        {% assign symptom_tags = "疲勞無力,婦科調理,術後調理,病後調養,產後調理,情緒調理,月經不調,壓力,更年期,失眠,心悸,健忘,食療養生" | split: "," %}
         {% for tag in symptom_tags %}
           {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" %}
           {% if tag_stories.size > 0 %}
@@ -37,7 +37,7 @@ permalink: /tags/
     <section class="tag-section">
       <h2>📊 依難度分類</h2>
       <div class="tag-group">
-        {% assign level_tags = "入門,進階,專業" | split: "," %}
+        {% assign level_tags = "入門,中階,進階" | split: "," %}
         {% for tag in level_tags %}
           {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" %}
           {% if tag_stories.size > 0 %}
@@ -159,6 +159,10 @@ permalink: /tags/
   border-color: #6b9a3e;
 }
 
+.tag-button.efficacy:hover {
+  background: #6b9a3e;
+}
+
 .tag-button.symptom {
   border-color: #d4a574;
 }
@@ -168,11 +172,11 @@ permalink: /tags/
 }
 
 .tag-button.level {
-  border-color: #8b7355;
+  border-color: #7c9885;
 }
 
 .tag-button.level:hover {
-  background: #8b7355;
+  background: #7c9885;
 }
 
 .tag-posts-section {
