@@ -11,7 +11,7 @@ excerpt: 臉色蒼白、手腳冰冷、月經不調？四位溫柔的姊妹來�
 ingredients:
   - name: 熟地黃
     description: 大姐｜深層補血，製造新血液
-    image: shudi.png
+    image: shudihuang.png
   - name: 當歸
     description: 二姐｜活血補血，調節月經
     image: danggui.png
