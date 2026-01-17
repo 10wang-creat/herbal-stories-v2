@@ -77,9 +77,51 @@ layout: default
   <!-- 社群分享按鈕 -->
 {% include share-buttons.html %}
   
-  <div class="story-footer">
-    <a href="{{ site.baseurl }}/" class="back-link">← 返回首頁</a>
-  </div>
+  <!-- 上一篇/下一篇導航 -->
+  {% assign sorted_stories = site.stories | sort: 'date' %}
+  {% assign story_count = sorted_stories | size %}
+  {% for story in sorted_stories %}
+    {% if story.url == page.url %}
+      {% assign current_index = forloop.index0 %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if current_index > 0 %}
+    {% assign prev_index = current_index | minus: 1 %}
+    {% assign prev_story = sorted_stories[prev_index] %}
+  {% endif %}
+  
+  {% assign next_index = current_index | plus: 1 %}
+  {% if next_index < story_count %}
+    {% assign next_story = sorted_stories[next_index] %}
+  {% endif %}
+
+  <nav class="story-navigation">
+    <div class="nav-prev">
+      {% if prev_story %}
+        <a href="{{ prev_story.url | relative_url }}" class="nav-link prev">
+          <span class="nav-label">← 上一篇</span>
+          <span class="nav-title">{{ prev_story.title }}</span>
+        </a>
+      {% endif %}
+    </div>
+    
+    <div class="nav-home">
+      <a href="{{ site.baseurl }}/" class="home-link">
+        <span class="home-icon">🏠</span>
+        <span>返回首頁</span>
+      </a>
+    </div>
+    
+    <div class="nav-next">
+      {% if next_story %}
+        <a href="{{ next_story.url | relative_url }}" class="nav-link next">
+          <span class="nav-label">下一篇 →</span>
+          <span class="nav-title">{{ next_story.title }}</span>
+        </a>
+      {% endif %}
+    </div>
+  </nav>
 </article>
 
 <!-- 留言區塊 -->
@@ -403,6 +445,147 @@ layout: default
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(6, 199, 85, 0.4);
   color: white;
+}
+
+/* 文章導航 */
+.story-navigation {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+  margin-top: 50px;
+  padding: 30px 0;
+  border-top: 2px solid #e8dcc8;
+}
+
+.nav-prev, .nav-next {
+  display: flex;
+}
+
+.nav-prev {
+  justify-content: flex-start;
+}
+
+.nav-next {
+  justify-content: flex-end;
+}
+
+.nav-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 25px;
+  background: white;
+  border: 2px solid #e8dcc8;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  max-width: 280px;
+}
+
+.nav-link:hover {
+  border-color: #4a7c2c;
+  background: #f9f6f0;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(74, 124, 44, 0.15);
+}
+
+.nav-link.prev {
+  text-align: left;
+}
+
+.nav-link.next {
+  text-align: right;
+}
+
+.nav-label {
+  font-size: 0.9em;
+  color: #4a7c2c;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.nav-title {
+  font-size: 1.05em;
+  color: #2d5016;
+  font-weight: 500;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.home-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #4a7c2c 0%, #6b9a3e 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(74, 124, 44, 0.3);
+}
+
+.home-link:hover {
+  background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(74, 124, 44, 0.4);
+}
+
+.home-icon {
+  font-size: 1.3em;
+}
+
+/* 響應式 - 平板 */
+@media (max-width: 900px) {
+  .story-navigation {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  
+  .nav-home {
+    grid-column: 1 / -1;
+    order: -1;
+    margin-bottom: 15px;
+  }
+  
+  .nav-link {
+    max-width: 100%;
+  }
+}
+
+/* 響應式 - 手機 */
+@media (max-width: 600px) {
+  .story-navigation {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .nav-prev, .nav-next {
+    justify-content: stretch;
+  }
+  
+  .nav-link {
+    max-width: 100%;
+    text-align: center !important;
+  }
+  
+  .nav-link.prev .nav-label::before {
+    content: '';
+  }
+  
+  .nav-link.next .nav-label::after {
+    content: '';
+  }
 }
 
 .story-footer {
