@@ -9,11 +9,11 @@ layout: default
   <p class="formula-name">💊 {{ page.formula }}</p>
   <div class="meta">
     <span class="date">📅 {{ page.date | date: "%Y年%m月%d日" }}</span>
-    {% assign words = content | strip_html | number_of_words %}
-    {% if words < 360 %}
+    {% assign content_text = content | strip_html | strip_newlines %}
+    {% assign char_count = content_text | size %}
+    {% assign read_time = char_count | divided_by: 500 %}
+    {% if read_time < 1 %}
       {% assign read_time = 1 %}
-    {% else %}
-      {% assign read_time = words | divided_by: 400 %}
     {% endif %}
     <span class="reading-time">⏱️ 閱讀時間：約 {{ read_time }} 分鐘</span>
   </div>
