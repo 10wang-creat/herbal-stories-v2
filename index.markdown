@@ -6,9 +6,8 @@ title: 首頁
 <div class="hero-section">
   <h1>🌿 歡迎來到草本故事館</h1>
   <p class="hero-subtitle">用故事認識中藥方劑，讓傳統醫學變得生動有趣</p>
-</div>
-
-<!-- 社群媒體按鈕 -->
+  
+  <!-- 社群媒體按鈕 -->
   <div class="hero-social">
     <a href="https://www.instagram.com/meet.the.herbs" 
        target="_blank" 
@@ -17,9 +16,69 @@ title: 首頁
       <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
       </svg>
-      <span>追蹤 @meet.the.herbs</span>
+      <span>追蹤 IG</span>
+    </a>
+    <a href="https://open.spotify.com/show/6k6qAkTg8nX7k4FMU32hgT" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="social-button spotify">
+      <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+      </svg>
+      <span>收聽 Podcast</span>
     </a>
   </div>
+</div>
+
+<!-- 🎙️ Podcast 預告區塊 -->
+<section class="podcast-section">
+  <div class="podcast-header">
+    <span class="podcast-badge">🎙️ 新企劃</span>
+    <h2>草本夜話</h2>
+    <p class="podcast-tagline">每一味藥草，都有自己的故事</p>
+  </div>
+  
+  <div class="podcast-content">
+    <div class="podcast-description">
+      <p class="podcast-intro">夜深了，讓我為你說一段草本的故事。</p>
+      <p>當歸為什麼叫「當歸」？人參怎麼從山野走進皇宮？枸杞和菊花又是怎麼成為絕配的？</p>
+      <p>在這裡，沒有艱澀的醫理，只有溫暖的故事。跟著二十四節氣的腳步，我們一起認識那些陪伴人們千年的草本植物——它們的名字由來、民間傳說、歷代名醫如何運用，還有如何在日常生活中與它們相遇。</p>
+      
+      <div class="podcast-meta">
+        <span class="meta-item">🌙 適合睡前聆聽</span>
+        <span class="meta-item">📅 每兩週更新</span>
+      </div>
+      
+      <div class="podcast-launch">
+        <span class="launch-icon">🌸</span>
+        <span>2026 立春首播</span>
+      </div>
+      
+      <a href="https://open.spotify.com/show/6k6qAkTg8nX7k4FMU32hgT" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         class="podcast-cta">
+        <svg class="spotify-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+        </svg>
+        追蹤節目，首播不錯過
+      </a>
+    </div>
+    
+    <div class="podcast-player">
+      <iframe 
+        style="border-radius:12px" 
+        src="https://open.spotify.com/embed/show/6k6qAkTg8nX7k4FMU32hgT?utm_source=generator&theme=0" 
+        width="100%" 
+        height="352" 
+        frameBorder="0" 
+        allowfullscreen="" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
 
 <div class="features">
   <h2>✨ 我們的特色</h2>
@@ -129,6 +188,244 @@ body {
   opacity: 0.95;
 }
 
+/* 社群媒體按鈕 */
+.hero-social {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.05em;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.social-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.social-button.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+}
+
+.social-button.spotify {
+  background: #1DB954;
+  color: white;
+}
+
+.social-button.spotify:hover {
+  background: #1ed760;
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+@media (max-width: 768px) {
+  .hero-social {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  
+  .social-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* 🎙️ Podcast 區塊樣式 */
+.podcast-section {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  border-radius: 20px;
+  padding: 50px 40px;
+  margin: 50px 0;
+  color: white;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.podcast-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(29, 185, 84, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.podcast-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.podcast-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #c9a961 0%, #e8d5a3 100%);
+  color: #1a1a2e;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.podcast-header h2 {
+  font-size: 2.8em;
+  margin: 15px 0;
+  background: linear-gradient(135deg, #ffffff 0%, #e8d5a3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.podcast-tagline {
+  font-size: 1.3em;
+  color: #a8b2d1;
+  font-style: italic;
+}
+
+.podcast-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.podcast-description {
+  position: relative;
+  z-index: 1;
+}
+
+.podcast-intro {
+  font-size: 1.25em;
+  color: #c9a961;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.podcast-description p {
+  color: #ccd6f6;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.podcast-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.meta-item {
+  background: rgba(255,255,255,0.1);
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 0.9em;
+  color: #a8b2d1;
+  backdrop-filter: blur(10px);
+}
+
+.podcast-launch {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, rgba(201, 169, 97, 0.2) 0%, rgba(232, 213, 163, 0.1) 100%);
+  border: 1px solid rgba(201, 169, 97, 0.3);
+  padding: 15px 25px;
+  border-radius: 12px;
+  margin: 20px 0;
+  font-size: 1.1em;
+  color: #c9a961;
+}
+
+.launch-icon {
+  font-size: 1.5em;
+}
+
+.podcast-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #1DB954;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05em;
+  margin-top: 20px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(29, 185, 84, 0.3);
+}
+
+.podcast-cta:hover {
+  background: #1ed760;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(29, 185, 84, 0.4);
+}
+
+.spotify-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.podcast-player {
+  position: relative;
+  z-index: 1;
+}
+
+.podcast-player iframe {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 900px) {
+  .podcast-section {
+    padding: 40px 25px;
+  }
+  
+  .podcast-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .podcast-header h2 {
+    font-size: 2.2em;
+  }
+  
+  .podcast-meta {
+    justify-content: center;
+  }
+  
+  .podcast-launch {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .podcast-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .features {
   margin: 50px 0;
 }
@@ -146,14 +443,12 @@ body {
   gap: 30px;
 }
 
-/* 響應式設計 - 手機螢幕 */
 @media (max-width: 900px) {
   .feature-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* 平板螢幕 - 顯示兩欄 */
 @media (min-width: 901px) and (max-width: 1200px) {
   .feature-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -175,10 +470,9 @@ body {
   box-shadow: 0 12px 30px rgba(45, 80, 22, 0.3);
 }
 
-.feature-card .icon {
-  font-size: 3.5em;
+.feature-icon {
+  font-size: 3em;
   margin-bottom: 20px;
-  display: block;
 }
 
 .feature-card h3 {
@@ -297,7 +591,7 @@ body {
   color: #6b9a3e;
 }
 
-  /* RSS 訂閱區塊 */
+/* RSS 訂閱區塊 */
 .rss-subscribe-box {
   display: flex;
   gap: 30px;
@@ -399,7 +693,6 @@ body {
   color: #2d5016;
 }
 
-/* 響應式設計 - 手機 */
 @media (max-width: 768px) {
   .rss-subscribe-box {
     flex-direction: column;
@@ -420,57 +713,6 @@ body {
   .rss-button {
     justify-content: center;
     width: 100%;
-  }
-}
-
-  /* 社群媒體按鈕 */
-.hero-social {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.social-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 35px;
-  background: white;
-  color: #2d5016;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 1.1em;
-  transition: all 0.3s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.social-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-}
-
-.social-button.instagram {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  color: white;
-}
-
-.social-icon {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
-}
-
-@media (max-width: 768px) {
-  .hero-social {
-    flex-direction: column;
-    padding: 0 20px;
-  }
-  
-  .social-button {
-    width: 100%;
-    justify-content: center;
   }
 }
 </style>
