@@ -23,7 +23,7 @@ ingredients:
     image: gancao.png
   - name: 熟地黃
     description: 君藥｜滋陰補血
-    image: shudi.png
+    image: shudihuang.png
   - name: 當歸
     description: 臣藥｜補血活血
     image: danggui.png
