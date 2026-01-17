@@ -13,9 +13,9 @@ permalink: /tags/
       <div class="tag-group">
         {% assign efficacy_tags = "補氣,補血,補陰,補陽,清熱,溫裡,理氣,活血,化痰,安神" | split: "," %}
         {% for tag in efficacy_tags %}
-          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
-          {% if tag_posts.size > 0 %}
-            <a href="#{{ tag }}" class="tag-button efficacy">{{ tag }} ({{ tag_posts.size }})</a>
+          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" %}
+          {% if tag_stories.size > 0 %}
+            <a href="#{{ tag }}" class="tag-button efficacy">{{ tag }} ({{ tag_stories.size }})</a>
           {% endif %}
         {% endfor %}
       </div>
@@ -24,11 +24,11 @@ permalink: /tags/
     <section class="tag-section">
       <h2>💊 依症狀分類</h2>
       <div class="tag-group">
-        {% assign symptom_tags = "疲勞無力,消化不良,失眠多夢,感冒咳嗽,頭痛眩暈,經期不調" | split: "," %}
+        {% assign symptom_tags = "疲勞無力,消化不良,失眠多夢,感冒咳嗽,頭痛眩暈,經期不調,婦科調理" | split: "," %}
         {% for tag in symptom_tags %}
-          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
-          {% if tag_posts.size > 0 %}
-            <a href="#{{ tag }}" class="tag-button symptom">{{ tag }} ({{ tag_posts.size }})</a>
+          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" %}
+          {% if tag_stories.size > 0 %}
+            <a href="#{{ tag }}" class="tag-button symptom">{{ tag }} ({{ tag_stories.size }})</a>
           {% endif %}
         {% endfor %}
       </div>
@@ -39,9 +39,9 @@ permalink: /tags/
       <div class="tag-group">
         {% assign level_tags = "入門,進階,專業" | split: "," %}
         {% for tag in level_tags %}
-          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
-          {% if tag_posts.size > 0 %}
-            <a href="#{{ tag }}" class="tag-button level">{{ tag }} ({{ tag_posts.size }})</a>
+          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" %}
+          {% if tag_stories.size > 0 %}
+            <a href="#{{ tag }}" class="tag-button level">{{ tag }} ({{ tag_stories.size }})</a>
           {% endif %}
         {% endfor %}
       </div>
@@ -50,32 +50,46 @@ permalink: /tags/
 
   <hr>
 
+  <!-- 收集所有標籤 -->
+  {% assign all_tags_array = "" | split: "" %}
+  {% for story in site.stories %}
+    {% for tag in story.tags %}
+      {% unless all_tags_array contains tag %}
+        {% assign all_tags_array = all_tags_array | push: tag %}
+      {% endunless %}
+    {% endfor %}
+  {% endfor %}
+  {% assign all_tags_sorted = all_tags_array | sort %}
+
   <!-- 顯示每個標籤下的文章列表 -->
-  {% assign all_tags = site.tags | sort %}
-  {% for tag in all_tags %}
-    <section id="{{ tag[0] }}" class="tag-posts-section">
+  {% for tag in all_tags_sorted %}
+    {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" | sort: "date" | reverse %}
+    <section id="{{ tag }}" class="tag-posts-section">
       <h2 class="tag-title">
-        <span class="tag-icon">#</span> {{ tag[0] }}
-        <span class="tag-count">({{ tag[1].size }} 篇)</span>
+        <span class="tag-icon">#</span> {{ tag }}
+        <span class="tag-count">({{ tag_stories.size }} 篇)</span>
       </h2>
       
       <div class="posts-grid">
-        {% for post in tag[1] %}
+        {% for story in tag_stories %}
           <article class="post-card">
             <h3>
-              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              <a href="{{ story.url | relative_url }}">{{ story.title }}</a>
             </h3>
+            {% if story.formula %}
+              <div class="formula-name">💊 {{ story.formula }}</div>
+            {% endif %}
             <div class="post-meta">
-              <time datetime="{{ post.date | date_to_xmlschema }}">
-                {{ post.date | date: "%Y年%m月%d日" }}
+              <time datetime="{{ story.date | date_to_xmlschema }}">
+                {{ story.date | date: "%Y年%m月%d日" }}
               </time>
             </div>
-            {% if post.excerpt %}
-              <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+            {% if story.excerpt %}
+              <p class="post-excerpt">{{ story.excerpt | truncate: 80 }}</p>
             {% endif %}
             <div class="post-tags">
-              {% for post_tag in post.tags limit:3 %}
-                <span class="mini-tag">{{ post_tag }}</span>
+              {% for story_tag in story.tags limit:3 %}
+                <span class="mini-tag">{{ story_tag }}</span>
               {% endfor %}
             </div>
           </article>
@@ -149,8 +163,16 @@ permalink: /tags/
   border-color: #d4a574;
 }
 
+.tag-button.symptom:hover {
+  background: #d4a574;
+}
+
 .tag-button.level {
   border-color: #8b7355;
+}
+
+.tag-button.level:hover {
+  background: #8b7355;
 }
 
 .tag-posts-section {
@@ -189,6 +211,7 @@ permalink: /tags/
   padding: 1.5rem;
   border-radius: 8px;
   border: 1px solid #e8dcc8;
+  border-left: 4px solid #4a7c2c;
   transition: all 0.3s ease;
 }
 
@@ -209,6 +232,13 @@ permalink: /tags/
 
 .post-card h3 a:hover {
   color: #6b9a3e;
+}
+
+.formula-name {
+  color: #c9a961;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
 }
 
 .post-meta {
