@@ -54,7 +54,7 @@ source: 《內科摘要》
 
 ## 📖 「我以為我已經學會了⋯⋯」
 
-如果你讀過[逍遙散的故事](/herbal-stories-v2/stories/xiao-yao-san/)，你應該還記得 Amy——那個因為工作壓力而「肝氣鬱結」的廣告設計師。
+如果你讀過[逍遙散的故事]({{ site.baseurl }}/stories/xiao-yao-san/)，你應該還記得 Amy——那個因為工作壓力而「肝氣鬱結」的廣告設計師。
 
 在那之後，Amy 遵照醫囑調理身體，學會了早睡、週末爬山、適時說「不」。她以為自己已經從壓力的漩渦中畢業了。
 
@@ -605,9 +605,9 @@ Amy 還是會想起阿凱，但那種想起，從「燒灼的痛」變成「淡�
 
 想了解更多相關方劑？
 
-- 👉 [逍遙散：壓力山大時的解鬱小隊](/herbal-stories-v2/stories/xiao-yao-san/) — Amy 的第一次調理經歷
-- 👉 [歸脾湯：失眠健忘的修復之旅](/herbal-stories-v2/stories/gui-pi-tang/) — 另一種「心好累」的調理
-- 👉 [四物湯：四姊妹的補血約定](/herbal-stories-v2/stories/si-wu-tang/) — 認識補血的基礎
+- 👉 [逍遙散：壓力山大時的解鬱小隊]({{ site.baseurl }}/stories/xiao-yao-san/) — Amy 的第一次調理經歷
+- 👉 [歸脾湯：失眠健忘的修復之旅]({{ site.baseurl }}/stories/gui-pi-tang/) — 另一種「心好累」的調理
+- 👉 [四物湯：四姊妹的補血約定]({{ site.baseurl }}/stories/si-wu-tang/) — 認識補血的基礎
 
 ---
 

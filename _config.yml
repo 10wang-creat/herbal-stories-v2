@@ -2,8 +2,8 @@ title: 草本故事館
 email: s881705@gmail.com
 description: >-
   用故事認識中藥方劑，讓傳統醫學變得生動有趣
-baseurl: "/herbal-stories-v2"
-url: "https://10wang-creat.github.io"
+baseurl: ""
+url: "https://herbal-stories-v2.vercel.app"
 github_username: 10wang-creat
 
 # Build settings
