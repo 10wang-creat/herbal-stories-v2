@@ -1,0 +1,190 @@
+---
+layout: default
+title: 聯絡我們
+---
+
+<div class="contact-page">
+  <h1>📬 聯絡我們</h1>
+  
+  <p class="contact-intro">
+    有任何問題、建議，或想聊聊中藥方劑的故事？<br>
+    歡迎留言，我會盡快回覆你！
+  </p>
+
+  <form 
+    action="https://formspree.io/f/YOUR_FORM_ID" 
+    method="POST"
+    class="contact-form"
+  >
+    <div class="form-group">
+      <label for="name">稱呼 *</label>
+      <input type="text" id="name" name="name" required placeholder="你的名字或暱稱">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required placeholder="方便回覆你的信箱">
+    </div>
+
+    <div class="form-group">
+      <label for="subject">主題</label>
+      <select id="subject" name="subject">
+        <option value="一般問題">一般問題</option>
+        <option value="內容建議">內容建議（想看什麼方劑）</option>
+        <option value="錯誤回報">錯誤回報</option>
+        <option value="合作邀約">合作邀約</option>
+        <option value="其他">其他</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="message">訊息內容 *</label>
+      <textarea id="message" name="message" rows="6" required placeholder="想說什麼都可以..."></textarea>
+    </div>
+
+    <!-- Honeypot 防垃圾郵件 -->
+    <input type="text" name="_gotcha" style="display:none">
+    
+    <!-- 成功後導向 -->
+    <input type="hidden" name="_next" value="{{ site.url }}/contact-success/">
+    
+    <!-- 郵件主旨 -->
+    <input type="hidden" name="_subject" value="草本故事館 - 新訊息">
+
+    <button type="submit" class="submit-btn">🌿 送出訊息</button>
+  </form>
+
+  <div class="contact-alt">
+    <p>或者透過其他方式聯繫：</p>
+    <ul>
+      <li>📧 Email：<a href="mailto:s881705@gmail.com">s881705@gmail.com</a></li>
+      <li>📷 Instagram：<a href="https://instagram.com/meet.the.herbs" target="_blank">@meet.the.herbs</a></li>
+    </ul>
+  </div>
+</div>
+
+<style>
+.contact-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.contact-page h1 {
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.contact-intro {
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.contact-form {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.contact-alt {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.contact-alt p {
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.contact-alt ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-alt li {
+  margin: 0.5rem 0;
+}
+
+.contact-alt a {
+  color: #2e7d32;
+  text-decoration: none;
+}
+
+.contact-alt a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 1.5rem;
+  }
+}
+</style>

@@ -1,0 +1,56 @@
+---
+layout: default
+title: 訊息已送出
+---
+
+<div class="success-page">
+  <div class="success-icon">✅</div>
+  <h1>訊息已送出！</h1>
+  <p>謝謝你的留言，我會盡快回覆你 📬</p>
+  <a href="{{ site.baseurl }}/" class="back-btn">🌿 回到首頁</a>
+</div>
+
+<style>
+.success-page {
+  max-width: 500px;
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.success-page h1 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.success-page p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.back-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+  color: white;
+}
+</style>

@@ -31,6 +31,7 @@ header_pages:
   - stories.html
   - tags.html
   - search.html
+  - contact.html
   - about.markdown
 
   # Disqus 留言系統
