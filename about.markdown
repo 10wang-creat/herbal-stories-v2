@@ -109,13 +109,7 @@ permalink: /about/
       </div>
     </section>
 
-    <section class="contact">
-      <div class="section-icon">📮</div>
-      <h2>聯絡我們</h2>
-      <p>如果你有任何建議、問題，或想分享你的中醫故事，歡迎與我們聯絡：</p>
-      <p class="contact-email">📧 <a href="mailto:s881705@gmail.com">s881705@gmail.com</a></p>
-      <p class="contact-social">💻 <a href="https://github.com/10wang-creat" target="_blank">GitHub: @10wang-creat</a></p>
-    </section>
+
   </div>
 </div>
 
@@ -366,26 +360,4 @@ permalink: /about/
   color: #664d03;
 }
 
-.contact {
-  text-align: center;
-}
-
-.contact-email,
-.contact-social {
-  font-size: 1.2em;
-  margin: 15px 0;
-}
-
-.contact-email a,
-.contact-social a {
-  color: #4a7c2c;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.contact-email a:hover,
-.contact-social a:hover {
-  color: #2d5016;
-  text-decoration: underline;
-}
 </style>
