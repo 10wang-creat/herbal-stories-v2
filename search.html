@@ -12,7 +12,7 @@ permalink: /search/
       <input 
         type="text" 
         id="search-input" 
-        placeholder="搜尋文章標題、內容、標籤..." 
+        placeholder="搜尋方劑、藥材、症狀..." 
         autocomplete="off"
       >
       <button id="search-button">
@@ -20,39 +20,80 @@ permalink: /search/
       </button>
     </div>
     
+    <div class="search-tips">
+      <p>💡 試試看：<span class="tip-keyword" data-keyword="腎虛">腎虛</span>、<span class="tip-keyword" data-keyword="失眠">失眠</span>、<span class="tip-keyword" data-keyword="補血">補血</span>、<span class="tip-keyword" data-keyword="當歸">當歸</span>、<span class="tip-keyword" data-keyword="怕冷">怕冷</span></p>
+    </div>
+    
     <div class="search-filters">
       <button class="filter-button active" data-filter="all">全部</button>
-      <button class="filter-button" data-filter="補氣">補氣</button>
-      <button class="filter-button" data-filter="補血">補血</button>
-      <button class="filter-button" data-filter="清熱">清熱</button>
-      <button class="filter-button" data-filter="入門">入門</button>
-      <button class="filter-button" data-filter="進階">進階</button>
+      {% assign all_tags = "" | split: "" %}
+      {% for story in site.stories %}
+        {% for tag in story.tags %}
+          {% assign all_tags = all_tags | push: tag %}
+        {% endfor %}
+      {% endfor %}
+      {% assign unique_tags = all_tags | uniq | sort %}
+      {% for tag in unique_tags limit:8 %}
+      <button class="filter-button" data-filter="{{ tag }}">{{ tag }}</button>
+      {% endfor %}
     </div>
   </div>
 
   <div id="search-results">
-    <p class="search-hint">請輸入關鍵字開始搜尋...</p>
+    <div class="initial-content">
+      <p class="search-hint">輸入關鍵字搜尋方劑、藥材或症狀</p>
+      
+      <div class="all-formulas">
+        <h2>📚 所有方劑</h2>
+        <div class="formula-grid">
+          {% assign sorted_stories = site.stories | sort: "date" | reverse %}
+          {% for story in sorted_stories %}
+          <a href="{{ story.url | relative_url }}" class="formula-card">
+            <span class="formula-icon">💊</span>
+            <span class="formula-name">{{ story.formula }}</span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- 將文章數據注入到 JavaScript -->
 <script>
-const posts = [
-  {% for post in site.posts %}
+const stories = [
+  {% for story in site.stories %}
   {
-    title: {{ post.title | jsonify }},
-    url: {{ post.url | relative_url | jsonify }},
-    date: {{ post.date | date: "%Y年%m月%d日" | jsonify }},
-    excerpt: {{ post.excerpt | strip_html | truncate: 150 | jsonify }},
-    content: {{ post.content | strip_html | jsonify }},
-    tags: {{ post.tags | jsonify }}
+    title: {{ story.title | jsonify }},
+    formula: {{ story.formula | jsonify }},
+    url: {{ story.url | relative_url | jsonify }},
+    date: {{ story.date | date: "%Y年%m月%d日" | jsonify }},
+    excerpt: {{ story.excerpt | jsonify }},
+    content: {{ story.content | strip_html | jsonify }},
+    tags: {{ story.tags | jsonify }},
+    effects: {{ story.effects | jsonify }},
+    ingredients: [{% for ing in story.ingredients %}"{{ ing.name }}"{% unless forloop.last %},{% endunless %}{% endfor %}]
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ];
+
+// 症狀關鍵字對照表（智慧搜尋）
+const symptomKeywords = {
+  "感冒": ["風寒", "風熱", "發燒", "頭痛", "鼻塞"],
+  "頭痛": ["川芎", "白芷", "頭風", "偏頭痛"],
+  "失眠": ["安神", "養心", "心悸", "多夢", "歸脾湯", "酸棗仁"],
+  "疲勞": ["補氣", "氣虛", "乏力", "四君子", "參"],
+  "怕冷": ["陽虛", "溫補", "腎陽", "附子", "肉桂", "畏寒"],
+  "腰痠": ["腎虛", "補腎", "地黃丸", "腰膝"],
+  "月經": ["血虛", "補血", "四物湯", "當歸", "調經"],
+  "消化": ["健脾", "脾胃", "四君子", "四神湯", "腹瀉"],
+  "壓力": ["肝鬱", "逍遙散", "疏肝", "解鬱"],
+  "掉髮": ["腎虛", "血虛", "補腎", "補血"],
+  "水腫": ["利濕", "茯苓", "澤瀉", "脾虛"]
+};
 </script>
 
 <script>
-// 搜尋功能
 let currentFilter = 'all';
 
 function performSearch() {
@@ -60,47 +101,93 @@ function performSearch() {
   const resultsContainer = document.getElementById('search-results');
   
   if (query.length === 0) {
-    resultsContainer.innerHTML = '<p class="search-hint">請輸入關鍵字開始搜尋...</p>';
+    // 顯示初始內容
+    resultsContainer.innerHTML = document.querySelector('.initial-content').outerHTML;
+    bindFormulaCards();
     return;
   }
   
+  // 擴展搜尋關鍵字（智慧搜尋）
+  let searchTerms = [query];
+  for (const [symptom, related] of Object.entries(symptomKeywords)) {
+    if (query.includes(symptom) || symptom.includes(query)) {
+      searchTerms = searchTerms.concat(related);
+    }
+  }
+  
   // 搜尋邏輯
-  let results = posts.filter(post => {
-    const matchesQuery = 
-      post.title.toLowerCase().includes(query) ||
-      post.content.toLowerCase().includes(query) ||
-      post.tags.some(tag => tag.toLowerCase().includes(query));
+  let results = stories.filter(story => {
+    const matchesQuery = searchTerms.some(term => {
+      const lowerTerm = term.toLowerCase();
+      return (
+        story.title.toLowerCase().includes(lowerTerm) ||
+        story.formula.toLowerCase().includes(lowerTerm) ||
+        story.content.toLowerCase().includes(lowerTerm) ||
+        story.effects.toLowerCase().includes(lowerTerm) ||
+        story.tags.some(tag => tag.toLowerCase().includes(lowerTerm)) ||
+        story.ingredients.some(ing => ing.toLowerCase().includes(lowerTerm))
+      );
+    });
     
     const matchesFilter = 
       currentFilter === 'all' || 
-      post.tags.includes(currentFilter);
+      story.tags.includes(currentFilter);
     
     return matchesQuery && matchesFilter;
   });
+  
+  // 計算相關度分數並排序
+  results = results.map(story => {
+    let score = 0;
+    const lowerQuery = query.toLowerCase();
+    
+    // 方劑名稱完全匹配得分最高
+    if (story.formula.toLowerCase().includes(lowerQuery)) score += 100;
+    // 標題匹配
+    if (story.title.toLowerCase().includes(lowerQuery)) score += 50;
+    // 藥材匹配
+    if (story.ingredients.some(ing => ing.toLowerCase().includes(lowerQuery))) score += 30;
+    // 功效匹配
+    if (story.effects.toLowerCase().includes(lowerQuery)) score += 20;
+    // 標籤匹配
+    if (story.tags.some(tag => tag.toLowerCase().includes(lowerQuery))) score += 15;
+    
+    return { ...story, score };
+  }).sort((a, b) => b.score - a.score);
   
   // 顯示結果
   if (results.length === 0) {
     resultsContainer.innerHTML = `
       <div class="no-results">
         <p>😕 找不到符合「${query}」的文章</p>
-        <p class="search-suggestion">試試其他關鍵字，或使用下方的分類篩選</p>
+        <p class="search-suggestion">試試其他關鍵字，例如：方劑名、藥材名、症狀</p>
       </div>
     `;
   } else {
     resultsContainer.innerHTML = `
       <p class="results-count">找到 <strong>${results.length}</strong> 篇相關文章</p>
       <div class="results-grid">
-        ${results.map(post => `
+        ${results.map(story => `
           <article class="result-card">
-            <h3><a href="${post.url}">${highlightText(post.title, query)}</a></h3>
-            <div class="post-meta">
-              <time>${post.date}</time>
+            <div class="card-header">
+              <span class="formula-badge">💊 ${story.formula}</span>
             </div>
-            <p class="post-excerpt">${highlightText(post.excerpt, query)}</p>
-            ${post.tags.length > 0 ? `
+            <h3><a href="${story.url}">${highlightText(story.title, query)}</a></h3>
+            <div class="post-meta">
+              <time>📅 ${story.date}</time>
+            </div>
+            <p class="post-effects">✨ ${highlightText(story.effects, query)}</p>
+            <div class="post-ingredients">
+              <span class="ingredients-label">🌿 藥材：</span>
+              ${story.ingredients.slice(0, 5).map(ing => 
+                `<span class="ingredient ${ing.toLowerCase().includes(query.toLowerCase()) ? 'highlight' : ''}">${ing}</span>`
+              ).join('')}
+              ${story.ingredients.length > 5 ? '<span class="more">...</span>' : ''}
+            </div>
+            ${story.tags.length > 0 ? `
               <div class="post-tags">
-                ${post.tags.slice(0, 4).map(tag => 
-                  `<span class="tag">${tag}</span>`
+                ${story.tags.slice(0, 4).map(tag => 
+                  `<span class="tag ${tag.toLowerCase().includes(query.toLowerCase()) ? 'highlight' : ''}">${tag}</span>`
                 ).join('')}
               </div>
             ` : ''}
@@ -113,28 +200,36 @@ function performSearch() {
 
 // 高亮關鍵字
 function highlightText(text, query) {
-  if (!query) return text;
+  if (!query || !text) return text || '';
   const regex = new RegExp(`(${query})`, 'gi');
   return text.replace(regex, '<mark>$1</mark>');
+}
+
+// 綁定方劑卡片點擊
+function bindFormulaCards() {
+  // 已經是連結，不需要額外綁定
 }
 
 // 事件監聽
 document.getElementById('search-input').addEventListener('input', performSearch);
 document.getElementById('search-button').addEventListener('click', performSearch);
 
+// 提示關鍵字點擊
+document.querySelectorAll('.tip-keyword').forEach(tip => {
+  tip.addEventListener('click', function() {
+    document.getElementById('search-input').value = this.dataset.keyword;
+    performSearch();
+  });
+});
+
 // 篩選按鈕
 document.querySelectorAll('.filter-button').forEach(button => {
   button.addEventListener('click', function() {
-    // 更新按鈕狀態
     document.querySelectorAll('.filter-button').forEach(btn => 
       btn.classList.remove('active')
     );
     this.classList.add('active');
-    
-    // 更新篩選條件
     currentFilter = this.dataset.filter;
-    
-    // 重新搜尋
     performSearch();
   });
 });
@@ -162,13 +257,13 @@ document.getElementById('search-input').addEventListener('keypress', function(e)
 }
 
 .search-container {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .search-box {
   display: flex;
   max-width: 700px;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1rem;
   box-shadow: 0 4px 12px rgba(107, 154, 62, 0.15);
   border-radius: 50px;
   overflow: hidden;
@@ -183,6 +278,10 @@ document.getElementById('search-input').addEventListener('keypress', function(e)
   font-size: 1.1rem;
   outline: none;
   border-radius: 50px 0 0 50px;
+}
+
+#search-input:focus {
+  border-color: #4a7c2c;
 }
 
 #search-button {
@@ -203,22 +302,49 @@ document.getElementById('search-input').addEventListener('keypress', function(e)
   font-size: 1.3rem;
 }
 
+.search-tips {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.search-tips p {
+  color: #8b7355;
+  font-size: 0.95rem;
+}
+
+.tip-keyword {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  background: #f0e8d8;
+  color: #4a7c2c;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 0.2rem;
+  transition: all 0.2s ease;
+}
+
+.tip-keyword:hover {
+  background: #6b9a3e;
+  color: white;
+}
+
 .search-filters {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.5rem;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 .filter-button {
-  padding: 0.5rem 1.25rem;
+  padding: 0.4rem 1rem;
   background: white;
   border: 2px solid #e8dcc8;
   border-radius: 20px;
   cursor: pointer;
   color: #4a7c2c;
   font-weight: 500;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
 }
 
@@ -241,9 +367,58 @@ document.getElementById('search-input').addEventListener('keypress', function(e)
   text-align: center;
   color: #8b7355;
   font-size: 1.1rem;
-  padding: 3rem;
+  padding: 2rem;
 }
 
+/* 所有方劑區塊 */
+.all-formulas {
+  margin-top: 2rem;
+}
+
+.all-formulas h2 {
+  color: #2d5016;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.formula-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.formula-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background: white;
+  border: 2px solid #e8dcc8;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.formula-card:hover {
+  border-color: #6b9a3e;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(107, 154, 62, 0.2);
+}
+
+.formula-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.formula-name {
+  color: #2d5016;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* 搜尋結果 */
 .no-results {
   text-align: center;
   padding: 3rem;
@@ -277,14 +452,14 @@ document.getElementById('search-input').addEventListener('keypress', function(e)
 
 .results-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.5rem;
 }
 
 .result-card {
   background: white;
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 12px;
   border: 1px solid #e8dcc8;
   transition: all 0.3s ease;
 }
@@ -294,9 +469,24 @@ document.getElementById('search-input').addEventListener('keypress', function(e)
   transform: translateY(-4px);
 }
 
+.card-header {
+  margin-bottom: 0.75rem;
+}
+
+.formula-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: linear-gradient(135deg, #6b9a3e, #4a7c2c);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 .result-card h3 {
   margin: 0 0 0.5rem 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
 }
 
 .result-card h3 a {
@@ -317,35 +507,75 @@ mark {
 
 .post-meta {
   color: #8b7355;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin-bottom: 0.75rem;
 }
 
-.post-excerpt {
-  color: #666;
-  font-size: 0.95rem;
-  line-height: 1.6;
+.post-effects {
+  color: #4a7c2c;
+  font-size: 0.9rem;
+  line-height: 1.5;
   margin: 0.75rem 0;
+  padding: 0.5rem;
+  background: #f9f6f0;
+  border-radius: 8px;
+}
+
+.post-ingredients {
+  margin: 0.75rem 0;
+  font-size: 0.85rem;
+}
+
+.ingredients-label {
+  color: #8b7355;
+}
+
+.ingredient {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background: #e8f5e9;
+  color: #2d5016;
+  border-radius: 4px;
+  margin: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.ingredient.highlight {
+  background: #ffe066;
+  font-weight: 600;
+}
+
+.more {
+  color: #8b7355;
 }
 
 .post-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
 }
 
 .tag {
-  font-size: 0.8rem;
-  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
   background: #f0e8d8;
   color: #4a7c2c;
   border-radius: 12px;
 }
 
+.tag.highlight {
+  background: #ffe066;
+  font-weight: 600;
+}
+
 @media (max-width: 768px) {
+  .search-page {
+    padding: 1rem;
+  }
+  
   .search-page h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .search-box {
@@ -354,15 +584,37 @@ mark {
   
   #search-input {
     font-size: 1rem;
-    padding: 0.875rem 1.25rem;
+    padding: 0.875rem 1rem;
   }
   
   #search-button {
-    padding: 0.875rem 1.5rem;
+    padding: 0.875rem 1.25rem;
+  }
+  
+  .formula-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  .formula-card {
+    padding: 1rem 0.75rem;
+  }
+  
+  .formula-name {
+    font-size: 0.9rem;
   }
   
   .results-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .search-filters {
+    gap: 0.4rem;
+  }
+  
+  .filter-button {
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8rem;
   }
 }
 </style>
