@@ -2,7 +2,7 @@
 layout: story
 title: 補中益氣湯：氣虛下陷時的升降電梯
 formula: 補中益氣湯
-date: 2025-01-31
+date: 2026-01-31
 tags:
   - 補氣
   - 升提
