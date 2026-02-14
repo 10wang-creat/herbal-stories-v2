@@ -2,7 +2,7 @@
 layout: story
 title: "當歸補血湯：補血為什麼要靠補氣？"
 formula: 當歸補血湯
-date: 2026-02-09
+date: 2026-02-13
 tags:
   - 補氣生血
   - 氣血理論
