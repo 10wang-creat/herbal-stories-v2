@@ -1,173 +1,159 @@
----
----
-@import "minima";
-
-$herbal-green: #2d5016;
-$light-green: #4a7c2c;
-$cream: #f5f1e8;
-$gold: #c9a961;
-
-body {
-  background-color: $cream;
-  font-family: "Microsoft JhengHei", sans-serif;
-}
-
-.site-header {
-  background-color: $herbal-green;
-  border-top: 5px solid $gold;
-  border-bottom: none;
-}
-
-.site-title, .site-title:visited {
-  color: $cream !important;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.site-nav .page-link {
-  color: $cream;
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  &:hover {
-    color: $gold;
-  }
-}
-
-.story-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.story-card {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  border-left: 4px solid $light-green;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
+  <!-- 基本 SEO -->
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title | default: "草本故事館" }}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  }
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="{% if page.layout == 'story' %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/og-image.png">
   
-  h3 {
-    margin-top: 0;
-    color: $herbal-green;
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ page.url | absolute_url }}">
+  <meta property="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/og-image.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon.png">
+  
+  <!-- Vercel Web Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     
-    a {
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", "微軟正黑體", sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f1e8;
+    }
+    
+    /* 網站 Header */
+    .site-header {
+      background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
+      padding: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .site-header .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .site-title {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: white;
       text-decoration: none;
-      color: $herbal-green;
-      
-      &:hover {
-        color: $light-green;
-      }
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-  }
-  
-  .formula-name {
-    color: $gold;
-    font-weight: bold;
-    margin: 5px 0;
-  }
-}
-
-.story-header {
-  text-align: center;
-  margin-bottom: 40px;
-  padding: 30px;
-  background: linear-gradient(135deg, $herbal-green 0%, $light-green 100%);
-  color: white;
-  border-radius: 8px;
-  
-  h1 {
-    margin-bottom: 10px;
-    font-size: 2.5em;
-  }
-  
-  .formula-name {
-    font-size: 1.3em;
-    color: $gold;
-    font-weight: bold;
-  }
-  
-  .meta {
-    margin-top: 10px;
-    opacity: 0.9;
-  }
-}
-
-.story-content {
-  line-height: 1.8;
-  font-size: 1.1em;
-  
-  p {
-    margin-bottom: 1.5em;
-  }
-}
-
-.ingredients, .effects {
-  background: white;
-  padding: 25px;
-  margin-top: 30px;
-  border-radius: 8px;
-  border-left: 4px solid $light-green;
-  
-  h2 {
-    color: $herbal-green;
-    margin-top: 0;
-  }
-  
-  ul {
-    list-style: none;
-    padding-left: 0;
     
-    li {
-      padding: 10px 0;
-      border-bottom: 1px solid #eee;
+    .site-title:hover {
+      opacity: 0.9;
+    }
+    
+    .site-nav {
+      display: flex;
+      gap: 30px;
+    }
+    
+    .site-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1em;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: all 0.3s;
+    }
+    
+    .site-nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    /* 主要內容區 */
+    .page-content {
+      min-height: calc(100vh - 400px);
+    }
+    
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* 響應式 - 手機 */
+    @media (max-width: 768px) {
+      .site-header .wrapper {
+        flex-direction: column;
+        gap: 10px;
+      }
       
-      &:last-child {
-        border-bottom: none;
+      .site-nav {
+        gap: 6px;
+        flex-wrap: nowrap;
+        justify-content: center;
+      }
+      
+      .site-nav a {
+        font-size: 0.9em;
+        padding: 5px 10px;
       }
     }
-  }
-}
+  </style>
+</head>
 
-/* 表格樣式 */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5em 0;
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-table th,
-table td {
-  border: 1px solid #ddd;
-  padding: 12px 15px;
-  text-align: left;
-}
-
-table th {
-  background-color: $herbal-green;
-  color: white;
-  font-weight: bold;
-}
-
-table td:first-child {
-  background-color: #f0f4e8;
-  color: $herbal-green;
-  font-weight: bold;
-}
-
-table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-table tr:hover {
-  background-color: #f5f5f5;
-}
+<body>
+  <!-- 網站 Header -->
+  <header class="site-header">
+    <div class="wrapper">
+      <a href="{{ site.baseurl }}/" class="site-title">
+        🌿 草本故事館
+      </a>
+      
+      <nav class="site-nav">
+        <a href="{{ site.baseurl }}/">首頁</a>
+        <a href="{{ site.baseurl }}/tags/">標籤</a>
+        <a href="{{ site.baseurl }}/search/">搜尋</a>
+        <a href="{{ site.baseurl }}/contact/">聯絡</a>
+        <a href="{{ site.baseurl }}/about/">關於</a>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- 主要內容 -->
+  <main class="page-content">
+    {{ content }}
+  </main>
+  
+  <!-- 頁尾 -->
+  {% include footer.html %}
+  
+</body>
+</html>
