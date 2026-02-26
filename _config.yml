@@ -7,6 +7,7 @@ url: "https://herbal-stories-v2.vercel.app"
 github_username: 10wang-creat
 
 # Build settings
+future: true
 theme: minima
 plugins:
   - jekyll-feed
