@@ -1,0 +1,438 @@
+---
+layout: default
+title: 藥材角色圖鑑
+permalink: /characters/
+description: 草本故事館的藥材角色大集合！每味藥材都有獨特的個性和外型，快來認識這些可愛的中藥小夥伴們。
+---
+
+<style>
+/* ===== 角色圖鑑頁面樣式 ===== */
+
+.characters-hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: linear-gradient(135deg, #f0f7e6 0%, #e8f5e9 50%, #fff8e1 100%);
+  border-bottom: 3px solid #c8e6c9;
+  margin-bottom: 40px;
+}
+
+.characters-hero h1 {
+  font-size: 2.2em;
+  color: #2d5016;
+  margin-bottom: 12px;
+}
+
+.characters-hero .subtitle {
+  font-size: 1.15em;
+  color: #558b2f;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* 統計數字 */
+.characters-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2em;
+  font-weight: 700;
+  color: #33691e;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  color: #689f38;
+}
+
+/* 篩選按鈕 */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 20px;
+  margin-bottom: 36px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  border: 2px solid #c8e6c9;
+  border-radius: 25px;
+  background: white;
+  color: #558b2f;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 500;
+}
+
+.filter-btn:hover {
+  background: #e8f5e9;
+  border-color: #81c784;
+}
+
+.filter-btn.active {
+  background: #2d5016;
+  color: white;
+  border-color: #2d5016;
+}
+
+/* 角色卡片網格 */
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+.character-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid #e8f5e9;
+  box-shadow: 0 2px 12px rgba(45, 80, 22, 0.08);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.character-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(45, 80, 22, 0.18);
+  border-color: #a5d6a7;
+}
+
+.character-card .card-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(135deg, #f9fbe7 0%, #f1f8e9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.character-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.character-card:hover .card-image img {
+  transform: scale(1.08);
+}
+
+.character-card .card-info {
+  padding: 16px 18px 20px;
+}
+
+.character-card .herb-name {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #2d5016;
+  margin: 0 0 4px;
+}
+
+.character-card .herb-role {
+  font-size: 0.88em;
+  color: #8d6e63;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+
+.character-card .herb-effect {
+  font-size: 0.85em;
+  color: #689f38;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+.character-card .herb-formulas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.formula-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  background: #f1f8e9;
+  color: #558b2f;
+  border-radius: 12px;
+  font-size: 0.78em;
+  border: 1px solid #dcedc8;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a.formula-tag:hover {
+  background: #dcedc8;
+  border-color: #aed581;
+  color: #33691e;
+}
+
+/* 空狀態 */
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  grid-column: 1 / -1;
+  display: none;
+}
+
+.no-results.show {
+  display: block;
+}
+
+/* 響應式 */
+@media (max-width: 768px) {
+  .characters-hero {
+    padding: 40px 16px 30px;
+  }
+
+  .characters-hero h1 {
+    font-size: 1.7em;
+  }
+
+  .characters-stats {
+    gap: 24px;
+  }
+
+  .characters-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .character-card .card-info {
+    padding: 12px 14px 16px;
+  }
+
+  .character-card .herb-name {
+    font-size: 1.05em;
+  }
+}
+
+@media (max-width: 480px) {
+  .characters-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .character-card .herb-effect {
+    display: none;
+  }
+}
+</style>
+
+<!-- 英雄區塊 -->
+<section class="characters-hero">
+  <h1>🎭 藥材角色圖鑑</h1>
+  <p class="subtitle">每味藥材都有獨特的個性與故事——<br>來認識這些陪伴我們千年的草本小夥伴！</p>
+  <div class="characters-stats">
+    <div class="stat-item">
+      <span class="stat-number" id="total-count">0</span>
+      <span class="stat-label">位角色</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" id="formula-count">0</span>
+      <span class="stat-label">篇方劑故事</span>
+    </div>
+  </div>
+</section>
+
+<!-- 篩選列 -->
+<div class="filter-bar" id="filter-bar">
+  <button class="filter-btn active" data-filter="all">全部</button>
+  <button class="filter-btn" data-filter="補氣">補氣</button>
+  <button class="filter-btn" data-filter="補血">補血</button>
+  <button class="filter-btn" data-filter="活血">活血</button>
+  <button class="filter-btn" data-filter="滋陰">滋陰</button>
+  <button class="filter-btn" data-filter="溫陽">溫陽</button>
+  <button class="filter-btn" data-filter="理氣">理氣</button>
+  <button class="filter-btn" data-filter="安神">安神</button>
+  <button class="filter-btn" data-filter="利水">利水</button>
+  <button class="filter-btn" data-filter="解表">解表</button>
+</div>
+
+<!-- 角色卡片 -->
+<div class="characters-grid" id="characters-grid">
+
+{% comment %}
+  從所有故事的 front matter 中收集藥材角色資訊
+  每個角色只顯示一次，並列出它出現過的方劑
+{% endcomment %}
+
+{% assign all_herbs = "" | split: "" %}
+{% assign herb_names_seen = "" | split: "" %}
+
+{% assign sorted_stories = site.stories | sort: "date" %}
+{% for story in sorted_stories %}
+  {% if story.ingredients %}
+    {% for ingredient in story.ingredients %}
+      {% unless herb_names_seen contains ingredient.name %}
+        {% assign herb_names_seen = herb_names_seen | push: ingredient.name %}
+        {% capture herb_data %}{{ ingredient.name }}|||{{ ingredient.image | default: "" }}|||{{ ingredient.description | default: "" }}|||{{ story.title }}|||{{ story.url }}|||{{ ingredient.category | default: "" }}{% endcapture %}
+        {% assign all_herbs = all_herbs | push: herb_data %}
+      {% endunless %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% for herb_raw in all_herbs %}
+  {% assign parts = herb_raw | split: "|||" %}
+  {% assign h_name = parts[0] %}
+  {% assign h_image = parts[1] %}
+  {% assign h_desc = parts[2] %}
+  {% assign h_category = parts[5] | default: "" %}
+
+  {% comment %} 找出這個藥材出現在哪些方劑中 {% endcomment %}
+  {% assign appeared_in = "" | split: "" %}
+  {% for s in sorted_stories %}
+    {% if s.ingredients %}
+      {% for ing in s.ingredients %}
+        {% if ing.name == h_name %}
+          {% capture formula_info %}{{ s.formula | default: s.title }}|||{{ s.url }}{% endcapture %}
+          {% assign appeared_in = appeared_in | push: formula_info %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+
+  <div class="character-card" data-category="{{ h_category }}" data-name="{{ h_name }}">
+    <div class="card-image">
+      {% if h_image != "" %}
+        <img src="{{ site.baseurl }}/assets/images/characters/{{ h_image }}" alt="{{ h_name }}" loading="lazy">
+      {% else %}
+        <div style="font-size: 4em; opacity: 0.3;">🌿</div>
+      {% endif %}
+    </div>
+    <div class="card-info">
+      <h3 class="herb-name">{{ h_name }}</h3>
+      {% if h_desc != "" %}
+        {% assign role_parts = h_desc | split: "｜" %}
+        {% if role_parts.size > 1 %}
+          <p class="herb-role">{{ role_parts[0] }}</p>
+          <p class="herb-effect">{{ role_parts[1] }}</p>
+        {% else %}
+          <p class="herb-effect">{{ h_desc }}</p>
+        {% endif %}
+      {% endif %}
+      <div class="herb-formulas">
+        {% for fi in appeared_in %}
+          {% assign fi_parts = fi | split: "|||" %}
+          <a href="{{ site.baseurl }}{{ fi_parts[1] }}" class="formula-tag">{{ fi_parts[0] }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endfor %}
+
+  <div class="no-results" id="no-results">
+    😅 目前沒有這個分類的角色，敬請期待！
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // 統計數字
+  var cards = document.querySelectorAll('.character-card');
+  var totalEl = document.getElementById('total-count');
+  var formulaEl = document.getElementById('formula-count');
+  
+  totalEl.textContent = cards.length;
+  
+  // 計算方劑數量（從頁面中所有 formula-tag 的不重複文字）
+  var formulaSet = new Set();
+  document.querySelectorAll('.formula-tag').forEach(function(tag) {
+    formulaSet.add(tag.textContent.trim());
+  });
+  formulaEl.textContent = formulaSet.size;
+  
+  // 篩選功能
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var noResults = document.getElementById('no-results');
+  
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      // 切換 active
+      filterBtns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      
+      var filter = btn.getAttribute('data-filter');
+      var visibleCount = 0;
+      
+      cards.forEach(function(card) {
+        if (filter === 'all') {
+          card.style.display = '';
+          visibleCount++;
+        } else {
+          var cat = card.getAttribute('data-category') || '';
+          var desc = card.querySelector('.herb-effect');
+          var descText = desc ? desc.textContent : '';
+          var role = card.querySelector('.herb-role');
+          var roleText = role ? role.textContent : '';
+          var name = card.getAttribute('data-name') || '';
+          
+          // 搜尋分類、描述、角色名稱中是否包含篩選關鍵字
+          if (cat.indexOf(filter) !== -1 || 
+              descText.indexOf(filter) !== -1 || 
+              roleText.indexOf(filter) !== -1 ||
+              name.indexOf(filter) !== -1) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+      
+      // 顯示/隱藏空狀態
+      if (visibleCount === 0) {
+        noResults.classList.add('show');
+      } else {
+        noResults.classList.remove('show');
+      }
+    });
+  });
+
+  // 隱藏沒有角色對應的篩選按鈕
+  var filterBar = document.getElementById('filter-bar');
+  filterBtns.forEach(function(btn) {
+    var filter = btn.getAttribute('data-filter');
+    if (filter === 'all') return;
+    
+    var hasMatch = false;
+    cards.forEach(function(card) {
+      var cat = card.getAttribute('data-category') || '';
+      var desc = card.querySelector('.herb-effect');
+      var descText = desc ? desc.textContent : '';
+      var role = card.querySelector('.herb-role');
+      var roleText = role ? role.textContent : '';
+      if (cat.indexOf(filter) !== -1 || descText.indexOf(filter) !== -1 || roleText.indexOf(filter) !== -1) {
+        hasMatch = true;
+      }
+    });
+    if (!hasMatch) {
+      btn.style.display = 'none';
+    }
+  });
+});
+</script>
