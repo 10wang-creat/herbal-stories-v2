@@ -156,7 +156,7 @@ permalink: /games/
         {id:"quiz",icon:"🧠",title:"方劑問診室",desc:"閱讀病患故事，選出正確的方劑",detail:SYMPTOMS_QUIZ.length+" 道情境題",color:"#5B8C5A"},
         {id:"match",icon:"🧩",title:"組方大挑戰",desc:"把正確的藥材選入方劑中",detail:FORMULAS.length+" 個經典方",color:"#D4A574"},
         {id:"memory",icon:"🎴",title:"藥材翻翻樂",desc:"翻牌配對，記住藥材與功效",detail:"記憶力挑戰",color:"#7B6BA5"},
-        {id:"collection",icon:"📖",title:"草本圖鑑",desc:"查看所有藥材角色卡",detail:HERBS.length+" 種藥材",color:"#C75B5B"},
+        {id:"collection",icon:"📖",title:"草本圖鑑",desc:"查看藥材角色插畫與介紹",detail:"角色大集合",color:"#C75B5B",external:"/characters/"},
       ];
       return React.createElement('div',{style:{maxWidth:900,margin:"0 auto",padding:"30px 20px"}},
         React.createElement('div',{style:{display:"flex",justifyContent:"center",marginBottom:30}},
@@ -170,7 +170,7 @@ permalink: /games/
         ),
         React.createElement('div',{style:{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(260px,1fr))",gap:20}},
           games.map(function(g,i){
-            return React.createElement('div',{key:g.id,className:"animate-in",style:{animationDelay:i*0.1+"s",opacity:0,background:"white",borderRadius:16,overflow:"hidden",boxShadow:"0 2px 12px rgba(91,140,90,0.1)",cursor:"pointer",transition:"all 0.25s",border:"1px solid rgba(0,0,0,0.06)"},onClick:function(){onSelect(g.id)},onMouseEnter:function(e){e.currentTarget.style.transform="translateY(-6px)";e.currentTarget.style.boxShadow="0 4px 20px rgba(91,140,90,0.18)"},onMouseLeave:function(e){e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="0 2px 12px rgba(91,140,90,0.1)"}},
+            return React.createElement('div',{key:g.id,className:"animate-in",style:{animationDelay:i*0.1+"s",opacity:0,background:"white",borderRadius:16,overflow:"hidden",boxShadow:"0 2px 12px rgba(91,140,90,0.1)",cursor:"pointer",transition:"all 0.25s",border:"1px solid rgba(0,0,0,0.06)"},onClick:function(){if(g.external){window.location.href=g.external}else{onSelect(g.id)}},onMouseEnter:function(e){e.currentTarget.style.transform="translateY(-6px)";e.currentTarget.style.boxShadow="0 4px 20px rgba(91,140,90,0.18)"},onMouseLeave:function(e){e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="0 2px 12px rgba(91,140,90,0.1)"}},
               React.createElement('div',{style:{height:6,background:"linear-gradient(90deg,"+g.color+","+g.color+"88)"}}),
               React.createElement('div',{style:{padding:"24px 20px"}},
                 React.createElement('div',{style:{fontSize:40,marginBottom:12}},g.icon),
