@@ -10,264 +10,230 @@ permalink: /games/
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>草本遊樂園 - 草本故事館</title>
   <meta name="description" content="邊玩邊學，認識中藥方劑的奇妙世界！翻牌配對、情境問答、組方挑戰，多種遊戲等你來玩。">
-  <meta property="og:title" content="草本遊樂園 - 草本故事館">
-  <meta property="og:description" content="邊玩邊學，認識中藥方劑的奇妙世界！">
-  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Noto Sans TC',sans-serif; background:#F7F3EB; color:#2C3E2C; min-height:100vh; }
-    .serif { font-family:'Noto Serif TC',serif; }
-    @keyframes fadeInUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
-    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
-    @keyframes shake { 0%,100%{transform:translateX(0)} 20%{transform:translateX(-8px)} 40%{transform:translateX(8px)} 60%{transform:translateX(-4px)} 80%{transform:translateX(4px)} }
-    .animate-in { animation:fadeInUp 0.5s ease-out forwards; }
-    .float { animation:float 3s ease-in-out infinite; }
-    .card-flip { perspective:800px; }
-    .card-flip-inner { position:relative;width:100%;height:100%;transition:transform 0.5s;transform-style:preserve-3d; }
-    .card-flip-inner.flipped { transform:rotateY(180deg); }
-    .card-flip-front,.card-flip-back { position:absolute;inset:0;backface-visibility:hidden;border-radius:12px; }
-    .card-flip-back { transform:rotateY(180deg); }
-    .herb-tag { display:inline-block;padding:3px 10px;border-radius:20px;font-size:12px;font-weight:500; }
-    .game-btn { padding:12px 28px;border-radius:10px;border:none;font-size:15px;font-weight:600;font-family:'Noto Sans TC',sans-serif;cursor:pointer;transition:all 0.2s; }
-    .game-btn:hover { transform:translateY(-2px); }
-    .game-btn:active { transform:translateY(0); }
-    .game-btn-primary { background:#5B8C5A;color:white; }
-    .game-btn-primary:hover { background:#3D6B3C;box-shadow:0 4px 20px rgba(91,140,90,0.18); }
-    .quiz-option { width:100%;padding:14px 18px;border-radius:10px;border:2px solid #E0D8CC;background:white;font-size:15px;font-family:'Noto Sans TC',sans-serif;cursor:pointer;transition:all 0.2s;text-align:left;display:flex;align-items:center;gap:10px; }
-    .quiz-option:hover:not(:disabled) { border-color:#5B8C5A;background:#F0F7F0;transform:translateX(4px); }
-    .quiz-option.correct { border-color:#5B8C5A;background:#E8F5E8; }
-    .quiz-option.wrong { border-color:#C75B5B;background:#FDE8E8;animation:shake 0.4s; }
-    .quiz-option:disabled { cursor:default; }
-    .match-slot { min-height:52px;padding:8px 14px;border-radius:10px;border:2px dashed #C8C0B4;background:#FAF8F4;display:flex;align-items:center;justify-content:center;transition:all 0.2s;font-size:14px; }
-    .match-slot.active { border-color:#5B8C5A;background:#F0F7F0; }
-    .match-slot.filled { border-style:solid;border-color:#D4A574;background:white; }
-    .draggable-herb { padding:8px 16px;border-radius:20px;background:white;border:2px solid #E8CDB0;cursor:pointer;transition:all 0.2s;font-size:14px;font-weight:500;user-select:none; }
-    .draggable-herb:hover { border-color:#D4A574;transform:scale(1.05);box-shadow:0 2px 12px rgba(91,140,90,0.1); }
-    .draggable-herb.selected { border-color:#5B8C5A;background:#F0F7F0; }
-    .draggable-herb.placed { opacity:0.35;pointer-events:none; }
-    .progress-bar { height:8px;background:#E0D8CC;border-radius:4px;overflow:hidden; }
-    .progress-fill { height:100%;background:linear-gradient(90deg,#5B8C5A,#D4A574);border-radius:4px;transition:width 0.5s; }
-    .score-badge { display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;background:linear-gradient(135deg,#FFF8E7,#FFF0D0);border:1px solid #DAA520;font-weight:600;font-size:14px;color:#8B6914; }
-    .back-to-site { display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,0.7);text-decoration:none;font-size:13px;transition:color 0.2s; }
-    .back-to-site:hover { color:white; }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Noto Sans TC',sans-serif;background:#F7F3EB;color:#2C3E2C;min-height:100vh}
+    .serif{font-family:'Noto Serif TC',serif}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+    .animate-in{animation:fadeInUp .5s ease-out forwards}.float{animation:float 3s ease-in-out infinite}
+    .card-flip{perspective:800px}.card-flip-inner{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}.card-flip-inner.flipped{transform:rotateY(180deg)}.card-flip-front,.card-flip-back{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px}.card-flip-back{transform:rotateY(180deg)}
+    .herb-tag{display:inline-block;padding:3px 10px;border-radius:20px;font-size:12px;font-weight:500}
+    .game-btn{padding:12px 28px;border-radius:10px;border:none;font-size:15px;font-weight:600;font-family:'Noto Sans TC',sans-serif;cursor:pointer;transition:all .2s}.game-btn:hover{transform:translateY(-2px)}.game-btn:active{transform:translateY(0)}.game-btn-primary{background:#5B8C5A;color:#fff}.game-btn-primary:hover{background:#3D6B3C;box-shadow:0 4px 20px rgba(91,140,90,.18)}
+    .quiz-option{width:100%;padding:14px 18px;border-radius:10px;border:2px solid #E0D8CC;background:#fff;font-size:15px;font-family:'Noto Sans TC',sans-serif;cursor:pointer;transition:all .2s;text-align:left;display:flex;align-items:center;gap:10px}.quiz-option:hover:not(:disabled){border-color:#5B8C5A;background:#F0F7F0;transform:translateX(4px)}.quiz-option.correct{border-color:#5B8C5A;background:#E8F5E8}.quiz-option.wrong{border-color:#C75B5B;background:#FDE8E8;animation:shake .4s}.quiz-option:disabled{cursor:default}
+    .match-slot{min-height:52px;padding:8px 14px;border-radius:10px;border:2px dashed #C8C0B4;background:#FAF8F4;display:flex;align-items:center;justify-content:center;transition:all .2s;font-size:14px}.match-slot.active{border-color:#5B8C5A;background:#F0F7F0}.match-slot.filled{border-style:solid;border-color:#D4A574;background:#fff}
+    .draggable-herb{padding:8px 16px;border-radius:20px;background:#fff;border:2px solid #E8CDB0;cursor:pointer;transition:all .2s;font-size:14px;font-weight:500;user-select:none}.draggable-herb:hover{border-color:#D4A574;transform:scale(1.05);box-shadow:0 2px 12px rgba(91,140,90,.1)}.draggable-herb.selected{border-color:#5B8C5A;background:#F0F7F0}.draggable-herb.placed{opacity:.35;pointer-events:none}
+    .progress-bar{height:8px;background:#E0D8CC;border-radius:4px;overflow:hidden}.progress-fill{height:100%;background:linear-gradient(90deg,#5B8C5A,#D4A574);border-radius:4px;transition:width .5s}
+    .score-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;background:linear-gradient(135deg,#FFF8E7,#FFF0D0);border:1px solid #DAA520;font-weight:600;font-size:14px;color:#8B6914}
+    .back-to-site{display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,.7);text-decoration:none;font-size:13px;transition:color .2s}.back-to-site:hover{color:#fff}
   </style>
 </head>
 <body>
-  <div id="root"></div>
-  <script type="text/babel">
-    const { useState, useEffect, useCallback, useRef } = React;
+<div id="root"></div>
 
-    const HERBS = [
-      { id:"huangqi", name:"黃耆", emoji:"🛡️", role:"補氣大將", property:"甘溫", meridian:"脾肺", effect:"補氣升陽、固表止汗", category:"補氣" },
-      { id:"renshen", name:"人參", emoji:"👑", role:"氣界之王", property:"甘微苦溫", meridian:"脾肺心", effect:"大補元氣、生津安神", category:"補氣" },
-      { id:"dangshen", name:"黨參", emoji:"🌾", role:"補氣副將", property:"甘平", meridian:"脾肺", effect:"補中益氣、健脾益肺", category:"補氣" },
-      { id:"baizhu", name:"白朮", emoji:"🏠", role:"脾胃管家", property:"苦甘溫", meridian:"脾胃", effect:"健脾益氣、燥濕利水", category:"補氣" },
-      { id:"fuling", name:"茯苓", emoji:"💧", role:"排水達人", property:"甘淡平", meridian:"心脾腎", effect:"利水滲濕、健脾安神", category:"利水" },
-      { id:"gancao", name:"甘草", emoji:"🤝", role:"和事佬", property:"甘平", meridian:"十二經", effect:"調和諸藥、補脾益氣", category:"補氣" },
-      { id:"zhigancao", name:"炙甘草", emoji:"🍬", role:"甜蜜調停", property:"甘溫", meridian:"十二經", effect:"補脾和胃、調和諸藥", category:"補氣" },
-      { id:"danggui", name:"當歸", emoji:"❤️", role:"血中聖藥", property:"甘辛溫", meridian:"肝心脾", effect:"補血活血、調經止痛", category:"補血" },
-      { id:"chuanxiong", name:"川芎", emoji:"🌪️", role:"血中氣藥", property:"辛溫", meridian:"肝膽心包", effect:"活血行氣、祛風止痛", category:"活血" },
-      { id:"baishao", name:"白芍", emoji:"🌸", role:"柔肝小姐", property:"苦酸微寒", meridian:"肝脾", effect:"養血調經、柔肝止痛", category:"補血" },
-      { id:"shudihuang", name:"熟地黃", emoji:"🍯", role:"滋陰基石", property:"甘微溫", meridian:"肝腎", effect:"補血滋陰、益精填髓", category:"補血" },
-      { id:"chaihu", name:"柴胡", emoji:"🚪", role:"疏肝使者", property:"苦辛微寒", meridian:"肝膽", effect:"疏肝解鬱、升舉陽氣", category:"解表" },
-      { id:"bohe", name:"薄荷", emoji:"🍃", role:"清涼信使", property:"辛涼", meridian:"肝肺", effect:"疏散風熱、清利頭目", category:"解表" },
-      { id:"shengjiang", name:"生薑", emoji:"🔥", role:"暖胃先鋒", property:"辛微溫", meridian:"脾胃肺", effect:"解表散寒、溫中止嘔", category:"解表" },
-      { id:"taoren", name:"桃仁", emoji:"🍑", role:"化瘀勇士", property:"苦甘平", meridian:"心肝大腸", effect:"活血祛瘀、潤腸通便", category:"活血" },
-      { id:"honghua", name:"紅花", emoji:"🌺", role:"活血花使", property:"辛溫", meridian:"心肝", effect:"活血通經、散瘀止痛", category:"活血" },
-      { id:"paoginger", name:"炮薑", emoji:"🌋", role:"溫經戰士", property:"辛熱", meridian:"脾胃肝", effect:"溫經止血、溫中止痛", category:"溫裏" },
-      { id:"shanzhuyu", name:"山茱萸", emoji:"🫐", role:"固精守將", property:"酸微溫", meridian:"肝腎", effect:"補益肝腎、收澀固脫", category:"收澀" },
-      { id:"shanyao", name:"山藥", emoji:"🥔", role:"脾腎雙修", property:"甘平", meridian:"脾肺腎", effect:"補脾養胃、生津益肺", category:"補氣" },
-      { id:"zexie", name:"澤瀉", emoji:"🚰", role:"清道夫", property:"甘淡寒", meridian:"腎膀胱", effect:"利水滲濕、泄熱", category:"利水" },
-      { id:"mudanpi", name:"牡丹皮", emoji:"🌹", role:"清熱專家", property:"苦辛微寒", meridian:"心肝腎", effect:"清熱涼血、活血化瘀", category:"清熱" },
-      { id:"rougui", name:"肉桂", emoji:"🪵", role:"命門之火", property:"辛甘大熱", meridian:"腎脾心肝", effect:"補火助陽、散寒止痛", category:"溫裏" },
-      { id:"fuzi", name:"附子", emoji:"⚡", role:"回陽先鋒", property:"辛甘大熱", meridian:"心腎脾", effect:"回陽救逆、補火助陽", category:"溫裏" },
-      { id:"shengma", name:"升麻", emoji:"⬆️", role:"升提使者", property:"辛微甘微寒", meridian:"肺脾胃", effect:"升舉陽氣、解毒透疹", category:"解表" },
-      { id:"chenpi", name:"陳皮", emoji:"🍊", role:"理氣幫手", property:"苦辛溫", meridian:"脾肺", effect:"理氣健脾、燥濕化痰", category:"理氣" },
-      { id:"fangfeng", name:"防風", emoji:"🌬️", role:"擋風屏障", property:"辛甘微溫", meridian:"膀胱肝脾", effect:"祛風解表、勝濕止痛", category:"解表" },
-      { id:"longyangrou", name:"龍眼肉", emoji:"🫂", role:"暖心甜姐", property:"甘溫", meridian:"心脾", effect:"補益心脾、養血安神", category:"補血" },
-      { id:"suanzaoren", name:"酸棗仁", emoji:"😴", role:"睡眠守護", property:"甘酸平", meridian:"肝膽心", effect:"養心安神、斂汗生津", category:"安神" },
-      { id:"yuanzhi", name:"遠志", emoji:"💌", role:"心腎信使", property:"苦辛溫", meridian:"心腎肺", effect:"安神益智、祛痰開竅", category:"安神" },
-      { id:"muxiang", name:"木香", emoji:"🌲", role:"氣機疏導", property:"辛苦溫", meridian:"脾胃大腸", effect:"行氣止痛、健脾消食", category:"理氣" },
-      { id:"dazao", name:"大棗", emoji:"🫘", role:"甜蜜後援", property:"甘溫", meridian:"脾胃", effect:"補中益氣、養血安神", category:"補氣" },
-      { id:"fushen", name:"茯神", emoji:"🧘", role:"安神專家", property:"甘淡平", meridian:"心脾", effect:"寧心安神、利水滲濕", category:"安神" },
-      { id:"lianzi", name:"蓮子", emoji:"🪷", role:"固腎使者", property:"甘澀平", meridian:"脾腎心", effect:"補脾益腎、養心安神", category:"收澀" },
-      { id:"qianshi", name:"芡實", emoji:"💎", role:"收斂戰將", property:"甘澀平", meridian:"脾腎", effect:"益腎固精、補脾止瀉", category:"收澀" },
-      { id:"huaishan", name:"淮山", emoji:"🌿", role:"健脾高手", property:"甘平", meridian:"脾肺腎", effect:"補脾養胃、生津", category:"補氣" },
-      { id:"yiyiren", name:"薏苡仁", emoji:"🌾", role:"去濕達人", property:"甘淡微寒", meridian:"脾胃肺", effect:"健脾利濕、清熱排膿", category:"利水" },
-    ];
+{% comment %}
+  =============================================
+  從 site.stories 自動產生藥材與方劑資料
+  =============================================
+{% endcomment %}
 
-    const FORMULAS = [
-      { id:"sijunzi", name:"四君子湯", herbs:["renshen","baizhu","fuling","zhigancao"], hint:"補氣基礎方，四位君子聯手健脾", category:"補氣", link:"/stories/sijunzi-tang/" },
-      { id:"siwu", name:"四物湯", herbs:["danggui","chuanxiong","baishao","shudihuang"], hint:"補血基礎方，四味藥材養血調經", category:"補血", link:"/stories/si-wu-tang/" },
-      { id:"bazhen", name:"八珍湯", herbs:["renshen","baizhu","fuling","zhigancao","danggui","chuanxiong","baishao","shudihuang"], hint:"四君子湯＋四物湯，氣血雙補", category:"氣血雙補", link:"/stories/Ba-zhen-tang/" },
-      { id:"xiaoyao", name:"逍遙散", herbs:["chaihu","danggui","baishao","baizhu","fuling","zhigancao","bohe","shengjiang"], hint:"疏肝解鬱、養血健脾的經典方", category:"疏肝", link:"/stories/xiao-yao-san/" },
-      { id:"shenghua", name:"生化湯", herbs:["danggui","chuanxiong","taoren","paoginger","zhigancao"], hint:"產後化瘀生新的代表方", category:"活血", link:"/stories/sheng-hua-tang/" },
-      { id:"dangguibuxue", name:"當歸補血湯", herbs:["huangqi","danggui"], hint:"黃耆用量五倍於當歸，以氣生血", category:"補血", link:"/stories/dang-gui-bu-xue-tang/" },
-      { id:"liuwei", name:"六味地黃丸", herbs:["shudihuang","shanzhuyu","shanyao","zexie","mudanpi","fuling"], hint:"三補三瀉，滋陰補腎經典方", category:"補腎", link:"/stories/liu-wei-di-huang-wan/" },
-      { id:"jinkui", name:"金匱腎氣丸", herbs:["shudihuang","shanzhuyu","shanyao","zexie","mudanpi","fuling","rougui","fuzi"], hint:"六味地黃丸加桂附，溫補腎陽", category:"補腎", link:"/stories/jin-kui-shen-qi-wan/" },
-      { id:"buzhong", name:"補中益氣湯", herbs:["huangqi","renshen","baizhu","zhigancao","danggui","chenpi","shengma","chaihu"], hint:"補氣升陽、甘溫除熱", category:"補氣", link:"/stories/bu-zhong-yi-qi-tang/" },
-      { id:"yupingfeng", name:"玉屏風散", herbs:["huangqi","baizhu","fangfeng"], hint:"三味藥打造免疫防線", category:"固表", link:"/stories/yu-ping-feng-san/" },
-      { id:"guipi", name:"歸脾湯", herbs:["dangshen","huangqi","baizhu","fushen","suanzaoren","longyangrou","yuanzhi","danggui","muxiang","zhigancao","shengjiang","dazao"], hint:"養心脾、補氣血、安神定志", category:"補氣血", link:"/stories/gui-pi-tang/" },
-      { id:"sishen", name:"四神湯", herbs:["lianzi","qianshi","huaishan","yiyiren","fuling"], hint:"平補脾胃、祛濕健脾的食療方", category:"健脾", link:"/stories/si-shen-tang/" },
-    ];
+<script id="auto-data" type="application/json">
+{
+  "formulas": [
+    {% assign sorted = site.stories | sort: "date" %}
+    {% for story in sorted %}
+    {% if story.formula and story.ingredients %}
+    {
+      "name": {{ story.formula | jsonify }},
+      "link": "{{ story.url }}",
+      "effects": {{ story.effects | default: "" | jsonify }},
+      "tags": {{ story.tags | default: "" | jsonify }},
+      "herbs": [
+        {% for ing in story.ingredients %}
+        {
+          "name": {{ ing.name | jsonify }},
+          "desc": {{ ing.description | default: "" | jsonify }},
+          "image": {{ ing.image | default: "" | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }{% unless forloop.last %},{% endunless %}
+    {% endif %}
+    {% endfor %}
+  ]
+}
+</script>
 
-    const SYMPTOMS_QUIZ = [
-      { scenario:"小美最近加班頻繁，總覺得四肢無力、食慾不振、說話有氣無力，臉色蠟黃。", question:"小美最可能需要哪個方劑？", options:["四君子湯","四物湯","逍遙散","生化湯"], answer:0, explanation:"四肢無力、食慾不振、氣短懶言、面色萎黃都是脾氣虛的典型表現，四君子湯是補氣健脾的基礎方。" },
-      { scenario:"阿華面色蒼白、頭暈眼花，每次月經量少色淡，還常覺得手腳冰冷、指甲色淡。", question:"阿華的狀況適合哪個方劑？", options:["逍遙散","四君子湯","四物湯","生化湯"], answer:2, explanation:"面色蒼白、頭暈、月經量少色淡、爪甲色淡是血虛的表現，四物湯是補血調經的基礎方。" },
-      { scenario:"老張工作壓力大，常常嘆氣、胸悶、脾氣暴躁，還經常脅肋脹痛，月經也不規律。", question:"老張需要的方劑是？", options:["四物湯","生化湯","四君子湯","逍遙散"], answer:3, explanation:"嘆氣、胸悶、脾氣暴躁、脅肋脹痛都是肝氣鬱結的表現，逍遙散能疏肝解鬱、養血健脾。" },
-      { scenario:"小琳剛自然產完一週，惡露排出不順暢，顏色暗紅帶有血塊，小腹隱隱冷痛。", question:"小琳適合用哪個方劑？", options:["四君子湯","逍遙散","四物湯","生化湯"], answer:3, explanation:"產後惡露不行、小腹冷痛，生化湯能活血化瘀、溫經止痛，幫助產後恢復。" },
-      { scenario:"阿婆最近覺得頭暈目眩、疲倦乏力，臉色發黃，蹲下站起來會眼前發黑。", question:"阿婆可能需要哪個方劑？", options:["當歸補血湯","逍遙散","生化湯","四君子湯"], answer:0, explanation:"頭暈、疲倦、面色萎黃是氣血兩虛的表現，當歸補血湯以補氣生血為主，適合氣血不足。" },
-      { scenario:"大雄長期熬夜打電動，最近腰痠背痛、掉頭髮、耳鳴、手心腳心發熱，晚上盜汗。", question:"大雄最適合哪個方劑？", options:["四君子湯","金匱腎氣丸","逍遙散","六味地黃丸"], answer:3, explanation:"腰痠、掉髮、耳鳴、手足心熱、盜汗都是腎陰虛的表現，六味地黃丸滋陰補腎。" },
-      { scenario:"王伯伯入冬後特別怕冷、腰像被冰敷著、夜尿頻繁一晚三四次、下肢水腫。", question:"王伯伯的狀況適合哪個方劑？", options:["六味地黃丸","逍遙散","金匱腎氣丸","四物湯"], answer:2, explanation:"極度怕冷、腰冷痛、夜尿頻繁、下肢水腫都是腎陽虛的表現，金匱腎氣丸溫補腎陽。" },
-      { scenario:"小莉是百貨專櫃小姐，久站後覺得身體往下墜、說話越來越沒力、反覆感冒。", question:"小莉需要哪個方劑來調理？", options:["逍遙散","補中益氣湯","四物湯","六味地黃丸"], answer:1, explanation:"久站乏力、身體下墜感、反覆感冒是中氣下陷的表現，補中益氣湯能補氣升陽。" },
-      { scenario:"換季時小花又開始打噴嚏、流鼻水，動不動就被同事傳染感冒，容易出汗怕風。", question:"小花適合用什麼方劑預防？", options:["四物湯","逍遙散","玉屏風散","生化湯"], answer:2, explanation:"反覆感冒、容易出汗、畏風怕冷是表虛衛氣不固的表現，玉屏風散能益氣固表。" },
-      { scenario:"雅琪長期照顧中風的媽媽，最近失眠淺眠、健忘心悸、食慾差、面色萎黃、多夢。", question:"雅琪最需要哪個方劑？", options:["逍遙散","六味地黃丸","歸脾湯","四物湯"], answer:2, explanation:"失眠健忘、心悸、食慾差、面色萎黃是心脾兩虛的表現，歸脾湯能養心脾、補氣血。" },
-      { scenario:"阿偉氣血都虛，不但臉色蒼白、容易累、食慾差（氣虛），還頭暈、心悸、經期量少（血虛）。", question:"阿偉需要哪個方劑？", options:["四君子湯","四物湯","逍遙散","八珍湯"], answer:3, explanation:"同時出現氣虛和血虛症狀，八珍湯是四君子湯＋四物湯的合方，能氣血雙補。" },
-      { scenario:"小胖脾胃虛弱，常常拉肚子、吃什麼都不太吸收，體內濕氣重、舌苔白膩。", question:"小胖適合用什麼調理？", options:["四物湯","六味地黃丸","四神湯","逍遙散"], answer:2, explanation:"脾虛泄瀉、濕氣重、消化不良，四神湯能平補脾胃、健脾祛濕，而且性質平和適合長期食療。" },
-    ];
+<script type="text/babel">
+const { useState, useEffect, useCallback, useRef } = React;
 
-    function Header({currentGame,onBack,score}) {
-      return React.createElement('header',{style:{background:"linear-gradient(135deg,#2C3E2C 0%,#3D5C3D 50%,#4A6B4A 100%)",padding:currentGame?"14px 24px":"40px 24px",transition:"padding 0.3s",position:"relative",overflow:"hidden"}},
-        React.createElement('div',{style:{position:"absolute",inset:0,opacity:0.06,backgroundImage:"radial-gradient(circle at 20% 50%,white 1px,transparent 1px),radial-gradient(circle at 80% 20%,white 1px,transparent 1px)",backgroundSize:"60px 60px,80px 80px"}}),
-        React.createElement('div',{style:{maxWidth:900,margin:"0 auto",position:"relative",zIndex:1}},
-          currentGame ?
-            React.createElement('div',{style:{display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:10}},
-              React.createElement('button',{onClick:onBack,style:{background:"rgba(255,255,255,0.15)",border:"none",color:"white",padding:"8px 16px",borderRadius:8,cursor:"pointer",fontFamily:"'Noto Sans TC'",fontSize:14,display:"flex",alignItems:"center",gap:6}},"← 返回遊戲大廳"),
-              React.createElement('div',{className:"score-badge"},"⭐ ",score," 分")
-            )
-          :
-            React.createElement('div',{style:{textAlign:"center"}},
-              React.createElement('a',{href:"/",className:"back-to-site",style:{marginBottom:12,display:"inline-block"}},"← 回草本故事館首頁"),
-              React.createElement('div',{className:"float",style:{fontSize:42,marginBottom:8}},"🌿"),
-              React.createElement('h1',{className:"serif",style:{color:"white",fontSize:32,fontWeight:900,letterSpacing:4,marginBottom:8}},"草本遊樂園"),
-              React.createElement('p',{style:{color:"rgba(255,255,255,0.7)",fontSize:15,letterSpacing:1}},"邊玩邊學，認識中藥方劑的奇妙世界")
-            )
-        )
-      );
+/* ═══════════ 從 Jekyll 自動產生的資料建構遊戲資料 ═══════════ */
+const RAW = JSON.parse(document.getElementById('auto-data').textContent);
+
+// 建立不重複的藥材清單
+const herbMap = {};
+RAW.formulas.forEach(function(f) {
+  f.herbs.forEach(function(h) {
+    var key = h.name;
+    if (!herbMap[key]) {
+      // 從 description 取角色名（格式："角色｜功效說明"）
+      var parts = (h.desc || "").split("｜");
+      herbMap[key] = {
+        id: key,
+        name: key,
+        role: parts[0] || "",
+        effect: parts[1] || parts[0] || "",
+        image: h.image || ""
+      };
     }
+  });
+});
+const HERBS = Object.values(herbMap);
 
-    function GameHub({onSelect,totalScore}) {
-      var games=[
-        {id:"quiz",icon:"🧠",title:"方劑問診室",desc:"閱讀病患故事，選出正確的方劑",detail:SYMPTOMS_QUIZ.length+" 道情境題",color:"#5B8C5A"},
-        {id:"match",icon:"🧩",title:"組方大挑戰",desc:"把正確的藥材選入方劑中",detail:FORMULAS.length+" 個經典方",color:"#D4A574"},
-        {id:"memory",icon:"🎴",title:"藥材翻翻樂",desc:"翻牌配對，記住藥材與功效",detail:"記憶力挑戰",color:"#7B6BA5"},
-        {id:"collection",icon:"📖",title:"草本圖鑑",desc:"查看藥材角色插畫與介紹",detail:"角色大集合",color:"#C75B5B",external:"/characters/"},
-      ];
-      return React.createElement('div',{style:{maxWidth:900,margin:"0 auto",padding:"30px 20px"}},
-        React.createElement('div',{style:{display:"flex",justifyContent:"center",marginBottom:30}},
-          React.createElement('div',{style:{background:"linear-gradient(135deg,#FFF8E7,#FFF0D0)",border:"2px solid #DAA520",borderRadius:16,padding:"14px 30px",display:"flex",alignItems:"center",gap:12}},
-            React.createElement('span',{style:{fontSize:28}},"🏆"),
-            React.createElement('div',null,
-              React.createElement('div',{style:{fontSize:12,color:"#6B7B6B"}},"累積總分"),
-              React.createElement('div',{className:"serif",style:{fontSize:28,fontWeight:900,color:"#8B6914"}},totalScore)
-            )
+// 建立方劑清單
+const FORMULAS = RAW.formulas.map(function(f) {
+  return {
+    name: f.name,
+    link: f.link,
+    effects: f.effects,
+    herbNames: f.herbs.map(function(h) { return h.name; })
+  };
+});
+
+/* ═══════════ 問答題（需手動維護，情境無法自動產生）═══════════ */
+const SYMPTOMS_QUIZ = [
+  { scenario:"小美最近加班頻繁，總覺得四肢無力、食慾不振、說話有氣無力，臉色蠟黃。", question:"小美最可能需要哪個方劑？", options:["四君子湯","四物湯","逍遙散","生化湯"], answer:0, explanation:"四肢無力、食慾不振、氣短懶言、面色萎黃都是脾氣虛的典型表現，四君子湯是補氣健脾的基礎方。" },
+  { scenario:"阿華面色蒼白、頭暈眼花，每次月經量少色淡，還常覺得手腳冰冷、指甲色淡。", question:"阿華的狀況適合哪個方劑？", options:["逍遙散","四君子湯","四物湯","生化湯"], answer:2, explanation:"面色蒼白、頭暈、月經量少色淡、爪甲色淡是血虛的表現，四物湯是補血調經的基礎方。" },
+  { scenario:"老張工作壓力大，常常嘆氣、胸悶、脾氣暴躁，還經常脅肋脹痛，月經也不規律。", question:"老張需要的方劑是？", options:["四物湯","生化湯","四君子湯","逍遙散"], answer:3, explanation:"嘆氣、胸悶、脾氣暴躁、脅肋脹痛都是肝氣鬱結的表現，逍遙散能疏肝解鬱、養血健脾。" },
+  { scenario:"小琳剛自然產完一週，惡露排出不順暢，顏色暗紅帶有血塊，小腹隱隱冷痛。", question:"小琳適合用哪個方劑？", options:["四君子湯","逍遙散","四物湯","生化湯"], answer:3, explanation:"產後惡露不行、小腹冷痛，生化湯能活血化瘀、溫經止痛，幫助產後恢復。" },
+  { scenario:"阿婆最近覺得頭暈目眩、疲倦乏力，臉色發黃，蹲下站起來會眼前發黑。", question:"阿婆可能需要哪個方劑？", options:["當歸補血湯","逍遙散","生化湯","四君子湯"], answer:0, explanation:"頭暈、疲倦、面色萎黃是氣血兩虛的表現，當歸補血湯以補氣生血為主，適合氣血不足。" },
+  { scenario:"大雄長期熬夜打電動，最近腰痠背痛、掉頭髮、耳鳴、手心腳心發熱，晚上盜汗。", question:"大雄最適合哪個方劑？", options:["四君子湯","金匱腎氣丸","逍遙散","六味地黃丸"], answer:3, explanation:"腰痠、掉髮、耳鳴、手足心熱、盜汗都是腎陰虛的表現，六味地黃丸滋陰補腎。" },
+  { scenario:"王伯伯入冬後特別怕冷、腰像被冰敷著、夜尿頻繁一晚三四次、下肢水腫。", question:"王伯伯的狀況適合哪個方劑？", options:["六味地黃丸","逍遙散","金匱腎氣丸","四物湯"], answer:2, explanation:"極度怕冷、腰冷痛、夜尿頻繁、下肢水腫都是腎陽虛的表現，金匱腎氣丸溫補腎陽。" },
+  { scenario:"小莉是百貨專櫃小姐，久站後覺得身體往下墜、說話越來越沒力、反覆感冒。", question:"小莉需要哪個方劑來調理？", options:["逍遙散","補中益氣湯","四物湯","六味地黃丸"], answer:1, explanation:"久站乏力、身體下墜感、反覆感冒是中氣下陷的表現，補中益氣湯能補氣升陽。" },
+  { scenario:"換季時小花又開始打噴嚏、流鼻水，動不動就被同事傳染感冒，容易出汗怕風。", question:"小花適合用什麼方劑預防？", options:["四物湯","逍遙散","玉屏風散","生化湯"], answer:2, explanation:"反覆感冒、容易出汗、畏風怕冷是表虛衛氣不固的表現，玉屏風散能益氣固表。" },
+  { scenario:"雅琪長期照顧中風的媽媽，最近失眠淺眠、健忘心悸、食慾差、面色萎黃、多夢。", question:"雅琪最需要哪個方劑？", options:["逍遙散","六味地黃丸","歸脾湯","四物湯"], answer:2, explanation:"失眠健忘、心悸、食慾差、面色萎黃是心脾兩虛的表現，歸脾湯能養心脾、補氣血。" },
+  { scenario:"阿偉氣血都虛，不但臉色蒼白、容易累、食慾差（氣虛），還頭暈、心悸、經期量少（血虛）。", question:"阿偉需要哪個方劑？", options:["四君子湯","四物湯","逍遙散","八珍湯"], answer:3, explanation:"同時出現氣虛和血虛症狀，八珍湯是四君子湯＋四物湯的合方，能氣血雙補。" },
+  { scenario:"小胖脾胃虛弱，常常拉肚子、吃什麼都不太吸收，體內濕氣重、舌苔白膩。", question:"小胖適合用什麼調理？", options:["四物湯","六味地黃丸","四神湯","逍遙散"], answer:2, explanation:"脾虛泄瀉、濕氣重、消化不良，四神湯能平補脾胃、健脾祛濕，而且性質平和適合長期食療。" },
+  { scenario:"小安最近越累越睡不著，躺在床上腦子轉不停，好不容易睡著又多夢易驚醒，還會盜汗。", question:"小安最適合哪個方劑？", options:["歸脾湯","逍遙散","酸棗仁湯","六味地黃丸"], answer:2, explanation:"越累越睡不著、虛煩多夢、盜汗是肝血不足導致的虛煩不眠，酸棗仁湯能養血安神、清熱除煩。" },
+];
+
+/* ═══════════ UI 元件 ═══════════ */
+
+function Header({currentGame,onBack,score}) {
+  return React.createElement('header',{style:{background:"linear-gradient(135deg,#2C3E2C 0%,#3D5C3D 50%,#4A6B4A 100%)",padding:currentGame?"14px 24px":"40px 24px",transition:"padding 0.3s",position:"relative",overflow:"hidden"}},
+    React.createElement('div',{style:{position:"absolute",inset:0,opacity:0.06,backgroundImage:"radial-gradient(circle at 20% 50%,white 1px,transparent 1px),radial-gradient(circle at 80% 20%,white 1px,transparent 1px)",backgroundSize:"60px 60px,80px 80px"}}),
+    React.createElement('div',{style:{maxWidth:900,margin:"0 auto",position:"relative",zIndex:1}},
+      currentGame ?
+        React.createElement('div',{style:{display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:10}},
+          React.createElement('button',{onClick:onBack,style:{background:"rgba(255,255,255,0.15)",border:"none",color:"white",padding:"8px 16px",borderRadius:8,cursor:"pointer",fontFamily:"'Noto Sans TC'",fontSize:14}},"← 返回遊戲大廳"),
+          React.createElement('div',{className:"score-badge"},"⭐ ",score," 分")
+        )
+      :
+        React.createElement('div',{style:{textAlign:"center"}},
+          React.createElement('a',{href:"/",className:"back-to-site",style:{marginBottom:12,display:"inline-block"}},"← 回草本故事館首頁"),
+          React.createElement('div',{className:"float",style:{fontSize:42,marginBottom:8}},"🌿"),
+          React.createElement('h1',{className:"serif",style:{color:"white",fontSize:32,fontWeight:900,letterSpacing:4,marginBottom:8}},"草本遊樂園"),
+          React.createElement('p',{style:{color:"rgba(255,255,255,0.7)",fontSize:15,letterSpacing:1}},"邊玩邊學，認識中藥方劑的奇妙世界")
+        )
+    )
+  );
+}
+
+function GameHub({onSelect,totalScore}) {
+  var games=[
+    {id:"quiz",icon:"🧠",title:"方劑問診室",desc:"閱讀病患故事，選出正確的方劑",detail:SYMPTOMS_QUIZ.length+" 道情境題",color:"#5B8C5A"},
+    {id:"match",icon:"🧩",title:"組方大挑戰",desc:"把正確的藥材選入方劑中",detail:FORMULAS.length+" 個經典方",color:"#D4A574"},
+    {id:"memory",icon:"🎴",title:"藥材翻翻樂",desc:"翻牌配對，記住藥材與功效",detail:"記憶力挑戰",color:"#7B6BA5"},
+    {id:"collection",icon:"📖",title:"草本圖鑑",desc:"查看藥材角色插畫與介紹",detail:"角色大集合",color:"#C75B5B",external:"/characters/"},
+  ];
+  return React.createElement('div',{style:{maxWidth:900,margin:"0 auto",padding:"30px 20px"}},
+    React.createElement('div',{style:{display:"flex",justifyContent:"center",marginBottom:30}},
+      React.createElement('div',{style:{background:"linear-gradient(135deg,#FFF8E7,#FFF0D0)",border:"2px solid #DAA520",borderRadius:16,padding:"14px 30px",display:"flex",alignItems:"center",gap:12}},
+        React.createElement('span',{style:{fontSize:28}},"🏆"),
+        React.createElement('div',null,
+          React.createElement('div',{style:{fontSize:12,color:"#6B7B6B"}},"累積總分"),
+          React.createElement('div',{className:"serif",style:{fontSize:28,fontWeight:900,color:"#8B6914"}},totalScore)
+        )
+      )
+    ),
+    React.createElement('div',{style:{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(260px,1fr))",gap:20}},
+      games.map(function(g,i){
+        return React.createElement('div',{key:g.id,className:"animate-in",style:{animationDelay:i*0.1+"s",opacity:0,background:"white",borderRadius:16,overflow:"hidden",boxShadow:"0 2px 12px rgba(91,140,90,0.1)",cursor:"pointer",transition:"all 0.25s",border:"1px solid rgba(0,0,0,0.06)"},onClick:function(){if(g.external){window.location.href=g.external}else{onSelect(g.id)}},onMouseEnter:function(e){e.currentTarget.style.transform="translateY(-6px)";e.currentTarget.style.boxShadow="0 4px 20px rgba(91,140,90,0.18)"},onMouseLeave:function(e){e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="0 2px 12px rgba(91,140,90,0.1)"}},
+          React.createElement('div',{style:{height:6,background:"linear-gradient(90deg,"+g.color+","+g.color+"88)"}}),
+          React.createElement('div',{style:{padding:"24px 20px"}},
+            React.createElement('div',{style:{fontSize:40,marginBottom:12}},g.icon),
+            React.createElement('h3',{className:"serif",style:{fontSize:20,fontWeight:700,marginBottom:6,color:g.color}},g.title),
+            React.createElement('p',{style:{fontSize:14,color:"#6B7B6B",marginBottom:14,lineHeight:1.6}},g.desc),
+            React.createElement('span',{style:{fontSize:12,color:g.color,fontWeight:600,background:g.color+"15",padding:"4px 12px",borderRadius:20}},g.detail)
           )
-        ),
-        React.createElement('div',{style:{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(260px,1fr))",gap:20}},
-          games.map(function(g,i){
-            return React.createElement('div',{key:g.id,className:"animate-in",style:{animationDelay:i*0.1+"s",opacity:0,background:"white",borderRadius:16,overflow:"hidden",boxShadow:"0 2px 12px rgba(91,140,90,0.1)",cursor:"pointer",transition:"all 0.25s",border:"1px solid rgba(0,0,0,0.06)"},onClick:function(){if(g.external){window.location.href=g.external}else{onSelect(g.id)}},onMouseEnter:function(e){e.currentTarget.style.transform="translateY(-6px)";e.currentTarget.style.boxShadow="0 4px 20px rgba(91,140,90,0.18)"},onMouseLeave:function(e){e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="0 2px 12px rgba(91,140,90,0.1)"}},
-              React.createElement('div',{style:{height:6,background:"linear-gradient(90deg,"+g.color+","+g.color+"88)"}}),
-              React.createElement('div',{style:{padding:"24px 20px"}},
-                React.createElement('div',{style:{fontSize:40,marginBottom:12}},g.icon),
-                React.createElement('h3',{className:"serif",style:{fontSize:20,fontWeight:700,marginBottom:6,color:g.color}},g.title),
-                React.createElement('p',{style:{fontSize:14,color:"#6B7B6B",marginBottom:14,lineHeight:1.6}},g.desc),
-                React.createElement('span',{style:{fontSize:12,color:g.color,fontWeight:600,background:g.color+"15",padding:"4px 12px",borderRadius:20}},g.detail)
-              )
-            );
-          })
-        ),
-        React.createElement('div',{style:{marginTop:36,textAlign:"center",padding:20,background:"#F0EDE6",borderRadius:12}},
-          React.createElement('p',{style:{fontSize:13,color:"#6B7B6B",lineHeight:1.8}},"⚕️ 小提醒：遊戲內容僅供中醫知識學習參考，實際用藥請諮詢合格中醫師")
-        )
-      );
-    }
+        );
+      })
+    ),
+    React.createElement('div',{style:{marginTop:36,textAlign:"center",padding:20,background:"#F0EDE6",borderRadius:12}},
+      React.createElement('p',{style:{fontSize:13,color:"#6B7B6B",lineHeight:1.8}},"⚕️ 小提醒：遊戲內容僅供中醫知識學習參考，實際用藥請諮詢合格中醫師")
+    )
+  );
+}
 
-    function QuizGame({onScoreAdd}) {
-      var _s=useState(0),current=_s[0],setCurrent=_s[1];
-      var _s2=useState(null),selected=_s2[0],setSelected=_s2[1];
-      var _s3=useState(false),showExplain=_s3[0],setShowExplain=_s3[1];
-      var _s4=useState(0),correct=_s4[0],setCorrect=_s4[1];
-      var _s5=useState(false),finished=_s5[0],setFinished=_s5[1];
-      var q=SYMPTOMS_QUIZ[current];
-      function handleSelect(idx){if(selected!==null)return;setSelected(idx);setShowExplain(true);if(idx===q.answer){setCorrect(function(c){return c+1});onScoreAdd(10)}}
-      function handleNext(){if(current<SYMPTOMS_QUIZ.length-1){setCurrent(function(c){return c+1});setSelected(null);setShowExplain(false)}else{setFinished(true)}}
-      if(finished){var pct=Math.round(correct/SYMPTOMS_QUIZ.length*100);var grade=pct>=80?"🏆 中醫高手！":pct>=60?"👍 不錯唷！":"📚 繼續加油！";return React.createElement('div',{className:"animate-in",style:{maxWidth:600,margin:"40px auto",padding:"40px 24px",background:"white",borderRadius:20,textAlign:"center",boxShadow:"0 2px 12px rgba(91,140,90,0.1)"}},React.createElement('div',{style:{fontSize:60,marginBottom:16}},pct>=80?"🎉":pct>=60?"😊":"💪"),React.createElement('h2',{className:"serif",style:{fontSize:26,marginBottom:8}},grade),React.createElement('p',{style:{fontSize:18,color:"#6B7B6B",marginBottom:24}},"答對 ",React.createElement('strong',{style:{color:"#5B8C5A"}},correct)," / ",SYMPTOMS_QUIZ.length," 題"),React.createElement('div',{style:{width:120,height:120,borderRadius:"50%",background:"conic-gradient(#5B8C5A "+pct+"%,#E0D8CC "+pct+"%)",display:"flex",alignItems:"center",justifyContent:"center",margin:"0 auto 24px"}},React.createElement('div',{style:{width:96,height:96,borderRadius:"50%",background:"white",display:"flex",alignItems:"center",justifyContent:"center",fontSize:24,fontWeight:700,color:"#5B8C5A"}},pct+"%")),React.createElement('button',{className:"game-btn game-btn-primary",onClick:function(){setCurrent(0);setSelected(null);setShowExplain(false);setCorrect(0);setFinished(false)}},"再挑戰一次"))}
-      return React.createElement('div',{className:"animate-in",style:{maxWidth:640,margin:"30px auto",padding:"0 20px"}},React.createElement('div',{style:{marginBottom:24}},React.createElement('div',{style:{display:"flex",justifyContent:"space-between",marginBottom:6,fontSize:13,color:"#6B7B6B"}},React.createElement('span',null,"第 "+(current+1)+" / "+SYMPTOMS_QUIZ.length+" 題"),React.createElement('span',null,"答對 "+correct+" 題")),React.createElement('div',{className:"progress-bar"},React.createElement('div',{className:"progress-fill",style:{width:(current+1)/SYMPTOMS_QUIZ.length*100+"%"}}))),React.createElement('div',{style:{background:"white",borderRadius:16,padding:24,boxShadow:"0 2px 12px rgba(91,140,90,0.1)",marginBottom:20}},React.createElement('div',{style:{background:"#FAF8F4",borderRadius:12,padding:18,marginBottom:20,borderLeft:"4px solid #D4A574",lineHeight:1.8,fontSize:15}},"📋 "+q.scenario),React.createElement('h3',{className:"serif",style:{fontSize:18,marginBottom:16}},q.question),React.createElement('div',{style:{display:"flex",flexDirection:"column",gap:10}},q.options.map(function(opt,i){var cls="quiz-option";if(selected!==null){if(i===q.answer)cls+=" correct";else if(i===selected)cls+=" wrong"}var cBg=selected!==null&&i===q.answer?"#5B8C5A":selected===i&&i!==q.answer?"#C75B5B":"#E0D8CC";var cCol=selected!==null&&(i===q.answer||i===selected)?"white":"#2C3E2C";var cTxt=selected!==null&&i===q.answer?"✓":selected===i&&i!==q.answer?"✗":String.fromCharCode(65+i);return React.createElement('button',{key:i,className:cls,disabled:selected!==null,onClick:function(){handleSelect(i)}},React.createElement('span',{style:{width:28,height:28,borderRadius:"50%",background:cBg,color:cCol,display:"flex",alignItems:"center",justifyContent:"center",fontSize:13,fontWeight:700,flexShrink:0}},cTxt),opt)}))),showExplain&&React.createElement('div',{className:"animate-in",style:{background:selected===q.answer?"#E8F5E8":"#FFF5F0",borderRadius:12,padding:18,marginBottom:20,border:"1px solid "+(selected===q.answer?"#A8D8A8":"#F0C8B8"),lineHeight:1.8,fontSize:14}},React.createElement('strong',null,selected===q.answer?"✅ 答對了！":"❌ 答錯了～"),React.createElement('br'),q.explanation),showExplain&&React.createElement('div',{style:{textAlign:"center"}},React.createElement('button',{className:"game-btn game-btn-primary",onClick:handleNext},current<SYMPTOMS_QUIZ.length-1?"下一題 →":"查看結果 🎯")));
-    }
+/* ─── Quiz ─── */
+function QuizGame({onScoreAdd}) {
+  var _s=useState(0),current=_s[0],setCurrent=_s[1];
+  var _s2=useState(null),selected=_s2[0],setSelected=_s2[1];
+  var _s3=useState(false),showExplain=_s3[0],setShowExplain=_s3[1];
+  var _s4=useState(0),correct=_s4[0],setCorrect=_s4[1];
+  var _s5=useState(false),finished=_s5[0],setFinished=_s5[1];
+  var q=SYMPTOMS_QUIZ[current];
+  function handleSelect(idx){if(selected!==null)return;setSelected(idx);setShowExplain(true);if(idx===q.answer){setCorrect(function(c){return c+1});onScoreAdd(10)}}
+  function handleNext(){if(current<SYMPTOMS_QUIZ.length-1){setCurrent(function(c){return c+1});setSelected(null);setShowExplain(false)}else{setFinished(true)}}
+  if(finished){var pct=Math.round(correct/SYMPTOMS_QUIZ.length*100);var grade=pct>=80?"🏆 中醫高手！":pct>=60?"👍 不錯唷！":"📚 繼續加油！";return React.createElement('div',{className:"animate-in",style:{maxWidth:600,margin:"40px auto",padding:"40px 24px",background:"white",borderRadius:20,textAlign:"center",boxShadow:"0 2px 12px rgba(91,140,90,0.1)"}},React.createElement('div',{style:{fontSize:60,marginBottom:16}},pct>=80?"🎉":pct>=60?"😊":"💪"),React.createElement('h2',{className:"serif",style:{fontSize:26,marginBottom:8}},grade),React.createElement('p',{style:{fontSize:18,color:"#6B7B6B",marginBottom:24}},"答對 ",React.createElement('strong',{style:{color:"#5B8C5A"}},correct)," / ",SYMPTOMS_QUIZ.length," 題"),React.createElement('div',{style:{width:120,height:120,borderRadius:"50%",background:"conic-gradient(#5B8C5A "+pct+"%,#E0D8CC "+pct+"%)",display:"flex",alignItems:"center",justifyContent:"center",margin:"0 auto 24px"}},React.createElement('div',{style:{width:96,height:96,borderRadius:"50%",background:"white",display:"flex",alignItems:"center",justifyContent:"center",fontSize:24,fontWeight:700,color:"#5B8C5A"}},pct+"%")),React.createElement('button',{className:"game-btn game-btn-primary",onClick:function(){setCurrent(0);setSelected(null);setShowExplain(false);setCorrect(0);setFinished(false)}},"再挑戰一次"))}
+  return React.createElement('div',{className:"animate-in",style:{maxWidth:640,margin:"30px auto",padding:"0 20px"}},React.createElement('div',{style:{marginBottom:24}},React.createElement('div',{style:{display:"flex",justifyContent:"space-between",marginBottom:6,fontSize:13,color:"#6B7B6B"}},React.createElement('span',null,"第 "+(current+1)+" / "+SYMPTOMS_QUIZ.length+" 題"),React.createElement('span',null,"答對 "+correct+" 題")),React.createElement('div',{className:"progress-bar"},React.createElement('div',{className:"progress-fill",style:{width:(current+1)/SYMPTOMS_QUIZ.length*100+"%"}}))),React.createElement('div',{style:{background:"white",borderRadius:16,padding:24,boxShadow:"0 2px 12px rgba(91,140,90,0.1)",marginBottom:20}},React.createElement('div',{style:{background:"#FAF8F4",borderRadius:12,padding:18,marginBottom:20,borderLeft:"4px solid #D4A574",lineHeight:1.8,fontSize:15}},"📋 "+q.scenario),React.createElement('h3',{className:"serif",style:{fontSize:18,marginBottom:16}},q.question),React.createElement('div',{style:{display:"flex",flexDirection:"column",gap:10}},q.options.map(function(opt,i){var cls="quiz-option";if(selected!==null){if(i===q.answer)cls+=" correct";else if(i===selected)cls+=" wrong"}var cBg=selected!==null&&i===q.answer?"#5B8C5A":selected===i&&i!==q.answer?"#C75B5B":"#E0D8CC";var cCol=selected!==null&&(i===q.answer||i===selected)?"white":"#2C3E2C";var cTxt=selected!==null&&i===q.answer?"✓":selected===i&&i!==q.answer?"✗":String.fromCharCode(65+i);return React.createElement('button',{key:i,className:cls,disabled:selected!==null,onClick:function(){handleSelect(i)}},React.createElement('span',{style:{width:28,height:28,borderRadius:"50%",background:cBg,color:cCol,display:"flex",alignItems:"center",justifyContent:"center",fontSize:13,fontWeight:700,flexShrink:0}},cTxt),opt)}))),showExplain&&React.createElement('div',{className:"animate-in",style:{background:selected===q.answer?"#E8F5E8":"#FFF5F0",borderRadius:12,padding:18,marginBottom:20,border:"1px solid "+(selected===q.answer?"#A8D8A8":"#F0C8B8"),lineHeight:1.8,fontSize:14}},React.createElement('strong',null,selected===q.answer?"✅ 答對了！":"❌ 答錯了～"),React.createElement('br'),q.explanation),showExplain&&React.createElement('div',{style:{textAlign:"center"}},React.createElement('button',{className:"game-btn game-btn-primary",onClick:handleNext},current<SYMPTOMS_QUIZ.length-1?"下一題 →":"查看結果 🎯")));
+}
 
-    function MatchGame({onScoreAdd}) {
-      var _s=useState(0),formulaIdx=_s[0],setFormulaIdx=_s[1];var _s2=useState([]),slots=_s2[0],setSlots=_s2[1];var _s3=useState(null),selectedHerb=_s3[0],setSelectedHerb=_s3[1];var _s4=useState([]),placed=_s4[0],setPlaced=_s4[1];var _s5=useState(false),checked=_s5[0],setChecked=_s5[1];var _s6=useState(false),isCorrect=_s6[0],setIsCorrect=_s6[1];var _s7=useState(0),score=_s7[0],setScore=_s7[1];var _s8=useState(false),finished=_s8[0],setFinished=_s8[1];var _s9=useState([]),pool=_s9[0],setPool=_s9[1];var formula=FORMULAS[formulaIdx];
-      useEffect(function(){resetRound()},[formulaIdx]);
-      function resetRound(){var f=FORMULAS[formulaIdx];setSlots(new Array(f.herbs.length).fill(null));setPlaced([]);setSelectedHerb(null);setChecked(false);setIsCorrect(false);var ch=f.herbs.map(function(id){return HERBS.find(function(h){return h.id===id})}).filter(Boolean);var ot=HERBS.filter(function(h){return!f.herbs.includes(h.id)});var sh=ot.sort(function(){return Math.random()-0.5}).slice(0,Math.max(3,Math.min(8,12-f.herbs.length)));setPool([].concat(ch,sh).sort(function(){return Math.random()-0.5}))}
-      function handleHerbClick(herb){if(checked||placed.includes(herb.id))return;setSelectedHerb(herb)}
-      function handleSlotClick(si){if(checked)return;if(selectedHerb){var ns=[].concat(slots);if(ns[si])setPlaced(function(p){return p.filter(function(id){return id!==ns[si].id})});ns[si]=selectedHerb;setSlots(ns);setPlaced(function(p){return[].concat(p.filter(function(id){return id!==selectedHerb.id}),[selectedHerb.id])});setSelectedHerb(null)}else if(slots[si]){setPlaced(function(p){return p.filter(function(id){return id!==slots[si].id})});var ns2=[].concat(slots);ns2[si]=null;setSlots(ns2)}}
-      function handleCheck(){var ok=slots.every(function(s){return s})&&slots.map(function(s){return s.id}).sort().join(",")===[].concat(formula.herbs).sort().join(",");setChecked(true);setIsCorrect(ok);if(ok){var pts=20;setScore(function(s){return s+pts});onScoreAdd(pts)}}
-      function handleNext(){if(formulaIdx<FORMULAS.length-1)setFormulaIdx(function(i){return i+1});else setFinished(true)}
-      if(finished)return React.createElement('div',{className:"animate-in",style:{maxWidth:500,margin:"40px auto",textAlign:"center",background:"white",borderRadius:20,padding:40,boxShadow:"0 2px 12px rgba(91,140,90,0.1)"}},React.createElement('div',{style:{fontSize:60,marginBottom:16}},"🎊"),React.createElement('h2',{className:"serif",style:{marginBottom:8}},"組方挑戰完成！"),React.createElement('p',{style:{color:"#6B7B6B",marginBottom:24,fontSize:16}},"你獲得了 ",React.createElement('strong',{style:{color:"#DAA520"}},score)," 分"),React.createElement('button',{className:"game-btn game-btn-primary",onClick:function(){setFormulaIdx(0);setScore(0);setFinished(false)}},"再玩一次"));
-      var allFilled=slots.every(function(s){return s!==null});
-      return React.createElement('div',{className:"animate-in",style:{maxWidth:640,margin:"30px auto",padding:"0 20px"}},React.createElement('div',{style:{marginBottom:20}},React.createElement('div',{style:{display:"flex",justifyContent:"space-between",marginBottom:6,fontSize:13,color:"#6B7B6B"}},React.createElement('span',null,"方劑 "+(formulaIdx+1)+" / "+FORMULAS.length),React.createElement('span',null,"得分 "+score)),React.createElement('div',{className:"progress-bar"},React.createElement('div',{className:"progress-fill",style:{width:(formulaIdx+1)/FORMULAS.length*100+"%"}}))),React.createElement('div',{style:{background:"white",borderRadius:16,padding:24,boxShadow:"0 2px 12px rgba(91,140,90,0.1)",marginBottom:20}},React.createElement('div',{style:{textAlign:"center",marginBottom:20}},React.createElement('span',{className:"herb-tag",style:{background:"#E8F5E8",color:"#5B8C5A",marginBottom:8,display:"inline-block"}},formula.category),React.createElement('h2',{className:"serif",style:{fontSize:24,color:"#5B8C5A",marginBottom:6}},formula.name),React.createElement('p',{style:{fontSize:14,color:"#6B7B6B"}},formula.hint)),React.createElement('div',{style:{marginBottom:24}},React.createElement('p',{style:{fontSize:13,color:"#6B7B6B",marginBottom:10}},"📦 請選擇 "+formula.herbs.length+" 味藥材放入方劑："),React.createElement('div',{style:{display:"grid",gridTemplateColumns:"repeat("+Math.min(formula.herbs.length,4)+",1fr)",gap:10}},slots.map(function(s,i){var ss={};if(checked&&s){ss=formula.herbs.includes(s.id)?{borderColor:"#5B8C5A",background:"#E8F5E8"}:{borderColor:"#C75B5B",background:"#FDE8E8"}}return React.createElement('div',{key:i,className:"match-slot"+(selectedHerb?" active":"")+(s?" filled":""),onClick:function(){handleSlotClick(i)},style:Object.assign({cursor:checked?"default":"pointer"},ss)},s?React.createElement('span',null,s.emoji+" "+s.name):React.createElement('span',{style:{color:"#C0B8AC",fontSize:13}},"點此放入"))}))),React.createElement('div',null,React.createElement('p',{style:{fontSize:13,color:"#6B7B6B",marginBottom:10}},"🌿 可選藥材："),React.createElement('div',{style:{display:"flex",flexWrap:"wrap",gap:8}},pool.map(function(herb){return React.createElement('span',{key:herb.id,className:"draggable-herb"+(selectedHerb&&selectedHerb.id===herb.id?" selected":"")+(placed.includes(herb.id)?" placed":""),onClick:function(){handleHerbClick(herb)}},herb.emoji+" "+herb.name)})))),checked&&React.createElement('div',{className:"animate-in",style:{background:isCorrect?"#E8F5E8":"#FFF5F0",borderRadius:12,padding:18,marginBottom:20,border:"1px solid "+(isCorrect?"#A8D8A8":"#F0C8B8"),lineHeight:1.8,fontSize:14}},isCorrect?React.createElement('span',null,"🎉 ",React.createElement('strong',null,"完美組方！"),"你成功組出了 "+formula.name+"！",formula.link&&React.createElement('a',{href:formula.link,style:{color:"#5B8C5A",marginLeft:8}},"📖 閱讀故事")):React.createElement('span',null,"💡 ",React.createElement('strong',null,"正確答案："),formula.herbs.map(function(id){var h=HERBS.find(function(x){return x.id===id});return h?h.emoji+h.name:"?"}).join("、"))),React.createElement('div',{style:{textAlign:"center"}},!checked?React.createElement('button',{className:"game-btn game-btn-primary",disabled:!allFilled,onClick:handleCheck,style:{opacity:allFilled?1:0.5}},"確認組方 ✓"):React.createElement('button',{className:"game-btn game-btn-primary",onClick:handleNext},formulaIdx<FORMULAS.length-1?"下一個方劑 →":"查看結果 🎯")));
-    }
+/* ─── Match ─── */
+function MatchGame({onScoreAdd}) {
+  var _s=useState(0),fi=_s[0],setFi=_s[1];var _s2=useState([]),slots=_s2[0],setSlots=_s2[1];var _s3=useState(null),selHerb=_s3[0],setSelHerb=_s3[1];var _s4=useState([]),placed=_s4[0],setPlaced=_s4[1];var _s5=useState(false),checked=_s5[0],setChecked=_s5[1];var _s6=useState(false),isOk=_s6[0],setIsOk=_s6[1];var _s7=useState(0),score=_s7[0],setScore=_s7[1];var _s8=useState(false),done=_s8[0],setDone=_s8[1];var _s9=useState([]),pool=_s9[0],setPool=_s9[1];
+  var f=FORMULAS[fi];
+  useEffect(function(){reset()},[fi]);
+  function reset(){var ff=FORMULAS[fi];setSlots(new Array(ff.herbNames.length).fill(null));setPlaced([]);setSelHerb(null);setChecked(false);setIsOk(false);var correct=ff.herbNames.map(function(n){return HERBS.find(function(h){return h.name===n})}).filter(Boolean);var others=HERBS.filter(function(h){return!ff.herbNames.includes(h.name)}).sort(function(){return Math.random()-.5}).slice(0,Math.max(3,Math.min(8,12-ff.herbNames.length)));setPool([].concat(correct,others).sort(function(){return Math.random()-.5}))}
+  function clickHerb(h){if(checked||placed.includes(h.name))return;setSelHerb(h)}
+  function clickSlot(si){if(checked)return;if(selHerb){var ns=[].concat(slots);if(ns[si])setPlaced(function(p){return p.filter(function(n){return n!==ns[si].name})});ns[si]=selHerb;setSlots(ns);setPlaced(function(p){return[].concat(p.filter(function(n){return n!==selHerb.name}),[selHerb.name])});setSelHerb(null)}else if(slots[si]){setPlaced(function(p){return p.filter(function(n){return n!==slots[si].name})});var ns2=[].concat(slots);ns2[si]=null;setSlots(ns2)}}
+  function check(){var ok=slots.every(function(s){return s})&&slots.map(function(s){return s.name}).sort().join(",")===[].concat(f.herbNames).sort().join(",");setChecked(true);setIsOk(ok);if(ok){setScore(function(s){return s+20});onScoreAdd(20)}}
+  function next(){if(fi<FORMULAS.length-1)setFi(function(i){return i+1});else setDone(true)}
+  if(done)return React.createElement('div',{className:"animate-in",style:{maxWidth:500,margin:"40px auto",textAlign:"center",background:"white",borderRadius:20,padding:40,boxShadow:"0 2px 12px rgba(91,140,90,0.1)"}},React.createElement('div',{style:{fontSize:60,marginBottom:16}},"🎊"),React.createElement('h2',{className:"serif",style:{marginBottom:8}},"組方挑戰完成！"),React.createElement('p',{style:{color:"#6B7B6B",marginBottom:24,fontSize:16}},"你獲得了 ",React.createElement('strong',{style:{color:"#DAA520"}},score)," 分"),React.createElement('button',{className:"game-btn game-btn-primary",onClick:function(){setFi(0);setScore(0);setDone(false)}},"再玩一次"));
+  var allFilled=slots.every(function(s){return s!==null});
+  return React.createElement('div',{className:"animate-in",style:{maxWidth:640,margin:"30px auto",padding:"0 20px"}},React.createElement('div',{style:{marginBottom:20}},React.createElement('div',{style:{display:"flex",justifyContent:"space-between",marginBottom:6,fontSize:13,color:"#6B7B6B"}},React.createElement('span',null,"方劑 "+(fi+1)+" / "+FORMULAS.length),React.createElement('span',null,"得分 "+score)),React.createElement('div',{className:"progress-bar"},React.createElement('div',{className:"progress-fill",style:{width:(fi+1)/FORMULAS.length*100+"%"}}))),React.createElement('div',{style:{background:"white",borderRadius:16,padding:24,boxShadow:"0 2px 12px rgba(91,140,90,0.1)",marginBottom:20}},React.createElement('div',{style:{textAlign:"center",marginBottom:20}},React.createElement('h2',{className:"serif",style:{fontSize:24,color:"#5B8C5A",marginBottom:6}},f.name),React.createElement('p',{style:{fontSize:13,color:"#6B7B6B",maxWidth:500,margin:"0 auto",lineHeight:1.6}},f.effects)),React.createElement('div',{style:{marginBottom:24}},React.createElement('p',{style:{fontSize:13,color:"#6B7B6B",marginBottom:10}},"📦 請選擇 "+f.herbNames.length+" 味藥材放入方劑："),React.createElement('div',{style:{display:"grid",gridTemplateColumns:"repeat("+Math.min(f.herbNames.length,4)+",1fr)",gap:10}},slots.map(function(s,i){var ss={};if(checked&&s){ss=f.herbNames.includes(s.name)?{borderColor:"#5B8C5A",background:"#E8F5E8"}:{borderColor:"#C75B5B",background:"#FDE8E8"}}return React.createElement('div',{key:i,className:"match-slot"+(selHerb?" active":"")+(s?" filled":""),onClick:function(){clickSlot(i)},style:Object.assign({cursor:checked?"default":"pointer"},ss)},s?React.createElement('span',null,s.name):React.createElement('span',{style:{color:"#C0B8AC",fontSize:13}},"點此放入"))}))),React.createElement('div',null,React.createElement('p',{style:{fontSize:13,color:"#6B7B6B",marginBottom:10}},"🌿 可選藥材："),React.createElement('div',{style:{display:"flex",flexWrap:"wrap",gap:8}},pool.map(function(h){return React.createElement('span',{key:h.name,className:"draggable-herb"+(selHerb&&selHerb.name===h.name?" selected":"")+(placed.includes(h.name)?" placed":""),onClick:function(){clickHerb(h)}},h.name)})))),checked&&React.createElement('div',{className:"animate-in",style:{background:isOk?"#E8F5E8":"#FFF5F0",borderRadius:12,padding:18,marginBottom:20,border:"1px solid "+(isOk?"#A8D8A8":"#F0C8B8"),lineHeight:1.8,fontSize:14}},isOk?React.createElement('span',null,"🎉 ",React.createElement('strong',null,"完美組方！"),"你成功組出了 "+f.name+"！",f.link&&React.createElement('a',{href:f.link,style:{color:"#5B8C5A",marginLeft:8}},"📖 閱讀故事")):React.createElement('span',null,"💡 ",React.createElement('strong',null,"正確答案："),f.herbNames.join("、"))),React.createElement('div',{style:{textAlign:"center"}},!checked?React.createElement('button',{className:"game-btn game-btn-primary",disabled:!allFilled,onClick:check,style:{opacity:allFilled?1:.5}},"確認組方 ✓"):React.createElement('button',{className:"game-btn game-btn-primary",onClick:next},fi<FORMULAS.length-1?"下一個方劑 →":"查看結果 🎯")));
+}
 
-    function MemoryGame({onScoreAdd}) {
-      var _s=useState([]),cards=_s[0],setCards=_s[1];var _s2=useState([]),flipped=_s2[0],setFlipped=_s2[1];var _s3=useState([]),matched=_s3[0],setMatched=_s3[1];var _s4=useState(0),moves=_s4[0],setMoves=_s4[1];var _s5=useState(false),finished=_s5[0],setFinished=_s5[1];var lockRef=useRef(false);var PC=8;
-      useEffect(function(){initGame()},[]);
-      function initGame(){var sel=HERBS.sort(function(){return Math.random()-0.5}).slice(0,PC);var pairs=[];sel.forEach(function(h){pairs.push({id:h.id+"_n",pairId:h.id,type:"name",content:h.emoji+" "+h.name});pairs.push({id:h.id+"_e",pairId:h.id,type:"effect",content:h.effect.length>10?h.effect.slice(0,10):h.effect})});setCards(pairs.sort(function(){return Math.random()-0.5}));setFlipped([]);setMatched([]);setMoves(0);setFinished(false);lockRef.current=false}
-      function handleFlip(idx){if(lockRef.current)return;if(flipped.includes(idx)||matched.includes(cards[idx].pairId))return;var nf=[].concat(flipped,[idx]);setFlipped(nf);if(nf.length===2){lockRef.current=true;setMoves(function(m){return m+1});var a=nf[0],b=nf[1];if(cards[a].pairId===cards[b].pairId&&cards[a].type!==cards[b].type){setTimeout(function(){setMatched(function(m){return[].concat(m,[cards[a].pairId])});setFlipped([]);lockRef.current=false;onScoreAdd(5);if(matched.length+1===PC)setTimeout(function(){setFinished(true)},600)},600)}else{setTimeout(function(){setFlipped([]);lockRef.current=false},800)}}}
-      if(finished){var stars=moves<=PC*1.5?3:moves<=PC*2?2:1;return React.createElement('div',{className:"animate-in",style:{maxWidth:500,margin:"40px auto",textAlign:"center",background:"white",borderRadius:20,padding:40,boxShadow:"0 2px 12px rgba(91,140,90,0.1)"}},React.createElement('div',{style:{fontSize:48,marginBottom:12}},"⭐".repeat(stars)),React.createElement('h2',{className:"serif",style:{marginBottom:8}},"翻翻樂完成！"),React.createElement('p',{style:{color:"#6B7B6B",marginBottom:24}},"共用了 ",React.createElement('strong',null,moves)," 步完成 "+PC+" 組配對"),React.createElement('button',{className:"game-btn game-btn-primary",onClick:initGame},"再玩一次（隨機出題）"))}
-      return React.createElement('div',{className:"animate-in",style:{maxWidth:560,margin:"30px auto",padding:"0 20px"}},React.createElement('div',{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:20}},React.createElement('span',{style:{fontSize:14,color:"#6B7B6B"}},"步數："+moves),React.createElement('span',{style:{fontSize:14,color:"#6B7B6B"}},"配對："+matched.length+" / "+PC)),React.createElement('div',{style:{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10}},cards.map(function(card,idx){var isF=flipped.includes(idx),isM=matched.includes(card.pairId),show=isF||isM;return React.createElement('div',{key:card.id,className:"card-flip",onClick:function(){handleFlip(idx)},style:{cursor:show&&!isF?"default":"pointer"}},React.createElement('div',{className:"card-flip-inner"+(show?" flipped":""),style:{height:80}},React.createElement('div',{className:"card-flip-front",style:{background:"linear-gradient(135deg,#5B8C5A,#3D6B3C)",display:"flex",alignItems:"center",justifyContent:"center",color:"white",fontSize:22}},"🌿"),React.createElement('div',{className:"card-flip-back",style:{background:isM?"#E8F5E8":"white",border:"2px solid "+(isM?"#5B8C5A":"#D4A574"),display:"flex",alignItems:"center",justifyContent:"center",padding:6,fontSize:card.type==="effect"?11:13,fontWeight:card.type==="name"?600:400,textAlign:"center",lineHeight:1.3}},card.content)))})),React.createElement('div',{style:{marginTop:20,textAlign:"center",fontSize:13,color:"#6B7B6B",lineHeight:1.6}},"💡 提示：藥材名稱和功效要配成一對唷！每次遊戲隨機出題"));
-    }
+/* ─── Memory ─── */
+function MemoryGame({onScoreAdd}) {
+  var _s=useState([]),cards=_s[0],setCards=_s[1];var _s2=useState([]),flipped=_s2[0],setFlipped=_s2[1];var _s3=useState([]),matched=_s3[0],setMatched=_s3[1];var _s4=useState(0),moves=_s4[0],setMoves=_s4[1];var _s5=useState(false),done=_s5[0],setDone=_s5[1];var lock=useRef(false);var PC=Math.min(8,HERBS.length);
+  useEffect(function(){init()},[]);
+  function init(){var sel=HERBS.sort(function(){return Math.random()-.5}).slice(0,PC);var pairs=[];sel.forEach(function(h){pairs.push({id:h.name+"_n",pid:h.name,type:"name",content:h.name});var eff=h.effect.length>10?h.effect.slice(0,10):h.effect;pairs.push({id:h.name+"_e",pid:h.name,type:"eff",content:eff})});setCards(pairs.sort(function(){return Math.random()-.5}));setFlipped([]);setMatched([]);setMoves(0);setDone(false);lock.current=false}
+  function flip(idx){if(lock.current||flipped.includes(idx)||matched.includes(cards[idx].pid))return;var nf=[].concat(flipped,[idx]);setFlipped(nf);if(nf.length===2){lock.current=true;setMoves(function(m){return m+1});var a=nf[0],b=nf[1];if(cards[a].pid===cards[b].pid&&cards[a].type!==cards[b].type){setTimeout(function(){setMatched(function(m){return[].concat(m,[cards[a].pid])});setFlipped([]);lock.current=false;onScoreAdd(5);if(matched.length+1===PC)setTimeout(function(){setDone(true)},600)},600)}else{setTimeout(function(){setFlipped([]);lock.current=false},800)}}}
+  if(done){var stars=moves<=PC*1.5?3:moves<=PC*2?2:1;return React.createElement('div',{className:"animate-in",style:{maxWidth:500,margin:"40px auto",textAlign:"center",background:"white",borderRadius:20,padding:40,boxShadow:"0 2px 12px rgba(91,140,90,0.1)"}},React.createElement('div',{style:{fontSize:48,marginBottom:12}},"⭐".repeat(stars)),React.createElement('h2',{className:"serif",style:{marginBottom:8}},"翻翻樂完成！"),React.createElement('p',{style:{color:"#6B7B6B",marginBottom:24}},"共用了 ",React.createElement('strong',null,moves)," 步完成 "+PC+" 組配對"),React.createElement('button',{className:"game-btn game-btn-primary",onClick:init},"再玩一次（隨機出題）"))}
+  return React.createElement('div',{className:"animate-in",style:{maxWidth:560,margin:"30px auto",padding:"0 20px"}},React.createElement('div',{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:20}},React.createElement('span',{style:{fontSize:14,color:"#6B7B6B"}},"步數："+moves),React.createElement('span',{style:{fontSize:14,color:"#6B7B6B"}},"配對："+matched.length+" / "+PC)),React.createElement('div',{style:{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10}},cards.map(function(c,idx){var isF=flipped.includes(idx),isM=matched.includes(c.pid),show=isF||isM;return React.createElement('div',{key:c.id,className:"card-flip",onClick:function(){flip(idx)},style:{cursor:show&&!isF?"default":"pointer"}},React.createElement('div',{className:"card-flip-inner"+(show?" flipped":""),style:{height:80}},React.createElement('div',{className:"card-flip-front",style:{background:"linear-gradient(135deg,#5B8C5A,#3D6B3C)",display:"flex",alignItems:"center",justifyContent:"center",color:"white",fontSize:22}},"🌿"),React.createElement('div',{className:"card-flip-back",style:{background:isM?"#E8F5E8":"white",border:"2px solid "+(isM?"#5B8C5A":"#D4A574"),display:"flex",alignItems:"center",justifyContent:"center",padding:6,fontSize:c.type==="eff"?11:14,fontWeight:c.type==="name"?600:400,textAlign:"center",lineHeight:1.3}},c.content)))})),React.createElement('div',{style:{marginTop:20,textAlign:"center",fontSize:13,color:"#6B7B6B",lineHeight:1.6}},"💡 提示：藥材名稱和功效要配成一對唷！每次遊戲隨機出題"));
+}
 
-    function Collection() {
-      var _s=useState(null),selected=_s[0],setSelected=_s[1];var _s2=useState("全部"),filter=_s2[0],setFilter=_s2[1];
-      var categories=["全部","補氣","補血","活血","利水","解表","溫裏","清熱","收澀","安神","理氣"];
-      var counts={};categories.forEach(function(c){counts[c]=c==="全部"?HERBS.length:HERBS.filter(function(h){return h.category===c}).length});
-      var filtered=filter==="全部"?HERBS:HERBS.filter(function(h){return h.category===filter});
-      return React.createElement('div',{className:"animate-in",style:{maxWidth:700,margin:"30px auto",padding:"0 20px"}},
-        React.createElement('div',{style:{display:"flex",flexWrap:"wrap",gap:8,marginBottom:24,justifyContent:"center"}},categories.filter(function(c){return counts[c]>0}).map(function(cat){return React.createElement('button',{key:cat,onClick:function(){setFilter(cat);setSelected(null)},style:{padding:"6px 16px",borderRadius:20,border:"none",background:filter===cat?"#5B8C5A":"#E8E2D8",color:filter===cat?"white":"#2C3E2C",fontSize:13,fontWeight:500,cursor:"pointer",fontFamily:"'Noto Sans TC'",transition:"all 0.2s"}},cat+" ("+counts[cat]+")")})),
-        React.createElement('div',{style:{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(130px,1fr))",gap:12}},filtered.map(function(herb){return React.createElement('div',{key:herb.id,onClick:function(){setSelected(selected&&selected.id===herb.id?null:herb)},style:{background:selected&&selected.id===herb.id?"#F0F7F0":"white",borderRadius:14,padding:16,textAlign:"center",boxShadow:"0 2px 12px rgba(91,140,90,0.1)",cursor:"pointer",border:"2px solid "+(selected&&selected.id===herb.id?"#5B8C5A":"transparent"),transition:"all 0.2s"}},React.createElement('div',{style:{fontSize:32,marginBottom:6}},herb.emoji),React.createElement('div',{className:"serif",style:{fontSize:16,fontWeight:700}},herb.name),React.createElement('div',{style:{fontSize:11,color:"#6B7B6B",marginTop:4}},herb.role))})),
-        selected&&React.createElement('div',{className:"animate-in",style:{marginTop:24,background:"white",borderRadius:16,padding:24,boxShadow:"0 2px 12px rgba(91,140,90,0.1)",position:"relative",borderTop:"4px solid #5B8C5A"}},
-          React.createElement('button',{onClick:function(){setSelected(null)},style:{position:"absolute",top:12,right:16,background:"none",border:"none",fontSize:20,cursor:"pointer",color:"#6B7B6B"}},"×"),
-          React.createElement('div',{style:{display:"flex",gap:20,flexWrap:"wrap"}},
-            React.createElement('div',{style:{width:80,height:80,borderRadius:16,background:"#FAF8F4",display:"flex",alignItems:"center",justifyContent:"center",fontSize:40,flexShrink:0}},selected.emoji),
-            React.createElement('div',{style:{flex:1,minWidth:200}},
-              React.createElement('h3',{className:"serif",style:{fontSize:22,marginBottom:4}},selected.name),
-              React.createElement('p',{style:{fontSize:14,color:"#D4A574",fontWeight:600,marginBottom:12}},"「"+selected.role+"」"),
-              React.createElement('div',{style:{display:"grid",gridTemplateColumns:"auto 1fr",gap:"8px 16px",fontSize:14}},
-                React.createElement('span',{style:{color:"#6B7B6B"}},"性味"),React.createElement('span',null,selected.property),
-                React.createElement('span',{style:{color:"#6B7B6B"}},"歸經"),React.createElement('span',null,selected.meridian),
-                React.createElement('span',{style:{color:"#6B7B6B"}},"功效"),React.createElement('span',null,selected.effect),
-                React.createElement('span',{style:{color:"#6B7B6B"}},"分類"),React.createElement('span',{className:"herb-tag",style:{background:"#E8F5E8",color:"#5B8C5A",alignSelf:"start"}},selected.category)
-              )
-            )
-          ),
-          React.createElement('div',{style:{marginTop:16,padding:12,background:"#FAF8F4",borderRadius:10,fontSize:13,color:"#6B7B6B"}},
-            "📝 出現方劑：",
-            FORMULAS.filter(function(f){return f.herbs.includes(selected.id)}).map(function(f,i,arr){return React.createElement(React.Fragment,{key:f.id},f.link?React.createElement('a',{href:f.link,style:{color:"#5B8C5A",textDecoration:"none",fontWeight:500}},f.name):f.name,i<arr.length-1?"、":"")}),
-            FORMULAS.filter(function(f){return f.herbs.includes(selected.id)}).length===0&&"（更多方劑持續更新中）"
-          )
-        )
-      );
-    }
+/* ─── Main App ─── */
+function App() {
+  var _s=useState(null),cur=_s[0],setCur=_s[1];
+  var _s2=useState(0),total=_s2[0],setTotal=_s2[1];
+  var add=useCallback(function(p){setTotal(function(s){return s+p})},[]);
+  var game=null;
+  if(cur==="quiz")game=React.createElement(QuizGame,{onScoreAdd:add});
+  else if(cur==="match")game=React.createElement(MatchGame,{onScoreAdd:add});
+  else if(cur==="memory")game=React.createElement(MemoryGame,{onScoreAdd:add});
+  else game=React.createElement(GameHub,{onSelect:setCur,totalScore:total});
+  return React.createElement('div',{style:{minHeight:"100vh",background:"#F7F3EB"}},React.createElement(Header,{currentGame:cur,onBack:function(){setCur(null)},score:total}),game);
+}
 
-    function App() {
-      var _s=useState(null),currentGame=_s[0],setCurrentGame=_s[1];
-      var _s2=useState(0),totalScore=_s2[0],setTotalScore=_s2[1];
-      var handleScoreAdd=useCallback(function(pts){setTotalScore(function(s){return s+pts})},[]);
-      var game=null;
-      if(currentGame==="quiz")game=React.createElement(QuizGame,{onScoreAdd:handleScoreAdd});
-      else if(currentGame==="match")game=React.createElement(MatchGame,{onScoreAdd:handleScoreAdd});
-      else if(currentGame==="memory")game=React.createElement(MemoryGame,{onScoreAdd:handleScoreAdd});
-      else if(currentGame==="collection")game=React.createElement(Collection);
-      else game=React.createElement(GameHub,{onSelect:setCurrentGame,totalScore:totalScore});
-      return React.createElement('div',{style:{minHeight:"100vh",background:"#F7F3EB"}},React.createElement(Header,{currentGame:currentGame,onBack:function(){setCurrentGame(null)},score:totalScore}),game);
-    }
-
-    ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(App));
-  </script>
+ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(App));
+</script>
 </body>
 </html>
