@@ -27,13 +27,22 @@ title: 首頁
       </svg>
       <span>收聽 Podcast</span>
     </a>
+    <a href="https://www.facebook.com/MeettheHerbs" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="social-button facebook">
+      <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+      </svg>
+      <span>Facebook 粉專</span>
+    </a>
   </div>
 </div>
 
-<!-- 🎙️ Podcast 預告區塊 -->
+<!-- 🎙️ Podcast 區塊 -->
 <section class="podcast-section">
   <div class="podcast-header">
-    <span class="podcast-badge">🎙️ 新企劃</span>
+    <span class="podcast-badge">🎙️ 熱播中</span>
     <h2>草本夜話</h2>
     <p class="podcast-tagline">每一味藥草，都有自己的故事</p>
   </div>
@@ -47,10 +56,18 @@ title: 首頁
       <span class="meta-item">🌙 適合睡前聆聽</span>
       <span class="meta-item">📅 每兩週更新</span>
     </div>
-    
-    <div class="podcast-launch">
-      <span class="launch-icon">🌸</span>
-      <span>2026 立春首播</span>
+
+    <div class="podcast-player">
+      <iframe 
+        style="border-radius:12px" 
+        src="https://open.spotify.com/embed/show/6k6qAkTg8nX7k4FMU32hgT?utm_source=generator&theme=0" 
+        width="100%" 
+        height="352" 
+        frameBorder="0" 
+        allowfullscreen="" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy">
+      </iframe>
     </div>
     
     <a href="https://open.spotify.com/show/6k6qAkTg8nX7k4FMU32hgT" 
@@ -60,7 +77,7 @@ title: 首頁
       <svg class="spotify-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
       </svg>
-      追蹤節目，首播不錯過
+      在 Spotify 上收聽
     </a>
   </div>
 </section>
@@ -218,6 +235,15 @@ body {
   background: #1ed760;
 }
 
+.social-button.facebook {
+  background: #1877f2;
+  color: white;
+}
+
+.social-button.facebook:hover {
+  background: #0d65d9;
+}
+
 .social-icon {
   width: 22px;
   height: 22px;
@@ -329,21 +355,14 @@ body {
   backdrop-filter: blur(10px);
 }
 
-.podcast-launch {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: linear-gradient(135deg, rgba(201, 169, 97, 0.2) 0%, rgba(232, 213, 163, 0.1) 100%);
-  border: 1px solid rgba(201, 169, 97, 0.3);
-  padding: 15px 25px;
-  border-radius: 12px;
-  margin: 20px 0;
-  font-size: 1.1em;
-  color: #c9a961;
+.podcast-player {
+  margin: 30px auto;
+  max-width: 600px;
 }
 
-.launch-icon {
-  font-size: 1.5em;
+.podcast-player iframe {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  border-radius: 12px;
 }
 
 .podcast-cta {
