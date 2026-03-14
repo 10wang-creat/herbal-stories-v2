@@ -82,6 +82,36 @@ title: 首頁
   </div>
 </section>
 
+<!-- 🔮 本草心語區塊 -->
+<section class="oracle-section">
+  <div class="oracle-content">
+    <div class="oracle-text">
+      <span class="oracle-badge">🔮 新上線</span>
+      <h2 class="oracle-title">本草心語</h2>
+      <p class="oracle-subtitle">Herbal Heart Language</p>
+      <p class="oracle-desc">靜下心，感受此刻的自己。</p>
+      <p class="oracle-desc">讓一味本草，回應你內心的聲音。</p>
+      <p class="oracle-detail">每一張卡牌背後，都是一味藥草的智慧。抽一張卡，看看今天的草本想對你說什麼——無論是當歸的思念、薄荷的清涼、還是人參的力量，都是專屬於你的一段心靈對話。</p>
+      <a href="https://tcm-oracle-cards-v2.vercel.app/" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         class="oracle-cta">
+        開始抽牌 →
+      </a>
+    </div>
+    <div class="oracle-visual">
+      <div class="oracle-card-stack">
+        <div class="oracle-card card-back-1"></div>
+        <div class="oracle-card card-back-2"></div>
+        <div class="oracle-card card-front">
+          <span class="card-emoji">🌿</span>
+          <span class="card-text">本草心語</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class="features">
   <h2>✨ 我們的特色</h2>
   
@@ -400,6 +430,176 @@ body {
   
   .podcast-header h2 {
     font-size: 2.2em;
+  }
+}
+
+/* 🔮 本草心語區塊 */
+.oracle-section {
+  background: linear-gradient(135deg, #FAF6F0 0%, #F5EDE0 50%, #EDE4D3 100%);
+  border-radius: 20px;
+  padding: 50px 40px;
+  margin: 50px 0;
+  box-shadow: 0 6px 30px rgba(139, 94, 60, 0.1);
+  border: 1px solid rgba(193, 163, 120, 0.2);
+}
+
+.oracle-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 50px;
+  align-items: center;
+}
+
+.oracle-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #8B5E9B 0%, #A67BB5 100%);
+  color: white;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.oracle-title {
+  font-size: 2.6em;
+  font-weight: 900;
+  color: #8B6B3D;
+  margin: 10px 0 5px;
+  letter-spacing: 6px;
+}
+
+.oracle-subtitle {
+  font-size: 1em;
+  color: #B8976A;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.oracle-desc {
+  font-size: 1.15em;
+  color: #6B5B4B;
+  line-height: 1.8;
+  margin-bottom: 6px;
+}
+
+.oracle-detail {
+  font-size: 0.95em;
+  color: #8B7B6B;
+  line-height: 1.8;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.oracle-cta {
+  display: inline-block;
+  background: linear-gradient(135deg, #8B6B3D 0%, #B8976A 100%);
+  color: white;
+  padding: 14px 36px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05em;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(139, 107, 61, 0.25);
+}
+
+.oracle-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(139, 107, 61, 0.35);
+  background: linear-gradient(135deg, #A07D4A 0%, #C9A87A 100%);
+}
+
+.oracle-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oracle-card-stack {
+  position: relative;
+  width: 180px;
+  height: 240px;
+}
+
+.oracle-card {
+  position: absolute;
+  width: 160px;
+  height: 220px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.card-back-1 {
+  background: linear-gradient(135deg, #D4C4A8 0%, #C9B896 100%);
+  top: 0;
+  left: 0;
+  transform: rotate(-8deg);
+}
+
+.card-back-2 {
+  background: linear-gradient(135deg, #C9B896 0%, #BBA97E 100%);
+  top: 0;
+  left: 10px;
+  transform: rotate(-3deg);
+}
+
+.card-front {
+  background: linear-gradient(135deg, #FAF6F0 0%, #FFF8EE 100%);
+  border: 2px solid #C9A961;
+  top: 0;
+  left: 20px;
+  transform: rotate(2deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: transform 0.3s;
+}
+
+.card-front:hover {
+  transform: rotate(0deg) translateY(-8px);
+}
+
+.card-emoji {
+  font-size: 3em;
+}
+
+.card-text {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #8B6B3D;
+  letter-spacing: 4px;
+}
+
+@media (max-width: 768px) {
+  .oracle-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .oracle-section {
+    padding: 40px 25px;
+  }
+  
+  .oracle-title {
+    font-size: 2em;
+  }
+  
+  .oracle-visual {
+    order: -1;
+  }
+  
+  .oracle-card-stack {
+    width: 160px;
+    height: 220px;
+    margin: 0 auto;
   }
 }
 
