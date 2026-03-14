@@ -101,11 +101,10 @@ title: 首頁
     </div>
     <div class="oracle-visual">
       <div class="oracle-card-stack">
-        <div class="oracle-card card-back-1"></div>
-        <div class="oracle-card card-back-2"></div>
-        <div class="oracle-card card-front">
-          <span class="card-emoji">🌿</span>
-          <span class="card-text">本草心語</span>
+        <div class="oracle-card card-shadow-1"></div>
+        <div class="oracle-card card-shadow-2"></div>
+        <div class="oracle-card card-main">
+          <img src="{{ '/assets/images/oracle-card-back.png' | relative_url }}" alt="本草心語卡牌">
         </div>
       </div>
     </div>
@@ -534,47 +533,37 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,0.12);
 }
 
-.card-back-1 {
+.card-shadow-1 {
   background: linear-gradient(135deg, #D4C4A8 0%, #C9B896 100%);
   top: 0;
   left: 0;
   transform: rotate(-8deg);
 }
 
-.card-back-2 {
+.card-shadow-2 {
   background: linear-gradient(135deg, #C9B896 0%, #BBA97E 100%);
   top: 0;
   left: 10px;
   transform: rotate(-3deg);
 }
 
-.card-front {
-  background: linear-gradient(135deg, #FAF6F0 0%, #FFF8EE 100%);
-  border: 2px solid #C9A961;
+.card-main {
   top: 0;
   left: 20px;
   transform: rotate(2deg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+  overflow: hidden;
   transition: transform 0.3s;
 }
 
-.card-front:hover {
+.card-main:hover {
   transform: rotate(0deg) translateY(-8px);
 }
 
-.card-emoji {
-  font-size: 3em;
-}
-
-.card-text {
-  font-size: 1.1em;
-  font-weight: 700;
-  color: #8B6B3D;
-  letter-spacing: 4px;
+.card-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
 }
 
 @media (max-width: 768px) {
