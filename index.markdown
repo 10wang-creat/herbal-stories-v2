@@ -141,6 +141,7 @@ title: 首頁
   <div class="story-list">
     {% assign sorted_stories = site.stories | sort: 'date' | reverse %}
     {% for story in sorted_stories limit:6 %}
+      {% if story.date > site.time %}{% continue %}{% endif %}
       <article class="story-card">
         <h3>
           <a href="{{ story.url | relative_url }}">{{ story.title }}</a>

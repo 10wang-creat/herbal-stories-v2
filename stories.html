@@ -11,6 +11,7 @@ permalink: /stories/
   <div class="story-timeline">
     {% assign sorted_stories = site.stories | sort: 'date' | reverse %}
     {% for story in sorted_stories %}
+      {% if story.date > site.time %}{% continue %}{% endif %}
       <article class="timeline-card">
         <div class="timeline-date">
           <span class="date-month">{{ story.date | date: "%m月" }}</span>

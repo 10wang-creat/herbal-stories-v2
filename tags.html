@@ -66,6 +66,7 @@ permalink: /tags/
   <!-- 收集所有標籤 -->
   {% assign all_tags_array = "" | split: "" %}
   {% for story in site.stories %}
+    {% if story.date > site.time %}{% continue %}{% endif %}
     {% for tag in story.tags %}
       {% unless all_tags_array contains tag %}
         {% assign all_tags_array = all_tags_array | push: tag %}
@@ -85,6 +86,7 @@ permalink: /tags/
       
       <div class="posts-grid">
         {% for story in tag_stories %}
+          {% if story.date > site.time %}{% continue %}{% endif %}
           <article class="post-card">
             <h3>
               <a href="{{ story.url | relative_url }}">{{ story.title }}</a>

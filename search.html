@@ -28,6 +28,7 @@ permalink: /search/
       <button class="filter-button active" data-filter="all">全部</button>
       {% assign all_tags = "" | split: "" %}
       {% for story in site.stories %}
+        {% if story.date > site.time %}{% continue %}{% endif %}
         {% for tag in story.tags %}
           {% assign all_tags = all_tags | push: tag %}
         {% endfor %}
@@ -48,6 +49,7 @@ permalink: /search/
         <div class="formula-grid">
           {% assign sorted_stories = site.stories | sort: "date" | reverse %}
           {% for story in sorted_stories %}
+          {% if story.date > site.time %}{% continue %}{% endif %}
           <a href="{{ story.url | relative_url }}" class="formula-card">
             <span class="formula-icon">💊</span>
             <span class="formula-name">{{ story.formula }}</span>
@@ -63,6 +65,7 @@ permalink: /search/
 <script>
 const stories = [
   {% for story in site.stories %}
+  {% if story.date > site.time %}{% continue %}{% endif %}
   {
     title: {{ story.title | jsonify }},
     formula: {{ story.formula | jsonify }},
