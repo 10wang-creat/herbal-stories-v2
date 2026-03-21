@@ -77,8 +77,14 @@ layout: default
   <!-- 社群分享按鈕 -->
 {% include share-buttons.html %}
   
-  <!-- 上一篇/下一篇導航 -->
-  {% assign sorted_stories = site.stories | sort: 'date' %}
+  <!-- 上一篇/下一篇導航（過濾未來文章） -->
+  {% assign all_sorted = site.stories | sort: 'date' %}
+  {% assign sorted_stories = "" | split: "" %}
+  {% for s in all_sorted %}
+    {% if s.date <= site.time %}
+      {% assign sorted_stories = sorted_stories | push: s %}
+    {% endif %}
+  {% endfor %}
   {% assign story_count = sorted_stories | size %}
   {% for story in sorted_stories %}
     {% if story.url == page.url %}
