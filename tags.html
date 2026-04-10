@@ -1,0 +1,308 @@
+---
+layout: default
+title: 標籤分類
+permalink: /tags/
+---
+
+<div class="tags-page">
+  <h1>📚 標籤分類</h1>
+  
+  <div class="tag-categories">
+    <section class="tag-section">
+      <h2>🌿 依功效分類</h2>
+      <div class="tag-group">
+        {% assign efficacy_tags = "補氣,補血,氣血雙補,補氣養血,健脾利濕,疏肝解鬱,清熱涼血,溫陽補氣,滋陰補腎" | split: "," %}
+        {% for tag in efficacy_tags %}
+          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" %}
+          {% if tag_stories.size > 0 %}
+            <a href="#{{ tag }}" class="tag-button efficacy">{{ tag }} ({{ tag_stories.size }})</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="tag-section">
+      <h2>💊 依適用情況分類</h2>
+      <div class="tag-group">
+        {% assign symptom_tags = "疲勞無力,婦科調理,術後調理,病後調養,產後調理,情緒調理,月經不調,壓力,更年期,失眠,心悸,健忘,食療養生" | split: "," %}
+        {% for tag in symptom_tags %}
+          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" %}
+          {% if tag_stories.size > 0 %}
+            <a href="#{{ tag }}" class="tag-button symptom">{{ tag }} ({{ tag_stories.size }})</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="tag-section">
+      <h2>📊 依難度分類</h2>
+      <div class="tag-group">
+        {% assign level_tags = "入門,中階,進階" | split: "," %}
+        {% for tag in level_tags %}
+          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" %}
+          {% if tag_stories.size > 0 %}
+            <a href="#{{ tag }}" class="tag-button level">{{ tag }} ({{ tag_stories.size }})</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="tag-section">
+      <h2>🏷️ 依方劑類型分類</h2>
+      <div class="tag-group">
+        {% assign type_tags = "經典方,補腎名方" | split: "," %}
+        {% for tag in type_tags %}
+          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" %}
+          {% if tag_stories.size > 0 %}
+            <a href="#{{ tag }}" class="tag-button type">{{ tag }} ({{ tag_stories.size }})</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+
+  <hr>
+
+  <!-- 收集所有標籤 -->
+  {% assign all_tags_array = "" | split: "" %}
+  {% for story in site.stories %}
+    {% if story.date > site.time %}{% continue %}{% endif %}
+    {% for tag in story.tags %}
+      {% unless all_tags_array contains tag %}
+        {% assign all_tags_array = all_tags_array | push: tag %}
+      {% endunless %}
+    {% endfor %}
+  {% endfor %}
+  {% assign all_tags_sorted = all_tags_array | sort %}
+
+  <!-- 顯示每個標籤下的文章列表 -->
+  {% for tag in all_tags_sorted %}
+    {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" | sort: "date" | reverse %}
+    <section id="{{ tag }}" class="tag-posts-section">
+      <h2 class="tag-title">
+        <span class="tag-icon">#</span> {{ tag }}
+        <span class="tag-count">({{ tag_stories.size }} 篇)</span>
+      </h2>
+      
+      <div class="posts-grid">
+        {% for story in tag_stories %}
+          {% if story.date > site.time %}{% continue %}{% endif %}
+          <article class="post-card">
+            <h3>
+              <a href="{{ story.url | relative_url }}">{{ story.title }}</a>
+            </h3>
+            {% if story.formula %}
+              <div class="formula-name">💊 {{ story.formula }}</div>
+            {% endif %}
+            <div class="post-meta">
+              <time datetime="{{ story.date | date_to_xmlschema }}">
+                {{ story.date | date: "%Y年%m月%d日" }}
+              </time>
+            </div>
+            {% if story.excerpt %}
+              <p class="post-excerpt">{{ story.excerpt | truncate: 80 }}</p>
+            {% endif %}
+            <div class="post-tags">
+              {% for story_tag in story.tags limit:3 %}
+                <span class="mini-tag">{{ story_tag }}</span>
+              {% endfor %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+</div>
+
+<style>
+.tags-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.tags-page h1 {
+  color: #2d5016;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+.tag-categories {
+  margin-bottom: 3rem;
+}
+
+.tag-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f9f6f0;
+  border-radius: 12px;
+}
+
+.tag-section h2 {
+  color: #4a7c2c;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tag-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 2px solid #6b9a3e;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #2d5016;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tag-button:hover {
+  background: #6b9a3e;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tag-button.efficacy {
+  border-color: #6b9a3e;
+}
+
+.tag-button.efficacy:hover {
+  background: #6b9a3e;
+}
+
+.tag-button.symptom {
+  border-color: #d4a574;
+}
+
+.tag-button.symptom:hover {
+  background: #d4a574;
+}
+
+.tag-button.level {
+  border-color: #7c9885;
+}
+
+.tag-button.level:hover {
+  background: #7c9885;
+}
+
+.tag-button.type {
+  border-color: #8b7355;
+}
+
+.tag-button.type:hover {
+  background: #8b7355;
+}
+
+.tag-posts-section {
+  margin: 3rem 0;
+  padding: 2rem 0;
+  border-top: 2px solid #e8dcc8;
+}
+
+.tag-title {
+  color: #2d5016;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tag-icon {
+  color: #6b9a3e;
+  font-size: 1.8rem;
+}
+
+.tag-count {
+  color: #8b7355;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.post-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e8dcc8;
+  border-left: 4px solid #4a7c2c;
+  transition: all 0.3s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0 4px 12px rgba(107, 154, 62, 0.15);
+  transform: translateY(-4px);
+}
+
+.post-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.post-card h3 a {
+  color: #2d5016;
+  text-decoration: none;
+}
+
+.post-card h3 a:hover {
+  color: #6b9a3e;
+}
+
+.formula-name {
+  color: #c9a961;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-meta {
+  color: #8b7355;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-excerpt {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0.75rem 0;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.mini-tag {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+  background: #f0e8d8;
+  color: #4a7c2c;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tags-page h1 {
+    font-size: 2rem;
+  }
+}
+</style>
