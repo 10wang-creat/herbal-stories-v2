@@ -13,7 +13,7 @@ permalink: /tags/
       <div class="tag-group">
         {% assign efficacy_tags = "補氣,補血,氣血雙補,補氣養血,健脾利濕,疏肝解鬱,清熱涼血,溫陽補氣,滋陰補腎" | split: "," %}
         {% for tag in efficacy_tags %}
-          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" %}
+          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" | where_exp: "story", "story.date <= site.time" %}
           {% if tag_stories.size > 0 %}
             <a href="#{{ tag }}" class="tag-button efficacy">{{ tag }} ({{ tag_stories.size }})</a>
           {% endif %}
@@ -26,7 +26,7 @@ permalink: /tags/
       <div class="tag-group">
         {% assign symptom_tags = "疲勞無力,婦科調理,術後調理,病後調養,產後調理,情緒調理,月經不調,壓力,更年期,失眠,心悸,健忘,食療養生" | split: "," %}
         {% for tag in symptom_tags %}
-          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" %}
+          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" | where_exp: "story", "story.date <= site.time" %}
           {% if tag_stories.size > 0 %}
             <a href="#{{ tag }}" class="tag-button symptom">{{ tag }} ({{ tag_stories.size }})</a>
           {% endif %}
@@ -39,7 +39,7 @@ permalink: /tags/
       <div class="tag-group">
         {% assign level_tags = "入門,中階,進階" | split: "," %}
         {% for tag in level_tags %}
-          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" %}
+          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" | where_exp: "story", "story.date <= site.time" %}
           {% if tag_stories.size > 0 %}
             <a href="#{{ tag }}" class="tag-button level">{{ tag }} ({{ tag_stories.size }})</a>
           {% endif %}
@@ -52,7 +52,7 @@ permalink: /tags/
       <div class="tag-group">
         {% assign type_tags = "經典方,補腎名方" | split: "," %}
         {% for tag in type_tags %}
-          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" %}
+          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" | where_exp: "story", "story.date <= site.time" %}
           {% if tag_stories.size > 0 %}
             <a href="#{{ tag }}" class="tag-button type">{{ tag }} ({{ tag_stories.size }})</a>
           {% endif %}

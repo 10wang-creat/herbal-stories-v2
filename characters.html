@@ -283,7 +283,7 @@ a.formula-tag:hover {
 {% assign all_herbs = "" | split: "" %}
 {% assign herb_names_seen = "" | split: "" %}
 
-{% assign sorted_stories = site.stories | sort: "date" %}
+{% assign sorted_stories = site.stories | where_exp: "story", "story.date <= site.time" | sort: "date" %}
 {% for story in sorted_stories %}
   {% if story.ingredients %}
     {% for ingredient in story.ingredients %}

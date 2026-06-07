@@ -46,7 +46,7 @@ permalink: /games/
 <script id="auto-data" type="application/json">
 {
   "formulas": [
-    {% assign sorted = site.stories | sort: "date" %}
+    {% assign sorted = site.stories | where_exp: "story", "story.date <= site.time" | sort: "date" %}
     {% for story in sorted %}
     {% if story.formula and story.ingredients %}
     {
