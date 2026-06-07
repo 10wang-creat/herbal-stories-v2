@@ -129,6 +129,21 @@ source: 《濟生方》
 
 ## 🌿 歸脾湯：身心修復的暖心團隊
 
+<div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:18px 0;">
+  <img src="/assets/images/characters/dangshen.png" alt="黨參" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/huangqi.png" alt="黃耆" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/baizhu.png" alt="白朮" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/fushen.png" alt="茯神" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/suanzaoren.png" alt="酸棗仁" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/longyanrou.png" alt="龍眼肉" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/yuanzhi.png" alt="遠志" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/danggui.png" alt="當歸" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/muxiang.png" alt="木香" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/gancao.png" alt="炙甘草" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/shengjiang.png" alt="生薑" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/dazao.png" alt="大棗" style="width:88px; height:auto;">
+</div>
+
 **歸脾湯**出自宋代嚴用和的《濟生方》，距今已有800多年歷史。
 
 方名「歸脾」有兩層含義：一是讓流失的精血「歸」回脾臟好好生產；二是讓飄蕩不安的心神「歸」於安定。

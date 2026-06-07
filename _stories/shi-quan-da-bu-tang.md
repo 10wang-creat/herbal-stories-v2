@@ -104,6 +104,19 @@ David 苦笑：「我已經休息三週了...為什麼還是這麼累？」
 
 ## 🎭 認識這十位成員
 
+<div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:18px 0;">
+  <img src="/assets/images/characters/renshen.png" alt="人參" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/baizhu.png" alt="白朮" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/fuling.png" alt="茯苓" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/gancao.png" alt="炙甘草" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/shudihuang.png" alt="熟地黃" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/danggui.png" alt="當歸" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/baishao.png" alt="白芍" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/chuanxiong.png" alt="川芎" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/huangqi.png" alt="黃耆" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/rougui.png" alt="肉桂" style="width:88px; height:auto;">
+</div>
+
 ### 補氣家族（四君子）
 
 #### 人參（元氣隊長）

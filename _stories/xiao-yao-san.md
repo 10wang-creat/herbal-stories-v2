@@ -91,48 +91,72 @@ Amy 最近變得很不像自己。
 ## 🎭 認識這八位隊員
 
 ### 柴胡（隊長）
+
+<img src="/assets/images/characters/chaihu.png" alt="柴胡" style="float:right; width:100px; margin:0 0 10px 15px;">
+
 - **角色**：疏肝解鬱擔當
 - **專長**：打開情緒的「堵塞」，讓氣機重新流動
 - **個性**：冷靜理性，擅長化解僵局
 - **口頭禪**：「堵住的路，就讓我來開通！」
 
 ### 當歸（補血姐姐）
+
+<img src="/assets/images/characters/danggui.png" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
+
 - **角色**：養血活血擔當
 - **專長**：為肝臟補充營養，讓它有力氣運作
 - **個性**：溫柔體貼，是四物湯的老班底
 - **口頭禪**：「血足了，心情自然好。」
 
 ### 白芍（柔和妹妹）
+
+<img src="/assets/images/characters/baishao.png" alt="白芍" style="float:right; width:100px; margin:0 0 10px 15px;">
+
 - **角色**：養血柔肝擔當
 - **專長**：緩解緊繃的情緒，讓心情柔軟下來
 - **個性**：溫柔內斂，善於安撫
 - **口頭禪**：「放輕鬆，不用那麼緊繃。」
 
 ### 白朮（後勤隊長）
+
+<img src="/assets/images/characters/baizhu.png" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
+
 - **角色**：健脾益氣擔當
 - **專長**：強化脾胃功能，讓營養吸收更好
 - **個性**：務實可靠，四君子的老戰友
 - **口頭禪**：「後勤穩了，前線才能打勝仗。」
 
 ### 茯苓（淨化大使）
+
+<img src="/assets/images/characters/fuling.png" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
+
 - **角色**：健脾利濕擔當
 - **專長**：排出體內多餘水濕，讓身體清爽
 - **個性**：低調認真，默默做好本分
 - **口頭禪**：「濕氣走了，身體就輕鬆了。」
 
 ### 炙甘草（和事佬）
+
+<img src="/assets/images/characters/gancao.png" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+
 - **角色**：調和擔當
 - **專長**：協調所有藥材，讓團隊合作更順暢
 - **個性**：圓融親切，人見人愛
 - **口頭禪**：「大家和氣生財，別吵啦！」
 
 ### 煨薑（暖心使者）
+
+<img src="/assets/images/characters/weijiang.png" alt="煨薑" style="float:right; width:100px; margin:0 0 10px 15px;">
+
 - **角色**：溫中和胃擔當
 - **專長**：溫暖脾胃，幫助藥效吸收
 - **個性**：熱情溫暖，不讓你著涼
 - **口頭禪**：「暖暖的，舒服多了吧？」
 
 ### 薄荷（清新小精靈）
+
+<img src="/assets/images/characters/bohe.png" alt="薄荷" style="float:right; width:100px; margin:0 0 10px 15px;">
+
 - **角色**：疏散鬱熱擔當
 - **專長**：透達肝經鬱熱，帶來清新感
 - **個性**：活潑輕盈，來去如風

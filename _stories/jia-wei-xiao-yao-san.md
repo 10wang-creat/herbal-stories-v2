@@ -319,6 +319,19 @@ Amy 恍然大悟：「難怪我一直覺得有東西在燒⋯⋯」
 
 ## 🌿 第八章：認識滅火雙俠
 
+<div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:18px 0;">
+  <img src="/assets/images/characters/chaihu.png" alt="柴胡" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/danggui.png" alt="當歸" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/baishao.png" alt="白芍" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/baizhu.png" alt="白朮" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/fuling.png" alt="茯苓" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/gancao.png" alt="炙甘草" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/weijiang.png" alt="煨薑" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/bohe.png" alt="薄荷" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/mudanpi.png" alt="牡丹皮" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/zhizi.png" alt="梔子" style="width:88px; height:auto;">
+</div>
+
 ### 原班人馬回顧
 
 加味逍遙散的基礎，還是逍遙散那八位老朋友：

@@ -56,6 +56,9 @@ effects: 補氣健脾，適用於脾胃氣虛、疲倦乏力、食慾不振
 ## 🎭 認識這四位團員
 
 ### 人參（團長）
+
+<img src="/assets/images/characters/renshen.png" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
+
 **角色：** 主唱擔當  
 **專長：** 大補元氣，就像給身體充電  
 **個性：** 溫和有力，是整個團隊的核心
@@ -71,6 +74,9 @@ effects: 補氣健脾，適用於脾胃氣虛、疲倦乏力、食慾不振
 ---
 
 ### 白朮（後勤隊長）
+
+<img src="/assets/images/characters/baizhu.png" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
+
 **角色：** 健脾擔當  
 **專長：** 強化脾胃，讓營養吸收更好  
 **個性：** 務實可靠，確保「補進去的氣不會漏掉」
@@ -86,6 +92,9 @@ effects: 補氣健脾，適用於脾胃氣虛、疲倦乏力、食慾不振
 ---
 
 ### 茯苓（淨化大使）
+
+<img src="/assets/images/characters/fuling.png" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
+
 **角色：** 利濕擔當  
 **專長：** 排出體內多餘水濕  
 **個性：** 清爽乾淨，不讓補品變成身體負擔
@@ -101,6 +110,9 @@ effects: 補氣健脾，適用於脾胃氣虛、疲倦乏力、食慾不振
 ---
 
 ### 炙甘草（和事佬）
+
+<img src="/assets/images/characters/gancao.png" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+
 **角色：** 調和擔當  
 **專長：** 協調所有藥材，增加甜味  
 **個性：** 圓融親切，讓藥不那麼苦
