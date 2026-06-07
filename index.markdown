@@ -139,9 +139,8 @@ title: 首頁
   <h2>📚 最新故事</h2>
   
   <div class="story-list">
-    {% assign sorted_stories = site.stories | sort: 'date' | reverse %}
-    {% for story in sorted_stories limit:6 %}
-      {% if story.date > site.time %}{% continue %}{% endif %}
+    {% assign published_stories = site.stories | where_exp: "story", "story.date <= site.time" | sort: 'date' | reverse %}
+    {% for story in published_stories limit:6 %}
       <article class="story-card">
         <h3>
           <a href="{{ story.url | relative_url }}">{{ story.title }}</a>
