@@ -359,7 +359,7 @@ source: 《濟生方》
 想了解更多相關方劑？
 
 - 👉 [四君子湯：身體的補氣天團]({{ site.baseurl }}/stories/sijunzi-tang/) — 補氣的基礎方
-- 👉 [八珍湯：氣血雙補的黃金組合]({{ site.baseurl }}/stories/Ba-zhen-tang/) — 氣血同補的經典方
+- 👉 [八珍湯：氣血雙補的黃金組合]({{ site.baseurl }}/stories/ba-zhen-tang/) — 氣血同補的經典方
 - 👉 [逍遙散：壓力山大時的解鬱小隊]({{ site.baseurl }}/stories/xiao-yao-san/) — 疏肝解鬱的名方
 
 ---
