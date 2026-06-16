@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://herbal-stories-v2.vercel.app/sitemap.xml
+Sitemap: https://herbalstoryhouse.com/sitemap.xml
