@@ -25,7 +25,7 @@ permalink: /stories/
           </h2>
           
           {% if story.formula %}
-            <div class="formula-badge">💊 {{ story.formula }}</div>
+            <div class="formula-badge">{% if story.series %}🌿{% else %}💊{% endif %} {{ story.formula }}</div>
           {% endif %}
           
           {% if story.excerpt %}

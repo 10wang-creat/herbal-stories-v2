@@ -147,7 +147,7 @@ title: 首頁
         </h3>
         
         {% if story.formula %}
-          <div class="formula-name">💊 {{ story.formula }}</div>
+          <div class="formula-name">{% if story.series %}🌿{% else %}💊{% endif %} {{ story.formula }}</div>
         {% endif %}
         
         {% if story.excerpt %}
