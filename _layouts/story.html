@@ -739,4 +739,26 @@ layout: default
     font-size: 1em;
   }
 }
+/* 內文角色浮動圖：連續多張右浮動圖的排版處理 */
+.story-content img {
+  clear: right; /* 連續右浮動圖各自往下疊，不並排、不重疊 */
+  border-radius: 10px;
+}
+
+/* 響應式 - 手機：角色圖改置中區塊，避免窄螢幕擠壓內文 */
+@media (max-width: 600px) {
+  .story-content {
+    padding: 24px 20px;
+    font-size: 1.05em;
+  }
+
+  .story-content img {
+    float: none !important;
+    display: block;
+    width: 128px !important;
+    height: auto;
+    margin: 10px auto 20px !important;
+    clear: both;
+  }
+}
 </style>
