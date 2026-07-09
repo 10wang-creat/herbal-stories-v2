@@ -12,58 +12,68 @@ permalink: /tags/
 
 <div class="inner-page">
   <div class="tag-categories">
+    <!-- 依系列 + 難度（快速入口）-->
     <section class="tag-section">
-      <h2>🌿 依功效分類</h2>
+      <h2>📚 依系列與難度瀏覽</h2>
       <div class="tag-group">
-        {% assign efficacy_tags = "補氣,補血,氣血雙補,補氣養血,健脾利濕,疏肝解鬱,清熱涼血,溫陽補氣,滋陰補腎" | split: "," %}
-        {% for tag in efficacy_tags %}
-          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" | where_exp: "story", "story.date <= site.time" %}
-          {% if tag_stories.size > 0 %}
-            <a href="#{{ tag }}" class="tag-button efficacy">{{ tag }} ({{ tag_stories.size }})</a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </section>
-
-    <section class="tag-section">
-      <h2>💊 依適用情況分類</h2>
-      <div class="tag-group">
-        {% assign symptom_tags = "疲勞無力,婦科調理,術後調理,病後調養,產後調理,情緒調理,月經不調,壓力,更年期,失眠,心悸,健忘,食療養生" | split: "," %}
-        {% for tag in symptom_tags %}
-          {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" | where_exp: "story", "story.date <= site.time" %}
-          {% if tag_stories.size > 0 %}
-            <a href="#{{ tag }}" class="tag-button symptom">{{ tag }} ({{ tag_stories.size }})</a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </section>
-
-    <section class="tag-section">
-      <h2>📊 依難度分類</h2>
-      <div class="tag-group">
+        <a href="{{ '/formulas/' | relative_url }}" class="tag-button">💊 方劑系列</a>
+        <a href="{{ '/paozhi/' | relative_url }}" class="tag-button paozhi">🔥 炮製系列</a>
         {% assign level_tags = "入門,中階,進階" | split: "," %}
         {% for tag in level_tags %}
           {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" | where_exp: "story", "story.date <= site.time" %}
           {% if tag_stories.size > 0 %}
-            <a href="#{{ tag }}" class="tag-button level">{{ tag }} ({{ tag_stories.size }})</a>
+            <a href="#{{ tag }}" class="tag-button">📊 {{ tag }} ({{ tag_stories.size }})</a>
           {% endif %}
         {% endfor %}
       </div>
     </section>
 
+    <!-- 炮製手法（自動收集炮製系列的標籤）-->
+    {% assign paozhi_tags = "" | split: "" %}
+    {% for story in site.stories %}
+      {% if story.date > site.time %}{% continue %}{% endif %}
+      {% if story.series == '炮製' %}
+        {% for tag in story.tags %}
+          {% unless tag == '炮製' or tag == '本草炮製' or tag == '中藥炮製' %}
+            {% unless paozhi_tags contains tag %}{% assign paozhi_tags = paozhi_tags | push: tag %}{% endunless %}
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+    {% if paozhi_tags.size > 0 %}
     <section class="tag-section">
-      <h2>🏷️ 依方劑類型分類</h2>
+      <h2>🔥 炮製手法與概念</h2>
       <div class="tag-group">
-        {% assign type_tags = "經典方,補腎名方" | split: "," %}
-        {% for tag in type_tags %}
+        {% assign paozhi_sorted = paozhi_tags | sort %}
+        {% for tag in paozhi_sorted %}
           {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" | where_exp: "story", "story.date <= site.time" %}
-          {% if tag_stories.size > 0 %}
-            <a href="#{{ tag }}" class="tag-button type">{{ tag }} ({{ tag_stories.size }})</a>
-          {% endif %}
+          <a href="#{{ tag }}" class="tag-button paozhi">{{ tag }} ({{ tag_stories.size }})</a>
         {% endfor %}
       </div>
     </section>
+    {% endif %}
   </div>
+
+  <!-- 全部標籤雲（自動，依熱度大小）-->
+  {% assign cloud_array = "" | split: "" %}
+  {% for story in site.stories %}
+    {% if story.date > site.time %}{% continue %}{% endif %}
+    {% for tag in story.tags %}
+      {% unless cloud_array contains tag %}{% assign cloud_array = cloud_array | push: tag %}{% endunless %}
+    {% endfor %}
+  {% endfor %}
+  <section class="tag-section">
+    <h2>🏷️ 全部標籤 <span class="tag-total">（{{ cloud_array | size }} 個 · 隨新文章自動更新）</span></h2>
+    <p class="tag-hint">點任一標籤，跳到該主題底下的所有文章。字級越大代表文章越多。</p>
+    <div class="tag-cloud">
+      {% assign cloud_sorted = cloud_array | sort %}
+      {% for tag in cloud_sorted %}
+        {% assign tag_stories = site.stories | where_exp: "story", "story.tags contains tag" | where_exp: "story", "story.date <= site.time" %}
+        {% assign n = tag_stories | size %}
+        <a href="#{{ tag }}" class="cloud-tag{% if n >= 4 %} lv3{% elsif n >= 2 %} lv2{% endif %}">{{ tag }} <span>{{ n }}</span></a>
+      {% endfor %}
+    </div>
+  </section>
 
   <hr>
 
@@ -96,7 +106,7 @@ permalink: /tags/
               <a href="{{ story.url | relative_url }}">{{ story.title }}</a>
             </h3>
             {% if story.formula %}
-              <div class="formula-name">💊 {{ story.formula }}</div>
+              <div class="formula-name">{% if story.series %}🔥{% else %}💊{% endif %} {{ story.formula }}</div>
             {% endif %}
             <div class="post-meta">
               <time datetime="{{ story.date | date_to_xmlschema }}">
@@ -162,6 +172,25 @@ permalink: /tags/
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
+.tag-button.paozhi { border-color: var(--fire-500); color: var(--fire-700); }
+.tag-button.paozhi:hover { background: var(--fire-500); color: #fff; }
+
+/* 全部標籤雲 */
+.tag-total { font-size: 0.9rem; color: var(--muted); font-weight: 400; }
+.tag-hint { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.1rem; }
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.cloud-tag {
+  display: inline-flex; align-items: baseline; gap: 5px;
+  padding: 0.35rem 0.75rem; background: var(--green-050); color: var(--green-700);
+  border: 1px solid #dce6cf; border-radius: 16px; text-decoration: none;
+  font-size: 0.9rem; line-height: 1.2; transition: all 0.2s ease;
+}
+.cloud-tag span { color: var(--muted); font-size: 0.78em; }
+.cloud-tag:hover { background: var(--green-500); color: #fff; border-color: var(--green-500); transform: translateY(-2px); }
+.cloud-tag:hover span { color: rgba(255,255,255,0.85); }
+.cloud-tag.lv2 { font-size: 1rem; font-weight: 600; }
+.cloud-tag.lv3 { font-size: 1.12rem; font-weight: 700; background: #e3efd3; }
 
 .tag-button.efficacy {
   border-color: #6b9a3e;

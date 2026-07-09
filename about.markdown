@@ -42,30 +42,6 @@ permalink: /about/
       </div>
     </section>
 
-    <section class="stickers">
-      <div class="section-icon">🎨</div>
-      <h2>LINE 貼圖作品集</h2>
-      <p>草本故事館的角色們，也在 LINE 貼圖裡陪你聊天！</p>
-      <p>從溫治小藥材到人參君，每一組貼圖都延續著中醫養生的溫暖世界觀。在日常對話中，讓這些小藥材提醒你好好照顧自己。</p>
-      <div class="sticker-grid">
-        <div class="sticker-card">
-          <div class="sticker-emoji">💬</div>
-          <h3>貼圖系列</h3>
-          <p>溫治小藥材、中藥世界探險、薑母鴨日常等 30+ 組原創貼圖</p>
-        </div>
-        <div class="sticker-card">
-          <div class="sticker-emoji">😊</div>
-          <h3>表情貼系列</h3>
-          <p>活力人參君、元氣當歸寶寶，用可愛表情點綴你的對話</p>
-        </div>
-      </div>
-      <div class="sticker-cta">
-        <a href="https://line.me/S/shop/sticker/author/5657737" target="_blank" class="sticker-button">
-          👉 瀏覽全部作品
-        </a>
-      </div>
-    </section>
-
     <section class="values">
       <div class="section-icon">💚</div>
       <h2>我們的價值觀</h2>

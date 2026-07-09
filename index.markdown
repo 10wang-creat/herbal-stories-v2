@@ -142,21 +142,6 @@ title: 首頁
   </div>
 </section>
 
-<!-- ===== RSS 訂閱 ===== -->
-<section class="section">
-  <div class="rss-subscribe-box">
-    <div class="rss-icon">📡</div>
-    <div class="rss-content">
-      <h3>📬 訂閱草本故事館</h3>
-      <p>透過 RSS 訂閱，第一時間收到新文章通知，不錯過任何精彩內容！</p>
-      <div class="rss-buttons">
-        <a href="{{ '/feed.xml' | relative_url }}" class="rss-button primary">📡 訂閱 RSS</a>
-        <a href="https://feedly.com/i/subscription/feed/{{ site.url }}{{ site.baseurl }}/feed.xml" class="rss-button secondary" target="_blank" rel="noopener">🔖 用 Feedly 訂閱</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <style>
 /* ===== 首頁專屬樣式 ===== */
 .home-hero {
