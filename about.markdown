@@ -4,12 +4,13 @@ title: 關於
 permalink: /about/
 ---
 
-<div class="about-page">
-  <div class="about-hero">
-    <h1>🌿 關於草本故事館</h1>
-    <p class="subtitle">讓傳統中醫，變成你我都能理解的故事</p>
-  </div>
+<section class="page-hero">
+  <div class="page-emoji">🌿</div>
+  <h1>關於草本故事館</h1>
+  <p class="subtitle">讓傳統中醫，變成你我都能理解的故事</p>
+</section>
 
+<div class="inner-page narrow">
   <div class="about-content">
     <section class="mission">
       <div class="section-icon">💡</div>
@@ -114,32 +115,6 @@ permalink: /about/
 </div>
 
 <style>
-.about-page {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.about-hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
-  color: white;
-  border-radius: 16px;
-  margin-bottom: 50px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-}
-
-.about-hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
-}
-
-.subtitle {
-  font-size: 1.3em;
-  opacity: 0.95;
-}
-
 .about-content section {
   background: white;
   padding: 40px;

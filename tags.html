@@ -4,9 +4,13 @@ title: 標籤分類
 permalink: /tags/
 ---
 
-<div class="tags-page">
-  <h1>📚 標籤分類</h1>
-  
+<section class="page-hero">
+  <div class="page-emoji">🏷️</div>
+  <h1>標籤分類</h1>
+  <p class="subtitle">依功效、症狀、難度、方劑類型，快速找到你想讀的故事</p>
+</section>
+
+<div class="inner-page">
   <div class="tag-categories">
     <section class="tag-section">
       <h2>🌿 依功效分類</h2>
@@ -115,34 +119,23 @@ permalink: /tags/
 </div>
 
 <style>
-.tags-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.tags-page h1 {
-  color: #2d5016;
-  text-align: center;
-  margin-bottom: 3rem;
-  font-size: 2.5rem;
-}
-
 .tag-categories {
   margin-bottom: 3rem;
 }
 
 .tag-section {
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   padding: 1.5rem;
-  background: #f9f6f0;
-  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
 }
 
 .tag-section h2 {
-  color: #4a7c2c;
+  color: var(--green-700);
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
 }
 
 .tag-group {
@@ -299,10 +292,6 @@ permalink: /tags/
 @media (max-width: 768px) {
   .posts-grid {
     grid-template-columns: 1fr;
-  }
-  
-  .tags-page h1 {
-    font-size: 2rem;
   }
 }
 </style>
