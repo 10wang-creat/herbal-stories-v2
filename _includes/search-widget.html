@@ -1,0 +1,160 @@
+<!-- 站內即時搜尋（可放首頁與系列頁）-->
+<div class="hs-search" id="hsSearch">
+  <div class="hs-search-box">
+    <span class="hs-search-ic" aria-hidden="true">🔍</span>
+    <input type="text" id="hsSearchInput" placeholder="{{ include.placeholder | default: '搜尋方劑、藥材、症狀…' }}" autocomplete="off" aria-label="站內搜尋">
+    <button type="button" id="hsSearchClear" class="hs-search-clear" aria-label="清除" hidden>✕</button>
+  </div>
+  <div class="hs-search-tips">
+    <span>試試：</span>
+    <button type="button" class="hs-chip" data-k="失眠">失眠</button>
+    <button type="button" class="hs-chip" data-k="補血">補血</button>
+    <button type="button" class="hs-chip" data-k="當歸">當歸</button>
+    <button type="button" class="hs-chip" data-k="祛濕">祛濕</button>
+    <button type="button" class="hs-chip" data-k="感冒">感冒</button>
+  </div>
+  <div id="hsSearchResults" class="hs-search-results" aria-live="polite"></div>
+</div>
+
+<script>
+window.HS_STORIES = [
+{% assign hs_pub = site.stories | where_exp: "s", "s.date <= site.time" | sort: "date" | reverse %}
+{% for story in hs_pub %}
+{title: {{ story.title | jsonify }}, formula: {{ story.formula | default: "" | jsonify }}, url: {{ story.url | relative_url | jsonify }}, series: {{ story.series | default: "" | jsonify }}, effects: {{ story.effects | default: "" | jsonify }}, tags: {{ story.tags | jsonify }}, ingredients: [{% for ing in story.ingredients %}{{ ing.name | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+];
+
+(function () {
+  var input = document.getElementById('hsSearchInput');
+  var results = document.getElementById('hsSearchResults');
+  var clearBtn = document.getElementById('hsSearchClear');
+  if (!input || !results) return;
+  var stories = window.HS_STORIES || [];
+
+  var symptomMap = {
+    "感冒": ["風寒","風熱","發燒","鼻塞","解表","咽"],
+    "失眠": ["安神","養心","心悸","多夢","酸棗仁","不眠"],
+    "疲勞": ["補氣","氣虛","乏力","四君子","參"],
+    "怕冷": ["陽虛","溫補","腎陽","附子","肉桂","畏寒"],
+    "腰痠": ["腎虛","補腎","地黃","腰膝"],
+    "月經": ["血虛","補血","四物","當歸","調經","經"],
+    "消化": ["健脾","脾胃","四神","腹瀉","消食","積"],
+    "壓力": ["肝鬱","逍遙","疏肝","解鬱","情緒"],
+    "水腫": ["利濕","茯苓","澤瀉","利水","濕"],
+    "祛濕": ["利濕","化濕","濕","茯苓","澤瀉","蒼朮"],
+    "掉髮": ["腎虛","血虛","補腎","補血"]
+  };
+
+  function esc(s){ return (s||'').replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function hl(text, q){ if(!q||!text) return esc(text); try{ return esc(text).replace(new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'),'<mark>$1</mark>'); }catch(e){ return esc(text); } }
+
+  function run(){
+    var q = input.value.trim();
+    clearBtn.hidden = q.length === 0;
+    if (q.length === 0){ results.innerHTML = ''; return; }
+    var lower = q.toLowerCase();
+    var terms = [lower];
+    for (var k in symptomMap){ if (q.indexOf(k) !== -1 || k.indexOf(q) !== -1){ terms = terms.concat(symptomMap[k].map(function(t){return t.toLowerCase();})); } }
+
+    var res = stories.filter(function(s){
+      return terms.some(function(t){
+        return (s.title||'').toLowerCase().indexOf(t)!==-1 ||
+               (s.formula||'').toLowerCase().indexOf(t)!==-1 ||
+               (s.effects||'').toLowerCase().indexOf(t)!==-1 ||
+               (s.tags||[]).some(function(x){return x.toLowerCase().indexOf(t)!==-1;}) ||
+               (s.ingredients||[]).some(function(x){return x.toLowerCase().indexOf(t)!==-1;});
+      });
+    }).map(function(s){
+      var sc=0;
+      if((s.formula||'').toLowerCase().indexOf(lower)!==-1) sc+=100;
+      if((s.title||'').toLowerCase().indexOf(lower)!==-1) sc+=50;
+      if((s.ingredients||[]).some(function(x){return x.toLowerCase().indexOf(lower)!==-1;})) sc+=30;
+      if((s.effects||'').toLowerCase().indexOf(lower)!==-1) sc+=20;
+      if((s.tags||[]).some(function(x){return x.toLowerCase().indexOf(lower)!==-1;})) sc+=15;
+      return Object.assign({_s:sc}, s);
+    }).sort(function(a,b){return b._s-a._s;});
+
+    if (res.length === 0){
+      results.innerHTML = '<p class="hs-noresult">😕 找不到符合「'+esc(q)+'」的文章，換個關鍵字試試（方劑名、藥材、症狀）。</p>';
+      return;
+    }
+    var html = '<p class="hs-count">找到 <strong>'+res.length+'</strong> 篇相關文章</p><div class="hs-result-list">';
+    res.slice(0,12).forEach(function(s){
+      var isPao = !!s.series;
+      html += '<a class="hs-result'+(isPao?' paozhi':'')+'" href="'+s.url+'">'
+            + '<span class="hs-result-badge '+(isPao?'paozhi':'formula')+'">'+(isPao?'🔥 炮製':'💊 方劑')+'</span>'
+            + '<span class="hs-result-title">'+hl(s.title, q)+'</span>'
+            + (s.effects?'<span class="hs-result-eff">'+hl(s.effects.slice(0,48), q)+'</span>':'')
+            + '</a>';
+    });
+    html += '</div>';
+    if (res.length > 12) html += '<p class="hs-more">僅顯示前 12 筆，輸入更精確的關鍵字可縮小範圍。</p>';
+    results.innerHTML = html;
+  }
+
+  input.addEventListener('input', run);
+  clearBtn.addEventListener('click', function(){ input.value=''; run(); input.focus(); });
+  document.querySelectorAll('#hsSearch .hs-chip').forEach(function(c){
+    c.addEventListener('click', function(){ input.value = c.getAttribute('data-k'); run(); input.focus(); });
+  });
+})();
+</script>
+
+<style>
+.hs-search { max-width: 760px; margin: 0 auto; }
+.hs-search-box {
+  display: flex; align-items: center; gap: 10px;
+  background: #fff; border: 2px solid var(--accent-500, #4a7c2c);
+  border-radius: 50px; padding: 6px 10px 6px 20px;
+  box-shadow: 0 6px 18px rgba(45,40,30,0.12);
+}
+.hs-search-ic { font-size: 1.2rem; opacity: 0.8; }
+.hs-search-box input {
+  flex: 1; border: 0; outline: 0; background: transparent;
+  font-size: 1.08rem; padding: 12px 4px; color: var(--ink, #33302b);
+  font-family: inherit;
+}
+.hs-search-clear {
+  border: 0; background: var(--accent-050, #f0f4e8); color: var(--accent-700, #2d5016);
+  width: 34px; height: 34px; border-radius: 50%; cursor: pointer; font-size: 0.9rem;
+  flex-shrink: 0; transition: background 0.2s;
+}
+.hs-search-clear:hover { background: #e2ecd4; }
+
+.hs-search-tips {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  justify-content: center; margin: 14px 0 0; color: var(--muted, #8b7355); font-size: 0.9rem;
+}
+.hs-chip {
+  border: 1px solid var(--line, #e8dcc8); background: #fff; color: var(--accent-700, #2d5016);
+  padding: 5px 14px; border-radius: 16px; cursor: pointer; font-size: 0.88rem; font-family: inherit;
+  transition: all 0.2s;
+}
+.hs-chip:hover { background: var(--accent-500, #4a7c2c); color: #fff; border-color: var(--accent-500, #4a7c2c); }
+
+.hs-search-results { margin-top: 22px; }
+.hs-count { color: var(--accent-700, #2d5016); margin-bottom: 12px; font-size: 0.98rem; }
+.hs-count strong { font-size: 1.15rem; }
+.hs-noresult { text-align: center; color: var(--muted, #8b7355); background: #fff; border: 1px solid var(--line,#e8dcc8); border-radius: 12px; padding: 24px; }
+.hs-result-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.hs-result {
+  display: flex; flex-direction: column; gap: 6px;
+  background: #fff; border: 1px solid var(--line, #e8dcc8); border-left: 4px solid var(--green-500, #4a7c2c);
+  border-radius: 10px; padding: 14px 16px; text-decoration: none; transition: all 0.2s;
+}
+.hs-result.paozhi { border-left-color: var(--fire-500, #c06a2c); }
+.hs-result:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(45,40,30,0.12); }
+.hs-result-badge { align-self: flex-start; font-size: 0.72rem; font-weight: 700; padding: 2px 10px; border-radius: 12px; }
+.hs-result-badge.formula { background: var(--green-050, #f0f4e8); color: var(--green-700, #2d5016); }
+.hs-result-badge.paozhi { background: var(--fire-050, #fbf1e6); color: var(--fire-700, #7a3410); }
+.hs-result-title { color: var(--ink, #33302b); font-weight: 600; font-size: 1rem; line-height: 1.4; }
+.hs-result-eff { color: var(--muted, #8b7355); font-size: 0.85rem; line-height: 1.5; }
+.hs-result mark, .hs-count + .hs-result-list mark { background: #ffe066; padding: 0 2px; border-radius: 3px; }
+mark { background: #ffe066; }
+.hs-more { color: var(--muted, #8b7355); font-size: 0.85rem; margin-top: 12px; text-align: center; }
+
+@media (max-width: 600px) {
+  .hs-result-list { grid-template-columns: 1fr; }
+  .hs-search-box input { font-size: 1rem; }
+}
+</style>

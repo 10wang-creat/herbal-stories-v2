@@ -4,6 +4,7 @@ title: 炮製系列
 permalink: /paozhi/
 description: 炮製系列 — 炒、炙、蒸、煆……同一味藥，經過不同炮製手法，性格與功效隨之翻轉。認識中藥的「變身術」。
 body_class: theme-paozhi
+og_image: og-paozhi.png
 ---
 
 {% assign paozhi_stories = site.stories | where_exp: "s", "s.date <= site.time" %}
@@ -15,6 +16,10 @@ body_class: theme-paozhi
   <p>同一把火，能炒出三種命運。炒、炙、蒸、煆、酒製、醋製、鹽製……中藥在入方之前，要先經過一場「變身」。看懂炮製，就看懂藥性如何被馴服與轉化。</p>
   <div class="hero-count">共 {{ paozhi_stories | size }} 篇炮製故事</div>
 </section>
+
+<div class="section" style="padding-bottom: 0;">
+  {% include search-widget.html placeholder="搜尋炮製手法、藥材、方劑…" %}
+</div>
 
 <div class="section">
   <div class="story-grid">

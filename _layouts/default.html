@@ -16,7 +16,7 @@
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/og-image.png">
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/{{ page.og_image | default: 'og-image.png' }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:locale" content="zh_TW">
 
@@ -24,7 +24,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/og-image.png">
+  <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/{{ page.og_image | default: 'og-image.png' }}">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon.png">
@@ -63,8 +63,6 @@
         <a href="{{ site.baseurl }}/paozhi/"><span class="nav-dot paozhi"></span>炮製系列</a>
         <a href="{{ site.baseurl }}/characters/">圖鑑</a>
         <a href="{{ site.baseurl }}/games/">遊樂園</a>
-        <a href="{{ site.baseurl }}/tags/">標籤</a>
-        <a href="{{ site.baseurl }}/search/">搜尋</a>
         <a href="{{ site.baseurl }}/about/">關於</a>
       </nav>
     </div>

@@ -26,6 +26,13 @@ title: 首頁
   </div>
 </section>
 
+<!-- ===== 站內搜尋 ===== -->
+<section class="section home-search-section">
+  <h2 class="section-title">🔍 直接搜尋</h2>
+  <p class="section-subtitle">輸入方劑名、藥材或症狀，馬上找到想讀的文章</p>
+  {% include search-widget.html %}
+</section>
+
 <!-- ===== 兩大系列分流 ===== -->
 <section class="section">
   <h2 class="section-title">兩大主題系列</h2>

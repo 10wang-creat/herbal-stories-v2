@@ -4,6 +4,7 @@ title: 方劑系列
 permalink: /formulas/
 description: 方劑系列 — 用擬人化故事認識中藥方劑，君臣佐使各司其職，一帖一段人間故事。
 body_class: theme-formula
+og_image: og-formulas.png
 ---
 
 {% assign formula_stories = site.stories | where_exp: "s", "s.date <= site.time" %}
@@ -15,6 +16,10 @@ body_class: theme-formula
   <p>一帖方劑，就是一支團隊。石膏、知母、當歸、白朮……讓每一味藥材化身角色，用故事讀懂君臣佐使如何搭配、為何有效。</p>
   <div class="hero-count">共 {{ formula_stories | size }} 帖方劑故事</div>
 </section>
+
+<div class="section" style="padding-bottom: 0;">
+  {% include search-widget.html placeholder="搜尋方劑、藥材、症狀…" %}
+</div>
 
 <div class="section">
   <div class="story-grid">

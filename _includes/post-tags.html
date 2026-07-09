@@ -5,9 +5,7 @@
   </h3>
   <div class="tags-list">
     {% for tag in page.tags %}
-      <a href="{{ '/tags/' | relative_url }}#{{ tag }}" class="post-tag">
-        {{ tag }}
-      </a>
+      <span class="post-tag">{{ tag }}</span>
     {% endfor %}
   </div>
 </div>
