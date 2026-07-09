@@ -46,9 +46,8 @@ permalink: /games/
 <script id="auto-data" type="application/json">
 {
   "formulas": [
-    {% assign sorted = site.stories | where_exp: "story", "story.date <= site.time" | sort: "date" %}
-    {% for story in sorted %}
-    {% if story.formula and story.ingredients %}
+    {% assign game_stories = site.stories | where_exp: "s", "s.date <= site.time" | where_exp: "s", "s.series != '炮製'" | where_exp: "s", "s.formula" | where_exp: "s", "s.ingredients" | sort: "date" %}
+    {% for story in game_stories %}
     {
       "name": {{ story.formula | jsonify }},
       "link": "{{ story.url }}",
@@ -64,7 +63,21 @@ permalink: /games/
         {% endfor %}
       ]
     }{% unless forloop.last %},{% endunless %}
-    {% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+
+<script id="paozhi-data" type="application/json">
+{
+  "items": [
+    {% assign pao_stories = site.stories | where_exp: "s", "s.date <= site.time" | where_exp: "s", "s.series == '炮製'" | where_exp: "s", "s.formula" | where_exp: "s", "s.effects" | sort: "date" %}
+    {% for story in pao_stories %}
+    {
+      "name": {{ story.formula | jsonify }},
+      "effects": {{ story.effects | jsonify }},
+      "link": "{{ story.url }}"
+    }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]
 }
@@ -106,23 +119,6 @@ const FORMULAS = RAW.formulas.map(function(f) {
   };
 });
 
-/* ═══════════ 問答題（需手動維護，情境無法自動產生）═══════════ */
-const SYMPTOMS_QUIZ = [
-  { scenario:"小美最近加班頻繁，總覺得四肢無力、食慾不振、說話有氣無力，臉色蠟黃。", question:"小美最可能需要哪個方劑？", options:["四君子湯","四物湯","逍遙散","生化湯"], answer:0, explanation:"四肢無力、食慾不振、氣短懶言、面色萎黃都是脾氣虛的典型表現，四君子湯是補氣健脾的基礎方。" },
-  { scenario:"阿華面色蒼白、頭暈眼花，每次月經量少色淡，還常覺得手腳冰冷、指甲色淡。", question:"阿華的狀況適合哪個方劑？", options:["逍遙散","四君子湯","四物湯","生化湯"], answer:2, explanation:"面色蒼白、頭暈、月經量少色淡、爪甲色淡是血虛的表現，四物湯是補血調經的基礎方。" },
-  { scenario:"老張工作壓力大，常常嘆氣、胸悶、脾氣暴躁，還經常脅肋脹痛，月經也不規律。", question:"老張需要的方劑是？", options:["四物湯","生化湯","四君子湯","逍遙散"], answer:3, explanation:"嘆氣、胸悶、脾氣暴躁、脅肋脹痛都是肝氣鬱結的表現，逍遙散能疏肝解鬱、養血健脾。" },
-  { scenario:"小琳剛自然產完一週，惡露排出不順暢，顏色暗紅帶有血塊，小腹隱隱冷痛。", question:"小琳適合用哪個方劑？", options:["四君子湯","逍遙散","四物湯","生化湯"], answer:3, explanation:"產後惡露不行、小腹冷痛，生化湯能活血化瘀、溫經止痛，幫助產後恢復。" },
-  { scenario:"阿婆最近覺得頭暈目眩、疲倦乏力，臉色發黃，蹲下站起來會眼前發黑。", question:"阿婆可能需要哪個方劑？", options:["當歸補血湯","逍遙散","生化湯","四君子湯"], answer:0, explanation:"頭暈、疲倦、面色萎黃是氣血兩虛的表現，當歸補血湯以補氣生血為主，適合氣血不足。" },
-  { scenario:"大雄長期熬夜打電動，最近腰痠背痛、掉頭髮、耳鳴、手心腳心發熱，晚上盜汗。", question:"大雄最適合哪個方劑？", options:["四君子湯","金匱腎氣丸","逍遙散","六味地黃丸"], answer:3, explanation:"腰痠、掉髮、耳鳴、手足心熱、盜汗都是腎陰虛的表現，六味地黃丸滋陰補腎。" },
-  { scenario:"王伯伯入冬後特別怕冷、腰像被冰敷著、夜尿頻繁一晚三四次、下肢水腫。", question:"王伯伯的狀況適合哪個方劑？", options:["六味地黃丸","逍遙散","金匱腎氣丸","四物湯"], answer:2, explanation:"極度怕冷、腰冷痛、夜尿頻繁、下肢水腫都是腎陽虛的表現，金匱腎氣丸溫補腎陽。" },
-  { scenario:"小莉是百貨專櫃小姐，久站後覺得身體往下墜、說話越來越沒力、反覆感冒。", question:"小莉需要哪個方劑來調理？", options:["逍遙散","補中益氣湯","四物湯","六味地黃丸"], answer:1, explanation:"久站乏力、身體下墜感、反覆感冒是中氣下陷的表現，補中益氣湯能補氣升陽。" },
-  { scenario:"換季時小花又開始打噴嚏、流鼻水，動不動就被同事傳染感冒，容易出汗怕風。", question:"小花適合用什麼方劑預防？", options:["四物湯","逍遙散","玉屏風散","生化湯"], answer:2, explanation:"反覆感冒、容易出汗、畏風怕冷是表虛衛氣不固的表現，玉屏風散能益氣固表。" },
-  { scenario:"雅琪長期照顧中風的媽媽，最近失眠淺眠、健忘心悸、食慾差、面色萎黃、多夢。", question:"雅琪最需要哪個方劑？", options:["逍遙散","六味地黃丸","歸脾湯","四物湯"], answer:2, explanation:"失眠健忘、心悸、食慾差、面色萎黃是心脾兩虛的表現，歸脾湯能養心脾、補氣血。" },
-  { scenario:"阿偉氣血都虛，不但臉色蒼白、容易累、食慾差（氣虛），還頭暈、心悸、經期量少（血虛）。", question:"阿偉需要哪個方劑？", options:["四君子湯","四物湯","逍遙散","八珍湯"], answer:3, explanation:"同時出現氣虛和血虛症狀，八珍湯是四君子湯＋四物湯的合方，能氣血雙補。" },
-  { scenario:"小胖脾胃虛弱，常常拉肚子、吃什麼都不太吸收，體內濕氣重、舌苔白膩。", question:"小胖適合用什麼調理？", options:["四物湯","六味地黃丸","四神湯","逍遙散"], answer:2, explanation:"脾虛泄瀉、濕氣重、消化不良，四神湯能平補脾胃、健脾祛濕，而且性質平和適合長期食療。" },
-  { scenario:"小安最近越累越睡不著，躺在床上腦子轉不停，好不容易睡著又多夢易驚醒，還會盜汗。", question:"小安最適合哪個方劑？", options:["歸脾湯","逍遙散","酸棗仁湯","六味地黃丸"], answer:2, explanation:"越累越睡不著、虛煩多夢、盜汗是肝血不足導致的虛煩不眠，酸棗仁湯能養血安神、清熱除煩。" },
-];
-
 /* ═══════════ UI 元件 ═══════════ */
 
 function Header({currentGame,onBack,score}) {
@@ -147,12 +143,15 @@ function Header({currentGame,onBack,score}) {
 
 function GameHub({onSelect,totalScore}) {
   var games=[
-    {id:"quiz",icon:"🧠",title:"方劑問診室",desc:"閱讀病患故事，選出正確的方劑",detail:SYMPTOMS_QUIZ.length+" 道情境題",color:"#5B8C5A"},
+    {id:"effquiz",icon:"💡",title:"看功效猜方劑",desc:"讀一段功效，猜出是哪一帖方劑",detail:FORMULAS.length+" 帖方劑",color:"#5B8C5A"},
     {id:"match",icon:"🧩",title:"組方大挑戰",desc:"把正確的藥材選入方劑中",detail:FORMULAS.length+" 個經典方",color:"#D4A574"},
+    {id:"herbhome",icon:"🏠",title:"藥材找家",desc:"這味藥材屬於哪一帖方劑？",detail:HERBS.length+" 味藥材",color:"#C79A3C"},
     {id:"memory",icon:"🎴",title:"藥材翻翻樂",desc:"翻牌配對，記住藥材與功效",detail:"記憶力挑戰",color:"#7B6BA5"},
+    {id:"flash",icon:"📇",title:"方劑速記卡",desc:"翻卡複習方劑的功效與組成",detail:FORMULAS.length+" 張速記卡",color:"#5B8C5A"},
+    {id:"paozhi",icon:"🔥",title:"炮製變變變",desc:"讀炮製作用，猜出是哪一種炮製法",detail:PAOZHI.length+" 種炮製法",color:"#C06A2C"},
     {id:"oracle",icon:"🔮",title:"本草心語",desc:"靜下心，感受此刻的自己，讓一味本草回應你內心的聲音",detail:"心靈卡牌",color:"#8B5E9B",external:"https://tcm-oracle-cards-v2.vercel.app/"},
     {id:"collection",icon:"📖",title:"草本圖鑑",desc:"查看藥材角色插畫與介紹",detail:"角色大集合",color:"#C75B5B",external:"/characters/"},
-  ];
+  ].filter(function(g){ return g.id!=="paozhi" || PAOZHI.length>=4; });
   return React.createElement('div',{style:{maxWidth:900,margin:"0 auto",padding:"30px 20px"}},
     React.createElement('div',{style:{display:"flex",justifyContent:"center",marginBottom:30}},
       React.createElement('div',{style:{background:"linear-gradient(135deg,#FFF8E7,#FFF0D0)",border:"2px solid #DAA520",borderRadius:16,padding:"14px 30px",display:"flex",alignItems:"center",gap:12}},
@@ -182,20 +181,6 @@ function GameHub({onSelect,totalScore}) {
   );
 }
 
-/* ─── Quiz ─── */
-function QuizGame({onScoreAdd}) {
-  var _s=useState(0),current=_s[0],setCurrent=_s[1];
-  var _s2=useState(null),selected=_s2[0],setSelected=_s2[1];
-  var _s3=useState(false),showExplain=_s3[0],setShowExplain=_s3[1];
-  var _s4=useState(0),correct=_s4[0],setCorrect=_s4[1];
-  var _s5=useState(false),finished=_s5[0],setFinished=_s5[1];
-  var q=SYMPTOMS_QUIZ[current];
-  function handleSelect(idx){if(selected!==null)return;setSelected(idx);setShowExplain(true);if(idx===q.answer){setCorrect(function(c){return c+1});onScoreAdd(10)}}
-  function handleNext(){if(current<SYMPTOMS_QUIZ.length-1){setCurrent(function(c){return c+1});setSelected(null);setShowExplain(false)}else{setFinished(true)}}
-  if(finished){var pct=Math.round(correct/SYMPTOMS_QUIZ.length*100);var grade=pct>=80?"🏆 中醫高手！":pct>=60?"👍 不錯唷！":"📚 繼續加油！";return React.createElement('div',{className:"animate-in",style:{maxWidth:600,margin:"40px auto",padding:"40px 24px",background:"white",borderRadius:20,textAlign:"center",boxShadow:"0 2px 12px rgba(91,140,90,0.1)"}},React.createElement('div',{style:{fontSize:60,marginBottom:16}},pct>=80?"🎉":pct>=60?"😊":"💪"),React.createElement('h2',{className:"serif",style:{fontSize:26,marginBottom:8}},grade),React.createElement('p',{style:{fontSize:18,color:"#6B7B6B",marginBottom:24}},"答對 ",React.createElement('strong',{style:{color:"#5B8C5A"}},correct)," / ",SYMPTOMS_QUIZ.length," 題"),React.createElement('div',{style:{width:120,height:120,borderRadius:"50%",background:"conic-gradient(#5B8C5A "+pct+"%,#E0D8CC "+pct+"%)",display:"flex",alignItems:"center",justifyContent:"center",margin:"0 auto 24px"}},React.createElement('div',{style:{width:96,height:96,borderRadius:"50%",background:"white",display:"flex",alignItems:"center",justifyContent:"center",fontSize:24,fontWeight:700,color:"#5B8C5A"}},pct+"%")),React.createElement('button',{className:"game-btn game-btn-primary",onClick:function(){setCurrent(0);setSelected(null);setShowExplain(false);setCorrect(0);setFinished(false)}},"再挑戰一次"))}
-  return React.createElement('div',{className:"animate-in",style:{maxWidth:640,margin:"30px auto",padding:"0 20px"}},React.createElement('div',{style:{marginBottom:24}},React.createElement('div',{style:{display:"flex",justifyContent:"space-between",marginBottom:6,fontSize:13,color:"#6B7B6B"}},React.createElement('span',null,"第 "+(current+1)+" / "+SYMPTOMS_QUIZ.length+" 題"),React.createElement('span',null,"答對 "+correct+" 題")),React.createElement('div',{className:"progress-bar"},React.createElement('div',{className:"progress-fill",style:{width:(current+1)/SYMPTOMS_QUIZ.length*100+"%"}}))),React.createElement('div',{style:{background:"white",borderRadius:16,padding:24,boxShadow:"0 2px 12px rgba(91,140,90,0.1)",marginBottom:20}},React.createElement('div',{style:{background:"#FAF8F4",borderRadius:12,padding:18,marginBottom:20,borderLeft:"4px solid #D4A574",lineHeight:1.8,fontSize:15}},"📋 "+q.scenario),React.createElement('h3',{className:"serif",style:{fontSize:18,marginBottom:16}},q.question),React.createElement('div',{style:{display:"flex",flexDirection:"column",gap:10}},q.options.map(function(opt,i){var cls="quiz-option";if(selected!==null){if(i===q.answer)cls+=" correct";else if(i===selected)cls+=" wrong"}var cBg=selected!==null&&i===q.answer?"#5B8C5A":selected===i&&i!==q.answer?"#C75B5B":"#E0D8CC";var cCol=selected!==null&&(i===q.answer||i===selected)?"white":"#2C3E2C";var cTxt=selected!==null&&i===q.answer?"✓":selected===i&&i!==q.answer?"✗":String.fromCharCode(65+i);return React.createElement('button',{key:i,className:cls,disabled:selected!==null,onClick:function(){handleSelect(i)}},React.createElement('span',{style:{width:28,height:28,borderRadius:"50%",background:cBg,color:cCol,display:"flex",alignItems:"center",justifyContent:"center",fontSize:13,fontWeight:700,flexShrink:0}},cTxt),opt)}))),showExplain&&React.createElement('div',{className:"animate-in",style:{background:selected===q.answer?"#E8F5E8":"#FFF5F0",borderRadius:12,padding:18,marginBottom:20,border:"1px solid "+(selected===q.answer?"#A8D8A8":"#F0C8B8"),lineHeight:1.8,fontSize:14}},React.createElement('strong',null,selected===q.answer?"✅ 答對了！":"❌ 答錯了～"),React.createElement('br'),q.explanation),showExplain&&React.createElement('div',{style:{textAlign:"center"}},React.createElement('button',{className:"game-btn game-btn-primary",onClick:handleNext},current<SYMPTOMS_QUIZ.length-1?"下一題 →":"查看結果 🎯")));
-}
-
 /* ─── Match ─── */
 function MatchGame({onScoreAdd}) {
   var _s=useState(0),fi=_s[0],setFi=_s[1];var _s2=useState([]),slots=_s2[0],setSlots=_s2[1];var _s3=useState(null),selHerb=_s3[0],setSelHerb=_s3[1];var _s4=useState([]),placed=_s4[0],setPlaced=_s4[1];var _s5=useState(false),checked=_s5[0],setChecked=_s5[1];var _s6=useState(false),isOk=_s6[0],setIsOk=_s6[1];var _s7=useState(0),score=_s7[0],setScore=_s7[1];var _s8=useState(false),done=_s8[0],setDone=_s8[1];var _s9=useState([]),pool=_s9[0],setPool=_s9[1];
@@ -221,15 +206,118 @@ function MemoryGame({onScoreAdd}) {
   return React.createElement('div',{className:"animate-in",style:{maxWidth:560,margin:"30px auto",padding:"0 20px"}},React.createElement('div',{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:20}},React.createElement('span',{style:{fontSize:14,color:"#6B7B6B"}},"步數："+moves),React.createElement('span',{style:{fontSize:14,color:"#6B7B6B"}},"配對："+matched.length+" / "+PC)),React.createElement('div',{style:{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10}},cards.map(function(c,idx){var isF=flipped.includes(idx),isM=matched.includes(c.pid),show=isF||isM;return React.createElement('div',{key:c.id,className:"card-flip",onClick:function(){flip(idx)},style:{cursor:show&&!isF?"default":"pointer"}},React.createElement('div',{className:"card-flip-inner"+(show?" flipped":""),style:{height:80}},React.createElement('div',{className:"card-flip-front",style:{background:"linear-gradient(135deg,#5B8C5A,#3D6B3C)",display:"flex",alignItems:"center",justifyContent:"center",color:"white",fontSize:22}},"🌿"),React.createElement('div',{className:"card-flip-back",style:{background:isM?"#E8F5E8":"white",border:"2px solid "+(isM?"#5B8C5A":"#D4A574"),display:"flex",alignItems:"center",justifyContent:"center",padding:6,fontSize:c.type==="eff"?11:14,fontWeight:c.type==="name"?600:400,textAlign:"center",lineHeight:1.3}},c.content)))})),React.createElement('div',{style:{marginTop:20,textAlign:"center",fontSize:13,color:"#6B7B6B",lineHeight:1.6}},"💡 提示：藥材名稱和功效要配成一對唷！每次遊戲隨機出題"));
 }
 
+/* ═══════════ 新遊戲：共用工具 ═══════════ */
+var el = React.createElement;
+var PAOZHI = (function(){ try { return JSON.parse(document.getElementById('paozhi-data').textContent).items; } catch(e){ return []; } })();
+function _shuffle(a){ return a.slice().sort(function(){ return Math.random()-0.5; }); }
+var _cardBox={background:"white",borderRadius:16,padding:24,boxShadow:"0 2px 12px rgba(91,140,90,0.1)",marginBottom:20};
+var _scenario={background:"#FAF8F4",borderRadius:12,padding:18,marginBottom:20,borderLeft:"4px solid #D4A574",lineHeight:1.8,fontSize:15};
+var _resultBox={maxWidth:600,margin:"40px auto",padding:"40px 24px",background:"white",borderRadius:20,textAlign:"center",boxShadow:"0 2px 12px rgba(91,140,90,0.1)"};
+function _explain(ok){ return {background:ok?"#E8F5E8":"#FFF5F0",borderRadius:12,padding:18,marginBottom:20,border:"1px solid "+(ok?"#A8D8A8":"#F0C8B8"),lineHeight:1.8,fontSize:14}; }
+function _progress(cur,total,correct){ return el('div',{style:{marginBottom:24}},el('div',{style:{display:"flex",justifyContent:"space-between",marginBottom:6,fontSize:13,color:"#6B7B6B"}},el('span',null,"第 "+(cur+1)+" / "+total+" 題"),el('span',null,"答對 "+correct+" 題")),el('div',{className:"progress-bar"},el('div',{className:"progress-fill",style:{width:(cur+1)/total*100+"%"}}))); }
+function _letter(i,sel,ans){ var bg=sel!==null&&i===ans?"#5B8C5A":sel===i&&i!==ans?"#C75B5B":"#E0D8CC"; var col=sel!==null&&(i===ans||i===sel)?"white":"#2C3E2C"; var txt=sel!==null&&i===ans?"✓":sel===i&&i!==ans?"✗":String.fromCharCode(65+i); return el('span',{style:{width:28,height:28,borderRadius:"50%",background:bg,color:col,display:"inline-flex",alignItems:"center",justifyContent:"center",fontSize:13,fontWeight:700,flexShrink:0}},txt); }
+
+/* 出題器：方劑 / 炮製 / 藥材找家 */
+function buildFormulaQ(){
+  return _shuffle(FORMULAS).slice(0,Math.min(8,FORMULAS.length)).map(function(f){
+    var others=_shuffle(FORMULAS.filter(function(x){return x.name!==f.name;})).slice(0,3).map(function(x){return x.name;});
+    var opts=_shuffle(others.concat([f.name]));
+    return {clue:"📋 "+f.effects, q:"這是哪一帖方劑的功效？", options:opts, answer:opts.indexOf(f.name), link:f.link};
+  });
+}
+function buildPaozhiQ(){
+  return _shuffle(PAOZHI).slice(0,Math.min(8,PAOZHI.length)).map(function(p){
+    var others=_shuffle(PAOZHI.filter(function(x){return x.name!==p.name;})).slice(0,3).map(function(x){return x.name;});
+    var opts=_shuffle(others.concat([p.name]));
+    return {clue:"🔥 "+p.effects, q:"這是哪一種炮製法？", options:opts, answer:opts.indexOf(p.name), link:p.link};
+  });
+}
+function buildHerbQ(){
+  var map={}; FORMULAS.forEach(function(f){ f.herbNames.forEach(function(n){ (map[n]=map[n]||[]).push(f); }); });
+  var names=Object.keys(map);
+  return _shuffle(names).slice(0,Math.min(8,names.length)).map(function(hn){
+    var belongs=map[hn]; var cf=belongs[Math.floor(Math.random()*belongs.length)];
+    var notC=_shuffle(FORMULAS.filter(function(f){return f.herbNames.indexOf(hn)===-1;})).slice(0,3).map(function(f){return f.name;});
+    var opts=_shuffle(notC.concat([cf.name]));
+    return {clue:"🌿 藥材：「"+hn+"」", q:"它是下列哪一帖方劑的成員？", options:opts, answer:opts.indexOf(cf.name), link:cf.link};
+  });
+}
+
+/* 通用選擇題（看功效猜方劑 / 炮製變變變 / 藥材找家共用）*/
+function OptionQuiz(props){
+  var _q=useState(props.build),qs=_q[0],setQs=_q[1];
+  var _i=useState(0),cur=_i[0],setCur=_i[1];
+  var _s=useState(null),sel=_s[0],setSel=_s[1];
+  var _c=useState(0),correct=_c[0],setCorrect=_c[1];
+  var _f=useState(false),fin=_f[0],setFin=_f[1];
+  var q=qs[cur];
+  function choose(i){ if(sel!==null)return; setSel(i); if(i===q.answer){ setCorrect(function(c){return c+1;}); props.onScoreAdd(10); } }
+  function next(){ if(cur<qs.length-1){ setCur(cur+1); setSel(null); } else setFin(true); }
+  function restart(){ setQs(props.build()); setCur(0); setSel(null); setCorrect(0); setFin(false); }
+  if(fin){
+    var pct=Math.round(correct/qs.length*100); var grade=pct>=80?"🏆 高手！":pct>=60?"👍 不錯唷！":"📚 繼續加油！";
+    return el('div',{className:"animate-in",style:_resultBox},
+      el('div',{style:{fontSize:60,marginBottom:16}},pct>=80?"🎉":pct>=60?"😊":"💪"),
+      el('h2',{className:"serif",style:{fontSize:26,marginBottom:8}},grade),
+      el('p',{style:{fontSize:18,color:"#6B7B6B",marginBottom:24}},"答對 ",el('strong',{style:{color:"#5B8C5A"}},correct)," / ",qs.length," 題"),
+      el('button',{className:"game-btn game-btn-primary",onClick:restart},"再玩一次（隨機出題）"));
+  }
+  return el('div',{className:"animate-in",style:{maxWidth:640,margin:"30px auto",padding:"0 20px"}},
+    _progress(cur,qs.length,correct),
+    el('div',{style:_cardBox},
+      el('div',{style:_scenario},q.clue),
+      el('h3',{className:"serif",style:{fontSize:18,marginBottom:16}},q.q),
+      el('div',{style:{display:"flex",flexDirection:"column",gap:10}},
+        q.options.map(function(opt,i){
+          var cls="quiz-option"; if(sel!==null){ if(i===q.answer)cls+=" correct"; else if(i===sel)cls+=" wrong"; }
+          return el('button',{key:i,className:cls,disabled:sel!==null,onClick:function(){choose(i);}}, _letter(i,sel,q.answer), opt);
+        }))),
+    sel!==null && el('div',{className:"animate-in",style:_explain(sel===q.answer)},
+      el('strong',null, sel===q.answer?"✅ 答對了！":("❌ 答錯了～ 正解："+q.options[q.answer])),
+      q.link?el('a',{href:q.link,style:{color:"#5B8C5A",marginLeft:8}},"📖 看故事"):null),
+    sel!==null && el('div',{style:{textAlign:"center"}},
+      el('button',{className:"game-btn game-btn-primary",onClick:next}, cur<qs.length-1?"下一題 →":"看結果 🎯")));
+}
+
+/* 方劑速記卡 */
+function FlashcardGame(){
+  var _o=useState(function(){return _shuffle(FORMULAS);}),order=_o[0];
+  var _i=useState(0),idx=_i[0],setIdx=_i[1];
+  var _fl=useState(false),flip=_fl[0],setFlip=_fl[1];
+  var c=order[idx];
+  function go(d){ var n=idx+d; if(n<0)n=order.length-1; if(n>=order.length)n=0; setIdx(n); setFlip(false); }
+  return el('div',{className:"animate-in",style:{maxWidth:560,margin:"30px auto",padding:"0 20px"}},
+    el('div',{style:{textAlign:"center",fontSize:13,color:"#6B7B6B",marginBottom:14}},"第 "+(idx+1)+" / "+order.length+" 張 · 點卡片翻面"),
+    el('div',{onClick:function(){setFlip(!flip);},style:{cursor:"pointer",minHeight:230,background:"white",borderRadius:16,boxShadow:"0 2px 12px rgba(91,140,90,0.12)",padding:28,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",textAlign:"center",border:"1px solid rgba(0,0,0,0.06)"}},
+      flip?
+        el('div',null,
+          el('div',{style:{fontSize:13,color:"#D4A574",fontWeight:700,marginBottom:10}},"功效"),
+          el('p',{style:{fontSize:15,lineHeight:1.8,color:"#2C3E2C",marginBottom:16}},c.effects||"（本方暫無功效說明）"),
+          el('div',{style:{fontSize:13,color:"#5B8C5A",fontWeight:700,marginBottom:6}},"組成"),
+          el('p',{style:{fontSize:14,color:"#6B7B6B"}},c.herbNames.join("、")))
+      :
+        el('div',null,
+          el('div',{className:"float",style:{fontSize:34,marginBottom:10}},"🎴"),
+          el('h2',{className:"serif",style:{fontSize:30,fontWeight:900,color:"#5B8C5A"}},c.name),
+          el('p',{style:{fontSize:13,color:"#A0988C",marginTop:10}},"點一下看功效與組成"))),
+    el('div',{style:{display:"flex",justifyContent:"center",gap:10,marginTop:20,flexWrap:"wrap"}},
+      el('button',{className:"game-btn",style:{background:"#E8E2D6",color:"#5B6B5B"},onClick:function(){go(-1);}},"← 上一張"),
+      c.link?el('a',{href:c.link,className:"game-btn game-btn-primary",style:{textDecoration:"none",display:"inline-block"}},"📖 看故事"):null,
+      el('button',{className:"game-btn game-btn-primary",onClick:function(){go(1);}},"下一張 →")));
+}
+
 /* ─── Main App ─── */
 function App() {
   var _s=useState(null),cur=_s[0],setCur=_s[1];
   var _s2=useState(0),total=_s2[0],setTotal=_s2[1];
   var add=useCallback(function(p){setTotal(function(s){return s+p})},[]);
   var game=null;
-  if(cur==="quiz")game=React.createElement(QuizGame,{onScoreAdd:add});
+  if(cur==="effquiz")game=React.createElement(OptionQuiz,{build:buildFormulaQ,onScoreAdd:add});
+  else if(cur==="paozhi")game=React.createElement(OptionQuiz,{build:buildPaozhiQ,onScoreAdd:add});
+  else if(cur==="herbhome")game=React.createElement(OptionQuiz,{build:buildHerbQ,onScoreAdd:add});
   else if(cur==="match")game=React.createElement(MatchGame,{onScoreAdd:add});
   else if(cur==="memory")game=React.createElement(MemoryGame,{onScoreAdd:add});
+  else if(cur==="flash")game=React.createElement(FlashcardGame,{});
   else game=React.createElement(GameHub,{onSelect:setCur,totalScore:total});
   return React.createElement('div',{style:{minHeight:"100vh",background:"#F7F3EB"}},React.createElement(Header,{currentGame:cur,onBack:function(){setCur(null)},score:total}),game);
 }
