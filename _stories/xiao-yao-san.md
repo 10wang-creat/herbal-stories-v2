@@ -31,6 +31,7 @@ ingredients:
     description: 和事佬｜補氣和中，調和全隊
     image: gancao.png
   - name: 煨薑
+    category: 溫裡
     description: 暖心使者｜溫中和胃，促進運化
     image: weijiang.png
   - name: 薄荷

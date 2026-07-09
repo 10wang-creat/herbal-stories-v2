@@ -13,15 +13,18 @@ ingredients:
     description: 君藥｜滋補腎陰
     image: shudihuang.png
   - name: 山茱萸
-    description: 臣藥｜補益肝腎
+    category: 補腎
+    description: 固本收藏家｜補益肝腎、收斂固澀
     image: shanzhuyu.png
   - name: 山藥
+    category: 補氣
     description: 臣藥｜補脾固腎
     image: shanyao.png
   - name: 澤瀉
-    description: 佐藥｜瀉腎濁
+    description: 排濁清道夫｜利水滲濕、瀉腎濁
     image: zexie.png
   - name: 牡丹皮
+    category: 清熱
     description: 佐藥｜清肝火
     image: mudanpi.png
   - name: 茯苓

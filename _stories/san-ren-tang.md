@@ -13,18 +13,22 @@ tags:
 effects: "宣暢氣機、清熱利濕，適用於濕溫初起、暑濕困阻、頭重身困、胸悶不飢、午後身熱、舌白不渴之濕重於熱者"
 ingredients:
   - name: 杏仁
+    category: 化痰
     description: 頂樓開窗師｜宣利上焦肺氣，氣行則濕化
     image: xingren.png
   - name: 白蔻仁
+    category: 化濕
     description: 中層除濕官｜芳香化濕、行氣寬中，暢通中焦
     image: baidoukou.png
   - name: 薏苡仁
+    category: 利濕
     description: 底層排水工｜滲濕健脾，把濕熱從下焦帶走
     image: yiyiren.png
   - name: 滑石
     description: 清涼導流員｜清利濕熱，給下焦降溫
     image: huashi.png
   - name: 通草
+    category: 利濕
     description: 細管疏通員｜利水通淋，疏通水道
     image: tongcao.png
   - name: 淡竹葉

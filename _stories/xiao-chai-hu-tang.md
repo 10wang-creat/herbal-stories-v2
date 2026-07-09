@@ -22,6 +22,7 @@ ingredients:
     description: 降逆止嘔員｜和胃降逆，壓住噁心嘔吐
     image: banxia.png
   - name: 人參
+    category: 補氣
     description: 元氣總司令｜益氣扶正，讓身體有力氣打仗
     image: renshen.png
   - name: 炙甘草

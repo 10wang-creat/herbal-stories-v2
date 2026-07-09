@@ -17,6 +17,7 @@ ingredients:
     description: 補氣大將軍｜補氣固表，撐起保護罩
     image: huangqi.png
   - name: 人參
+    category: 補氣
     description: 發電廠廠長｜大補元氣
     image: renshen.png
   - name: 白朮
@@ -32,6 +33,7 @@ ingredients:
     description: 交通指揮｜理氣防滯
     image: chenpi.png
   - name: 升麻
+    category: 解表
     description: 電梯操作員｜升舉陽氣
     image: shengma.png
   - name: 柴胡

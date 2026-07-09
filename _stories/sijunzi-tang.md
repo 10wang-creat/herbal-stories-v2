@@ -10,6 +10,7 @@ tags:
 excerpt: 總是感覺累、說話有氣無力？四位溫和的君子來幫你補回元氣！
 ingredients:
   - name: 人參
+    category: 補氣
     description: 團長｜大補元氣，給身體充電
     image: renshen.png
   - name: 白朮

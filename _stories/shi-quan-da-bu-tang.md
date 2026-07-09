@@ -12,6 +12,7 @@ tags:
 excerpt: 大病初癒，為什麼還是這麼累？當四君子的補氣隊遇上四物湯的補血隊，再加上黃耆和肉桂的守護，十位英雄聯手為你全面重建！
 ingredients:
   - name: 人參
+    category: 補氣
     description: 君藥｜大補元氣
     image: renshen.png
   - name: 白朮
@@ -36,10 +37,11 @@ ingredients:
     description: 佐藥｜活血行氣
     image: chuanxiong.png
   - name: 黃耆
-    description: 臣藥｜補氣固表
+    description: 城牆守將｜補氣固表，撐起最外圈防護罩
     image: huangqi.png
   - name: 肉桂
-    description: 佐藥｜溫陽散寒
+    category: 溫裡
+    description: 暖爐點火官｜辛熱溫陽、散寒通脈
     image: rougui.png
 effects: 氣血雙補、溫陽益氣，適用於氣血兩虛、陽氣不足、面色蒼白、畏寒肢冷、病後體虛
 ---

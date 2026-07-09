@@ -22,6 +22,7 @@ ingredients:
     description: 瘀血清除專家｜破血祛瘀，清理殘留血塊
     image: taoren.png
   - name: 炮薑
+    category: 溫裡
     description: 溫暖守護者｜溫經散寒，防止出血過多
     image: paojiang.png
   - name: 炙甘草

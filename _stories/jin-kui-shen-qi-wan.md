@@ -11,24 +11,29 @@ tags:
 excerpt: 阿凱吃了三個月六味地黃丸，陰虛症狀改善了，卻在入冬後發現新問題：極度怕冷、夜尿頻繁、腰像被冰敷著。原來，他的身體從「散熱問題」變成了「供電問題」——這次需要的是金匱腎氣丸。
 ingredients:
   - name: 附子
-    description: 佐藥｜溫腎陽
+    category: 溫裡
+    description: 回陽急先鋒｜溫腎助陽、散寒回厥
     image: fuzi.png
   - name: 肉桂
+    category: 溫裡
     description: 佐藥｜引火歸元
     image: rougui.png
   - name: 熟地黃
     description: 君藥｜滋補腎陰
     image: shudihuang.png
   - name: 山茱萸
+    category: 補腎
     description: 臣藥｜補益肝腎
     image: shanzhuyu.png
   - name: 山藥
+    category: 補氣
     description: 臣藥｜補脾固腎
     image: shanyao.png
   - name: 澤瀉
     description: 佐藥｜瀉腎濁
     image: zexie.png
   - name: 牡丹皮
+    category: 清熱
     description: 佐藥｜清肝火
     image: mudanpi.png
   - name: 茯苓

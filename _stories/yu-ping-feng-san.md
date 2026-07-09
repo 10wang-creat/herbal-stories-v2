@@ -20,6 +20,7 @@ ingredients:
     description: 地基工程師｜健脾益氣，鞏固根基
     image: baizhu.png
   - name: 防風
+    category: 解表
     description: 巡邏隊長｜祛風散邪，守衛城門
     image: fangfeng.png
 effects: 益氣固表止汗，適用於表虛自汗、反覆感冒、過敏性鼻炎、畏風怕冷、換季易感

@@ -13,6 +13,7 @@ tags:
 effects: "溫中補虛、和里緩急，適用於中焦虛寒、肝脾不和所致的腹痛喜溫喜按、面色萎黃、神疲乏力、食慾不振"
 ingredients:
   - name: 飴糖
+    category: 補氣
     description: 甜蜜隊長｜溫補中焦、緩急止痛，用最溫柔的甘甜撫平痙攣
     image: yitang.png
   - name: 白芍

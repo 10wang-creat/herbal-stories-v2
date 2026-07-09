@@ -13,6 +13,7 @@ tags:
 effects: "養血安神、清熱除煩，適用於虛勞虛煩不得眠、驚悸多夢、體虛盜汗、心煩口乾"
 ingredients:
   - name: 酸棗仁
+    category: 安神
     description: 安眠總監｜養肝血、寧心神，讓躁動的心安靜下來
     image: suanzaoren.png
   - name: 茯苓

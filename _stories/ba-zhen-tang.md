@@ -10,6 +10,7 @@ tags:
 excerpt: 既累又虛、臉色蒼白？四君子和四姊妹攜手合作，給你最全面的照顧！
 ingredients:
   - name: 人參
+    category: 補氣
     description: 君藥｜大補元氣
     image: renshen.png
   - name: 白朮

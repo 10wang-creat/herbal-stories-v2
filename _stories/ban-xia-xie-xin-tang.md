@@ -23,9 +23,11 @@ ingredients:
     description: 滅火專員｜苦寒清心胃之火，專消上半身的燥熱
     image: huanglian.png
   - name: 乾薑
+    category: 溫裡
     description: 暖爐戰士｜辛溫散寒、溫中健脾，把下陷的脾寒烘暖
     image: ganjiang.png
   - name: 人參
+    category: 補氣
     description: 補氣主帥｜大補元氣、健脾扶正，修好主機
     image: renshen.png
   - name: 炙甘草

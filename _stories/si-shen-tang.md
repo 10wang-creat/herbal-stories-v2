@@ -13,13 +13,16 @@ ingredients:
     description: 臣藥｜健脾利濕
     image: fuling.png
   - name: 芡實
-    description: 臣藥｜固腎益精
+    category: 收澀
+    description: 固澀守門員｜健脾固腎、收澀止瀉
     image: qianshi.png
   - name: 蓮子
-    description: 臣藥｜養心安神
+    category: 安神
+    description: 安神哄睡師｜養心安神、補脾止瀉
     image: lianzi.png
   - name: 山藥
-    description: 臣藥｜補脾益肺
+    category: 補氣
+    description: 三補拿手｜平補脾肺腎，補而不燥
     image: shanyao.png
 effects: 健脾養胃、利濕止瀉，適用於脾胃虛弱、食慾不振、消化不良、慢性腹瀉
 ---

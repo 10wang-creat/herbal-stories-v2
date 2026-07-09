@@ -22,6 +22,7 @@ ingredients:
     description: 甘露灌溉師｜養陰生津，替燒乾的土地重新補水
     image: maimendong.png
   - name: 人參
+    category: 補氣
     description: 電力搶修長｜大補元氣，把大戰耗掉的電力接回來
     image: renshen.png
   - name: 半夏

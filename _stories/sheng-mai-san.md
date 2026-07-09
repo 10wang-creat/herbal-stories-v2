@@ -13,12 +13,14 @@ tags:
 effects: "益氣生津、斂陰止汗，適用於氣陰兩虛所致的汗多口渴、氣短懶言、體倦乏力、咽乾舌燥"
 ingredients:
   - name: 人參
+    category: 補氣
     description: 元氣總司令｜大補元氣、益氣生津，把快要見底的能量灌回來
     image: renshen.png
   - name: 麥門冬
     description: 潤澤滋養師｜養陰清熱、潤肺生津，像沙漠裡的綠洲
     image: maimendong.png
   - name: 五味子
+    category: 收澀
     description: 收斂守門員｜斂肺止汗、生津止渴，把快要流失的元氣兜住
     image: wuweizi.png
 excerpt: "大汗淋漓、口渴灌水也沒用、整個人像被掏空？這帖只有三味藥的千年名方，一補一清一斂——讓快要斷線的脈搏重新跳回來。"
