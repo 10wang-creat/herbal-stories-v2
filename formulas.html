@@ -1,0 +1,41 @@
+---
+layout: default
+title: 方劑系列
+permalink: /formulas/
+description: 方劑系列 — 用擬人化故事認識中藥方劑，君臣佐使各司其職，一帖一段人間故事。
+body_class: theme-formula
+---
+
+{% assign formula_stories = site.stories | where_exp: "s", "s.date <= site.time" %}
+{% assign formula_stories = formula_stories | where_exp: "s", "s.series == nil" | sort: 'date' | reverse %}
+
+<section class="series-hero">
+  <div class="series-emoji">💊</div>
+  <h1>方劑系列</h1>
+  <p>一帖方劑，就是一支團隊。石膏、知母、當歸、白朮……讓每一味藥材化身角色，用故事讀懂君臣佐使如何搭配、為何有效。</p>
+  <div class="hero-count">共 {{ formula_stories | size }} 帖方劑故事</div>
+</section>
+
+<div class="section">
+  <div class="story-grid">
+    {% for story in formula_stories %}
+      <article class="story-card">
+        <span class="series-badge formula">💊 方劑</span>
+        <h3><a href="{{ story.url | relative_url }}">{{ story.title }}</a></h3>
+        {% if story.formula %}<div class="formula-name">{{ story.formula }}</div>{% endif %}
+        {% if story.excerpt %}<p class="story-excerpt">{{ story.excerpt | strip_html | truncate: 90 }}</p>{% endif %}
+        {% if story.effects %}
+          <div class="story-effects"><span>✨</span><span>{{ story.effects | truncate: 70 }}</span></div>
+        {% endif %}
+        <div class="card-footer">
+          <time class="story-date">{{ story.date | date: "%Y.%m.%d" }}</time>
+          <a href="{{ story.url | relative_url }}" class="read-more">閱讀全文 →</a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+
+  <div style="text-align:center; margin-top:44px;">
+    <a href="{{ '/paozhi/' | relative_url }}" class="btn btn-ghost">看看另一個系列：🔥 炮製系列 →</a>
+  </div>
+</div>

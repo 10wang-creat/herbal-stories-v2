@@ -1,0 +1,41 @@
+---
+layout: default
+title: 炮製系列
+permalink: /paozhi/
+description: 炮製系列 — 炒、炙、蒸、煆……同一味藥，經過不同炮製手法，性格與功效隨之翻轉。認識中藥的「變身術」。
+body_class: theme-paozhi
+---
+
+{% assign paozhi_stories = site.stories | where_exp: "s", "s.date <= site.time" %}
+{% assign paozhi_stories = paozhi_stories | where_exp: "s", "s.series == '炮製'" | sort: 'date' | reverse %}
+
+<section class="series-hero">
+  <div class="series-emoji">🔥</div>
+  <h1>炮製系列</h1>
+  <p>同一把火，能炒出三種命運。炒、炙、蒸、煆、酒製、醋製、鹽製……中藥在入方之前，要先經過一場「變身」。看懂炮製，就看懂藥性如何被馴服與轉化。</p>
+  <div class="hero-count">共 {{ paozhi_stories | size }} 篇炮製故事</div>
+</section>
+
+<div class="section">
+  <div class="story-grid">
+    {% for story in paozhi_stories %}
+      <article class="story-card paozhi">
+        <span class="series-badge paozhi">🔥 炮製</span>
+        <h3><a href="{{ story.url | relative_url }}">{{ story.title }}</a></h3>
+        {% if story.formula %}<div class="formula-name">{{ story.formula }}</div>{% endif %}
+        {% if story.excerpt %}<p class="story-excerpt">{{ story.excerpt | strip_html | truncate: 90 }}</p>{% endif %}
+        {% if story.effects %}
+          <div class="story-effects"><span>✨</span><span>{{ story.effects | truncate: 70 }}</span></div>
+        {% endif %}
+        <div class="card-footer">
+          <time class="story-date">{{ story.date | date: "%Y.%m.%d" }}</time>
+          <a href="{{ story.url | relative_url }}" class="read-more">閱讀全文 →</a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+
+  <div style="text-align:center; margin-top:44px;">
+    <a href="{{ '/formulas/' | relative_url }}" class="btn btn-ghost">看看另一個系列：💊 方劑系列 →</a>
+  </div>
+</div>
