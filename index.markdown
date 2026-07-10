@@ -6,7 +6,8 @@ title: 首頁
 <!-- ===== Hero ===== -->
 <section class="home-hero">
   <div class="wrapper">
-    <h1><img src="{{ site.baseurl }}/assets/images/site-logo.png" alt="" style="height:110px;width:110px;vertical-align:middle;border-radius:50%;margin-right:0.15em"> 草本故事館</h1>
+    <div style="text-align:center;margin-bottom:12px"><img src="{{ site.baseurl }}/assets/images/site-logo.png" alt="" style="height:110px;width:110px;border-radius:50%"></div>
+<h1>草本故事館</h1>
     <p class="home-hero-sub">用故事認識中藥方劑，讓傳統醫學變得生動有趣</p>
 
     <div class="hero-social">
