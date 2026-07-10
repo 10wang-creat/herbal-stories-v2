@@ -438,7 +438,7 @@ a { color: var(--green-500); }
 .footer-social-link.facebook:hover { background: #1877f2; }
 .footer-social-link.line:hover { background: #06c755; }
 .footer-social-link.rss:hover { background: #ff6600; }
-.footer-social-link.vocus:hover { background: #34435e; }
+.footer-social-link.vocus:hover { background: #e8505b; }
 .footer-ig-name { font-size: 0.85rem; opacity: 0.8; margin-top: 6px; }
 .footer-links { list-style: none; }
 .footer-links li { margin-bottom: 11px; }

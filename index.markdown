@@ -23,7 +23,7 @@ title: 首頁
         <span>Facebook 粉專</span>
       </a>
       <a href="https://vocus.cc/salon/herbalstories" target="_blank" rel="noopener noreferrer" class="social-button vocus">
-        <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.6 3.6h6.2v6.2H3.6zM14.2 3.6h6.2v6.2h-6.2zM3.6 14.2h6.2v6.2H3.6zM14.2 14.2h6.2v6.2h-6.2z" rx="1"/></svg>
+        <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"/><rect x="12.6" y="12.6" width="4.6" height="4.6" rx="1.3" fill="currentColor"/></svg>
         <span>方格子</span>
       </a>
     </div>
@@ -120,6 +120,30 @@ title: 首頁
   </div>
 </section>
 
+<!-- ===== 四時堂小說連載 ===== -->
+<section class="sishitang-section">
+  <div class="sishitang-inner">
+    <div class="sishitang-text">
+      <span class="sishitang-badge">📖 小說連載中</span>
+      <h2 class="sishitang-title">四時堂</h2>
+      <p class="sishitang-tagline">抓的不是藥，是心事</p>
+      <p class="sishitang-desc">一條快被遺忘的老街上，有一間中藥行。老闆娘抓的不是藥，是心事——一章一味藥，一個帶著症狀走進來的人，一段藏在身體底下的故事。跟著節氣走，慢慢說給你聽。</p>
+      <p class="sishitang-seasons">🌱 春祛濕 · ☀️ 夏清暑 · 🍂 秋潤燥 · ❄️ 冬溫補</p>
+      <div class="sishitang-chapters">
+        <span>第一章〈酸棗仁〉他不是睡不著，是不敢睡</span>
+        <span>第二章〈佩蘭〉有些濕，不在身上，在心裡</span>
+      </div>
+      <a href="https://vocus.cc/salon/herbalstories" target="_blank" rel="noopener noreferrer" class="sishitang-cta">到方格子看《四時堂》→</a>
+      <div class="sishitang-source">
+        <span class="sishitang-source-ic">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2.4"/><rect x="12.6" y="12.6" width="4.6" height="4.6" rx="1.3" fill="currentColor"/></svg>
+        </span>
+        <span>在方格子 vocus 連載</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== 本草心語抽卡 ===== -->
 <section class="oracle-section">
   <div class="oracle-content">
@@ -174,7 +198,7 @@ title: 首頁
 .social-button.instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
 .social-button.spotify { background: #1DB954; }
 .social-button.facebook { background: #1877f2; }
-.social-button.vocus { background: #34435e; }
+.social-button.vocus { background: #e8505b; }
 .social-icon { width: 21px; height: 21px; fill: currentColor; }
 @media (max-width: 640px) {
   .hero-social { flex-direction: column; padding: 0 16px; }
@@ -213,6 +237,30 @@ title: 首頁
 .podcast-cta:hover { background: #1ed760; transform: translateY(-3px); }
 .spotify-icon { width: 23px; height: 23px; fill: currentColor; }
 @media (max-width: 900px) { .podcast-section { padding: 40px 24px; margin: 40px 20px; } .podcast-header h2 { font-size: 2.1rem; } }
+
+/* 四時堂小說 */
+.sishitang-section {
+  background: linear-gradient(135deg, #f7edf1 0%, #f2e3ea 100%);
+  border-radius: var(--radius-lg); padding: 50px 40px; margin: 56px auto; max-width: 1080px;
+  box-shadow: 0 6px 30px rgba(143,58,82,0.1); border: 1px solid #ecd8e0;
+}
+.sishitang-inner { max-width: 780px; margin: 0 auto; }
+.sishitang-badge { display: inline-block; background: linear-gradient(135deg, #9a4560, #c15c7a); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; letter-spacing: 1px; }
+.sishitang-title { font-family: var(--serif); font-size: 2.4rem; color: #8f3a52; margin: 12px 0 4px; letter-spacing: 6px; }
+.sishitang-tagline { font-size: 1.1rem; color: #a3506a; font-style: italic; margin-bottom: 16px; }
+.sishitang-desc { color: var(--ink-soft); line-height: 1.85; margin-bottom: 14px; }
+.sishitang-seasons { color: var(--muted); font-size: 0.95rem; margin-bottom: 16px; }
+.sishitang-chapters { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; }
+.sishitang-chapters span { background: #fff; border-left: 3px solid #c15c7a; border-radius: 6px; padding: 9px 14px; font-size: 0.92rem; color: var(--ink); }
+.sishitang-cta { display: inline-block; background: linear-gradient(135deg, #8f3a52, #b0546e); color: #fff; padding: 13px 30px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(143,58,82,0.25); }
+.sishitang-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(143,58,82,0.3); }
+.sishitang-source { display: flex; align-items: center; gap: 8px; margin-top: 14px; color: var(--muted); font-size: 0.85rem; }
+.sishitang-source-ic { width: 22px; height: 22px; border-radius: 6px; background: #e8505b; color: #fff; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.sishitang-source-ic svg { width: 14px; height: 14px; }
+@media (max-width: 768px) {
+  .sishitang-section { padding: 40px 24px; margin: 40px 20px; }
+  .sishitang-chapters span { text-align: left; }
+}
 
 /* Oracle */
 .oracle-section {
