@@ -1,30 +1,36 @@
-{% if site.disqus.shortname %}
 <div class="comments-section">
   <div class="comments-header">
-    <h3>💬 讀者留言</h3>
-    <p>歡迎分享你的想法、經驗或提問！</p>
+    <h3>💬 想聊聊嗎？</h3>
+    <p>喜歡這篇、有心得或想問的，歡迎到 IG 或 FB 留言，我會親自回覆你！</p>
   </div>
-  
-  <div id="disqus_thread"></div>
-  
-  <script>
-    var disqus_config = function () {
-      this.page.url = '{{ page.url | absolute_url }}';
-      this.page.identifier = '{{ page.id }}';
-      this.page.title = '{{ page.title }}';
-    };
-    
-    (function() {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  
-  <noscript>
-    請啟用 JavaScript 來查看 <a href="https://disqus.com/?ref_noscript" rel="nofollow">Disqus 提供的留言功能</a>。
-  </noscript>
+
+  <div class="social-invite">
+    <a class="social-invite-btn ig"
+       href="https://www.instagram.com/meet.the.herbs"
+       target="_blank" rel="noopener noreferrer">
+      <span class="social-invite-ic">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </span>
+      <span class="social-invite-text">
+        <strong>Instagram 留言</strong>
+        <small>@meet.the.herbs</small>
+      </span>
+    </a>
+
+    <a class="social-invite-btn fb"
+       href="https://www.facebook.com/MeettheHerbs"
+       target="_blank" rel="noopener noreferrer">
+      <span class="social-invite-ic">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </span>
+      <span class="social-invite-text">
+        <strong>Facebook 留言</strong>
+        <small>遇見中藥</small>
+      </span>
+    </a>
+  </div>
+
+  <p class="social-invite-note">在你原本就在的平台留言，不用再註冊新帳號 🌿</p>
 </div>
 
 <style>
@@ -32,32 +38,57 @@
   max-width: 900px;
   margin: 60px auto 0;
   padding: 40px 20px 0;
-  border-top: 3px solid #e0e0e0;
+  border-top: 2px solid var(--line, #ddd9e6);
 }
-
-.comments-header {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
+.comments-header { margin-bottom: 26px; text-align: center; }
 .comments-header h3 {
-  color: #2d5016;
+  font-family: var(--serif, serif);
+  color: var(--green-700, #4f6f62);
   margin: 0 0 10px 0;
-  font-size: 2em;
+  font-size: 1.8em;
 }
+.comments-header p { color: var(--ink-soft, #59617a); margin: 0; font-size: 1.08em; }
 
-.comments-header p {
-  color: #666;
-  margin: 0;
-  font-size: 1.1em;
+.social-invite {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 620px;
+  margin: 0 auto;
 }
+@media (max-width: 560px) { .social-invite { grid-template-columns: 1fr; } }
 
-#disqus_thread {
-  margin-top: 30px;
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+.social-invite-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 4px 14px rgba(52,67,94,0.12);
+}
+.social-invite-btn:hover { transform: translateY(-4px); box-shadow: 0 8px 22px rgba(52,67,94,0.18); }
+.social-invite-btn.ig { background: linear-gradient(45deg, #7b5ea7 0%, #8981c2 40%, #aac9e8 100%); }
+.social-invite-btn.fb { background: linear-gradient(135deg, #34435e 0%, #6d93c8 100%); }
+
+.social-invite-ic {
+  flex-shrink: 0;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.18);
+  display: flex; align-items: center; justify-content: center;
+}
+.social-invite-ic svg { width: 24px; height: 24px; fill: #fff; }
+.social-invite-text { display: flex; flex-direction: column; line-height: 1.35; }
+.social-invite-text strong { font-size: 1.08em; }
+.social-invite-text small { font-size: 0.85em; opacity: 0.9; }
+
+.social-invite-note {
+  text-align: center;
+  color: var(--muted, #8a90a4);
+  font-size: 0.92em;
+  margin: 20px 0 0;
 }
 </style>
-{% endif %}

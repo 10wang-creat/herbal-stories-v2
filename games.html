@@ -17,7 +17,7 @@ permalink: /games/
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Noto Sans TC',sans-serif;background:#F7F3EB;color:#2C3E2C;min-height:100vh}
+    body{font-family:'Noto Sans TC',sans-serif;background:#f0eef3;color:#333b4a;min-height:100vh}
     .serif{font-family:'Noto Serif TC',serif}
     @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
     @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
@@ -25,12 +25,12 @@ permalink: /games/
     .animate-in{animation:fadeInUp .5s ease-out forwards}.float{animation:float 3s ease-in-out infinite}
     .card-flip{perspective:800px}.card-flip-inner{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}.card-flip-inner.flipped{transform:rotateY(180deg)}.card-flip-front,.card-flip-back{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px}.card-flip-back{transform:rotateY(180deg)}
     .herb-tag{display:inline-block;padding:3px 10px;border-radius:20px;font-size:12px;font-weight:500}
-    .game-btn{padding:12px 28px;border-radius:10px;border:none;font-size:15px;font-weight:600;font-family:'Noto Sans TC',sans-serif;cursor:pointer;transition:all .2s}.game-btn:hover{transform:translateY(-2px)}.game-btn:active{transform:translateY(0)}.game-btn-primary{background:#5B8C5A;color:#fff}.game-btn-primary:hover{background:#3D6B3C;box-shadow:0 4px 20px rgba(91,140,90,.18)}
-    .quiz-option{width:100%;padding:14px 18px;border-radius:10px;border:2px solid #E0D8CC;background:#fff;font-size:15px;font-family:'Noto Sans TC',sans-serif;cursor:pointer;transition:all .2s;text-align:left;display:flex;align-items:center;gap:10px}.quiz-option:hover:not(:disabled){border-color:#5B8C5A;background:#F0F7F0;transform:translateX(4px)}.quiz-option.correct{border-color:#5B8C5A;background:#E8F5E8}.quiz-option.wrong{border-color:#C75B5B;background:#FDE8E8;animation:shake .4s}.quiz-option:disabled{cursor:default}
-    .match-slot{min-height:52px;padding:8px 14px;border-radius:10px;border:2px dashed #C8C0B4;background:#FAF8F4;display:flex;align-items:center;justify-content:center;transition:all .2s;font-size:14px}.match-slot.active{border-color:#5B8C5A;background:#F0F7F0}.match-slot.filled{border-style:solid;border-color:#D4A574;background:#fff}
-    .draggable-herb{padding:8px 16px;border-radius:20px;background:#fff;border:2px solid #E8CDB0;cursor:pointer;transition:all .2s;font-size:14px;font-weight:500;user-select:none}.draggable-herb:hover{border-color:#D4A574;transform:scale(1.05);box-shadow:0 2px 12px rgba(91,140,90,.1)}.draggable-herb.selected{border-color:#5B8C5A;background:#F0F7F0}.draggable-herb.placed{opacity:.35;pointer-events:none}
-    .progress-bar{height:8px;background:#E0D8CC;border-radius:4px;overflow:hidden}.progress-fill{height:100%;background:linear-gradient(90deg,#5B8C5A,#D4A574);border-radius:4px;transition:width .5s}
-    .score-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;background:linear-gradient(135deg,#FFF8E7,#FFF0D0);border:1px solid #DAA520;font-weight:600;font-size:14px;color:#8B6914}
+    .game-btn{padding:12px 28px;border-radius:10px;border:none;font-size:15px;font-weight:600;font-family:'Noto Sans TC',sans-serif;cursor:pointer;transition:all .2s}.game-btn:hover{transform:translateY(-2px)}.game-btn:active{transform:translateY(0)}.game-btn-primary{background:#6f9083;color:#fff}.game-btn-primary:hover{background:#4f6f62;box-shadow:0 4px 20px rgba(91,140,90,.18)}
+    .quiz-option{width:100%;padding:14px 18px;border-radius:10px;border:2px solid #dcd9e6;background:#fff;font-size:15px;font-family:'Noto Sans TC',sans-serif;cursor:pointer;transition:all .2s;text-align:left;display:flex;align-items:center;gap:10px}.quiz-option:hover:not(:disabled){border-color:#6f9083;background:#F0F7F0;transform:translateX(4px)}.quiz-option.correct{border-color:#6f9083;background:#E8F5E8}.quiz-option.wrong{border-color:#C75B5B;background:#FDE8E8;animation:shake .4s}.quiz-option:disabled{cursor:default}
+    .match-slot{min-height:52px;padding:8px 14px;border-radius:10px;border:2px dashed #C8C0B4;background:#f5f4f9;display:flex;align-items:center;justify-content:center;transition:all .2s;font-size:14px}.match-slot.active{border-color:#6f9083;background:#F0F7F0}.match-slot.filled{border-style:solid;border-color:#9aa6b8;background:#fff}
+    .draggable-herb{padding:8px 16px;border-radius:20px;background:#fff;border:2px solid #E8CDB0;cursor:pointer;transition:all .2s;font-size:14px;font-weight:500;user-select:none}.draggable-herb:hover{border-color:#9aa6b8;transform:scale(1.05);box-shadow:0 2px 12px rgba(91,140,90,.1)}.draggable-herb.selected{border-color:#6f9083;background:#F0F7F0}.draggable-herb.placed{opacity:.35;pointer-events:none}
+    .progress-bar{height:8px;background:#dcd9e6;border-radius:4px;overflow:hidden}.progress-fill{height:100%;background:linear-gradient(90deg,#6f9083,#9aa6b8);border-radius:4px;transition:width .5s}
+    .score-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;background:linear-gradient(135deg,#FFF8E7,#FFF0D0);border:1px solid #9aa6b8;font-weight:600;font-size:14px;color:#4f5a76}
     .back-to-site{display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,.7);text-decoration:none;font-size:13px;transition:color .2s}.back-to-site:hover{color:#fff}
   </style>
 </head>
@@ -122,7 +122,7 @@ const FORMULAS = RAW.formulas.map(function(f) {
 /* ═══════════ UI 元件 ═══════════ */
 
 function Header({currentGame,onBack,score}) {
-  return React.createElement('header',{style:{background:"linear-gradient(135deg,#2C3E2C 0%,#3D5C3D 50%,#4A6B4A 100%)",padding:currentGame?"14px 24px":"40px 24px",transition:"padding 0.3s",position:"relative",overflow:"hidden"}},
+  return React.createElement('header',{style:{background:"linear-gradient(135deg,#333b4a 0%,#3D5C3D 50%,#4A6B4A 100%)",padding:currentGame?"14px 24px":"40px 24px",transition:"padding 0.3s",position:"relative",overflow:"hidden"}},
     React.createElement('div',{style:{position:"absolute",inset:0,opacity:0.06,backgroundImage:"radial-gradient(circle at 20% 50%,white 1px,transparent 1px),radial-gradient(circle at 80% 20%,white 1px,transparent 1px)",backgroundSize:"60px 60px,80px 80px"}}),
     React.createElement('div',{style:{maxWidth:900,margin:"0 auto",position:"relative",zIndex:1}},
       currentGame ?
@@ -143,22 +143,22 @@ function Header({currentGame,onBack,score}) {
 
 function GameHub({onSelect,totalScore}) {
   var games=[
-    {id:"effquiz",icon:"💡",title:"看功效猜方劑",desc:"讀一段功效，猜出是哪一帖方劑",detail:FORMULAS.length+" 帖方劑",color:"#5B8C5A"},
-    {id:"match",icon:"🧩",title:"組方大挑戰",desc:"把正確的藥材選入方劑中",detail:FORMULAS.length+" 個經典方",color:"#D4A574"},
-    {id:"herbhome",icon:"🏠",title:"藥材找家",desc:"這味藥材屬於哪一帖方劑？",detail:HERBS.length+" 味藥材",color:"#C79A3C"},
+    {id:"effquiz",icon:"💡",title:"看功效猜方劑",desc:"讀一段功效，猜出是哪一帖方劑",detail:FORMULAS.length+" 帖方劑",color:"#6f9083"},
+    {id:"match",icon:"🧩",title:"組方大挑戰",desc:"把正確的藥材選入方劑中",detail:FORMULAS.length+" 個經典方",color:"#9aa6b8"},
+    {id:"herbhome",icon:"🏠",title:"藥材找家",desc:"這味藥材屬於哪一帖方劑？",detail:HERBS.length+" 味藥材",color:"#7f8bb0"},
     {id:"memory",icon:"🎴",title:"藥材翻翻樂",desc:"翻牌配對，記住藥材與功效",detail:"記憶力挑戰",color:"#7B6BA5"},
-    {id:"flash",icon:"📇",title:"方劑速記卡",desc:"翻卡複習方劑的功效與組成",detail:FORMULAS.length+" 張速記卡",color:"#5B8C5A"},
-    {id:"paozhi",icon:"🔥",title:"炮製變變變",desc:"讀炮製作用，猜出是哪一種炮製法",detail:PAOZHI.length+" 種炮製法",color:"#C06A2C"},
+    {id:"flash",icon:"📇",title:"方劑速記卡",desc:"翻卡複習方劑的功效與組成",detail:FORMULAS.length+" 張速記卡",color:"#6f9083"},
+    {id:"paozhi",icon:"🔥",title:"炮製變變變",desc:"讀炮製作用，猜出是哪一種炮製法",detail:PAOZHI.length+" 種炮製法",color:"#8981c2"},
     {id:"oracle",icon:"🔮",title:"本草心語",desc:"靜下心，感受此刻的自己，讓一味本草回應你內心的聲音",detail:"心靈卡牌",color:"#8B5E9B",external:"https://tcm-oracle-cards-v2.vercel.app/"},
     {id:"collection",icon:"📖",title:"草本圖鑑",desc:"查看藥材角色插畫與介紹",detail:"角色大集合",color:"#C75B5B",external:"/characters/"},
   ].filter(function(g){ return g.id!=="paozhi" || PAOZHI.length>=4; });
   return React.createElement('div',{style:{maxWidth:900,margin:"0 auto",padding:"30px 20px"}},
     React.createElement('div',{style:{display:"flex",justifyContent:"center",marginBottom:30}},
-      React.createElement('div',{style:{background:"linear-gradient(135deg,#FFF8E7,#FFF0D0)",border:"2px solid #DAA520",borderRadius:16,padding:"14px 30px",display:"flex",alignItems:"center",gap:12}},
+      React.createElement('div',{style:{background:"linear-gradient(135deg,#FFF8E7,#FFF0D0)",border:"2px solid #9aa6b8",borderRadius:16,padding:"14px 30px",display:"flex",alignItems:"center",gap:12}},
         React.createElement('span',{style:{fontSize:28}},"🏆"),
         React.createElement('div',null,
           React.createElement('div',{style:{fontSize:12,color:"#6B7B6B"}},"累積總分"),
-          React.createElement('div',{className:"serif",style:{fontSize:28,fontWeight:900,color:"#8B6914"}},totalScore)
+          React.createElement('div',{className:"serif",style:{fontSize:28,fontWeight:900,color:"#4f5a76"}},totalScore)
         )
       )
     ),
@@ -191,9 +191,9 @@ function MatchGame({onScoreAdd}) {
   function clickSlot(si){if(checked)return;if(selHerb){var ns=[].concat(slots);if(ns[si])setPlaced(function(p){return p.filter(function(n){return n!==ns[si].name})});ns[si]=selHerb;setSlots(ns);setPlaced(function(p){return[].concat(p.filter(function(n){return n!==selHerb.name}),[selHerb.name])});setSelHerb(null)}else if(slots[si]){setPlaced(function(p){return p.filter(function(n){return n!==slots[si].name})});var ns2=[].concat(slots);ns2[si]=null;setSlots(ns2)}}
   function check(){var ok=slots.every(function(s){return s})&&slots.map(function(s){return s.name}).sort().join(",")===[].concat(f.herbNames).sort().join(",");setChecked(true);setIsOk(ok);if(ok){setScore(function(s){return s+20});onScoreAdd(20)}}
   function next(){if(fi<FORMULAS.length-1)setFi(function(i){return i+1});else setDone(true)}
-  if(done)return React.createElement('div',{className:"animate-in",style:{maxWidth:500,margin:"40px auto",textAlign:"center",background:"white",borderRadius:20,padding:40,boxShadow:"0 2px 12px rgba(91,140,90,0.1)"}},React.createElement('div',{style:{fontSize:60,marginBottom:16}},"🎊"),React.createElement('h2',{className:"serif",style:{marginBottom:8}},"組方挑戰完成！"),React.createElement('p',{style:{color:"#6B7B6B",marginBottom:24,fontSize:16}},"你獲得了 ",React.createElement('strong',{style:{color:"#DAA520"}},score)," 分"),React.createElement('button',{className:"game-btn game-btn-primary",onClick:function(){setFi(0);setScore(0);setDone(false)}},"再玩一次"));
+  if(done)return React.createElement('div',{className:"animate-in",style:{maxWidth:500,margin:"40px auto",textAlign:"center",background:"white",borderRadius:20,padding:40,boxShadow:"0 2px 12px rgba(91,140,90,0.1)"}},React.createElement('div',{style:{fontSize:60,marginBottom:16}},"🎊"),React.createElement('h2',{className:"serif",style:{marginBottom:8}},"組方挑戰完成！"),React.createElement('p',{style:{color:"#6B7B6B",marginBottom:24,fontSize:16}},"你獲得了 ",React.createElement('strong',{style:{color:"#9aa6b8"}},score)," 分"),React.createElement('button',{className:"game-btn game-btn-primary",onClick:function(){setFi(0);setScore(0);setDone(false)}},"再玩一次"));
   var allFilled=slots.every(function(s){return s!==null});
-  return React.createElement('div',{className:"animate-in",style:{maxWidth:640,margin:"30px auto",padding:"0 20px"}},React.createElement('div',{style:{marginBottom:20}},React.createElement('div',{style:{display:"flex",justifyContent:"space-between",marginBottom:6,fontSize:13,color:"#6B7B6B"}},React.createElement('span',null,"方劑 "+(fi+1)+" / "+FORMULAS.length),React.createElement('span',null,"得分 "+score)),React.createElement('div',{className:"progress-bar"},React.createElement('div',{className:"progress-fill",style:{width:(fi+1)/FORMULAS.length*100+"%"}}))),React.createElement('div',{style:{background:"white",borderRadius:16,padding:24,boxShadow:"0 2px 12px rgba(91,140,90,0.1)",marginBottom:20}},React.createElement('div',{style:{textAlign:"center",marginBottom:20}},React.createElement('h2',{className:"serif",style:{fontSize:24,color:"#5B8C5A",marginBottom:6}},f.name),React.createElement('p',{style:{fontSize:13,color:"#6B7B6B",maxWidth:500,margin:"0 auto",lineHeight:1.6}},f.effects)),React.createElement('div',{style:{marginBottom:24}},React.createElement('p',{style:{fontSize:13,color:"#6B7B6B",marginBottom:10}},"📦 請選擇 "+f.herbNames.length+" 味藥材放入方劑："),React.createElement('div',{style:{display:"grid",gridTemplateColumns:"repeat("+Math.min(f.herbNames.length,4)+",1fr)",gap:10}},slots.map(function(s,i){var ss={};if(checked&&s){ss=f.herbNames.includes(s.name)?{borderColor:"#5B8C5A",background:"#E8F5E8"}:{borderColor:"#C75B5B",background:"#FDE8E8"}}return React.createElement('div',{key:i,className:"match-slot"+(selHerb?" active":"")+(s?" filled":""),onClick:function(){clickSlot(i)},style:Object.assign({cursor:checked?"default":"pointer"},ss)},s?React.createElement('span',null,s.name):React.createElement('span',{style:{color:"#C0B8AC",fontSize:13}},"點此放入"))}))),React.createElement('div',null,React.createElement('p',{style:{fontSize:13,color:"#6B7B6B",marginBottom:10}},"🌿 可選藥材："),React.createElement('div',{style:{display:"flex",flexWrap:"wrap",gap:8}},pool.map(function(h){return React.createElement('span',{key:h.name,className:"draggable-herb"+(selHerb&&selHerb.name===h.name?" selected":"")+(placed.includes(h.name)?" placed":""),onClick:function(){clickHerb(h)}},h.name)})))),checked&&React.createElement('div',{className:"animate-in",style:{background:isOk?"#E8F5E8":"#FFF5F0",borderRadius:12,padding:18,marginBottom:20,border:"1px solid "+(isOk?"#A8D8A8":"#F0C8B8"),lineHeight:1.8,fontSize:14}},isOk?React.createElement('span',null,"🎉 ",React.createElement('strong',null,"完美組方！"),"你成功組出了 "+f.name+"！",f.link&&React.createElement('a',{href:f.link,style:{color:"#5B8C5A",marginLeft:8}},"📖 閱讀故事")):React.createElement('span',null,"💡 ",React.createElement('strong',null,"正確答案："),f.herbNames.join("、"))),React.createElement('div',{style:{textAlign:"center"}},!checked?React.createElement('button',{className:"game-btn game-btn-primary",disabled:!allFilled,onClick:check,style:{opacity:allFilled?1:.5}},"確認組方 ✓"):React.createElement('button',{className:"game-btn game-btn-primary",onClick:next},fi<FORMULAS.length-1?"下一個方劑 →":"查看結果 🎯")));
+  return React.createElement('div',{className:"animate-in",style:{maxWidth:640,margin:"30px auto",padding:"0 20px"}},React.createElement('div',{style:{marginBottom:20}},React.createElement('div',{style:{display:"flex",justifyContent:"space-between",marginBottom:6,fontSize:13,color:"#6B7B6B"}},React.createElement('span',null,"方劑 "+(fi+1)+" / "+FORMULAS.length),React.createElement('span',null,"得分 "+score)),React.createElement('div',{className:"progress-bar"},React.createElement('div',{className:"progress-fill",style:{width:(fi+1)/FORMULAS.length*100+"%"}}))),React.createElement('div',{style:{background:"white",borderRadius:16,padding:24,boxShadow:"0 2px 12px rgba(91,140,90,0.1)",marginBottom:20}},React.createElement('div',{style:{textAlign:"center",marginBottom:20}},React.createElement('h2',{className:"serif",style:{fontSize:24,color:"#6f9083",marginBottom:6}},f.name),React.createElement('p',{style:{fontSize:13,color:"#6B7B6B",maxWidth:500,margin:"0 auto",lineHeight:1.6}},f.effects)),React.createElement('div',{style:{marginBottom:24}},React.createElement('p',{style:{fontSize:13,color:"#6B7B6B",marginBottom:10}},"📦 請選擇 "+f.herbNames.length+" 味藥材放入方劑："),React.createElement('div',{style:{display:"grid",gridTemplateColumns:"repeat("+Math.min(f.herbNames.length,4)+",1fr)",gap:10}},slots.map(function(s,i){var ss={};if(checked&&s){ss=f.herbNames.includes(s.name)?{borderColor:"#6f9083",background:"#E8F5E8"}:{borderColor:"#C75B5B",background:"#FDE8E8"}}return React.createElement('div',{key:i,className:"match-slot"+(selHerb?" active":"")+(s?" filled":""),onClick:function(){clickSlot(i)},style:Object.assign({cursor:checked?"default":"pointer"},ss)},s?React.createElement('span',null,s.name):React.createElement('span',{style:{color:"#C0B8AC",fontSize:13}},"點此放入"))}))),React.createElement('div',null,React.createElement('p',{style:{fontSize:13,color:"#6B7B6B",marginBottom:10}},"🌿 可選藥材："),React.createElement('div',{style:{display:"flex",flexWrap:"wrap",gap:8}},pool.map(function(h){return React.createElement('span',{key:h.name,className:"draggable-herb"+(selHerb&&selHerb.name===h.name?" selected":"")+(placed.includes(h.name)?" placed":""),onClick:function(){clickHerb(h)}},h.name)})))),checked&&React.createElement('div',{className:"animate-in",style:{background:isOk?"#E8F5E8":"#FFF5F0",borderRadius:12,padding:18,marginBottom:20,border:"1px solid "+(isOk?"#A8D8A8":"#F0C8B8"),lineHeight:1.8,fontSize:14}},isOk?React.createElement('span',null,"🎉 ",React.createElement('strong',null,"完美組方！"),"你成功組出了 "+f.name+"！",f.link&&React.createElement('a',{href:f.link,style:{color:"#6f9083",marginLeft:8}},"📖 閱讀故事")):React.createElement('span',null,"💡 ",React.createElement('strong',null,"正確答案："),f.herbNames.join("、"))),React.createElement('div',{style:{textAlign:"center"}},!checked?React.createElement('button',{className:"game-btn game-btn-primary",disabled:!allFilled,onClick:check,style:{opacity:allFilled?1:.5}},"確認組方 ✓"):React.createElement('button',{className:"game-btn game-btn-primary",onClick:next},fi<FORMULAS.length-1?"下一個方劑 →":"查看結果 🎯")));
 }
 
 /* ─── Memory ─── */
@@ -203,7 +203,7 @@ function MemoryGame({onScoreAdd}) {
   function init(){var sel=HERBS.sort(function(){return Math.random()-.5}).slice(0,PC);var pairs=[];sel.forEach(function(h){pairs.push({id:h.name+"_n",pid:h.name,type:"name",content:h.name});var eff=h.effect.length>10?h.effect.slice(0,10):h.effect;pairs.push({id:h.name+"_e",pid:h.name,type:"eff",content:eff})});setCards(pairs.sort(function(){return Math.random()-.5}));setFlipped([]);setMatched([]);setMoves(0);setDone(false);lock.current=false}
   function flip(idx){if(lock.current||flipped.includes(idx)||matched.includes(cards[idx].pid))return;var nf=[].concat(flipped,[idx]);setFlipped(nf);if(nf.length===2){lock.current=true;setMoves(function(m){return m+1});var a=nf[0],b=nf[1];if(cards[a].pid===cards[b].pid&&cards[a].type!==cards[b].type){setTimeout(function(){setMatched(function(m){return[].concat(m,[cards[a].pid])});setFlipped([]);lock.current=false;onScoreAdd(5);if(matched.length+1===PC)setTimeout(function(){setDone(true)},600)},600)}else{setTimeout(function(){setFlipped([]);lock.current=false},800)}}}
   if(done){var stars=moves<=PC*1.5?3:moves<=PC*2?2:1;return React.createElement('div',{className:"animate-in",style:{maxWidth:500,margin:"40px auto",textAlign:"center",background:"white",borderRadius:20,padding:40,boxShadow:"0 2px 12px rgba(91,140,90,0.1)"}},React.createElement('div',{style:{fontSize:48,marginBottom:12}},"⭐".repeat(stars)),React.createElement('h2',{className:"serif",style:{marginBottom:8}},"翻翻樂完成！"),React.createElement('p',{style:{color:"#6B7B6B",marginBottom:24}},"共用了 ",React.createElement('strong',null,moves)," 步完成 "+PC+" 組配對"),React.createElement('button',{className:"game-btn game-btn-primary",onClick:init},"再玩一次（隨機出題）"))}
-  return React.createElement('div',{className:"animate-in",style:{maxWidth:560,margin:"30px auto",padding:"0 20px"}},React.createElement('div',{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:20}},React.createElement('span',{style:{fontSize:14,color:"#6B7B6B"}},"步數："+moves),React.createElement('span',{style:{fontSize:14,color:"#6B7B6B"}},"配對："+matched.length+" / "+PC)),React.createElement('div',{style:{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10}},cards.map(function(c,idx){var isF=flipped.includes(idx),isM=matched.includes(c.pid),show=isF||isM;return React.createElement('div',{key:c.id,className:"card-flip",onClick:function(){flip(idx)},style:{cursor:show&&!isF?"default":"pointer"}},React.createElement('div',{className:"card-flip-inner"+(show?" flipped":""),style:{height:80}},React.createElement('div',{className:"card-flip-front",style:{background:"linear-gradient(135deg,#5B8C5A,#3D6B3C)",display:"flex",alignItems:"center",justifyContent:"center",color:"white",fontSize:22}},"🌿"),React.createElement('div',{className:"card-flip-back",style:{background:isM?"#E8F5E8":"white",border:"2px solid "+(isM?"#5B8C5A":"#D4A574"),display:"flex",alignItems:"center",justifyContent:"center",padding:6,fontSize:c.type==="eff"?11:14,fontWeight:c.type==="name"?600:400,textAlign:"center",lineHeight:1.3}},c.content)))})),React.createElement('div',{style:{marginTop:20,textAlign:"center",fontSize:13,color:"#6B7B6B",lineHeight:1.6}},"💡 提示：藥材名稱和功效要配成一對唷！每次遊戲隨機出題"));
+  return React.createElement('div',{className:"animate-in",style:{maxWidth:560,margin:"30px auto",padding:"0 20px"}},React.createElement('div',{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:20}},React.createElement('span',{style:{fontSize:14,color:"#6B7B6B"}},"步數："+moves),React.createElement('span',{style:{fontSize:14,color:"#6B7B6B"}},"配對："+matched.length+" / "+PC)),React.createElement('div',{style:{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10}},cards.map(function(c,idx){var isF=flipped.includes(idx),isM=matched.includes(c.pid),show=isF||isM;return React.createElement('div',{key:c.id,className:"card-flip",onClick:function(){flip(idx)},style:{cursor:show&&!isF?"default":"pointer"}},React.createElement('div',{className:"card-flip-inner"+(show?" flipped":""),style:{height:80}},React.createElement('div',{className:"card-flip-front",style:{background:"linear-gradient(135deg,#6f9083,#4f6f62)",display:"flex",alignItems:"center",justifyContent:"center",color:"white",fontSize:22}},"🌿"),React.createElement('div',{className:"card-flip-back",style:{background:isM?"#E8F5E8":"white",border:"2px solid "+(isM?"#6f9083":"#9aa6b8"),display:"flex",alignItems:"center",justifyContent:"center",padding:6,fontSize:c.type==="eff"?11:14,fontWeight:c.type==="name"?600:400,textAlign:"center",lineHeight:1.3}},c.content)))})),React.createElement('div',{style:{marginTop:20,textAlign:"center",fontSize:13,color:"#6B7B6B",lineHeight:1.6}},"💡 提示：藥材名稱和功效要配成一對唷！每次遊戲隨機出題"));
 }
 
 /* ═══════════ 新遊戲：共用工具 ═══════════ */
@@ -211,11 +211,11 @@ var el = React.createElement;
 var PAOZHI = (function(){ try { return JSON.parse(document.getElementById('paozhi-data').textContent).items; } catch(e){ return []; } })();
 function _shuffle(a){ return a.slice().sort(function(){ return Math.random()-0.5; }); }
 var _cardBox={background:"white",borderRadius:16,padding:24,boxShadow:"0 2px 12px rgba(91,140,90,0.1)",marginBottom:20};
-var _scenario={background:"#FAF8F4",borderRadius:12,padding:18,marginBottom:20,borderLeft:"4px solid #D4A574",lineHeight:1.8,fontSize:15};
+var _scenario={background:"#f5f4f9",borderRadius:12,padding:18,marginBottom:20,borderLeft:"4px solid #9aa6b8",lineHeight:1.8,fontSize:15};
 var _resultBox={maxWidth:600,margin:"40px auto",padding:"40px 24px",background:"white",borderRadius:20,textAlign:"center",boxShadow:"0 2px 12px rgba(91,140,90,0.1)"};
 function _explain(ok){ return {background:ok?"#E8F5E8":"#FFF5F0",borderRadius:12,padding:18,marginBottom:20,border:"1px solid "+(ok?"#A8D8A8":"#F0C8B8"),lineHeight:1.8,fontSize:14}; }
 function _progress(cur,total,correct){ return el('div',{style:{marginBottom:24}},el('div',{style:{display:"flex",justifyContent:"space-between",marginBottom:6,fontSize:13,color:"#6B7B6B"}},el('span',null,"第 "+(cur+1)+" / "+total+" 題"),el('span',null,"答對 "+correct+" 題")),el('div',{className:"progress-bar"},el('div',{className:"progress-fill",style:{width:(cur+1)/total*100+"%"}}))); }
-function _letter(i,sel,ans){ var bg=sel!==null&&i===ans?"#5B8C5A":sel===i&&i!==ans?"#C75B5B":"#E0D8CC"; var col=sel!==null&&(i===ans||i===sel)?"white":"#2C3E2C"; var txt=sel!==null&&i===ans?"✓":sel===i&&i!==ans?"✗":String.fromCharCode(65+i); return el('span',{style:{width:28,height:28,borderRadius:"50%",background:bg,color:col,display:"inline-flex",alignItems:"center",justifyContent:"center",fontSize:13,fontWeight:700,flexShrink:0}},txt); }
+function _letter(i,sel,ans){ var bg=sel!==null&&i===ans?"#6f9083":sel===i&&i!==ans?"#C75B5B":"#dcd9e6"; var col=sel!==null&&(i===ans||i===sel)?"white":"#333b4a"; var txt=sel!==null&&i===ans?"✓":sel===i&&i!==ans?"✗":String.fromCharCode(65+i); return el('span',{style:{width:28,height:28,borderRadius:"50%",background:bg,color:col,display:"inline-flex",alignItems:"center",justifyContent:"center",fontSize:13,fontWeight:700,flexShrink:0}},txt); }
 
 /* 出題器：方劑 / 炮製 / 藥材找家 */
 function buildFormulaQ(){
@@ -259,7 +259,7 @@ function OptionQuiz(props){
     return el('div',{className:"animate-in",style:_resultBox},
       el('div',{style:{fontSize:60,marginBottom:16}},pct>=80?"🎉":pct>=60?"😊":"💪"),
       el('h2',{className:"serif",style:{fontSize:26,marginBottom:8}},grade),
-      el('p',{style:{fontSize:18,color:"#6B7B6B",marginBottom:24}},"答對 ",el('strong',{style:{color:"#5B8C5A"}},correct)," / ",qs.length," 題"),
+      el('p',{style:{fontSize:18,color:"#6B7B6B",marginBottom:24}},"答對 ",el('strong',{style:{color:"#6f9083"}},correct)," / ",qs.length," 題"),
       el('button',{className:"game-btn game-btn-primary",onClick:restart},"再玩一次（隨機出題）"));
   }
   return el('div',{className:"animate-in",style:{maxWidth:640,margin:"30px auto",padding:"0 20px"}},
@@ -274,7 +274,7 @@ function OptionQuiz(props){
         }))),
     sel!==null && el('div',{className:"animate-in",style:_explain(sel===q.answer)},
       el('strong',null, sel===q.answer?"✅ 答對了！":("❌ 答錯了～ 正解："+q.options[q.answer])),
-      q.link?el('a',{href:q.link,style:{color:"#5B8C5A",marginLeft:8}},"📖 看故事"):null),
+      q.link?el('a',{href:q.link,style:{color:"#6f9083",marginLeft:8}},"📖 看故事"):null),
     sel!==null && el('div',{style:{textAlign:"center"}},
       el('button',{className:"game-btn game-btn-primary",onClick:next}, cur<qs.length-1?"下一題 →":"看結果 🎯")));
 }
@@ -291,14 +291,14 @@ function FlashcardGame(){
     el('div',{onClick:function(){setFlip(!flip);},style:{cursor:"pointer",minHeight:230,background:"white",borderRadius:16,boxShadow:"0 2px 12px rgba(91,140,90,0.12)",padding:28,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",textAlign:"center",border:"1px solid rgba(0,0,0,0.06)"}},
       flip?
         el('div',null,
-          el('div',{style:{fontSize:13,color:"#D4A574",fontWeight:700,marginBottom:10}},"功效"),
-          el('p',{style:{fontSize:15,lineHeight:1.8,color:"#2C3E2C",marginBottom:16}},c.effects||"（本方暫無功效說明）"),
-          el('div',{style:{fontSize:13,color:"#5B8C5A",fontWeight:700,marginBottom:6}},"組成"),
+          el('div',{style:{fontSize:13,color:"#9aa6b8",fontWeight:700,marginBottom:10}},"功效"),
+          el('p',{style:{fontSize:15,lineHeight:1.8,color:"#333b4a",marginBottom:16}},c.effects||"（本方暫無功效說明）"),
+          el('div',{style:{fontSize:13,color:"#6f9083",fontWeight:700,marginBottom:6}},"組成"),
           el('p',{style:{fontSize:14,color:"#6B7B6B"}},c.herbNames.join("、")))
       :
         el('div',null,
           el('div',{className:"float",style:{fontSize:34,marginBottom:10}},"🎴"),
-          el('h2',{className:"serif",style:{fontSize:30,fontWeight:900,color:"#5B8C5A"}},c.name),
+          el('h2',{className:"serif",style:{fontSize:30,fontWeight:900,color:"#6f9083"}},c.name),
           el('p',{style:{fontSize:13,color:"#A0988C",marginTop:10}},"點一下看功效與組成"))),
     el('div',{style:{display:"flex",justifyContent:"center",gap:10,marginTop:20,flexWrap:"wrap"}},
       el('button',{className:"game-btn",style:{background:"#E8E2D6",color:"#5B6B5B"},onClick:function(){go(-1);}},"← 上一張"),
@@ -319,7 +319,7 @@ function App() {
   else if(cur==="memory")game=React.createElement(MemoryGame,{onScoreAdd:add});
   else if(cur==="flash")game=React.createElement(FlashcardGame,{});
   else game=React.createElement(GameHub,{onSelect:setCur,totalScore:total});
-  return React.createElement('div',{style:{minHeight:"100vh",background:"#F7F3EB"}},React.createElement(Header,{currentGame:cur,onBack:function(){setCur(null)},score:total}),game);
+  return React.createElement('div',{style:{minHeight:"100vh",background:"#f0eef3"}},React.createElement(Header,{currentGame:cur,onBack:function(){setCur(null)},score:total}),game);
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(App));

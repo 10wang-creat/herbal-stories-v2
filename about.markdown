@@ -106,7 +106,7 @@ permalink: /about/
 }
 
 .about-content h2 {
-  color: #2d5016;
+  color: #3b564c;
   font-size: 2em;
   margin-bottom: 25px;
   text-align: center;
@@ -139,11 +139,11 @@ permalink: /about/
 }
 
 .approach-card {
-  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8f4 100%);
+  background: linear-gradient(135deg, #eaf1ec 0%, #eef2f0 100%);
   padding: 30px 20px;
   border-radius: 10px;
   text-align: center;
-  border: 2px solid #c8e6c9;
+  border: 2px solid #cdddd3;
   transition: transform 0.3s;
 }
 
@@ -153,7 +153,7 @@ permalink: /about/
 }
 
 .approach-card h3 {
-  color: #2d5016;
+  color: #3b564c;
   font-size: 1.3em;
   margin-bottom: 15px;
 }
@@ -242,14 +242,14 @@ permalink: /about/
   padding: 15px 20px;
   margin: 10px 0;
   background: #f8f9fa;
-  border-left: 4px solid #4a7c2c;
+  border-left: 4px solid #4f6f62;
   border-radius: 5px;
   line-height: 1.6;
   font-size: 1.1em;
 }
 
 .values-list strong {
-  color: #2d5016;
+  color: #3b564c;
 }
 
 .target-grid {
@@ -274,7 +274,7 @@ permalink: /about/
 .target-item {
   text-align: center;
   padding: 25px;
-  background: #f5f1e8;
+  background: #f0eef3;
   border-radius: 10px;
   transition: transform 0.3s;
 }
@@ -289,26 +289,26 @@ permalink: /about/
 }
 
 .target-item p {
-  color: #2d5016;
+  color: #3b564c;
   font-weight: 500;
   margin: 0;
 }
 
 .disclaimer-box {
-  background: #fff3cd;
-  border: 2px solid #ffc107;
+  background: #eceaf4;
+  border: 2px solid #9aa6b8;
   border-radius: 10px;
   padding: 25px;
   margin-top: 20px;
 }
 
 .disclaimer-box p {
-  color: #856404;
+  color: #4f5a76;
   margin-bottom: 15px;
 }
 
 .disclaimer-box strong {
-  color: #664d03;
+  color: #3b4256;
 }
 
 </style>

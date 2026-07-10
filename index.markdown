@@ -22,6 +22,10 @@ title: 首頁
         <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
         <span>Facebook 粉專</span>
       </a>
+      <a href="https://vocus.cc/salon/herbalstories" target="_blank" rel="noopener noreferrer" class="social-button vocus">
+        <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.6 3.6h6.2v6.2H3.6zM14.2 3.6h6.2v6.2h-6.2zM3.6 14.2h6.2v6.2H3.6zM14.2 14.2h6.2v6.2h-6.2z" rx="1"/></svg>
+        <span>方格子</span>
+      </a>
     </div>
   </div>
 </section>
@@ -170,6 +174,7 @@ title: 首頁
 .social-button.instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
 .social-button.spotify { background: #1DB954; }
 .social-button.facebook { background: #1877f2; }
+.social-button.vocus { background: #34435e; }
 .social-icon { width: 21px; height: 21px; fill: currentColor; }
 @media (max-width: 640px) {
   .hero-social { flex-direction: column; padding: 0 16px; }
@@ -211,23 +216,23 @@ title: 首頁
 
 /* Oracle */
 .oracle-section {
-  background: linear-gradient(135deg, #FAF6F0 0%, #F5EDE0 50%, #EDE4D3 100%);
+  background: linear-gradient(135deg, #f3f1f7 0%, #e9e5f0 50%, #ded9ea 100%);
   border-radius: var(--radius-lg); padding: 50px 40px; margin: 56px auto; max-width: 1080px;
-  box-shadow: 0 6px 30px rgba(139,94,60,0.1); border: 1px solid rgba(193,163,120,0.2);
+  box-shadow: 0 6px 30px rgba(139,94,60,0.1); border: 1px solid rgba(150,160,190,0.22);
 }
 .oracle-content { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 260px; gap: 46px; align-items: center; }
 .oracle-badge { display: inline-block; background: linear-gradient(135deg, #8B5E9B 0%, #A67BB5 100%); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; letter-spacing: 1px; }
-.oracle-title { font-size: 2.4rem; font-weight: 900; color: #8B6B3D; margin: 12px 0 4px; letter-spacing: 5px; }
-.oracle-subtitle { font-size: 0.95rem; color: #B8976A; letter-spacing: 3px; margin-bottom: 18px; font-weight: 500; }
-.oracle-desc { font-size: 1.1rem; color: #6B5B4B; line-height: 1.8; margin-bottom: 6px; }
-.oracle-detail { font-size: 0.95rem; color: #8B7B6B; line-height: 1.8; margin: 14px 0 24px; }
-.oracle-cta { display: inline-block; background: linear-gradient(135deg, #8B6B3D 0%, #B8976A 100%); color: #fff; padding: 13px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(139,107,61,0.25); }
+.oracle-title { font-size: 2.4rem; font-weight: 900; color: #5f6f9e; margin: 12px 0 4px; letter-spacing: 5px; }
+.oracle-subtitle { font-size: 0.95rem; color: #9aa0c0; letter-spacing: 3px; margin-bottom: 18px; font-weight: 500; }
+.oracle-desc { font-size: 1.1rem; color: #59617a; line-height: 1.8; margin-bottom: 6px; }
+.oracle-detail { font-size: 0.95rem; color: #8a90a4; line-height: 1.8; margin: 14px 0 24px; }
+.oracle-cta { display: inline-block; background: linear-gradient(135deg, #5f6f9e 0%, #9aa0c0 100%); color: #fff; padding: 13px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(139,107,61,0.25); }
 .oracle-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(139,107,61,0.35); }
 .oracle-visual { display: flex; justify-content: center; }
 .oracle-card-stack { position: relative; width: 180px; height: 240px; }
 .oracle-card { position: absolute; width: 160px; height: 220px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
-.card-shadow-1 { background: linear-gradient(135deg, #D4C4A8 0%, #C9B896 100%); top: 0; left: 0; transform: rotate(-8deg); }
-.card-shadow-2 { background: linear-gradient(135deg, #C9B896 0%, #BBA97E 100%); top: 0; left: 10px; transform: rotate(-3deg); }
+.card-shadow-1 { background: linear-gradient(135deg, #cfd2df 0%, #c0c4d5 100%); top: 0; left: 0; transform: rotate(-8deg); }
+.card-shadow-2 { background: linear-gradient(135deg, #c0c4d5 0%, #aeb4c8 100%); top: 0; left: 10px; transform: rotate(-3deg); }
 .card-main { top: 0; left: 20px; transform: rotate(2deg); overflow: hidden; transition: transform 0.3s; }
 .card-main:hover { transform: rotate(0deg) translateY(-8px); }
 .card-main img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; }
