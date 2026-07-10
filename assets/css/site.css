@@ -133,6 +133,7 @@ a { color: var(--green-500); }
   letter-spacing: 1px;
 }
 .site-title:hover { opacity: 0.92; }
+.site-logo { height: 38px; width: 38px; border-radius: 50%; background: #fff; }
 
 .nav-toggle {
   display: none;
