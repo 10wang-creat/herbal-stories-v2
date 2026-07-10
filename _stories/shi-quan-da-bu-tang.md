@@ -347,42 +347,42 @@ David 回到正常工作節奏。
 
 <table style="width:100%; border-collapse:collapse; margin:20px 0;">
   <thead>
-    <tr style="background-color:#2d5016; color:white;">
-      <th style="padding:12px; border:1px solid #c9a961; text-align:left;">比較項目</th>
-      <th style="padding:12px; border:1px solid #c9a961; text-align:left;">八珍湯</th>
-      <th style="padding:12px; border:1px solid #c9a961; text-align:left;">十全大補湯</th>
+    <tr style="background-color:#3b564c; color:white;">
+      <th style="padding:12px; border:1px solid #7f8bb0; text-align:left;">比較項目</th>
+      <th style="padding:12px; border:1px solid #7f8bb0; text-align:left;">八珍湯</th>
+      <th style="padding:12px; border:1px solid #7f8bb0; text-align:left;">十全大補湯</th>
     </tr>
   </thead>
   <tbody>
-    <tr style="background-color:#f5f1e8;">
-      <td style="padding:12px; border:1px solid #c9a961; font-weight:600; color:#2d5016;">藥材數量</td>
-      <td style="padding:12px; border:1px solid #c9a961;">8 味</td>
-      <td style="padding:12px; border:1px solid #c9a961;">10 味</td>
+    <tr style="background-color:#f0eef3;">
+      <td style="padding:12px; border:1px solid #7f8bb0; font-weight:600; color:#3b564c;">藥材數量</td>
+      <td style="padding:12px; border:1px solid #7f8bb0;">8 味</td>
+      <td style="padding:12px; border:1px solid #7f8bb0;">10 味</td>
     </tr>
     <tr style="background-color:#ffffff;">
-      <td style="padding:12px; border:1px solid #c9a961; font-weight:600; color:#2d5016;">主要功效</td>
-      <td style="padding:12px; border:1px solid #c9a961;">氣血雙補</td>
-      <td style="padding:12px; border:1px solid #c9a961;">氣血雙補 + 溫陽</td>
+      <td style="padding:12px; border:1px solid #7f8bb0; font-weight:600; color:#3b564c;">主要功效</td>
+      <td style="padding:12px; border:1px solid #7f8bb0;">氣血雙補</td>
+      <td style="padding:12px; border:1px solid #7f8bb0;">氣血雙補 + 溫陽</td>
     </tr>
-    <tr style="background-color:#f5f1e8;">
-      <td style="padding:12px; border:1px solid #c9a961; font-weight:600; color:#2d5016;">適合體質</td>
-      <td style="padding:12px; border:1px solid #c9a961;">氣血兩虛</td>
-      <td style="padding:12px; border:1px solid #c9a961;">氣血兩虛 + 陽虛畏寒</td>
-    </tr>
-    <tr style="background-color:#ffffff;">
-      <td style="padding:12px; border:1px solid #c9a961; font-weight:600; color:#2d5016;">怕冷程度</td>
-      <td style="padding:12px; border:1px solid #c9a961;">輕度手腳冷</td>
-      <td style="padding:12px; border:1px solid #c9a961;">明顯畏寒、四肢冰冷</td>
-    </tr>
-    <tr style="background-color:#f5f1e8;">
-      <td style="padding:12px; border:1px solid #c9a961; font-weight:600; color:#2d5016;">補益強度</td>
-      <td style="padding:12px; border:1px solid #c9a961;">中等</td>
-      <td style="padding:12px; border:1px solid #c9a961;">較強</td>
+    <tr style="background-color:#f0eef3;">
+      <td style="padding:12px; border:1px solid #7f8bb0; font-weight:600; color:#3b564c;">適合體質</td>
+      <td style="padding:12px; border:1px solid #7f8bb0;">氣血兩虛</td>
+      <td style="padding:12px; border:1px solid #7f8bb0;">氣血兩虛 + 陽虛畏寒</td>
     </tr>
     <tr style="background-color:#ffffff;">
-      <td style="padding:12px; border:1px solid #c9a961; font-weight:600; color:#2d5016;">溫燥程度</td>
-      <td style="padding:12px; border:1px solid #c9a961;">平和</td>
-      <td style="padding:12px; border:1px solid #c9a961;">偏溫</td>
+      <td style="padding:12px; border:1px solid #7f8bb0; font-weight:600; color:#3b564c;">怕冷程度</td>
+      <td style="padding:12px; border:1px solid #7f8bb0;">輕度手腳冷</td>
+      <td style="padding:12px; border:1px solid #7f8bb0;">明顯畏寒、四肢冰冷</td>
+    </tr>
+    <tr style="background-color:#f0eef3;">
+      <td style="padding:12px; border:1px solid #7f8bb0; font-weight:600; color:#3b564c;">補益強度</td>
+      <td style="padding:12px; border:1px solid #7f8bb0;">中等</td>
+      <td style="padding:12px; border:1px solid #7f8bb0;">較強</td>
+    </tr>
+    <tr style="background-color:#ffffff;">
+      <td style="padding:12px; border:1px solid #7f8bb0; font-weight:600; color:#3b564c;">溫燥程度</td>
+      <td style="padding:12px; border:1px solid #7f8bb0;">平和</td>
+      <td style="padding:12px; border:1px solid #7f8bb0;">偏溫</td>
     </tr>
   </tbody>
 </table>

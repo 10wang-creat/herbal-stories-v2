@@ -149,7 +149,7 @@ permalink: /about/
 
 .approach-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(74, 124, 44, 0.15);
+  box-shadow: 0 6px 16px rgba(52, 67, 94, 0.15);
 }
 
 .approach-card h3 {
@@ -178,7 +178,7 @@ permalink: /about/
 }
 
 .sticker-card {
-  background: linear-gradient(135deg, #fff8e1 0%, #fffde7 100%);
+  background: linear-gradient(135deg, #f3f1f7 0%, #ffffff 100%);
   padding: 30px 20px;
   border-radius: 10px;
   text-align: center;
@@ -188,7 +188,7 @@ permalink: /about/
 
 .sticker-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(255, 193, 7, 0.2);
+  box-shadow: 0 6px 16px rgba(90, 100, 130, 0.2);
 }
 
 .sticker-emoji {
@@ -197,7 +197,7 @@ permalink: /about/
 }
 
 .sticker-card h3 {
-  color: #f57c00;
+  color: #5f5896;
   font-size: 1.3em;
   margin-bottom: 15px;
 }

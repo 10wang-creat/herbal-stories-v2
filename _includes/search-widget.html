@@ -104,9 +104,9 @@ window.HS_STORIES = [
 .hs-search { max-width: 760px; margin: 0 auto; }
 .hs-search-box {
   display: flex; align-items: center; gap: 10px;
-  background: #fff; border: 2px solid var(--accent-500, #4a7c2c);
+  background: #fff; border: 2px solid var(--accent-500, #4f6f62);
   border-radius: 50px; padding: 6px 10px 6px 20px;
-  box-shadow: 0 6px 18px rgba(45,40,30,0.12);
+  box-shadow: 0 6px 18px rgba(52,67,94,0.12);
 }
 .hs-search-ic { font-size: 1.2rem; opacity: 0.8; }
 .hs-search-box input {
@@ -115,7 +115,7 @@ window.HS_STORIES = [
   font-family: inherit;
 }
 .hs-search-clear {
-  border: 0; background: var(--accent-050, #f0f4e8); color: var(--accent-700, #2d5016);
+  border: 0; background: var(--accent-050, #eaf1ec); color: var(--accent-700, #3b564c);
   width: 34px; height: 34px; border-radius: 50%; cursor: pointer; font-size: 0.9rem;
   flex-shrink: 0; transition: background 0.2s;
 }
@@ -123,35 +123,35 @@ window.HS_STORIES = [
 
 .hs-search-tips {
   display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
-  justify-content: center; margin: 14px 0 0; color: var(--muted, #8b7355); font-size: 0.9rem;
+  justify-content: center; margin: 14px 0 0; color: var(--muted, #8a90a4); font-size: 0.9rem;
 }
 .hs-chip {
-  border: 1px solid var(--line, #e8dcc8); background: #fff; color: var(--accent-700, #2d5016);
+  border: 1px solid var(--line, #ddd9e6); background: #fff; color: var(--accent-700, #3b564c);
   padding: 5px 14px; border-radius: 16px; cursor: pointer; font-size: 0.88rem; font-family: inherit;
   transition: all 0.2s;
 }
-.hs-chip:hover { background: var(--accent-500, #4a7c2c); color: #fff; border-color: var(--accent-500, #4a7c2c); }
+.hs-chip:hover { background: var(--accent-500, #4f6f62); color: #fff; border-color: var(--accent-500, #4f6f62); }
 
 .hs-search-results { margin-top: 22px; }
-.hs-count { color: var(--accent-700, #2d5016); margin-bottom: 12px; font-size: 0.98rem; }
+.hs-count { color: var(--accent-700, #3b564c); margin-bottom: 12px; font-size: 0.98rem; }
 .hs-count strong { font-size: 1.15rem; }
-.hs-noresult { text-align: center; color: var(--muted, #8b7355); background: #fff; border: 1px solid var(--line,#e8dcc8); border-radius: 12px; padding: 24px; }
+.hs-noresult { text-align: center; color: var(--muted, #8a90a4); background: #fff; border: 1px solid var(--line,#ddd9e6); border-radius: 12px; padding: 24px; }
 .hs-result-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
 .hs-result {
   display: flex; flex-direction: column; gap: 6px;
-  background: #fff; border: 1px solid var(--line, #e8dcc8); border-left: 4px solid var(--green-500, #4a7c2c);
+  background: #fff; border: 1px solid var(--line, #ddd9e6); border-left: 4px solid var(--green-500, #4f6f62);
   border-radius: 10px; padding: 14px 16px; text-decoration: none; transition: all 0.2s;
 }
-.hs-result.paozhi { border-left-color: var(--fire-500, #c06a2c); }
-.hs-result:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(45,40,30,0.12); }
+.hs-result.paozhi { border-left-color: var(--fire-500, #8981c2); }
+.hs-result:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(52,67,94,0.12); }
 .hs-result-badge { align-self: flex-start; font-size: 0.72rem; font-weight: 700; padding: 2px 10px; border-radius: 12px; }
-.hs-result-badge.formula { background: var(--green-050, #f0f4e8); color: var(--green-700, #2d5016); }
+.hs-result-badge.formula { background: var(--green-050, #eaf1ec); color: var(--green-700, #3b564c); }
 .hs-result-badge.paozhi { background: var(--fire-050, #fbf1e6); color: var(--fire-700, #7a3410); }
 .hs-result-title { color: var(--ink, #33302b); font-weight: 600; font-size: 1rem; line-height: 1.4; }
-.hs-result-eff { color: var(--muted, #8b7355); font-size: 0.85rem; line-height: 1.5; }
+.hs-result-eff { color: var(--muted, #8a90a4); font-size: 0.85rem; line-height: 1.5; }
 .hs-result mark, .hs-count + .hs-result-list mark { background: #ffe066; padding: 0 2px; border-radius: 3px; }
 mark { background: #ffe066; }
-.hs-more { color: var(--muted, #8b7355); font-size: 0.85rem; margin-top: 12px; text-align: center; }
+.hs-more { color: var(--muted, #8a90a4); font-size: 0.85rem; margin-top: 12px; text-align: center; }
 
 @media (max-width: 600px) {
   .hs-result-list { grid-template-columns: 1fr; }

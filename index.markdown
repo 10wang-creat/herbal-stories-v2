@@ -266,7 +266,7 @@ title: 首頁
 .oracle-section {
   background: linear-gradient(135deg, #f3f1f7 0%, #e9e5f0 50%, #ded9ea 100%);
   border-radius: var(--radius-lg); padding: 50px 40px; margin: 56px auto; max-width: 1080px;
-  box-shadow: 0 6px 30px rgba(139,94,60,0.1); border: 1px solid rgba(150,160,190,0.22);
+  box-shadow: 0 6px 30px rgba(90,100,130,0.1); border: 1px solid rgba(150,160,190,0.22);
 }
 .oracle-content { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 260px; gap: 46px; align-items: center; }
 .oracle-badge { display: inline-block; background: linear-gradient(135deg, #8B5E9B 0%, #A67BB5 100%); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; letter-spacing: 1px; }
@@ -274,8 +274,8 @@ title: 首頁
 .oracle-subtitle { font-size: 0.95rem; color: #9aa0c0; letter-spacing: 3px; margin-bottom: 18px; font-weight: 500; }
 .oracle-desc { font-size: 1.1rem; color: #59617a; line-height: 1.8; margin-bottom: 6px; }
 .oracle-detail { font-size: 0.95rem; color: #8a90a4; line-height: 1.8; margin: 14px 0 24px; }
-.oracle-cta { display: inline-block; background: linear-gradient(135deg, #5f6f9e 0%, #9aa0c0 100%); color: #fff; padding: 13px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(139,107,61,0.25); }
-.oracle-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(139,107,61,0.35); }
+.oracle-cta { display: inline-block; background: linear-gradient(135deg, #5f6f9e 0%, #9aa0c0 100%); color: #fff; padding: 13px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(90,100,130,0.25); }
+.oracle-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(90,100,130,0.35); }
 .oracle-visual { display: flex; justify-content: center; }
 .oracle-card-stack { position: relative; width: 180px; height: 240px; }
 .oracle-card { position: absolute; width: 160px; height: 220px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
@@ -308,7 +308,7 @@ title: 首頁
 /* RSS */
 .rss-subscribe-box {
   display: flex; gap: 28px; align-items: center;
-  background: linear-gradient(135deg, #f9f6f0 0%, #fff 100%);
+  background: linear-gradient(135deg, #f3f1f7 0%, #fff 100%);
   padding: 36px; border-radius: var(--radius); border: 2px solid #e8f5e9; box-shadow: var(--shadow-sm);
 }
 .rss-icon { font-size: 3.6rem; line-height: 1; flex-shrink: 0; }
