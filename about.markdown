@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 <section class="page-hero">
-  <div class="page-emoji"><img src="{{ site.baseurl }}/assets/images/site-logo.png" alt="" style="width:1em;height:1em;border-radius:50%;vertical-align:middle"></div>
+  <div class="page-emoji"><img src="{{ site.baseurl }}/assets/images/site-logo.png" alt="" style="width:110px;height:110px;border-radius:50%;vertical-align:middle"></div>
   <h1>關於草本故事館</h1>
   <p class="subtitle">讓傳統中醫，變成你我都能理解的故事</p>
 </section>
