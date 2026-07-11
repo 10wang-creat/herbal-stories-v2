@@ -154,7 +154,7 @@ title: 首頁
       <p class="oracle-subtitle">Herbal Heart Language</p>
       <p class="oracle-desc">靜下心，感受此刻的自己。讓一味本草，回應你內心的聲音。</p>
       <p class="oracle-detail">抽一張卡，看看今天的草本想對你說什麼——無論是當歸的思念、薄荷的清涼、還是人參的力量，都是專屬於你的一段心靈對話。</p>
-      <a href="https://tcm-oracle-cards-v2.vercel.app/" target="_blank" rel="noopener noreferrer" class="oracle-cta">開始抽牌 →</a>
+      <a href="https://tcm-oracle-cards.vercel.app/" target="_blank" rel="noopener noreferrer" class="oracle-cta">開始抽牌 →</a>
     </div>
     <div class="oracle-visual">
       <div class="oracle-card-stack">

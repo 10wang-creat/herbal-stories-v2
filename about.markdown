@@ -31,7 +31,7 @@ permalink: /about/
           <h3>草本夜話</h3>
           <p>睡前 Podcast，用溫柔的聲音說草本的故事</p>
         </a>
-        <a href="https://tcm-oracle-cards-v2.vercel.app/" target="_blank" rel="noopener noreferrer" class="eco-card">
+        <a href="https://tcm-oracle-cards.vercel.app/" target="_blank" rel="noopener noreferrer" class="eco-card">
           <div class="eco-emoji">🔮</div>
           <h3>本草心語</h3>
           <p>心靈卡牌，讓一味本草回應你內心的聲音</p>
