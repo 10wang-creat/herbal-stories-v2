@@ -168,6 +168,17 @@ title: 首頁
   </div>
 </section>
 
+<!-- ===== 中藥正念日曆 ===== -->
+<section class="meditation-section">
+  <div class="meditation-inner">
+    <span class="meditation-badge">🧘 每日正念</span>
+    <h2 class="meditation-title">2026 中藥正念日曆</h2>
+    <p class="meditation-tagline">每日一藥一冥想，跟著二十四節氣養生</p>
+    <p class="meditation-desc">結合傳統中藥智慧與正念冥想的全年日曆——每天一味藥、一段冥想引導，隨節氣調養身心，讓忙碌的日子有個溫柔的停頓。</p>
+    <a href="https://tcm-mindfulness-calendar.vercel.app/" target="_blank" rel="noopener noreferrer" class="meditation-cta">打開正念日曆 →</a>
+  </div>
+</section>
+
 <!-- ===== 特色 ===== -->
 <section class="section features">
   <h2 class="section-title">✨ 我們的特色</h2>
@@ -262,6 +273,21 @@ title: 首頁
   .sishitang-section { padding: 40px 24px; margin: 40px 20px; }
   .sishitang-chapters span { text-align: left; }
 }
+
+/* 中藥正念日曆 */
+.meditation-section {
+  background: linear-gradient(135deg, #eef4f0 0%, #e4eeea 100%);
+  border-radius: var(--radius-lg); padding: 50px 40px; margin: 56px auto; max-width: 1080px;
+  box-shadow: 0 6px 30px rgba(52,67,94,0.1); border: 1px solid #d9e6e0; text-align: center;
+}
+.meditation-inner { max-width: 640px; margin: 0 auto; }
+.meditation-badge { display: inline-block; background: linear-gradient(135deg, #4f6f62, #6f9083); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; letter-spacing: 1px; }
+.meditation-title { font-family: var(--serif); font-size: 2.2rem; color: #3b564c; margin: 14px 0 6px; }
+.meditation-tagline { font-size: 1.1rem; color: #4f6f62; font-style: italic; margin-bottom: 16px; }
+.meditation-desc { color: var(--ink-soft); line-height: 1.85; margin-bottom: 24px; }
+.meditation-cta { display: inline-block; background: linear-gradient(135deg, #3b564c, #6f9083); color: #fff; padding: 13px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(52,67,94,0.25); }
+.meditation-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(52,67,94,0.3); }
+@media (max-width: 768px) { .meditation-section { padding: 40px 24px; margin: 40px 20px; } }
 
 /* Oracle */
 .oracle-section {

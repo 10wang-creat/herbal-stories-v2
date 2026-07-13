@@ -149,6 +149,7 @@ function GameHub({onSelect,totalScore}) {
     {id:"memory",icon:"🎴",title:"藥材翻翻樂",desc:"翻牌配對，記住藥材與功效",detail:"記憶力挑戰",color:"#7B6BA5"},
     {id:"flash",icon:"📇",title:"方劑速記卡",desc:"翻卡複習方劑的功效與組成",detail:FORMULAS.length+" 張速記卡",color:"#6f9083"},
     {id:"paozhi",icon:"🔥",title:"炮製變變變",desc:"讀炮製作用，猜出是哪一種炮製法",detail:PAOZHI.length+" 種炮製法",color:"#8981c2"},
+    {id:"calendar",icon:"🧘",title:"中藥正念日曆",desc:"每日一藥一冥想，跟著二十四節氣養生",detail:"2026 全年日曆",color:"#6f9083",external:"https://tcm-mindfulness-calendar.vercel.app/"},
     {id:"oracle",icon:"🔮",title:"本草心語",desc:"靜下心，感受此刻的自己，讓一味本草回應你內心的聲音",detail:"心靈卡牌",color:"#8B5E9B",external:"https://tcm-oracle-cards.vercel.app/"},
     {id:"collection",icon:"📖",title:"草本圖鑑",desc:"查看藥材角色插畫與介紹",detail:"角色大集合",color:"#c15c7a",external:"/characters/"},
   ].filter(function(g){ return g.id!=="paozhi" || PAOZHI.length>=4; });
