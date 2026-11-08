@@ -17,10 +17,10 @@
   {%- assign canonical_url = page.url | replace: 'index.html', '' | absolute_url -%}
 
   {%- comment -%} 分享縮圖：文章頁優先用自動產生的專屬圖 assets/images/og/<slug>.jpg，沒有就退回品牌圖 {%- endcomment -%}
-  {%- assign og_type = 'image/png' -%}{%- assign og_w = 2400 -%}{%- assign og_h = 1260 -%}
+  {%- assign og_type = 'image/jpeg' -%}{%- assign og_w = 1200 -%}{%- assign og_h = 630 -%}
   {%- if page.og_image -%}
     {%- assign og_image = site.url | append: site.baseurl | append: '/assets/images/' | append: page.og_image -%}
-    {%- if page.og_image contains '.jpg' -%}{%- assign og_type = 'image/jpeg' -%}{%- assign og_w = 1200 -%}{%- assign og_h = 630 -%}{%- endif -%}
+    {%- if page.og_image contains '.png' -%}{%- assign og_type = 'image/png' -%}{%- assign og_w = 2400 -%}{%- assign og_h = 1260 -%}{%- endif -%}
   {%- elsif page.layout == 'story' and page.slug -%}
     {%- assign og_path = '/assets/images/og/' | append: page.slug | append: '.jpg' -%}
     {%- assign og_file = site.static_files | where: 'path', og_path | first -%}
@@ -28,10 +28,10 @@
       {%- assign og_image = site.url | append: site.baseurl | append: og_path -%}
       {%- assign og_type = 'image/jpeg' -%}{%- assign og_w = 1200 -%}{%- assign og_h = 630 -%}
     {%- else -%}
-      {%- assign og_image = site.url | append: site.baseurl | append: '/assets/images/og-image.png' -%}
+      {%- assign og_image = site.url | append: site.baseurl | append: '/assets/images/og-image.jpg' -%}
     {%- endif -%}
   {%- else -%}
-    {%- assign og_image = site.url | append: site.baseurl | append: '/assets/images/og-image.png' -%}
+    {%- assign og_image = site.url | append: site.baseurl | append: '/assets/images/og-image.jpg' -%}
   {%- endif %}
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title | default: "草本故事館" }}</title>
   <meta name="description" content="{{ page_desc }}">
