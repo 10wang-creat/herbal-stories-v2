@@ -15,6 +15,9 @@ permalink: /about/
     <section class="founder">
       <div class="section-icon">🌿</div>
       <h2>關於創辦人</h2>
+      <figure class="founder-figure">
+        <img src="{{ site.baseurl }}/assets/images/about.png" alt="草本故事館創辦人在書桌前寫作，桌上有本草卡牌、枸杞與麥克風" loading="lazy">
+      </figure>
       <p>嗨，我是草本故事館的創辦人。</p>
       <p>我不是中醫師，而是一個對中藥文化充滿熱情的故事創作者。從小看著家裡長輩煎中藥、聽他們說起每一味藥材的故事，讓我對這個領域產生了深深的好奇。</p>
       <p>在深入研讀中醫典籍和方劑學的過程中，我發現這些千年智慧其實非常有趣，只是被艱澀的古文擋在了門外。於是我決定用故事的方式，把這些知識重新說給大家聽——讓每一味藥材都有自己的角色，讓每一帖方劑都有自己的故事。</p>
@@ -361,6 +364,19 @@ permalink: /about/
 }
 
 /* 創辦人區塊 */
+.founder-figure {
+  margin: 0 auto 30px;
+  max-width: 760px;
+}
+
+.founder-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(59, 86, 76, 0.18);
+}
+
 .founder p {
   max-width: 700px;
   margin-left: auto;
