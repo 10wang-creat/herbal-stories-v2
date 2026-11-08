@@ -6,7 +6,7 @@ title: 首頁
 <!-- ===== Hero ===== -->
 <section class="home-hero">
   <div class="wrapper">
-    <div style="text-align:center;margin-bottom:12px"><img src="{{ site.baseurl }}/assets/images/site-logo.png" alt="" style="height:110px;width:110px;border-radius:50%"></div>
+    <div style="text-align:center;margin-bottom:12px"><img src="{{ site.baseurl }}/assets/images/site-logo.png" alt="" width="110" height="110" style="height:110px;width:110px;border-radius:50%"></div>
 <h1>草本故事館</h1>
     <p class="home-hero-sub">用故事認識中藥方劑，讓傳統醫學變得生動有趣</p>
 
@@ -161,7 +161,7 @@ title: 首頁
         <div class="oracle-card card-shadow-1"></div>
         <div class="oracle-card card-shadow-2"></div>
         <div class="oracle-card card-main">
-          <img src="{{ '/assets/images/oracle-card-back.webp' | relative_url }}" alt="本草心語卡牌">
+          <img src="{{ '/assets/images/oracle-card-back.webp' | relative_url }}" alt="本草心語卡牌" loading="lazy" decoding="async">
         </div>
       </div>
     </div>

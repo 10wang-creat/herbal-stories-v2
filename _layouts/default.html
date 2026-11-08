@@ -6,47 +6,136 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- 基本 SEO -->
+  {%- assign page_title = page.title | default: site.title -%}
+  {%- if page.description -%}
+    {%- assign page_desc = page.description | strip_html | strip_newlines | truncate: 160 -%}
+  {%- elsif page.excerpt -%}
+    {%- assign page_desc = page.excerpt | strip_html | strip_newlines | truncate: 160 -%}
+  {%- else -%}
+    {%- assign page_desc = site.description | strip_newlines -%}
+  {%- endif -%}
+  {%- assign canonical_url = page.url | replace: 'index.html', '' | absolute_url -%}
+
+  {%- comment -%} 分享縮圖：文章頁優先用自動產生的專屬圖 assets/images/og/<slug>.jpg，沒有就退回品牌圖 {%- endcomment -%}
+  {%- assign og_type = 'image/png' -%}{%- assign og_w = 2400 -%}{%- assign og_h = 1260 -%}
+  {%- if page.og_image -%}
+    {%- assign og_image = site.url | append: site.baseurl | append: '/assets/images/' | append: page.og_image -%}
+  {%- elsif page.layout == 'story' and page.slug -%}
+    {%- assign og_path = '/assets/images/og/' | append: page.slug | append: '.jpg' -%}
+    {%- assign og_file = site.static_files | where: 'path', og_path | first -%}
+    {%- if og_file -%}
+      {%- assign og_image = site.url | append: site.baseurl | append: og_path -%}
+      {%- assign og_type = 'image/jpeg' -%}{%- assign og_w = 1200 -%}{%- assign og_h = 630 -%}
+    {%- else -%}
+      {%- assign og_image = site.url | append: site.baseurl | append: '/assets/images/og-image.png' -%}
+    {%- endif -%}
+  {%- else -%}
+    {%- assign og_image = site.url | append: site.baseurl | append: '/assets/images/og-image.png' -%}
+  {%- endif %}
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title | default: "草本故事館" }}</title>
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="description" content="{{ page_desc }}">
   <meta name="keywords" content="中醫, 中藥, 方劑, 炮製, {% if page.tags %}{{ page.tags | join: ', ' }}, {% endif %}傳統醫學, 草本故事">
   <meta name="author" content="{{ site.title }}">
+  <link rel="canonical" href="{{ canonical_url }}">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="{% if page.layout == 'story' %}article{% else %}website{% endif %}">
-  <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/{{ page.og_image | default: 'og-image.png' }}">
-  <meta property="og:image:secure_url" content="{{ site.url }}{{ site.baseurl }}/assets/images/{{ page.og_image | default: 'og-image.png' }}">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="2400">
-  <meta property="og:image:height" content="1260">
-  <meta property="og:image:alt" content="{{ site.title }}｜{{ site.description }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_desc }}">
+  <meta property="og:image" content="{{ og_image }}">
+  <meta property="og:image:secure_url" content="{{ og_image }}">
+  <meta property="og:image:type" content="{{ og_type }}">
+  <meta property="og:image:width" content="{{ og_w }}">
+  <meta property="og:image:height" content="{{ og_h }}">
+  <meta property="og:image:alt" content="{{ page_title }}｜{{ site.title }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:locale" content="zh_TW">
+  {%- if page.layout == 'story' %}
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <meta property="article:section" content="{% if page.series %}本草{{ page.series }}{% else %}中藥方劑{% endif %}">
+  {%- for tag in page.tags %}
+  <meta property="article:tag" content="{{ tag }}">
+  {%- endfor %}
+  {%- endif %}
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/{{ page.og_image | default: 'og-image.png' }}">
-  <meta name="twitter:image:alt" content="{{ site.title }}">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_desc }}">
+  <meta name="twitter:image" content="{{ og_image }}">
+  <meta name="twitter:image:alt" content="{{ page_title }}">
 
-  <!-- 給 Google／舊版爬蟲的縮圖提示（優先用品牌分享圖）-->
-  <link rel="image_src" href="{{ site.url }}{{ site.baseurl }}/assets/images/{{ page.og_image | default: 'og-image.png' }}">
+  <!-- 給 Google／舊版爬蟲的縮圖提示 -->
+  <link rel="image_src" href="{{ og_image }}">
+
+  <!-- 結構化資料（Google 搜尋結果用） -->
+  {%- if page.layout == 'story' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": {{ page.title | jsonify }},
+    "description": {{ page_desc | jsonify }},
+    "image": [{{ og_image | jsonify }}],
+    "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+    "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+    "inLanguage": "zh-TW",
+    "mainEntityOfPage": {{ canonical_url | jsonify }},
+    "keywords": {{ page.tags | join: ", " | jsonify }},
+    "articleSection": {% if page.series %}"本草{{ page.series }}"{% else %}"中藥方劑"{% endif %},
+    {%- if page.formula %}
+    "about": { "@type": "Thing", "name": {{ page.formula | jsonify }} },
+    {%- endif %}
+    "author": { "@type": "Organization", "name": {{ site.title | jsonify }}, "url": {{ site.url | jsonify }} },
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ site.title | jsonify }},
+      "logo": { "@type": "ImageObject", "url": "{{ site.url }}{{ site.baseurl }}/assets/images/site-logo.png" }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "{{ site.url }}{{ site.baseurl }}/" },
+      { "@type": "ListItem", "position": 2, "name": "{% if page.series %}炮製系列{% else %}方劑系列{% endif %}", "item": "{{ site.url }}{{ site.baseurl }}{% if page.series %}/paozhi/{% else %}/formulas/{% endif %}" },
+      { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": {{ canonical_url | jsonify }} }
+    ]
+  }
+  </script>
+  {%- elsif page.url == '/' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": {{ site.title | jsonify }},
+    "url": {{ site.url | jsonify }},
+    "description": {{ site.description | strip_newlines | jsonify }},
+    "inLanguage": "zh-TW",
+    "publisher": { "@type": "Organization", "name": {{ site.title | jsonify }}, "logo": "{{ site.url }}{{ site.baseurl }}/assets/images/site-logo.png" }
+  }
+  </script>
+  {%- endif %}
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="{{ site.baseurl }}/assets/images/favicon.jpg">
-  <link rel="shortcut icon" type="image/jpeg" href="{{ site.baseurl }}/assets/images/favicon.jpg">
-  <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/images/favicon.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ site.baseurl }}/assets/images/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/images/apple-touch-icon.png">
+  <meta name="theme-color" content="#3b564c">
 
-  <!-- 字體：優雅襯線標題 -->
+  <!-- 字體：標題用 Noto Serif TC（只載 700，內文用系統字） -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
 
   <!-- 共用樣式 -->
-  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M' }}">
+  {%- if page.layout == 'story' %}
+  <link rel="stylesheet" href="{{ '/assets/css/story.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M' }}">
+  {%- endif %}
 
   <!-- Feed -->
   {% feed_meta %}
@@ -58,23 +147,27 @@
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
 
+{%- assign nav_section = page.url -%}
+{%- if page.layout == 'story' -%}
+  {%- if page.series -%}{%- assign nav_section = '/paozhi/' -%}{%- else -%}{%- assign nav_section = '/formulas/' -%}{%- endif -%}
+{%- endif %}
 <body class="{{ page.body_class }}{% if page.layout == 'story' and page.series %} theme-paozhi{% endif %}">
   <!-- 網站 Header -->
   <header class="site-header">
     <div class="wrapper">
-      <a href="{{ site.baseurl }}/" class="site-title"><img src="{{ site.baseurl }}/assets/images/site-logo.png" alt="" class="site-logo">草本故事館</a>
+      <a href="{{ site.baseurl }}/" class="site-title"><img src="{{ site.baseurl }}/assets/images/site-logo.png" alt="" class="site-logo" width="38" height="38">草本故事館</a>
 
       <button class="nav-toggle" aria-label="開啟選單" aria-expanded="false" onclick="var n=document.getElementById('siteNav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o);">
         <span></span><span></span><span></span>
       </button>
 
       <nav class="site-nav" id="siteNav">
-        <a href="{{ site.baseurl }}/">首頁</a>
-        <a href="{{ site.baseurl }}/formulas/"><span class="nav-dot formula"></span>方劑系列</a>
-        <a href="{{ site.baseurl }}/paozhi/"><span class="nav-dot paozhi"></span>炮製系列</a>
-        <a href="{{ site.baseurl }}/characters/">圖鑑</a>
-        <a href="{{ site.baseurl }}/games/">遊樂園</a>
-        <a href="{{ site.baseurl }}/about/">關於</a>
+        <a href="{{ site.baseurl }}/"{% if page.url == '/' %} class="is-active" aria-current="page"{% endif %}>首頁</a>
+        <a href="{{ site.baseurl }}/formulas/"{% if nav_section == '/formulas/' %} class="is-active"{% endif %}><span class="nav-dot formula"></span>方劑系列</a>
+        <a href="{{ site.baseurl }}/paozhi/"{% if nav_section == '/paozhi/' %} class="is-active"{% endif %}><span class="nav-dot paozhi"></span>炮製系列</a>
+        <a href="{{ site.baseurl }}/characters/"{% if page.url == '/characters/' %} class="is-active"{% endif %}>圖鑑</a>
+        <a href="{{ site.baseurl }}/games/"{% if page.url == '/games/' %} class="is-active"{% endif %}>遊樂園</a>
+        <a href="{{ site.baseurl }}/about/"{% if page.url == '/about/' %} class="is-active"{% endif %}>關於</a>
       </nav>
     </div>
   </header>

@@ -27,3 +27,21 @@ python tools/img2webp.py --size 800 --quality 80 圖片...
 - 預設模型 u2net 對目前這種「貼紙卡片」風格最乾淨。若角色邊緣被吃掉，試 `--model isnet-anime`。
 - 原本就有透明背景的 PNG 不需要去背，直接用 `轉WebP.bat` 即可。
 - 去背會順便裁掉四周多餘的透明區域。
+
+---
+
+# tools：文章分享圖（og:image）
+
+每篇文章在 FB／LINE／IG 分享時顯示的縮圖，由 `make_og.py` 自動產生：
+深色系列漸層底 + 文章標題 + 方劑名 + 前三位角色圖，1200×630 JPG，輸出到 `assets/images/og/<文章檔名>.jpg`。
+`_layouts/default.html` 會自動偵測：有這張圖就用它，沒有就退回品牌圖 `og-image.png`。
+
+## 平常怎麼用
+- 寫完新文章、放好角色圖後，雙擊 `產生分享圖.bat`（只會幫還沒有圖的文章產生），再一起 commit。
+- 改了標題或角色圖想重做：`python tools/make_og.py --force _stories/檔名.md`
+- 改了版型想全部重做：`python tools/make_og.py --force`
+
+## 注意
+- 字型會依序找 Noto CJK → 微軟正黑體（Windows）→ 蘋方（macOS）；都找不到會提示你在 `FONT_CANDIDATES` 加路徑。
+- 需要 `pip install pillow pyyaml`。
+- FB 分享圖有快取：圖換了但 FB 還顯示舊圖時，到 https://developers.facebook.com/tools/debug/ 貼網址按「重新抓取」。

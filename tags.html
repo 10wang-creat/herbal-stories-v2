@@ -1,0 +1,99 @@
+---
+layout: default
+title: 標籤總覽
+description: 依主題標籤瀏覽草本故事館全部文章：補氣、補血、安神、祛濕、解表……從你關心的方向找到對應的方劑與炮製故事。
+permalink: /tags/
+---
+
+{%- assign tag_pub = site.stories | where_exp: "s", "s.date <= site.time" -%}
+{%- assign tag_all = "" | split: "" -%}
+{%- for s in tag_pub -%}
+  {%- for t in s.tags -%}{%- assign tag_all = tag_all | push: t -%}{%- endfor -%}
+{%- endfor -%}
+{%- assign tag_uniq = tag_all | uniq -%}
+{%- assign tag_keys = "" | split: "" -%}
+{%- for t in tag_uniq -%}
+  {%- assign n = tag_pub | where_exp: "s", "s.tags contains t" | size -%}
+  {%- assign key = n | prepend: "000" | slice: -3, 3 | append: "|" | append: t -%}
+  {%- assign tag_keys = tag_keys | push: key -%}
+{%- endfor -%}
+{%- assign tag_keys = tag_keys | sort | reverse -%}
+
+<section class="page-hero">
+  <div class="page-emoji">🏷️</div>
+  <h1>標籤總覽</h1>
+  <p class="subtitle">從主題找文章。點一個標籤，就會跳到該標籤底下的所有故事。</p>
+  <div class="page-hero-stats">
+    <div><span class="stat-number">{{ tag_uniq | size }}</span><span class="stat-label">個標籤</span></div>
+    <div><span class="stat-number">{{ tag_pub | size }}</span><span class="stat-label">篇文章</span></div>
+  </div>
+</section>
+
+<div class="inner-page">
+  <nav class="tag-cloud" aria-label="所有標籤">
+    {%- for key in tag_keys -%}
+      {%- assign parts = key | split: "|" -%}
+      {%- assign t = parts[1] -%}
+      {%- assign n = parts[0] | plus: 0 -%}
+      <a class="tag-chip{% if n >= 5 %} tag-chip-lg{% elsif n >= 3 %} tag-chip-md{% endif %}" href="#tag-{{ t | url_encode }}">{{ t }}<span>{{ n }}</span></a>
+    {%- endfor -%}
+  </nav>
+
+  {%- for key in tag_keys -%}
+    {%- assign parts = key | split: "|" -%}
+    {%- assign t = parts[1] -%}
+    {%- assign group = tag_pub | where_exp: "s", "s.tags contains t" | sort: "date" | reverse -%}
+    <section class="tag-group" id="tag-{{ t | url_encode }}">
+      <h2 class="tag-group-title">🏷️ {{ t }} <small>{{ group | size }} 篇</small></h2>
+      <ul class="tag-group-list">
+      {%- for s in group -%}
+        <li class="tag-story{% if s.series %} paozhi{% endif %}">
+          <a href="{{ s.url | relative_url }}">
+            <span class="series-badge {% if s.series %}paozhi{% else %}formula{% endif %}">{% if s.series %}🔥{% else %}💊{% endif %}</span>
+            <span class="tag-story-title">{{ s.title }}</span>
+            {% if s.formula %}<span class="tag-story-formula">{{ s.formula }}</span>{% endif %}
+            <time class="tag-story-date" datetime="{{ s.date | date_to_xmlschema }}">{{ s.date | date: "%Y.%m" }}</time>
+          </a>
+        </li>
+      {%- endfor -%}
+      </ul>
+      <a class="tag-group-top" href="#top">↑ 回到標籤列表</a>
+    </section>
+  {%- endfor -%}
+</div>
+
+<style>
+.tag-cloud { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0 auto 48px; max-width: 900px; }
+.tag-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 14px; border-radius: 20px; text-decoration: none;
+  background: #fff; border: 2px solid var(--line); color: var(--ink);
+  font-size: 0.92rem; font-weight: 500; transition: all 0.2s;
+}
+.tag-chip span { color: var(--muted); font-size: 0.82em; }
+.tag-chip-md { font-size: 1rem; border-color: var(--green-400); }
+.tag-chip-lg { font-size: 1.08rem; border-color: var(--green-500); font-weight: 700; color: var(--green-700); }
+.tag-chip:hover { background: var(--green-500); border-color: var(--green-500); color: #fff; transform: translateY(-2px); }
+.tag-chip:hover span { color: rgba(255,255,255,0.85); }
+
+.tag-group { max-width: 900px; margin: 0 auto 36px; padding: 22px 26px 18px; background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); scroll-margin-top: 90px; }
+.tag-group-title { color: var(--green-700); font-size: 1.35rem; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid var(--line); }
+.tag-group-title small { color: var(--muted); font-size: 0.75em; font-family: var(--sans); font-weight: 500; margin-left: 6px; }
+.tag-group-list { list-style: none; }
+.tag-story a {
+  display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 12px;
+  padding: 11px 8px; text-decoration: none; color: var(--ink); border-radius: 8px; transition: background 0.2s;
+}
+.tag-story a:hover { background: var(--accent-050); }
+.tag-story.paozhi a:hover { background: var(--fire-050); }
+.tag-story-title { font-weight: 600; }
+.tag-story-formula { color: var(--gold); font-size: 0.9rem; white-space: nowrap; }
+.tag-story-date { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+.tag-group-top { display: inline-block; margin-top: 10px; font-size: 0.88rem; color: var(--muted); text-decoration: none; }
+.tag-group-top:hover { color: var(--green-700); }
+@media (max-width: 600px) {
+  .tag-story a { grid-template-columns: auto 1fr; }
+  .tag-story-formula, .tag-story-date { grid-column: 2; font-size: 0.82rem; }
+  .tag-group { padding: 18px 16px 14px; }
+}
+</style>

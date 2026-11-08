@@ -334,7 +334,7 @@ a.formula-tag:hover {
   <div class="character-card" data-category="{{ h_category }}" data-name="{{ h_name }}">
     <div class="card-image">
       {% if h_image != "" %}
-        <img src="{{ site.baseurl }}/assets/images/characters/{{ h_image }}" alt="{{ h_name }}" loading="lazy">
+        <img src="{{ site.baseurl }}/assets/images/characters/{{ h_image }}" alt="{{ h_name }}" width="1024" height="1024" loading="lazy" decoding="async">
       {% else %}
         <div style="font-size: 4em; opacity: 0.3;">🌿</div>
       {% endif %}

@@ -5,56 +5,8 @@
   </h3>
   <div class="tags-list">
     {% for tag in page.tags %}
-      <span class="post-tag">{{ tag }}</span>
+      <a class="post-tag" href="{{ '/tags/' | relative_url }}#tag-{{ tag | url_encode }}" title="看所有「{{ tag }}」相關文章">{{ tag }}</a>
     {% endfor %}
   </div>
 </div>
-
-<style>
-.post-tags-container {
-  margin: 2rem 0;
-  padding: 1.5rem;
-  background: #f0eef3;
-  border-radius: 12px;
-  border-left: 4px solid #7b9b8a;
-}
-
-.tags-heading {
-  color: #4f6f62;
-  font-size: 1.2rem;
-  margin: 0 0 1rem 0;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.tags-icon {
-  font-size: 1.3rem;
-}
-
-.tags-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.post-tag {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: white;
-  border: 2px solid #7b9b8a;
-  border-radius: 20px;
-  color: #3b564c;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.post-tag:hover {
-  background: #7b9b8a;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(52, 67, 94, 0.2);
-}
-</style>
 {% endif %}
