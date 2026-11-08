@@ -13,6 +13,17 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+# 不要被 Jekyll 當成網站內容的資料夾／檔案（tools/ 有中文檔名的 .bat，會讓 Vercel 的 Linux build 出錯）
+exclude:
+  - tools/
+  - Claude outputs/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vercel.json
+  - node_modules/
+  - vendor/
+
 # Collections
 collections:
   stories:
