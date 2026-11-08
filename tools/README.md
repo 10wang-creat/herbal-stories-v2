@@ -45,3 +45,18 @@ python tools/img2webp.py --size 800 --quality 80 圖片...
 - 字型會依序找 Noto CJK → 微軟正黑體（Windows）→ 蘋方（macOS）；都找不到會提示你在 `FONT_CANDIDATES` 加路徑。
 - 需要 `pip install pillow pyyaml`。
 - FB 分享圖有快取：圖換了但 FB 還顯示舊圖時，到 https://developers.facebook.com/tools/debug/ 貼網址按「重新抓取」。
+
+---
+
+# tools：同步本草心語卡片資料
+
+網站的 `/oracle/` 落地頁、首頁「今日一卡」、每篇文章結尾的「抽一張卡」都讀 `_data/oracle.yml`。
+這個檔由 `sync_oracle.py` 從 App repo（`../tcm-oracle-cards-v2/index.html` 裡的 `var H=[...]`）抓出來：
+
+```
+python tools/sync_oracle.py
+```
+
+- App 的卡片文字或圖片檔名有改，跑一次再 commit 網站即可。
+- `alias:` 區塊是「文章裡的藥材名 → 卡名」對照（炙甘草→甘草、麥冬→麥門冬…），手動維護，同步時不會被覆蓋。
+- 卡圖直接連 `https://tcm-oracle-cards.vercel.app/images/<img>.webp`，網站 repo 不另存一份。

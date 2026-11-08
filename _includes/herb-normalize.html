@@ -1,0 +1,17 @@
+{%- comment -%}
+  統一藥材名稱與功效分類的寫法（圖鑑頁與遊戲共用）。
+  用法：{% include herb-normalize.html ing=ing %} → 之後可用 hn_name、hn_cat
+  - 同一味藥在不同文章寫法不同（紫蘇／蘇葉／紫蘇葉）時合併成一張卡
+  - 分類同義詞合併，避免篩選列出現「利水 (3)」又「利濕 (7)」
+{%- endcomment -%}
+{%- assign hn_name = include.ing.name -%}
+{%- case hn_name -%}
+  {%- when "紫蘇", "蘇葉" -%}{%- assign hn_name = "紫蘇葉" -%}
+{%- endcase -%}
+{%- assign hn_cat = include.ing.category | default: "" -%}
+{%- case hn_cat -%}
+  {%- when "利水" -%}{%- assign hn_cat = "利濕" -%}
+  {%- when "燥濕" -%}{%- assign hn_cat = "化濕" -%}
+  {%- when "滋陰" -%}{%- assign hn_cat = "補陰" -%}
+  {%- when "止痛" -%}{%- assign hn_cat = "活血" -%}
+{%- endcase -%}

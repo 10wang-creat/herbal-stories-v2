@@ -20,6 +20,7 @@
   {%- assign og_type = 'image/png' -%}{%- assign og_w = 2400 -%}{%- assign og_h = 1260 -%}
   {%- if page.og_image -%}
     {%- assign og_image = site.url | append: site.baseurl | append: '/assets/images/' | append: page.og_image -%}
+    {%- if page.og_image contains '.jpg' -%}{%- assign og_type = 'image/jpeg' -%}{%- assign og_w = 1200 -%}{%- assign og_h = 630 -%}{%- endif -%}
   {%- elsif page.layout == 'story' and page.slug -%}
     {%- assign og_path = '/assets/images/og/' | append: page.slug | append: '.jpg' -%}
     {%- assign og_file = site.static_files | where: 'path', og_path | first -%}
@@ -166,6 +167,7 @@
         <a href="{{ site.baseurl }}/formulas/"{% if nav_section == '/formulas/' %} class="is-active"{% endif %}><span class="nav-dot formula"></span>方劑系列</a>
         <a href="{{ site.baseurl }}/paozhi/"{% if nav_section == '/paozhi/' %} class="is-active"{% endif %}><span class="nav-dot paozhi"></span>炮製系列</a>
         <a href="{{ site.baseurl }}/characters/"{% if page.url == '/characters/' %} class="is-active"{% endif %}>圖鑑</a>
+        <a href="{{ site.baseurl }}/oracle/"{% if page.url == '/oracle/' %} class="is-active"{% endif %}>🔮 心語卡</a>
         <a href="{{ site.baseurl }}/games/"{% if page.url == '/games/' %} class="is-active"{% endif %}>遊樂園</a>
         <a href="{{ site.baseurl }}/about/"{% if page.url == '/about/' %} class="is-active"{% endif %}>關於</a>
       </nav>

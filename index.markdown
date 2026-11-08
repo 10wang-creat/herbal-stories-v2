@@ -170,24 +170,28 @@ title: 首頁
 </section>
 
 <!-- ===== 本草心語抽卡 ===== -->
-<section class="oracle-section">
+{%- include oracle-today.html -%}
+<section class="oracle-section" aria-labelledby="oracleHomeTitle">
   <div class="oracle-content">
     <div class="oracle-text">
-      <span class="oracle-badge">🔮 互動小物</span>
-      <h2 class="oracle-title">本草心語</h2>
-      <p class="oracle-subtitle">Herbal Heart Language</p>
-      <p class="oracle-desc">靜下心，感受此刻的自己。讓一味本草，回應你內心的聲音。</p>
-      <p class="oracle-detail">抽一張卡，看看今天的草本想對你說什麼——無論是當歸的思念、薄荷的清涼、還是人參的力量，都是專屬於你的一段心靈對話。</p>
-      <a href="https://tcm-oracle-cards.vercel.app/" target="_blank" rel="noopener noreferrer" class="oracle-cta">開始抽牌 →</a>
+      <span class="oracle-badge">🔮 本草心語 · 今日一卡 {{ site.time | date: "%-m/%-d" }}</span>
+      <h2 class="oracle-title" id="oracleHomeTitle">{{ oracle_today.n }}</h2>
+      <p class="oracle-subtitle">{{ oracle_today.cat }} · {{ oracle_today.fn }}</p>
+      <p class="oracle-desc oracle-quote">{{ oracle_today.mo }}</p>
+      <p class="oracle-detail">{{ oracle_today.af }}。81 味本草、81 句話——這是今天全站共同翻開的一張。想問自己的問題？再抽一張屬於你的。</p>
+      <div class="oracle-actions">
+        <a href="{{ oracle_today_link }}" target="_blank" rel="noopener noreferrer" class="oracle-cta">讀〈{{ oracle_today.n }}〉的解讀 →</a>
+        <a href="{{ '/oracle/' | relative_url }}" class="oracle-cta ghost">什麼是本草心語？</a>
+      </div>
     </div>
     <div class="oracle-visual">
-      <div class="oracle-card-stack">
+      <a class="oracle-card-stack" href="{{ oracle_today_link }}" target="_blank" rel="noopener noreferrer" aria-label="翻開今日一卡：{{ oracle_today.n }}">
         <div class="oracle-card card-shadow-1"></div>
         <div class="oracle-card card-shadow-2"></div>
         <div class="oracle-card card-main">
-          <img src="{{ '/assets/images/oracle-card-back.webp' | relative_url }}" alt="本草心語卡牌" loading="lazy" decoding="async">
+          <img src="{{ oracle_today_img }}" alt="{{ oracle_today.n }} 心語卡" width="400" height="400" loading="lazy" decoding="async">
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -280,7 +284,7 @@ title: 首頁
   border-radius: var(--radius-lg); padding: 44px 40px; margin: 56px auto; max-width: 1080px;
   box-shadow: 0 6px 30px rgba(143,58,82,0.1); border: 1px solid #ecd8e0;
 }
-.sishitang-inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: start; }
+.sishitang-inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; }
 .sishitang-badge { display: inline-block; background: linear-gradient(135deg, #9a4560, #c15c7a); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; letter-spacing: 1px; }
 .sishitang-title { font-family: var(--serif); font-size: 2.4rem; color: #8f3a52; margin: 12px 0 4px; letter-spacing: 6px; }
 .sishitang-tagline { font-size: 1.1rem; color: #a3506a; font-style: italic; margin-bottom: 16px; }
@@ -323,7 +327,6 @@ title: 首頁
   .sishitang-chapters .ch-title { grid-column: 1 / -1; white-space: normal; font-size: 0.88rem; }
   .sishitang-actions .sishitang-cta { flex: 1 1 100%; text-align: center; }
 }
-}
 
 /* 中藥正念日曆 */
 .meditation-section {
@@ -354,14 +357,18 @@ title: 首頁
 .oracle-detail { font-size: 0.95rem; color: #8a90a4; line-height: 1.8; margin: 14px 0 24px; }
 .oracle-cta { display: inline-block; background: linear-gradient(135deg, #5f6f9e 0%, #9aa0c0 100%); color: #fff; padding: 13px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(90,100,130,0.25); }
 .oracle-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(90,100,130,0.35); }
+.oracle-quote { font-family: var(--serif); font-size: 1.35rem !important; color: #4a4f7a !important; }
+.oracle-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.oracle-cta.ghost { background: #fff; color: #5f6f9e; border: 2px solid #b7bcd6; box-shadow: none; }
+.oracle-cta.ghost:hover { background: #f6f4fa; }
 .oracle-visual { display: flex; justify-content: center; }
-.oracle-card-stack { position: relative; width: 180px; height: 240px; }
-.oracle-card { position: absolute; width: 160px; height: 220px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+.oracle-card-stack { position: relative; width: 240px; height: 240px; display: block; }
+.oracle-card { position: absolute; width: 220px; height: 220px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
 .card-shadow-1 { background: linear-gradient(135deg, #cfd2df 0%, #c0c4d5 100%); top: 0; left: 0; transform: rotate(-8deg); }
 .card-shadow-2 { background: linear-gradient(135deg, #c0c4d5 0%, #aeb4c8 100%); top: 0; left: 10px; transform: rotate(-3deg); }
 .card-main { top: 0; left: 20px; transform: rotate(2deg); overflow: hidden; transition: transform 0.3s; }
 .card-main:hover { transform: rotate(0deg) translateY(-8px); }
-.card-main img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; }
+.card-main img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; display: block; }
 @media (max-width: 768px) {
   .oracle-content { grid-template-columns: 1fr; gap: 28px; text-align: center; }
   .oracle-section { padding: 40px 24px; margin: 40px 20px; }

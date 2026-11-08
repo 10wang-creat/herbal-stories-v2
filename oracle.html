@@ -1,0 +1,188 @@
+---
+layout: default
+title: 本草心語｜中藥心靈牌卡
+description: 本草心語是一套 81 味中藥的線上心靈牌卡。靜下心、想一個問題、翻一張卡，讓一味本草用它的性味與故事回應你此刻的心情。免費、免安裝，手機就能玩。
+permalink: /oracle/
+og_image: og-oracle.jpg
+body_class: page-oracle
+---
+
+{%- include oracle-today.html -%}
+{%- assign oc = site.data.oracle -%}
+{%- assign oc_cats = oc.cards | map: "cat" | uniq -%}
+
+<section class="page-hero oracle-hero">
+  <div class="page-emoji">🔮</div>
+  <h1>本草心語</h1>
+  <p class="subtitle">Herbal Heart Language — 81 味中藥，81 句想對你說的話。<br>靜下心，想一個問題，翻一張卡。</p>
+  <div class="page-hero-stats">
+    <div><span class="stat-number">{{ oc_total }}</span><span class="stat-label">張牌卡</span></div>
+    <div><span class="stat-number">{{ oc_cats | size }}</span><span class="stat-label">大類</span></div>
+    <div><span class="stat-number">免費</span><span class="stat-label">免安裝</span></div>
+  </div>
+  <a class="btn oracle-hero-btn" href="{{ oc.app_url }}" target="_blank" rel="noopener noreferrer">開始抽牌 →</a>
+</section>
+
+<div class="inner-page">
+
+  <!-- 今日一卡 -->
+  <section class="oracle-today" aria-labelledby="todayTitle">
+    <a class="oracle-today-card" href="{{ oracle_today_link }}" target="_blank" rel="noopener noreferrer">
+      <img src="{{ oracle_today_img }}" alt="{{ oracle_today.n }} 心語卡" width="400" height="400" decoding="async">
+    </a>
+    <div class="oracle-today-text">
+      <span class="oracle-badge">🗓️ 今日一卡 · {{ site.time | date: "%-m 月 %-d 日" }}</span>
+      <h2 id="todayTitle">{{ oracle_today.n }}</h2>
+      <p class="oracle-today-sub">{{ oracle_today.cat }} · {{ oracle_today.fn }}</p>
+      <p class="oracle-today-quote">{{ oracle_today.mo }}</p>
+      <p class="oracle-today-af">{{ oracle_today.af }}</p>
+      <a class="oracle-cta" href="{{ oracle_today_link }}" target="_blank" rel="noopener noreferrer">讀這張卡的完整解讀 →</a>
+      <p class="oracle-today-note">每天早上 8 點換一張，全站的人今天看到的都是同一張——像一起翻開的日曆。</p>
+    </div>
+  </section>
+
+  <!-- 這是什麼 -->
+  <section class="oracle-block">
+    <h2 class="oracle-h2">這是什麼？</h2>
+    <p>本草心語把 81 味常見中藥做成一套心靈牌卡。每一張卡上有這味藥的性味歸經與功效，但更多的是它的「個性」——肉桂是點燃心中的小火爐，百合是乾裂時的一場細雨，酸棗仁是那個陪你不敢睡的夜。</p>
+    <p>它不是占卜，也不會告訴你該不該吃什麼藥。它比較像一面鏡子：藉由一味本草的特質，陪你把此刻說不清楚的感覺，說清楚一點。</p>
+  </section>
+
+  <!-- 怎麼玩 -->
+  <section class="oracle-block">
+    <h2 class="oracle-h2">怎麼玩？</h2>
+    <ol class="oracle-steps">
+      <li><strong>靜下來</strong><span>深呼吸三次，把注意力從手機通知拉回到身體上。</span></li>
+      <li><strong>想一個問題</strong><span>不一定要很大。「今天我需要什麼？」就很好。</span></li>
+      <li><strong>翻一張卡</strong><span>讀它的話、讀它的故事。合不合，你自己最知道。</span></li>
+      <li><strong>收藏與分享</strong><span>抽過的卡會留在你的圖鑑裡；每張卡都有專屬連結，可以傳給正需要它的人。</span></li>
+    </ol>
+  </section>
+
+  <!-- 五大類 -->
+  <section class="oracle-block">
+    <h2 class="oracle-h2">81 張卡，五種聲音</h2>
+    <div class="oracle-cats">
+      {%- for c in oc_cats %}
+      {%- assign group = oc.cards | where: "cat", c %}
+      <div class="oracle-cat">
+        <div class="oracle-cat-head"><strong>{{ c }}</strong><span>{{ group | size }} 張</span></div>
+        <div class="oracle-cat-cards">
+          {%- for card in group limit: 4 %}
+          <a href="{{ oc.app_url }}?c={{ card.id }}" target="_blank" rel="noopener noreferrer" title="{{ card.n }}：{{ card.mo }}">
+            <img src="{{ oc.image_base }}{{ card.img }}.webp" alt="{{ card.n }}" width="160" height="160" loading="lazy" decoding="async">
+            <span>{{ card.n }}</span>
+          </a>
+          {%- endfor %}
+        </div>
+        <p class="oracle-cat-more">{% for card in group offset: 4 %}{{ card.n }}{% unless forloop.last %}、{% endunless %}{% endfor %}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <!-- 和故事館的關係 -->
+  <section class="oracle-block oracle-link-block">
+    <h2 class="oracle-h2">卡牌裡的藥，故事館裡都有</h2>
+    <p>本草心語的 81 味藥，大多數也在<a href="{{ '/formulas/' | relative_url }}">方劑故事</a>裡登場過。抽到一張卡，想多認識它一點，可以到<a href="{{ '/characters/' | relative_url }}">藥材圖鑑</a>找它的角色介紹，或看看它在哪幾帖方裡出任務。每篇故事的結尾也都放了「抽一張卡」的入口，讀完故事順手抽一張，剛剛好。</p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="oracle-block">
+    <h2 class="oracle-h2">常見問題</h2>
+    <details class="oracle-faq"><summary>需要下載 App 嗎？</summary><p>不用。用手機或電腦瀏覽器打開就能玩；iPhone 可以「加入主畫面」，Android 會跳出「安裝」提示，之後像 App 一樣從桌面開啟。</p></details>
+    <details class="oracle-faq"><summary>抽到的卡可以當作用藥建議嗎？</summary><p>不行。卡片上的性味功效是真實的中藥知識，但這套牌卡的用途是陪伴與自我覺察，不是診斷，也不是處方。身體有狀況，請找合格中醫師。</p></details>
+    <details class="oracle-faq"><summary>每天可以抽幾次？</summary><p>沒有限制。不過我們的建議是：一天一張，給它一點時間在心裡發酵。</p></details>
+    <details class="oracle-faq"><summary>抽過的卡會不見嗎？</summary><p>抽過的卡會存在你這台裝置的瀏覽器裡（圖鑑收集進度）。換裝置或清除瀏覽資料會重新開始。</p></details>
+    <details class="oracle-faq"><summary>可以分享給朋友嗎？</summary><p>可以。翻開卡後按「分享」，會產生這張卡的專屬連結；朋友點開直接看到同一張卡和它的解讀。</p></details>
+  </section>
+
+  <section class="oracle-final">
+    <h2>今天，讓一味本草陪你一下</h2>
+    <a class="oracle-cta big" href="{{ oc.app_url }}" target="_blank" rel="noopener noreferrer">開始抽牌 →</a>
+    <p>免費 · 免登入 · 手機電腦都能玩</p>
+  </section>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "本草心語 ─ 中藥心靈牌卡",
+  "alternateName": "Herbal Heart Language",
+  "url": {{ oc.app_url | jsonify }},
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TWD" },
+  "inLanguage": "zh-TW",
+  "description": {{ page.description | jsonify }},
+  "image": "{{ site.url }}{{ site.baseurl }}/assets/images/og-oracle.jpg",
+  "publisher": { "@type": "Organization", "name": {{ site.title | jsonify }}, "url": {{ site.url | jsonify }} }
+}
+</script>
+
+<style>
+.oracle-hero { background: linear-gradient(135deg, #4a4f7a 0%, #5f6f9e 55%, #9aa0c0 100%); }
+.oracle-hero .subtitle { line-height: 1.8; }
+.oracle-hero-btn { margin-top: 26px; background: #fff; color: #5f6f9e; font-size: 1.05rem; padding: 14px 36px; }
+.oracle-hero-btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.oracle-badge { display: inline-block; background: linear-gradient(135deg, #8B5E9B 0%, #A67BB5 100%); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; letter-spacing: 1px; }
+.oracle-cta { display: inline-block; background: linear-gradient(135deg, #5f6f9e 0%, #9aa0c0 100%); color: #fff; padding: 13px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(90,100,130,0.25); }
+.oracle-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(90,100,130,0.35); }
+.oracle-cta.big { font-size: 1.1rem; padding: 16px 44px; }
+
+.oracle-today {
+  display: grid; grid-template-columns: 260px 1fr; gap: 40px; align-items: center;
+  background: linear-gradient(135deg, #f3f1f7 0%, #e9e5f0 50%, #ded9ea 100%);
+  border: 1px solid rgba(150,160,190,0.22); border-radius: var(--radius-lg);
+  padding: 40px; margin: 0 auto 48px; max-width: 980px; box-shadow: 0 6px 30px rgba(90,100,130,0.12);
+}
+.oracle-today-card { display: block; border-radius: 18px; overflow: hidden; box-shadow: 0 12px 36px rgba(90,100,130,0.3); transform: rotate(-3deg); transition: transform 0.3s; background: #fff; }
+.oracle-today-card:hover { transform: rotate(0) translateY(-6px); }
+.oracle-today-card img { display: block; width: 100%; height: auto; }
+.oracle-today-text h2 { font-size: 2.4rem; color: #5f6f9e; letter-spacing: 4px; margin: 12px 0 2px; }
+.oracle-today-sub { color: #9aa0c0; font-size: 0.95rem; margin-bottom: 14px; }
+.oracle-today-quote { font-family: var(--serif); font-size: 1.5rem; color: #4a4f7a; line-height: 1.6; margin-bottom: 10px; }
+.oracle-today-af { color: #59617a; font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px; }
+.oracle-today-note { color: var(--muted); font-size: 0.85rem; margin-top: 16px; }
+
+.oracle-block { max-width: 820px; margin: 0 auto 44px; line-height: 1.9; color: var(--ink-soft); font-size: 1.05rem; }
+.oracle-block p { margin-bottom: 14px; }
+.oracle-block a { color: #5f6f9e; font-weight: 600; }
+.oracle-h2 { font-size: 1.7rem; color: #4a4f7a; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #ded9ea; }
+.oracle-steps { list-style: none; counter-reset: step; display: grid; gap: 12px; }
+.oracle-steps li { counter-increment: step; display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: start; background: #fff; border-radius: 12px; padding: 16px 20px; box-shadow: var(--shadow-sm); }
+.oracle-steps li::before { content: counter(step); width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #5f6f9e, #9aa0c0); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-family: var(--serif); grid-row: 1 / 3; }
+.oracle-steps li strong { color: #4a4f7a; font-size: 1.05rem; display: block; }
+.oracle-steps li span { color: var(--ink-soft); font-size: 0.98rem; }
+
+.oracle-cats { display: grid; gap: 18px; }
+.oracle-cat { background: #fff; border-radius: 14px; padding: 18px 20px; box-shadow: var(--shadow-sm); }
+.oracle-cat-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+.oracle-cat-head strong { color: #4a4f7a; font-size: 1.15rem; font-family: var(--serif); }
+.oracle-cat-head span { color: var(--muted); font-size: 0.88rem; }
+.oracle-cat-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.oracle-cat-cards a { text-decoration: none; text-align: center; color: var(--ink); font-size: 0.9rem; transition: transform 0.2s; }
+.oracle-cat-cards a:hover { transform: translateY(-4px); }
+.oracle-cat-cards img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 14px rgba(90,100,130,0.18); display: block; margin-bottom: 6px; }
+.oracle-cat-more { color: var(--muted); font-size: 0.86rem; margin: 12px 0 0; line-height: 1.7; }
+
+.oracle-link-block { background: var(--accent-050); border-radius: 14px; padding: 24px 28px; }
+.oracle-faq { background: #fff; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; box-shadow: var(--shadow-sm); }
+.oracle-faq summary { cursor: pointer; font-weight: 700; color: #4a4f7a; }
+.oracle-faq p { margin: 10px 0 0; font-size: 0.98rem; }
+.oracle-final { text-align: center; padding: 30px 20px 10px; }
+.oracle-final h2 { font-size: 1.6rem; color: #4a4f7a; margin-bottom: 20px; }
+.oracle-final p { color: var(--muted); font-size: 0.9rem; margin-top: 14px; }
+
+@media (max-width: 760px) {
+  .oracle-today { grid-template-columns: 1fr; gap: 24px; padding: 28px 20px; text-align: center; }
+  .oracle-today-card { width: 200px; margin: 0 auto; }
+  .oracle-today-text h2 { font-size: 2rem; }
+  .oracle-today-quote { font-size: 1.25rem; }
+  .oracle-cat-cards { grid-template-columns: repeat(2, 1fr); }
+  .oracle-steps li { grid-template-columns: 36px 1fr; }
+  .oracle-steps li::before { width: 32px; height: 32px; }
+}
+</style>

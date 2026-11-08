@@ -49,7 +49,8 @@ layout: default
           <img src="{{ site.baseurl }}/assets/images/characters/{{ ingredient.image }}" alt="{{ ingredient.name }}" width="1024" height="1024" loading="lazy" decoding="async">
         </div>
       {% endif %}
-      <div class="ingredient-name">{{ ingredient.name }}</div>
+      {% include herb-normalize.html ing=ingredient %}
+      <div class="ingredient-name"><a href="{{ '/characters/' | relative_url }}#herb-{{ hn_name | url_encode }}" title="到圖鑑看「{{ hn_name }}」出現過的所有方劑">{{ ingredient.name }}</a></div>
       <div class="ingredient-desc">{{ ingredient.description }}</div>
     </div>
   {% endfor %}
@@ -68,6 +69,9 @@ layout: default
     </div>
   </section>
   {% endif %}
+
+  <!-- 本草心語抽卡入口 -->
+  {% include oracle-cta.html %}
 
   <!-- 相關文章：依共同「主題標籤」數排序（出處書名、系列名等泛用標籤不計分；同系列只當平手時的加分），取前 3 篇 -->
   {% assign rel_generic = "傷寒論,金匱要略,溫病條辨,太平惠民和劑局方,醫林改錯,醫學心悟,炮製,本草炮製,中藥炮製,入門,進階" | split: "," %}

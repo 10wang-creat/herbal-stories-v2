@@ -1,0 +1,37 @@
+{%- comment -%}
+  文章頁結尾「抽一張本草心語」：優先挑方劑裡第一味有心語卡的藥材（通常是君藥），
+  用藥材名→卡名的 alias 對照；全部對不到就顯示一般入口。
+{%- endcomment -%}
+{%- assign oc = site.data.oracle -%}
+{%- assign oc_card = nil -%}
+{%- for ing in page.ingredients -%}
+  {%- if oc_card -%}{%- break -%}{%- endif -%}
+  {%- assign oc_nm = oc.alias[ing.name] | default: ing.name -%}
+  {%- assign oc_card = oc.cards | where: "n", oc_nm | first -%}
+{%- endfor -%}
+<aside class="oracle-cta-box{% if oc_card %} has-card{% endif %}" aria-labelledby="oracleCtaTitle">
+  {%- if oc_card %}
+  <a class="oracle-cta-card" href="{{ oc.app_url }}?c={{ oc_card.id }}" target="_blank" rel="noopener noreferrer">
+    <img src="{{ oc.image_base }}{{ oc_card.img }}.webp" alt="{{ oc_card.n }} 心語卡" width="300" height="300" loading="lazy" decoding="async">
+  </a>
+  {%- endif %}
+  <div class="oracle-cta-text">
+    <span class="oracle-cta-badge">🔮 本草心語</span>
+    {%- if oc_card %}
+    <h3 id="oracleCtaTitle">故事讀完了，抽一張〈{{ oc_card.n }}〉的心語卡</h3>
+    <p class="oracle-cta-quote">{{ oc_card.mo }}</p>
+    <p class="oracle-cta-desc">{{ oc_card.n }}也是這帖方的成員。81 味本草、81 句話——靜下心翻一張，看看今天它想對你說什麼。</p>
+    <div class="oracle-cta-actions">
+      <a class="oracle-cta-btn" href="{{ oc.app_url }}?c={{ oc_card.id }}" target="_blank" rel="noopener noreferrer">翻開〈{{ oc_card.n }}〉這張卡 →</a>
+      <a class="oracle-cta-link" href="{{ '/oracle/' | relative_url }}">什麼是本草心語？</a>
+    </div>
+    {%- else %}
+    <h3 id="oracleCtaTitle">故事讀完了，抽一張今天的本草心語</h3>
+    <p class="oracle-cta-desc">81 味本草、81 句話。靜下心，想一個問題，翻一張卡，看看今天的草本想對你說什麼。</p>
+    <div class="oracle-cta-actions">
+      <a class="oracle-cta-btn" href="{{ oc.app_url }}" target="_blank" rel="noopener noreferrer">開始抽牌 →</a>
+      <a class="oracle-cta-link" href="{{ '/oracle/' | relative_url }}">什麼是本草心語？</a>
+    </div>
+    {%- endif %}
+  </div>
+</aside>

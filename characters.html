@@ -40,6 +40,9 @@ description: 草本故事館的藥材角色大集合！每味藥材都有獨特�
   gap: 10px;
 }
 
+.char-result-count { text-align: center; color: var(--muted); font-size: 0.9rem; min-height: 1.4em; margin: -14px 0 12px; }
+.character-card { scroll-margin-top: 100px; }
+.character-card.is-target { outline: 3px solid var(--accent-500, #6f9083); outline-offset: 3px; box-shadow: 0 10px 30px rgba(52,67,94,0.2); }
 .filter-btn {
   padding: 8px 20px;
   border: 2px solid #cdddd3;
@@ -237,11 +240,12 @@ a.formula-tag:hover {
 {% assign hc_pairs = "" | split: "" %}
 {% for story in pub_stories %}
   {% for ing in story.ingredients %}
-    {% assign c = ing.category | default: "" %}
+    {% include herb-normalize.html ing=ing %}
+    {% assign c = hn_cat %}
     {% if c != "" %}
-      {% unless hc_names contains ing.name %}
-        {% assign hc_names = hc_names | push: ing.name %}
-        {% capture pr %}{{ ing.name }}|||{{ c }}{% endcapture %}
+      {% unless hc_names contains hn_name %}
+        {% assign hc_names = hc_names | push: hn_name %}
+        {% capture pr %}{{ hn_name }}|||{{ c }}{% endcapture %}
         {% assign hc_pairs = hc_pairs | push: pr %}
       {% endunless %}
     {% endif %}
@@ -272,6 +276,7 @@ a.formula-tag:hover {
     <span class="char-search-ic" aria-hidden="true">🔍</span>
     <input type="text" id="char-search-input" placeholder="輸入藥材名稱，如：當歸、茯苓、石膏…" autocomplete="off" aria-label="搜尋藥材">
   </div>
+  <p class="char-result-count" id="char-result-count" aria-live="polite"></p>
   <div class="filter-bar" id="filter-bar">
     <button class="filter-btn active" data-filter="all">全部</button>
     {% for pair in cat_pairs %}
@@ -298,9 +303,10 @@ a.formula-tag:hover {
 {% for story in sorted_stories %}
   {% if story.ingredients %}
     {% for ingredient in story.ingredients %}
-      {% unless herb_names_seen contains ingredient.name %}
-        {% assign herb_names_seen = herb_names_seen | push: ingredient.name %}
-        {% capture herb_data %}{{ ingredient.name }}|||{{ ingredient.image | default: "" }}|||{{ ingredient.description | default: "" }}|||{{ story.title }}|||{{ story.url }}|||{{ ingredient.category | default: "" }}{% endcapture %}
+      {% include herb-normalize.html ing=ingredient %}
+      {% unless herb_names_seen contains hn_name %}
+        {% assign herb_names_seen = herb_names_seen | push: hn_name %}
+        {% capture herb_data %}{{ hn_name }}|||{{ ingredient.image | default: "" }}|||{{ ingredient.description | default: "" }}|||{{ story.title }}|||{{ story.url }}|||{{ ingredient.category | default: "" }}{% endcapture %}
         {% assign all_herbs = all_herbs | push: herb_data %}
       {% endunless %}
     {% endfor %}
@@ -323,7 +329,8 @@ a.formula-tag:hover {
   {% for s in sorted_stories %}
     {% if s.ingredients %}
       {% for ing in s.ingredients %}
-        {% if ing.name == h_name %}
+        {% assign nm = ing.name %}{% if nm == "紫蘇" or nm == "蘇葉" %}{% assign nm = "紫蘇葉" %}{% endif %}
+        {% if nm == h_name %}
           {% capture formula_info %}{{ s.formula | default: s.title }}|||{{ s.url }}{% endcapture %}
           {% assign appeared_in = appeared_in | push: formula_info %}
         {% endif %}
@@ -331,7 +338,7 @@ a.formula-tag:hover {
     {% endif %}
   {% endfor %}
 
-  <div class="character-card" data-category="{{ h_category }}" data-name="{{ h_name }}">
+  <div class="character-card" id="herb-{{ h_name }}" data-category="{{ h_category }}" data-name="{{ h_name }}">
     <div class="card-image">
       {% if h_image != "" %}
         <img src="{{ site.baseurl }}/assets/images/characters/{{ h_image }}" alt="{{ h_name }}" width="1024" height="1024" loading="lazy" decoding="async">
@@ -371,8 +378,23 @@ document.addEventListener('DOMContentLoaded', function() {
   var cards = document.querySelectorAll('.character-card');
   var totalEl = document.getElementById('total-count');
   var formulaEl = document.getElementById('formula-count');
-  
+  var countEl = document.getElementById('char-result-count');
+  function updateCount(n, label){ if(countEl) countEl.textContent = n === cards.length ? '' : ('顯示 ' + n + ' 位角色' + (label ? '｜' + label : '')); }
+
   totalEl.textContent = cards.length;
+
+  // 從文章頁的藥材名連過來（/characters/#herb-當歸）：高亮該卡片
+  function highlightFromHash(){
+    var id = decodeURIComponent(location.hash || '').slice(1);
+    if (!id) return;
+    var target = document.getElementById(id);
+    if (!target || !target.classList.contains('character-card')) return;
+    document.querySelectorAll('.character-card.is-target').forEach(function(c){ c.classList.remove('is-target'); });
+    target.classList.add('is-target');
+    setTimeout(function(){ target.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 50);
+  }
+  highlightFromHash();
+  window.addEventListener('hashchange', highlightFromHash);
   
   // 計算方劑數量（從頁面中所有 formula-tag 的不重複文字）
   var formulaSet = new Set();
@@ -406,6 +428,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (show) visible++;
       });
       noResults.classList.toggle('show', visible === 0);
+      updateCount(visible, q ? '搜尋「' + this.value.trim() + '」' : '');
     });
   }
 
@@ -426,17 +449,8 @@ document.addEventListener('DOMContentLoaded', function() {
           visibleCount++;
         } else {
           var cat = card.getAttribute('data-category') || '';
-          var desc = card.querySelector('.herb-effect');
-          var descText = desc ? desc.textContent : '';
-          var role = card.querySelector('.herb-role');
-          var roleText = role ? role.textContent : '';
-          var name = card.getAttribute('data-name') || '';
-          
-          // 搜尋分類、描述、角色名稱中是否包含篩選關鍵字
-          if (cat.indexOf(filter) !== -1 || 
-              descText.indexOf(filter) !== -1 || 
-              roleText.indexOf(filter) !== -1 ||
-              name.indexOf(filter) !== -1) {
+          // 嚴格依功效分類篩選（分類已在 front matter 標齊，不再用描述文字模糊比對）
+          if (cat === filter) {
             card.style.display = '';
             visibleCount++;
           } else {
@@ -451,6 +465,7 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         noResults.classList.remove('show');
       }
+      updateCount(visibleCount, filter === 'all' ? '' : filter);
     });
   });
 
@@ -462,14 +477,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     var hasMatch = false;
     cards.forEach(function(card) {
-      var cat = card.getAttribute('data-category') || '';
-      var desc = card.querySelector('.herb-effect');
-      var descText = desc ? desc.textContent : '';
-      var role = card.querySelector('.herb-role');
-      var roleText = role ? role.textContent : '';
-      if (cat.indexOf(filter) !== -1 || descText.indexOf(filter) !== -1 || roleText.indexOf(filter) !== -1) {
-        hasMatch = true;
-      }
+      if ((card.getAttribute('data-category') || '') === filter) hasMatch = true;
     });
     if (!hasMatch) {
       btn.style.display = 'none';

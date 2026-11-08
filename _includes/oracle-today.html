@@ -1,0 +1,12 @@
+{%- comment -%}
+  今日一卡：依日期固定挑一張（全站同一張，網站每天早上 8 點自動重建就會換）。
+  用法：{% include oracle-today.html %} → 之後可用 oracle_today（卡片物件）、oracle_today_img、oracle_today_link
+{%- endcomment -%}
+{%- assign oc = site.data.oracle -%}
+{%- assign oc_total = oc.cards | size -%}
+{%- assign oc_doy = site.time | date: "%j" | plus: 0 -%}
+{%- assign oc_year = site.time | date: "%Y" | plus: 0 | times: 7 -%}
+{%- assign oc_idx = oc_doy | plus: oc_year | modulo: oc_total -%}
+{%- assign oracle_today = oc.cards[oc_idx] -%}
+{%- assign oracle_today_img = oc.image_base | append: oracle_today.img | append: ".webp" -%}
+{%- assign oracle_today_link = oc.app_url | append: "?c=" | append: oracle_today.id -%}
