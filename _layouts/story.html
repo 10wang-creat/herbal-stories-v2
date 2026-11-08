@@ -69,18 +69,20 @@ layout: default
   </section>
   {% endif %}
 
-  <!-- 相關文章：依共同標籤數排序（同系列加 1 分），取前 3 篇 -->
+  <!-- 相關文章：依共同「主題標籤」數排序（出處書名、系列名等泛用標籤不計分；同系列只當平手時的加分），取前 3 篇 -->
+  {% assign rel_generic = "傷寒論,金匱要略,溫病條辨,太平惠民和劑局方,醫林改錯,醫學心悟,炮製,本草炮製,中藥炮製,入門,進階" | split: "," %}
   {% assign rel_pub = site.stories | where_exp: "s", "s.date <= site.time" %}
   {% assign rel_keys = "" | split: "" %}
   {% for s in rel_pub %}
     {% if s.url == page.url %}{% continue %}{% endif %}
     {% assign rel_score = 0 %}
     {% for t in page.tags %}
-      {% if s.tags contains t %}{% assign rel_score = rel_score | plus: 1 %}{% endif %}
+      {% if rel_generic contains t %}{% continue %}{% endif %}
+      {% if s.tags contains t %}{% assign rel_score = rel_score | plus: 10 %}{% endif %}
     {% endfor %}
     {% if rel_score > 0 %}
       {% if s.series == page.series %}{% assign rel_score = rel_score | plus: 1 %}{% endif %}
-      {% assign rel_key = rel_score | prepend: "00" | slice: -2, 2 | append: "|" | append: s.date | append: "|" | append: s.url %}
+      {% assign rel_key = rel_score | prepend: "000" | slice: -3, 3 | append: "|" | append: s.date | append: "|" | append: s.url %}
       {% assign rel_keys = rel_keys | push: rel_key %}
     {% endif %}
   {% endfor %}
@@ -188,7 +190,8 @@ layout: default
         var li = document.createElement('li');
         var a = document.createElement('a');
         a.href = '#' + h.id;
-        a.textContent = h.textContent.replace(/^[\s\p{Extended_Pictographic}\uFE0F]+/u, '').trim() || h.textContent;
+        var t = h.textContent.replace(/^[^\u4e00-\u9fffA-Za-z0-9「『（(]+/, '').trim();
+        a.textContent = t || h.textContent;
         li.appendChild(a);
         list.appendChild(li);
       });
