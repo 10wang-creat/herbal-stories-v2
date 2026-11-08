@@ -122,25 +122,49 @@ title: 首頁
 </section>
 
 <!-- ===== 四時堂小說連載 ===== -->
-<section class="sishitang-section">
+<section class="sishitang-section" aria-labelledby="sishitangTitle">
+  {%- assign ssc = site.data.sishitang.chapters -%}
+  {%- assign ssc_total = ssc | size -%}
+  {%- assign ssc_latest = ssc | reverse -%}
+  {%- assign ssc_salon = site.data.sishitang.salon | default: "https://vocus.cc/salon/herbalstories" -%}
   <div class="sishitang-inner">
     <div class="sishitang-text">
-      <span class="sishitang-badge">📖 小說連載中</span>
-      <h2 class="sishitang-title">四時堂</h2>
+      <span class="sishitang-badge">📖 小說連載中 · 已更新 {{ ssc_total }} 章</span>
+      <h2 class="sishitang-title" id="sishitangTitle">四時堂</h2>
       <p class="sishitang-tagline">抓的不是藥，是心事</p>
       <p class="sishitang-desc">一條快被遺忘的老街上，有一間中藥行。老闆娘抓的不是藥，是心事——一章一味藥，一個帶著症狀走進來的人，一段藏在身體底下的故事。跟著節氣走，慢慢說給你聽。</p>
       <p class="sishitang-seasons">🌱 春祛濕 · ☀️ 夏清暑 · 🍂 秋潤燥 · ❄️ 冬溫補</p>
-      <div class="sishitang-chapters">
-        <span>第一章〈酸棗仁〉他不是睡不著，是不敢睡</span>
-        <span>第二章〈佩蘭〉有些濕，不在身上，在心裡</span>
+      <div class="sishitang-actions">
+        {%- if ssc_latest.first %}
+        <a href="{{ ssc_latest.first.url }}" target="_blank" rel="noopener noreferrer" class="sishitang-cta">讀最新一章〈{{ ssc_latest.first.herb }}〉→</a>
+        {%- endif %}
+        <a href="{{ ssc.first.url | default: ssc_salon }}" target="_blank" rel="noopener noreferrer" class="sishitang-cta ghost">從第一章開始</a>
       </div>
-      <a href="https://vocus.cc/salon/herbalstories" target="_blank" rel="noopener noreferrer" class="sishitang-cta">到方格子看《四時堂》→</a>
-      <div class="sishitang-source">
+      <a class="sishitang-source" href="{{ ssc_salon }}" target="_blank" rel="noopener noreferrer">
         <span class="sishitang-source-ic">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2.4"/><rect x="12.6" y="12.6" width="4.6" height="4.6" rx="1.3" fill="currentColor"/></svg>
         </span>
-        <span>在方格子 vocus 連載</span>
-      </div>
+        <span>在方格子 vocus 連載 · 隔週日晚上更新 · 看全部章節 →</span>
+      </a>
+    </div>
+    <div class="sishitang-list">
+      <div class="sishitang-list-head">最新章節</div>
+      <ol class="sishitang-chapters" reversed start="{{ ssc_total }}">
+        {%- for ch in ssc_latest limit: 4 %}
+        {%- assign ch_no = ssc_total | minus: forloop.index0 %}
+        <li>
+          <a href="{{ ch.url }}" target="_blank" rel="noopener noreferrer"{% if forloop.first %} class="is-new"{% endif %}>
+            <span class="ch-no">第 {{ ch_no }} 章</span>
+            <span class="ch-herb">〈{{ ch.herb }}〉</span>
+            <span class="ch-title">{{ ch.title }}</span>
+            {%- if forloop.first %}<span class="ch-new">NEW</span>{% endif %}
+          </a>
+        </li>
+        {%- endfor %}
+      </ol>
+      {%- if ssc_total > 4 %}
+      <a class="sishitang-more" href="{{ ssc_salon }}" target="_blank" rel="noopener noreferrer">還有 {{ ssc_total | minus: 4 }} 章，到方格子看全部 →</a>
+      {%- endif %}
     </div>
   </div>
 </section>
@@ -253,25 +277,52 @@ title: 首頁
 /* 四時堂小說 */
 .sishitang-section {
   background: linear-gradient(135deg, #f7edf1 0%, #f2e3ea 100%);
-  border-radius: var(--radius-lg); padding: 50px 40px; margin: 56px auto; max-width: 1080px;
+  border-radius: var(--radius-lg); padding: 44px 40px; margin: 56px auto; max-width: 1080px;
   box-shadow: 0 6px 30px rgba(143,58,82,0.1); border: 1px solid #ecd8e0;
 }
-.sishitang-inner { max-width: 780px; margin: 0 auto; }
+.sishitang-inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: start; }
 .sishitang-badge { display: inline-block; background: linear-gradient(135deg, #9a4560, #c15c7a); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; letter-spacing: 1px; }
 .sishitang-title { font-family: var(--serif); font-size: 2.4rem; color: #8f3a52; margin: 12px 0 4px; letter-spacing: 6px; }
 .sishitang-tagline { font-size: 1.1rem; color: #a3506a; font-style: italic; margin-bottom: 16px; }
 .sishitang-desc { color: var(--ink-soft); line-height: 1.85; margin-bottom: 14px; }
-.sishitang-seasons { color: var(--muted); font-size: 0.95rem; margin-bottom: 16px; }
-.sishitang-chapters { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; }
-.sishitang-chapters span { background: #fff; border-left: 3px solid #c15c7a; border-radius: 6px; padding: 9px 14px; font-size: 0.92rem; color: var(--ink); }
-.sishitang-cta { display: inline-block; background: linear-gradient(135deg, #8f3a52, #b0546e); color: #fff; padding: 13px 30px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(143,58,82,0.25); }
+.sishitang-seasons { color: var(--muted); font-size: 0.95rem; margin-bottom: 22px; }
+.sishitang-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.sishitang-cta { display: inline-block; background: linear-gradient(135deg, #8f3a52, #b0546e); color: #fff; padding: 12px 26px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(143,58,82,0.25); }
 .sishitang-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(143,58,82,0.3); }
-.sishitang-source { display: flex; align-items: center; gap: 8px; margin-top: 14px; color: var(--muted); font-size: 0.85rem; }
+.sishitang-cta.ghost { background: #fff; color: #8f3a52; border: 2px solid #c98aa0; box-shadow: none; }
+.sishitang-cta.ghost:hover { background: #fbf3f6; }
+.sishitang-source { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; color: var(--muted); font-size: 0.85rem; text-decoration: none; }
+.sishitang-source:hover { color: #8f3a52; }
 .sishitang-source-ic { width: 22px; height: 22px; border-radius: 6px; background: #e8505b; color: #fff; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .sishitang-source-ic svg { width: 14px; height: 14px; }
+
+.sishitang-list { background: rgba(255,255,255,0.65); border: 1px solid #ecd8e0; border-radius: 16px; padding: 18px 18px 14px; }
+.sishitang-list-head { font-family: var(--serif); font-weight: 700; color: #8f3a52; font-size: 1.05rem; margin-bottom: 10px; padding-left: 4px; }
+.sishitang-chapters { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; }
+.sishitang-chapters a {
+  display: grid; grid-template-columns: auto auto 1fr auto; align-items: baseline; gap: 8px;
+  background: #fff; border-left: 3px solid #c15c7a; border-radius: 8px; padding: 10px 14px;
+  text-decoration: none; color: var(--ink); font-size: 0.92rem; transition: transform 0.2s, box-shadow 0.2s;
+}
+.sishitang-chapters a:hover { transform: translateX(4px); box-shadow: 0 4px 14px rgba(143,58,82,0.15); }
+.sishitang-chapters a.is-new { border-left-color: #8f3a52; background: #fff8fa; }
+.sishitang-chapters .ch-no { color: var(--muted); font-size: 0.8rem; white-space: nowrap; }
+.sishitang-chapters .ch-herb { color: #8f3a52; font-weight: 700; white-space: nowrap; }
+.sishitang-chapters .ch-title { color: var(--ink-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sishitang-chapters .ch-new { background: #c15c7a; color: #fff; font-size: 0.68rem; font-weight: 700; padding: 2px 7px; border-radius: 10px; letter-spacing: 1px; }
+.sishitang-more { display: block; text-align: right; margin-top: 10px; font-size: 0.86rem; color: #a3506a; text-decoration: none; }
+.sishitang-more:hover { text-decoration: underline; }
+
+@media (max-width: 880px) {
+  .sishitang-inner { grid-template-columns: 1fr; gap: 24px; }
+}
 @media (max-width: 768px) {
-  .sishitang-section { padding: 40px 24px; margin: 40px 20px; }
-  .sishitang-chapters span { text-align: left; }
+  .sishitang-section { padding: 32px 20px; margin: 40px 20px; }
+  .sishitang-title { font-size: 2rem; letter-spacing: 4px; }
+  .sishitang-chapters a { grid-template-columns: auto 1fr auto; }
+  .sishitang-chapters .ch-title { grid-column: 1 / -1; white-space: normal; font-size: 0.88rem; }
+  .sishitang-actions .sishitang-cta { flex: 1 1 100%; text-align: center; }
+}
 }
 
 /* 中藥正念日曆 */

@@ -1,0 +1,38 @@
+# 《四時堂》小說連載章節清單（首頁「小說連載中」區塊會自動讀這裡）
+# 新章節請加在最後面；首頁會顯示最新 4 章與總章數。
+# 欄位：herb 藥材名、title 章名、url 方格子文章網址、season 可選（春/夏/秋/冬）
+salon: https://vocus.cc/salon/herbalstories
+chapters:
+  - herb: 酸棗仁
+    title: 你不是睡不著，你是不敢睡
+    url: https://vocus.cc/article/6a266b04fd897800019fedf5
+  - herb: 佩蘭
+    title: 你這濕，不是這個夏天才下的雨
+    url: https://vocus.cc/article/6a26745bfd89780001a2dd12
+  - herb: 薄荷
+    title: 你這個笑，戴很久了
+    url: https://vocus.cc/article/6a2ce00ffd89780001d499f0
+  - herb: 蓮子心
+    title: 最苦的那一點，長在心的正中央
+    url: https://vocus.cc/article/6a4a0c49fd897800017fbf0f
+  - herb: 麥冬
+    title: 妳不缺水，妳是把水都給出去了
+    url: https://vocus.cc/article/6a658288fd89780001fdb5e0
+  - herb: 五味子
+    title: 你不是太累，你是沒有邊
+    url: https://vocus.cc/article/6a658518fd89780001fe70b8
+  - herb: 百合
+    title: 你不是壞了，你是乾了
+    url: https://vocus.cc/article/6a78295cfd897800019e8cde
+  - herb: 桑葉
+    title: 你不是還放不下，你是斷得太乾淨
+    url: https://vocus.cc/article/6a9c07bafd89780001bf9390
+  - herb: 苦杏仁
+    title: 你不是不難過，你是降不下來
+    url: https://vocus.cc/article/6ab14124fd8978000122ad51
+  - herb: 菊花
+    title: 你不是忘不了，你是捨不得眨眼
+    url: https://vocus.cc/article/6ab14296fd8978000123103d
+  - herb: 陳皮
+    title: 你不是想不通，你是放得還不夠久
+    url: https://vocus.cc/article/6adf1d34fd897800011030d4
