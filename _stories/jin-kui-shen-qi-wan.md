@@ -13,32 +13,32 @@ ingredients:
   - name: 附子
     category: 溫裡
     description: 回陽急先鋒｜溫腎助陽、散寒回厥
-    image: fuzi.png
+    image: fuzi.webp
   - name: 肉桂
     category: 溫裡
     description: 佐藥｜引火歸元
-    image: rougui.png
+    image: rougui.webp
   - name: 熟地黃
     description: 君藥｜滋補腎陰
-    image: shudihuang.png
+    image: shudihuang.webp
   - name: 山茱萸
     category: 補腎
     description: 臣藥｜補益肝腎
-    image: shanzhuyu.png
+    image: shanzhuyu.webp
   - name: 山藥
     category: 補氣
     description: 臣藥｜補脾固腎
-    image: shanyao.png
+    image: shanyao.webp
   - name: 澤瀉
     description: 佐藥｜瀉腎濁
-    image: zexie.png
+    image: zexie.webp
   - name: 牡丹皮
     category: 清熱
     description: 佐藥｜清肝火
-    image: mudanpi.png
+    image: mudanpi.webp
   - name: 茯苓
     description: 佐藥｜滲脾濕
-    image: fuling.png
+    image: fuling.webp
 effects: 溫補腎陽，適用於腎陽不足、腰膝冷痛、畏寒肢冷、夜尿頻繁、小便不利、下肢水腫
 ---
 
@@ -171,7 +171,7 @@ effects: 溫補腎陽，適用於腎陽不足、腰膝冷痛、畏寒肢冷、�
 
 ### 🔥 附子——火力供應站
 
-<img src="/assets/images/characters/fuzi.png" alt="附子" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fuzi.webp" alt="附子" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **基本資料**
 - 性味：辛、甘、大熱，**有毒**
@@ -198,7 +198,7 @@ effects: 溫補腎陽，適用於腎陽不足、腰膝冷痛、畏寒肢冷、�
 
 ### 🕯️ 肉桂——溫暖的穩壓器
 
-<img src="/assets/images/characters/rougui.png" alt="肉桂" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/rougui.webp" alt="肉桂" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **基本資料**
 - 性味：辛、甘、大熱
@@ -228,12 +228,12 @@ effects: 溫補腎陽，適用於腎陽不足、腰膝冷痛、畏寒肢冷、�
 ## 🔄 原班人馬：六味地黃丸的六位夥伴
 
 <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:18px 0;">
-  <img src="/assets/images/characters/shudihuang.png" alt="熟地黃" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/shanzhuyu.png" alt="山茱萸" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/shanyao.png" alt="山藥" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/zexie.png" alt="澤瀉" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/mudanpi.png" alt="牡丹皮" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/fuling.png" alt="茯苓" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/shudihuang.webp" alt="熟地黃" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/shanzhuyu.webp" alt="山茱萸" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/shanyao.webp" alt="山藥" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/zexie.webp" alt="澤瀉" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/mudanpi.webp" alt="牡丹皮" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/fuling.webp" alt="茯苓" style="width:88px; height:auto;">
 </div>
 
 這六位是阿凱已經合作三個月的老班底：

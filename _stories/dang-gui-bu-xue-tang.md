@@ -14,10 +14,10 @@ effects: "補氣生血，適用於勞倦內傷、血虛發熱、產後調養、�
 ingredients:
   - name: 黃耆
     description: 氣力總工程師｜大補脾肺之氣，提供造血的能量來源
-    image: huangqi.png
+    image: huangqi.webp
   - name: 當歸
     description: 血液品管師｜養血和營，引導新生的血液各歸其位
-    image: danggui.png
+    image: danggui.webp
 excerpt: "明明叫「補血湯」，為什麼補氣藥用量是補血藥的五倍？這個中醫史上最反直覺的處方，藏著氣血關係的終極密碼。"
 ---
 
@@ -169,7 +169,7 @@ excerpt: "明明叫「補血湯」，為什麼補氣藥用量是補血藥的五�
 
 ### 黃耆的任務履歷
 
-<img src="/assets/images/characters/huangqi.png" alt="黃耆" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/huangqi.webp" alt="黃耆" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 
 | 方劑 | 角色定位 | 任務內容 |
@@ -182,7 +182,7 @@ excerpt: "明明叫「補血湯」，為什麼補氣藥用量是補血藥的五�
 
 ### 當歸的任務履歷
 
-<img src="/assets/images/characters/danggui.png" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/danggui.webp" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 | 方劑 | 角色定位 | 任務內容 |
 |---|---|---|

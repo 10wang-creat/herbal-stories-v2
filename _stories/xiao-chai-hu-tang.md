@@ -14,26 +14,26 @@ effects: "和解少陽，適用於少陽病證所致的往來寒熱、胸脅苦�
 ingredients:
   - name: 柴胡
     description: 疏散先鋒｜透泄少陽之邪、疏暢氣機，把卡住的敵人往外推
-    image: chaihu.png
+    image: chaihu.webp
   - name: 黃芩
     description: 清熱鎮守官｜清泄少陽半裡之熱，防止敵人往裡面跑
-    image: huangqin.png
+    image: huangqin.webp
   - name: 半夏
     description: 降逆止嘔員｜和胃降逆，壓住噁心嘔吐
-    image: banxia.png
+    image: banxia.webp
   - name: 人參
     category: 補氣
     description: 元氣總司令｜益氣扶正，讓身體有力氣打仗
-    image: renshen.png
+    image: renshen.webp
   - name: 炙甘草
     description: 和事佬｜益氣和中、調和諸藥
-    image: gancao.png
+    image: gancao.webp
   - name: 生薑
     description: 暖胃急先鋒｜助半夏和胃止嘔，溫散寒邪
-    image: shengjiang.png
+    image: shengjiang.webp
   - name: 大棗
     description: 補脾甜心｜補中益氣、養血安神，穩固後方
-    image: dazao.png
+    image: dazao.webp
 excerpt: "忽冷忽熱、一下怕冷一下發燒、胸口悶悶的還一直想吐？感冒沒好透卻也不算嚴重——這帖張仲景最經典的「和解」名方，七味藥就能搞定卡在半路的病邪。"
 ---
 
@@ -138,7 +138,7 @@ excerpt: "忽冷忽熱、一下怕冷一下發燒、胸口悶悶的還一直想�
 
 ### 🌿 柴胡（君藥）——疏散先鋒
 
-<img src="/assets/images/characters/chaihu.png" alt="柴胡角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/chaihu.webp" alt="柴胡角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「柴胡是草本故事館的老朋友——[逍遙散](/stories/xiao-yao-san/)裡他就是疏肝解鬱的主將。在那個方子裡，柴胡負責疏通肝氣的鬱結；在小柴胡湯裡，他要做的是更直接的事——**把少陽經的邪氣往外推出去**。」
 
@@ -150,7 +150,7 @@ excerpt: "忽冷忽熱、一下怕冷一下發燒、胸口悶悶的還一直想�
 
 ### 🔥 黃芩（臣藥）——清熱鎮守官
 
-<img src="/assets/images/characters/huangqin.png" alt="黃芩角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/huangqin.webp" alt="黃芩角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「新面孔登場。黃芩是唇形科的植物，用的是它的根——切開來裡面是金黃色的，放久了中間會變成中空的，古人叫它『枯芩』或『片芩』。」
 
@@ -164,10 +164,10 @@ excerpt: "忽冷忽熱、一下怕冷一下發燒、胸口悶悶的還一直想�
 
 ### 💊 半夏 + 生薑（佐藥）——和胃止嘔組
 
-<img src="/assets/images/characters/shengjiang.png" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shengjiang.webp" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 
-<img src="/assets/images/characters/banxia.png" alt="半夏角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/banxia.webp" alt="半夏角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「半夏是[二陳湯](/stories/er-chen-tang/)裡的化痰總司令，還記得吧？在小柴胡湯裡，她的任務不一樣——這次主要是**和胃降逆止嘔**。」
 
@@ -175,10 +175,10 @@ excerpt: "忽冷忽熱、一下怕冷一下發燒、胸口悶悶的還一直想�
 
 ### 💪 人參 + 大棗（佐藥）——扶正後勤組
 
-<img src="/assets/images/characters/dazao.png" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/dazao.webp" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 
-<img src="/assets/images/characters/renshen.png" alt="人參角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/renshen.webp" alt="人參角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「人參是[四君子湯](/stories/sijunzi-tang/)以來的元老了。在小柴胡湯裡，他的任務是**益氣扶正**——讓身體有足夠的正氣來打這場仗。」
 
@@ -186,7 +186,7 @@ excerpt: "忽冷忽熱、一下怕冷一下發燒、胸口悶悶的還一直想�
 
 ### 🌱 炙甘草（使藥）——和事佬
 
-<img src="/assets/images/characters/gancao.png" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 炙甘草在這裡做它最擅長的事——**調和諸藥**。柴胡升散、黃芩沉降、半夏辛燥、人參甘補⋯⋯性格各異的七味藥，靠甘草把它們協調成一個團隊。
 

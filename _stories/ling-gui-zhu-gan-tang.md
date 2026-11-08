@@ -16,19 +16,19 @@ ingredients:
   - name: 茯苓
     category: 利濕
     description: 除濕工程師｜甘淡滲利，健脾利水，把積在中焦的水飲從小便排出去，本方君藥
-    image: fuling.png
+    image: fuling.webp
   - name: 桂枝
     category: 溫裡
     description: 溫陽發動機｜辛甘而溫，溫陽化氣、平沖降逆，水要有熱才化得開
-    image: guizhi.png
+    image: guizhi.webp
   - name: 白朮
     category: 補氣
     description: 脾胃管家｜健脾燥濕，從源頭讓水飲不再生出來
-    image: baizhu.png
+    image: baizhu.webp
   - name: 甘草
     category: 補氣
     description: 和事佬｜炙用，合桂枝辛甘化陽，合白朮益氣健脾，兼調和諸藥
-    image: gancao.png
+    image: gancao.webp
 excerpt: "美惠的早餐店開了二十二年。她每天凌晨四點起床，蹲下去搬豆漿桶、一站起來，整間店就開始旋轉。胸口悶、心臟怦怦跳、胃裡咕嚕咕嚕像裝了半袋水。她以為是貧血。中醫師聽完卻問：「妳店裡的抽風機如果壞了，會怎麼樣？」她說：「整間都是水氣，玻璃全是霧，什麼都看不清楚。」"
 ---
 
@@ -158,7 +158,7 @@ excerpt: "美惠的早餐店開了二十二年。她每天凌晨四點起床，�
 
 #### 茯苓（除濕工程師）
 
-<img src="/assets/images/characters/fuling.png" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fuling.webp" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・健脾利水擔當
 - **專長**：甘、淡，性平。**利水滲濕、健脾、寧心**。三件事剛好對上美惠的三個問題：水飲停著（利水）、脾虛生飲（健脾）、心悸（寧心）。全方他用量最重（四兩）
@@ -169,7 +169,7 @@ excerpt: "美惠的早餐店開了二十二年。她每天凌晨四點起床，�
 
 #### 桂枝（溫陽發動機）
 
-<img src="/assets/images/characters/guizhi.png" alt="桂枝" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/guizhi.webp" alt="桂枝" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・溫陽化氣、平沖降逆擔當
 - **專長**：辛、甘，性溫。在這帖方裡他做兩件事：**一、溫陽化氣**——水是陰的、冷的，要有陽氣去蒸化它，它才會動；**二、平沖降逆**——那股「氣上衝胸」的感覺，由他壓下來
@@ -181,7 +181,7 @@ excerpt: "美惠的早餐店開了二十二年。她每天凌晨四點起床，�
 
 #### 白朮（脾胃管家）
 
-<img src="/assets/images/characters/baizhu.png" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baizhu.webp" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・健脾燥濕擔當
 - **專長**：苦、甘，性溫。**健脾燥濕**。茯苓和桂枝處理的是「已經積著的水」，白朮處理的是「**為什麼會一直積水**」——脾是運化水濕的總管，脾健了，水才不會再停下來。中醫說「**脾為生痰之源**」，治飲不治脾，就是一直在拖地卻不關水龍頭
@@ -191,7 +191,7 @@ excerpt: "美惠的早餐店開了二十二年。她每天凌晨四點起床，�
 
 #### 甘草（和事佬）
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐使藥・益氣和中、調和諸藥
 - **專長**：用**炙甘草**。他在這裡有兩組搭檔：跟桂枝合作，是「**辛甘化陽**」——辛的配甘的，溫陽的效果更穩；跟白朮合作，是**益氣健脾**，幫忙把土培厚

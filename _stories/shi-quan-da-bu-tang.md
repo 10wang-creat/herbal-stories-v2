@@ -14,35 +14,35 @@ ingredients:
   - name: 人參
     category: 補氣
     description: 君藥｜大補元氣
-    image: renshen.png
+    image: renshen.webp
   - name: 白朮
     description: 臣藥｜健脾益氣
-    image: baizhu.png
+    image: baizhu.webp
   - name: 茯苓
     description: 佐藥｜利濕健脾
-    image: fuling.png
+    image: fuling.webp
   - name: 炙甘草
     description: 使藥｜調和諸藥
-    image: gancao.png
+    image: gancao.webp
   - name: 熟地黃
     description: 君藥｜滋陰補血
-    image: shudihuang.png
+    image: shudihuang.webp
   - name: 當歸
     description: 臣藥｜補血活血
-    image: danggui.png
+    image: danggui.webp
   - name: 白芍
     description: 佐藥｜養血柔肝
-    image: baishao.png
+    image: baishao.webp
   - name: 川芎
     description: 佐藥｜活血行氣
-    image: chuanxiong.png
+    image: chuanxiong.webp
   - name: 黃耆
     description: 城牆守將｜補氣固表，撐起最外圈防護罩
-    image: huangqi.png
+    image: huangqi.webp
   - name: 肉桂
     category: 溫裡
     description: 暖爐點火官｜辛熱溫陽、散寒通脈
-    image: rougui.png
+    image: rougui.webp
 effects: 氣血雙補、溫陽益氣，適用於氣血兩虛、陽氣不足、面色蒼白、畏寒肢冷、病後體虛
 ---
 
@@ -107,16 +107,16 @@ David 苦笑：「我已經休息三週了...為什麼還是這麼累？」
 ## 🎭 認識這十位成員
 
 <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:18px 0;">
-  <img src="/assets/images/characters/renshen.png" alt="人參" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/baizhu.png" alt="白朮" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/fuling.png" alt="茯苓" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/gancao.png" alt="炙甘草" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/shudihuang.png" alt="熟地黃" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/danggui.png" alt="當歸" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/baishao.png" alt="白芍" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/chuanxiong.png" alt="川芎" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/huangqi.png" alt="黃耆" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/rougui.png" alt="肉桂" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/renshen.webp" alt="人參" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/baizhu.webp" alt="白朮" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/fuling.webp" alt="茯苓" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/gancao.webp" alt="炙甘草" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/shudihuang.webp" alt="熟地黃" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/danggui.webp" alt="當歸" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/baishao.webp" alt="白芍" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/chuanxiong.webp" alt="川芎" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/huangqi.webp" alt="黃耆" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/rougui.webp" alt="肉桂" style="width:88px; height:auto;">
 </div>
 
 ### 補氣家族（四君子）

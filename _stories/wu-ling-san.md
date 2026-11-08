@@ -15,23 +15,23 @@ effects: "利水滲濕、溫陽化氣，適用於水濕內停所致的小便不�
 ingredients:
   - name: 澤瀉
     description: 利水總指揮｜甘淡性寒，直達腎與膀胱，打開排水閘門
-    image: zexie.png
+    image: zexie.webp
     category: 利濕
   - name: 豬苓
     description: 通水道先鋒｜甘淡性平，專攻疏通水道、利尿排濕
-    image: zhuling.png
+    image: zhuling.webp
     category: 利濕
   - name: 茯苓
     description: 除濕暖男｜甘淡滲利，健脾利濕，老朋友再度歸隊
-    image: fuling.png
+    image: fuling.webp
     category: 利濕
   - name: 白朮
     description: 脾胃守護者｜健脾燥濕、運化水液，從源頭管控水的分配
-    image: baizhu.png
+    image: baizhu.webp
     category: 補氣
   - name: 桂枝
     description: 溫陽發動機｜溫通陽氣、助膀胱氣化，讓排水系統重新啟動
-    image: guizhi.png
+    image: guizhi.webp
     category: 溫裡
 excerpt: "明明一直喝水卻越喝越渴？臉和腳腫得像發麵團？小便少得可憐？你的身體不是缺水，是水的「物流系統」當機了。這帖被譽為「古今利水第一方」的經典名方，五味藥就能重新啟動身體的排水工程。"
 ---
@@ -110,7 +110,7 @@ excerpt: "明明一直喝水卻越喝越渴？臉和腳腫得像發麵團？小�
 
 ### 排水三兄弟
 
-<img src="/assets/images/characters/zexie.png" alt="澤瀉" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/zexie.webp" alt="澤瀉" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **澤瀉——利水總指揮（君藥）**
 
@@ -118,7 +118,7 @@ excerpt: "明明一直喝水卻越喝越渴？臉和腳腫得像發麵團？小�
 
 在五苓散裡，澤瀉的用量最大，是利水的主力軍。它不是粗暴地「瀉水」，而是像一個經驗豐富的水利工程師，精準地疏通該排的水路。
 
-<img src="/assets/images/characters/zhuling.png" alt="豬苓" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/zhuling.webp" alt="豬苓" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **豬苓——通水道先鋒（臣藥）**
 
@@ -126,7 +126,7 @@ excerpt: "明明一直喝水卻越喝越渴？臉和腳腫得像發麵團？小�
 
 豬苓甘淡性平，專門負責**疏通水道**。如果說澤瀉是打開閘門的總工程師，豬苓就是在管線裡面穿梭疏通的工人——哪裡堵了就通哪裡。
 
-<img src="/assets/images/characters/fuling.png" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fuling.webp" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **茯苓——除濕暖男（臣藥）**
 
@@ -136,7 +136,7 @@ excerpt: "明明一直喝水卻越喝越渴？臉和腳腫得像發麵團？小�
 
 ### 幕後關鍵角色
 
-<img src="/assets/images/characters/baizhu.png" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baizhu.webp" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **白朮——脾胃守護者（佐藥）**
 
@@ -144,7 +144,7 @@ excerpt: "明明一直喝水卻越喝越渴？臉和腳腫得像發麵團？小�
 
 白朮跟茯苓是老搭檔，在[玉屏風散](/stories/yu-ping-feng-san/)裡就一起合作過。這次在五苓散裡，他們繼續聯手：白朮管「源頭」（脾的運化），茯苓管「中間」（滲利水濕），分工明確。
 
-<img src="/assets/images/characters/guizhi.png" alt="桂枝" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/guizhi.webp" alt="桂枝" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **桂枝——溫陽發動機（佐藥）**
 

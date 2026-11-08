@@ -15,30 +15,30 @@ excerpt: 站到腰斷、說話沒力、一直感冒？讓升降電梯小隊把�
 ingredients:
   - name: 黃耆
     description: 補氣大將軍｜補氣固表，撐起保護罩
-    image: huangqi.png
+    image: huangqi.webp
   - name: 人參
     category: 補氣
     description: 發電廠廠長｜大補元氣
-    image: renshen.png
+    image: renshen.webp
   - name: 白朮
     description: 後勤總管｜健脾益氣
-    image: baizhu.png
+    image: baizhu.webp
   - name: 炙甘草
     description: 調度總監｜調和諸藥
-    image: gancao.png
+    image: gancao.webp
   - name: 當歸
     description: 血液銀行經理｜補血活血
-    image: danggui.png
+    image: danggui.webp
   - name: 陳皮
     description: 交通指揮｜理氣防滯
-    image: chenpi.png
+    image: chenpi.webp
   - name: 升麻
     category: 解表
     description: 電梯操作員｜升舉陽氣
-    image: shengma.png
+    image: shengma.webp
   - name: 柴胡
     description: 疏通工程師｜升陽疏肝
-    image: chaihu.png
+    image: chaihu.webp
 effects: 補中益氣、升陽舉陷，適用於脾胃氣虛、中氣下陷、久瀉脫肛、子宮下垂、體虛易感
 ---
 
@@ -119,14 +119,14 @@ effects: 補中益氣、升陽舉陷，適用於脾胃氣虛、中氣下陷、�
 ## 🎭 認識補中益氣湯的八位成員
 
 <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:18px 0;">
-  <img src="/assets/images/characters/huangqi.png" alt="黃耆" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/renshen.png" alt="人參" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/baizhu.png" alt="白朮" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/gancao.png" alt="炙甘草" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/danggui.png" alt="當歸" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/chenpi.png" alt="陳皮" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/shengma.png" alt="升麻" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/chaihu.png" alt="柴胡" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/huangqi.webp" alt="黃耆" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/renshen.webp" alt="人參" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/baizhu.webp" alt="白朮" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/gancao.webp" alt="炙甘草" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/danggui.webp" alt="當歸" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/chenpi.webp" alt="陳皮" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/shengma.webp" alt="升麻" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/chaihu.webp" alt="柴胡" style="width:88px; height:auto;">
 </div>
 
 補中益氣湯的團隊陣容龐大，一共有八位成員。其中四位是「四君子湯」的老班底，另外四位是專門來執行「升提任務」的特種部隊。

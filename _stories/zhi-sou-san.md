@@ -15,31 +15,31 @@ ingredients:
   - name: 紫菀
     category: 化痰
     description: 安撫鐘身的手（新角色）｜辛苦而溫潤，潤肺下氣、化痰止咳，溫而不燥，新咳久咳都用得上，本方君藥
-    image: ziwan.png
+    image: ziwan.webp
   - name: 百部
     category: 化痰
     description: 值夜班的老護理師（新角色）｜甘苦微溫，潤肺下氣止咳，不分新久寒熱的咳嗽都接，與紫菀同為君藥
-    image: baibu.png
+    image: baibu.webp
   - name: 桔梗
     category: 化痰
     description: 開窗通風員｜苦辛而平，宣肺利咽、祛痰，負責「往上開」
-    image: jiegeng.png
+    image: jiegeng.webp
   - name: 白前
     category: 化痰
     description: 把氣往下帶的人（新角色）｜辛苦微溫，降氣消痰止咳，負責「往下降」，與桔梗一升一降
-    image: baiqian.png
+    image: baiqian.webp
   - name: 荊芥
     category: 解表
     description: 送客的人｜辛而微溫，疏風解表，把賴在門口的最後一點風邪客客氣氣地送出去
-    image: jingjie.png
+    image: jingjie.webp
   - name: 陳皮
     category: 理氣
     description: 理氣老手｜理氣健脾、燥濕化痰，氣先動，痰才會走
-    image: chenpi.png
+    image: chenpi.webp
   - name: 甘草
     category: 補氣
     description: 和事佬｜調和諸藥，合桔梗利咽止咳
-    image: gancao.png
+    image: gancao.webp
 excerpt: "家豪在補習班教國三數學。兩個禮拜前的感冒早就好了，燒退了、鼻水停了，只剩下咳——喉嚨一癢就咳，一咳就是一串，講解到一半得背過身去。止咳糖漿壓得住兩小時，枇杷膏越吃越悶。中醫師說：「你的肺像一口鐘。鐘還在響，是因為外面還有人在輕輕地敲。」"
 ---
 
@@ -172,7 +172,7 @@ excerpt: "家豪在補習班教國三數學。兩個禮拜前的感冒早就好�
 
 #### 紫菀（安撫鐘身的手）🆕
 
-<img src="/assets/images/characters/ziwan.png" alt="紫菀" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/ziwan.webp" alt="紫菀" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・潤肺下氣、化痰止咳擔當
 - **專長**：本篇新角色。味辛、苦，性溫，但質地柔潤——古人說她「**溫而不熱，潤而不燥**」。這是很難得的性格：溫的藥通常會燥，潤的藥通常偏涼，她兩邊都不沾。所以**不管是新咳還是久咳、偏寒還是偏熱，她都能上場**
@@ -182,7 +182,7 @@ excerpt: "家豪在補習班教國三數學。兩個禮拜前的感冒早就好�
 
 #### 百部（值夜班的老護理師）🆕
 
-<img src="/assets/images/characters/baibu.png" alt="百部" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baibu.webp" alt="百部" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・潤肺止咳擔當
 - **專長**：本篇新角色。味甘、苦，性微溫。**潤肺下氣止咳**，專長就是「止咳」兩個字——**新咳、久咳、寒咳、熱咳**，經過適當配伍他都接。紫菀偏重化痰順氣，他偏重止咳，兩人搭檔當君藥
@@ -195,7 +195,7 @@ excerpt: "家豪在補習班教國三數學。兩個禮拜前的感冒早就好�
 
 #### 桔梗（開窗通風員）
 
-<img src="/assets/images/characters/jiegeng.png" alt="桔梗" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/jiegeng.webp" alt="桔梗" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・宣肺利咽擔當
 - **專長**：苦、辛，性平。**開宣肺氣、祛痰利咽**。痰卡在喉嚨咳不出來，就是肺氣「宣」不開，她負責把窗打開
@@ -204,7 +204,7 @@ excerpt: "家豪在補習班教國三數學。兩個禮拜前的感冒早就好�
 
 #### 白前（把氣往下帶的人）🆕
 
-<img src="/assets/images/characters/baiqian.png" alt="白前" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baiqian.webp" alt="白前" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・降氣消痰擔當
 - **專長**：本篇新角色。味辛、苦，性微溫。**降氣、消痰、止咳**，古人稱他是「**肺家要藥**」。咳嗽的本質是肺氣該降而不降、反而往上衝，他的工作就是把那股氣**順順地帶下去**
@@ -216,7 +216,7 @@ excerpt: "家豪在補習班教國三數學。兩個禮拜前的感冒早就好�
 
 #### 荊芥（送客的人）
 
-<img src="/assets/images/characters/jingjie.png" alt="荊芥" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/jingjie.webp" alt="荊芥" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・疏風解表擔當
 - **專長**：辛，微溫。**祛風解表**，而且是解表藥裡**最溫和**的一位——辛而不烈、溫而不燥，風寒風熱都能用。門口只剩一兩個賴著不走的客人，不需要出動麻黃、桂枝那種大陣仗，**荊芥客客氣氣地送一下就夠了**
@@ -226,7 +226,7 @@ excerpt: "家豪在補習班教國三數學。兩個禮拜前的感冒早就好�
 
 #### 陳皮（理氣老手）
 
-<img src="/assets/images/characters/chenpi.png" alt="陳皮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/chenpi.webp" alt="陳皮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・理氣化痰擔當
 - **專長**：辛、苦，性溫。**理氣健脾、燥濕化痰**。痰黏著咳不出來，很多時候不是痰太多，是**氣不動**。他讓氣先走，痰自然跟著鬆
@@ -237,7 +237,7 @@ excerpt: "家豪在補習班教國三數學。兩個禮拜前的感冒早就好�
 
 #### 甘草（和事佬）
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐使藥・調和諸藥、利咽止咳
 - **專長**：調和七味藥之外，他跟桔梗還有一層老交情——**桔梗配甘草，就是張仲景的「桔梗湯」**，專治咽喉不利。喉嚨癢、痰黏在咽部，這兩位聯手處理

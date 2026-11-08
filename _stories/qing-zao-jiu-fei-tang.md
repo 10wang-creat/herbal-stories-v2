@@ -16,39 +16,39 @@ ingredients:
   - name: 桑葉
     category: 解表
     description: 清透餘熱的人｜質輕性寒，清透肺中燥熱之邪，全方用量最重的君藥
-    image: sangye.png
+    image: sangye.webp
   - name: 石膏
     category: 清熱
     description: 降溫大將（輕裝版）｜辛甘大寒，清泄肺熱，本方只用二錢五分
-    image: shigao.png
+    image: shigao.webp
   - name: 麥門冬
     category: 補陰
     description: 慢慢加水的人｜甘寒養陰潤肺，上一篇的君藥，這一篇退居臣位
-    image: maimendong.png
+    image: maimendong.webp
   - name: 阿膠
     category: 補血
     description: 補窯壁的泥（新角色）｜滋陰養血潤燥，把被烤裂的地方一層層補回來
-    image: ejiao.png
+    image: ejiao.webp
   - name: 胡麻仁
     category: 補陰
     description: 一把黑芝麻（新角色）｜潤燥滑腸、養陰，用最日常的方式補油潤
-    image: humaren.png
+    image: humaren.webp
   - name: 人參
     category: 補氣
     description: 顧著爐火的人｜益氣生津，培土生金，讓身體有力氣自己造水
-    image: renshen.png
+    image: renshen.webp
   - name: 杏仁
     category: 化痰
     description: 降氣專員｜肅降肺氣，把往上衝的喘與咳帶下來
-    image: xingren.png
+    image: xingren.webp
   - name: 枇杷葉
     category: 化痰
     description: 打開煙道的人（新角色）｜蜜炙後降氣止咳、清肺和胃，去毛去燥性
-    image: pipaye.png
+    image: pipaye.webp
   - name: 甘草
     category: 補氣
     description: 和事佬｜培土生金、調和諸藥，兼潤咽喉
-    image: gancao.png
+    image: gancao.webp
 excerpt: "柴窯熄火那天是秋分前三天。明德顧了三天三夜的窯，一千兩百度，火滅之後窯體還要再燙上一個禮拜。回家第五天，他開始乾咳，咳到講一句話要換兩次氣。他以為這是燒窯三十年的職業病——直到中醫師跟他說：「你身上那座窯，火滅了，可是還在燙。」"
 ---
 
@@ -179,7 +179,7 @@ excerpt: "柴窯熄火那天是秋分前三天。明德顧了三天三夜的窯�
 
 #### 桑葉（清透餘熱的人）
 
-<img src="/assets/images/characters/sangye.png" alt="桑葉" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/sangye.webp" alt="桑葉" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・清透燥熱擔當
 - **專長**：質輕性寒，**清透肺中燥熱之邪**。注意那個「透」字——她不是把熱壓下去，是把熱帶出來。全方她的用量最重（三錢），因為餘熱不清，補再多水都會被烤掉
@@ -188,7 +188,7 @@ excerpt: "柴窯熄火那天是秋分前三天。明德顧了三天三夜的窯�
 
 #### 石膏（降溫大將・輕裝版）
 
-<img src="/assets/images/characters/shigao.png" alt="石膏" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shigao.webp" alt="石膏" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・清泄肺熱擔當
 - **專長**：辛甘大寒，**清泄肺熱**。但這一次他是**輕裝上陣**——本方只用二錢五分
@@ -205,7 +205,7 @@ excerpt: "柴窯熄火那天是秋分前三天。明德顧了三天三夜的窯�
 
 #### 麥門冬（慢慢加水的人）
 
-<img src="/assets/images/characters/maimendong.png" alt="麥門冬" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/maimendong.webp" alt="麥門冬" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・養陰潤肺擔當
 - **專長**：甘寒滋潤，**養陰潤肺**，配合桑葉、石膏，一邊清熱一邊補水
@@ -216,7 +216,7 @@ excerpt: "柴窯熄火那天是秋分前三天。明德顧了三天三夜的窯�
 
 #### 阿膠（補窯壁的泥）🆕
 
-<img src="/assets/images/characters/ejiao.png" alt="阿膠" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/ejiao.webp" alt="阿膠" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・滋陰養血潤燥擔當
 - **專長**：本篇新角色。阿膠是驢皮熬煮濃縮而成的膠塊，**質地厚重、黏潤**——她的工作就是把被烤出裂縫的地方，一層一層地補回去。中醫說她「**滋陰補血、潤燥**」，用在乾到見血絲的階段特別合適
@@ -225,7 +225,7 @@ excerpt: "柴窯熄火那天是秋分前三天。明德顧了三天三夜的窯�
 
 #### 胡麻仁（一把黑芝麻）🆕
 
-<img src="/assets/images/characters/humaren.png" alt="胡麻仁" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/humaren.webp" alt="胡麻仁" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・潤燥擔當
 - **專長**：本篇新角色，也是全方最平易近人的一位——**胡麻仁就是黑芝麻**。富含油脂，**潤燥、滑腸、養陰**，原方註明要「炒研」，炒香再磨開，油潤才出得來
@@ -236,7 +236,7 @@ excerpt: "柴窯熄火那天是秋分前三天。明德顧了三天三夜的窯�
 
 #### 人參（顧著爐火的人）
 
-<img src="/assets/images/characters/renshen.png" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/renshen.webp" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・益氣生津擔當
 - **專長**：**益氣生津**。在這帖方裡他還有一個更關鍵的身分——**培土生金**：脾胃屬土、肺屬金，把脾胃顧好，肺才有源源不絕的津液可用
@@ -245,7 +245,7 @@ excerpt: "柴窯熄火那天是秋分前三天。明德顧了三天三夜的窯�
 
 #### 甘草（和事佬）
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐使藥・培土生金、調和諸藥
 - **專長**：與人參同用**培土生金**，並且**調和諸藥**——這一隊有大寒（石膏）、有滋膩（阿膠）、有降氣（杏仁），性質差很多，需要有人把它們調到同一個節奏
@@ -255,7 +255,7 @@ excerpt: "柴窯熄火那天是秋分前三天。明德顧了三天三夜的窯�
 
 #### 杏仁（降氣專員）
 
-<img src="/assets/images/characters/xingren.png" alt="杏仁" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/xingren.webp" alt="杏仁" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・肅降肺氣擔當
 - **專長**：**苦降肺氣**，把往上衝的喘與咳帶下來。原方註明「泡去皮尖、炒黃」
@@ -264,7 +264,7 @@ excerpt: "柴窯熄火那天是秋分前三天。明德顧了三天三夜的窯�
 
 #### 枇杷葉（打開煙道的人）🆕
 
-<img src="/assets/images/characters/pipaye.png" alt="枇杷葉" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/pipaye.webp" alt="枇杷葉" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・降氣止咳擔當
 - **專長**：本篇新角色。**清肺降氣、止咳，並能和胃降逆**。她和杏仁一組，專責把堵住的煙道打開，讓熱有地方散

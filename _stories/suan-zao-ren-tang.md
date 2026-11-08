@@ -15,19 +15,19 @@ ingredients:
   - name: 酸棗仁
     category: 安神
     description: 安眠總監｜養肝血、寧心神，讓躁動的心安靜下來
-    image: suanzaoren.png
+    image: suanzaoren.webp
   - name: 茯苓
     description: 安神副手｜寧心健脾，穩定身心的老朋友
-    image: fuling.png
+    image: fuling.webp
   - name: 知母
     description: 清熱潤燥師｜滋陰清虛熱，幫過熱的身體降溫
-    image: zhimu.png
+    image: zhimu.webp
   - name: 川芎
     description: 血路疏通員｜行氣活血，疏達肝氣
-    image: chuanxiong.png
+    image: chuanxiong.webp
   - name: 甘草
     description: 和事佬｜調和諸藥，益氣和中
-    image: gancao.png
+    image: gancao.webp
 excerpt: "明明累到不行，腦子卻像關不掉的程式？這帖張仲景的千年安眠處方，五味藥就能養血安神、清熱除煩——讓「越累越睡不著」的惡性循環停下來。"
 ---
 
@@ -108,7 +108,7 @@ excerpt: "明明累到不行，腦子卻像關不掉的程式？這帖張仲景�
 
 ### 🌙 酸棗仁（君藥）——安眠總監
 
-<img src="/assets/images/characters/suanzaoren.png" alt="酸棗仁角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/suanzaoren.webp" alt="酸棗仁角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「整個方子的靈魂人物。酸棗仁是酸棗的種子——酸棗是棗子的野生親戚，果實又小又酸，不好吃；但它的種子卻是中藥裡最重要的安神藥之一。」
 
@@ -124,7 +124,7 @@ excerpt: "明明累到不行，腦子卻像關不掉的程式？這帖張仲景�
 
 ### 🍄 茯苓（臣藥）——安神副手
 
-<img src="/assets/images/characters/fuling.png" alt="茯苓角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/fuling.webp" alt="茯苓角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「老朋友了！茯苓在[四君子湯](/stories/sijunzi-tang/)裡負責健脾祛濕，在[歸脾湯](/stories/gui-pi-tang/)裡也有出場。這次她展現的是另一面——**寧心安神**。」
 
@@ -136,7 +136,7 @@ excerpt: "明明累到不行，腦子卻像關不掉的程式？這帖張仲景�
 
 ### 💧 知母（佐藥）——清熱潤燥師
 
-<img src="/assets/images/characters/zhimu.png" alt="知母角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/zhimu.webp" alt="知母角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「新面孔。知母是滋陰清熱的高手，專門對付身體裡的虛火。」
 
@@ -148,7 +148,7 @@ excerpt: "明明累到不行，腦子卻像關不掉的程式？這帖張仲景�
 
 ### 🌊 川芎（佐藥）——血路疏通員
 
-<img src="/assets/images/characters/chuanxiong.png" alt="川芎角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/chuanxiong.webp" alt="川芎角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「川芎也是老朋友了——在[四物湯](/stories/si-wu-tang/)裡就是補血團隊的成員，在[生化湯](/stories/sheng-hua-tang/)裡負責幫產後媽媽推動瘀血排出。這次他的任務是**疏達肝氣**。」
 
@@ -162,7 +162,7 @@ excerpt: "明明累到不行，腦子卻像關不掉的程式？這帖張仲景�
 
 ### ⚖️ 甘草（使藥）——調和大師
 
-<img src="/assets/images/characters/gancao.png" alt="甘草角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「甘草就不用多介紹了——草本故事館的常駐調和大師。」
 

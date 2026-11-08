@@ -16,27 +16,27 @@ ingredients:
   - name: 麥門冬
     category: 補陰
     description: 慢慢加水的人｜重用七升，甘寒滋養肺胃之陰、清降虛火，是全方分量最重的主角
-    image: maimendong.png
+    image: maimendong.webp
   - name: 人參
     category: 補氣
     description: 墊厚鍋底的人｜益氣生津，讓身體有力氣把津液送上去
-    image: renshen.png
+    image: renshen.webp
   - name: 半夏
     category: 化痰
     description: 攪拌的那支鏟子｜降逆下氣、開胃行津，用量只有麥冬的七分之一
-    image: banxia.png
+    image: banxia.webp
   - name: 粳米
     category: 補氣
     description: 一鍋米湯｜益胃生津，最溫和的一種補
-    image: jingmi.png
+    image: jingmi.webp
   - name: 大棗
     category: 補氣
     description: 甜味補給員｜補脾益胃，與粳米一起把中焦的底鋪好
-    image: dazao.png
+    image: dazao.webp
   - name: 甘草
     category: 補氣
     description: 和事佬｜益氣和中、調和諸藥，兼潤咽喉
-    image: gancao.png
+    image: gancao.webp
 excerpt: "淑芬一天喝三千 CC 的水，還是覺得喉嚨乾。乾咳一咳就是一陣，咳到眼淚流出來，痰卻幾乎沒有。她吃了三個星期的化痰藥，越吃越乾。中醫師聽完只問了一句：「你有痰嗎？」——這句話後面，是一個關於「水為什麼留不住」的答案。"
 ---
 
@@ -180,7 +180,7 @@ excerpt: "淑芬一天喝三千 CC 的水，還是覺得喉嚨乾。乾咳一咳
 
 #### 麥門冬（慢慢加水的人）
 
-<img src="/assets/images/characters/maimendong.png" alt="麥門冬" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/maimendong.webp" alt="麥門冬" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・滋養肺胃擔當
 - **專長**：甘寒質潤，**滋養肺胃之陰、清降虛火**。她的做法不是灌，是滲——一點一點地補進去，讓水真的留在鍋裡。原方重用到七升，這個「重用」本身就是處方的一部分
@@ -193,7 +193,7 @@ excerpt: "淑芬一天喝三千 CC 的水，還是覺得喉嚨乾。乾咳一咳
 
 #### 人參（墊厚鍋底的人）
 
-<img src="/assets/images/characters/renshen.png" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/renshen.webp" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・益氣生津擔當
 - **專長**：**大補元氣、益氣生津**。津液不只要「有」，還要有力氣「送上去」——那個力氣就是氣。麥冬負責水，人參負責推
@@ -202,7 +202,7 @@ excerpt: "淑芬一天喝三千 CC 的水，還是覺得喉嚨乾。乾咳一咳
 
 #### 粳米（一鍋米湯）
 
-<img src="/assets/images/characters/jingmi.png" alt="粳米" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/jingmi.webp" alt="粳米" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・益胃生津擔當
 - **專長**：就是我們吃的白米。**益胃、生津、養脾**——最溫和的一種補，不會給虛弱的胃增加負擔
@@ -211,7 +211,7 @@ excerpt: "淑芬一天喝三千 CC 的水，還是覺得喉嚨乾。乾咳一咳
 
 #### 大棗（甜味補給員）
 
-<img src="/assets/images/characters/dazao.png" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/dazao.webp" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・補脾益胃擔當
 - **專長**：**補中益氣、養血安神**，跟粳米一起把中焦的底鋪厚。這一組的甜味也有作用——**甘能緩、能生津**
@@ -219,7 +219,7 @@ excerpt: "淑芬一天喝三千 CC 的水，還是覺得喉嚨乾。乾咳一咳
 
 #### 半夏（攪拌的那支鏟子）
 
-<img src="/assets/images/characters/banxia.png" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/banxia.webp" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・降逆下氣擔當
 - **專長**：全方最有意思的一位。**降逆下氣、開胃行津**——那股往上頂的氣，是他負責壓下來的；而「開胃行津」四個字更關鍵：**只加水不攪，水會浮在焦層上流掉；有他攪一攪，水才滲得進去**
@@ -239,7 +239,7 @@ excerpt: "淑芬一天喝三千 CC 的水，還是覺得喉嚨乾。乾咳一咳
 
 #### 甘草（和事佬）
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：使藥・益氣和中擔當
 - **專長**：**益氣和中、調和諸藥**，並且甘能潤，順帶安撫乾燥的咽喉

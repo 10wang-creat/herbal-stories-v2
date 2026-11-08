@@ -44,7 +44,7 @@ excerpt: "為什麼藥材採來不能直接用，要又炒又蒸又泡？小宇�
 
 ### 一、減毒——把猛將馴服
 
-<img src="/assets/images/characters/fuzi.png" alt="附子" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fuzi.webp" alt="附子" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 「有些藥本事大，但帶毒，生用會傷人。」老闆娘說，「像**附子**、**半夏**這種猛將，得先經過一道道炮製，把毒性壓下來，才敢請上場。」
 
@@ -64,7 +64,7 @@ excerpt: "為什麼藥材採來不能直接用，要又炒又蒸又泡？小宇�
 
 ### 四、改變歸經——分派崗位、指條路
 
-<img src="/assets/images/characters/shudihuang.png" alt="熟地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shudihuang.webp" alt="熟地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 「這招最神。」老闆娘眼睛一亮，「藉著輔料的味道，可以『帶』著藥往身體的某個方向走。」
 
@@ -78,7 +78,7 @@ excerpt: "為什麼藥材採來不能直接用，要又炒又蒸又泡？小宇�
 
 ### 六、便於儲存——學會保存自己
 
-<img src="/assets/images/characters/huangqin.png" alt="黃芩" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/huangqin.webp" alt="黃芩" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 「藥材採回來，要放得住。」
 

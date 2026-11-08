@@ -16,7 +16,7 @@ permalink: /about/
       <div class="section-icon">🌿</div>
       <h2>關於創辦人</h2>
       <figure class="founder-figure">
-        <img src="{{ site.baseurl }}/assets/images/about.png" alt="草本故事館創辦人在書桌前寫作，桌上有本草卡牌、枸杞與麥克風" loading="lazy">
+        <img src="{{ site.baseurl }}/assets/images/about.webp" alt="草本故事館創辦人在書桌前寫作，桌上有本草卡牌、枸杞與麥克風" loading="lazy">
       </figure>
       <p>嗨，我是草本故事館的創辦人。</p>
       <p>我不是中醫師，而是一個對中藥文化充滿熱情的故事創作者。從小看著家裡長輩煎中藥、聽他們說起每一味藥材的故事，讓我對這個領域產生了深深的好奇。</p>

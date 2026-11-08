@@ -14,16 +14,16 @@ effects: "燥濕化痰、理氣和中，適用於濕痰內阻所致的咳嗽痰�
 ingredients:
   - name: 半夏
     description: 化痰總司令｜燥濕化痰、降逆止嘔，痰濕剋星
-    image: banxia.png
+    image: banxia.webp
   - name: 陳皮
     description: 理氣疏通員｜理氣健脾、燥濕化痰，讓氣機動起來
-    image: chenpi.png
+    image: chenpi.webp
   - name: 茯苓
     description: 除濕工程師｜利水滲濕、健脾安神，從根源斷絕痰的生產線
-    image: fuling.png
+    image: fuling.webp
   - name: 炙甘草
     description: 和事佬｜益氣和中、調和諸藥，守護脾胃的老朋友
-    image: gancao.png
+    image: gancao.webp
 excerpt: "痰多、頭昏、身體沉重、腦袋像裹了一層保鮮膜？這帖宋朝的「化痰祖方」，四味藥就能燥濕化痰、理氣和中——幫身體打開除濕機。"
 ---
 
@@ -129,7 +129,7 @@ excerpt: "痰多、頭昏、身體沉重、腦袋像裹了一層保鮮膜？這�
 
 ### 🌿 半夏（君藥）——化痰總司令
 
-<img src="/assets/images/characters/banxia.png" alt="半夏角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/banxia.webp" alt="半夏角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「新面孔登場。半夏是天南星科的植物，用的是它地下的塊莖——白白胖胖的，像個小馬鈴薯。名字很詩意，因為它在夏天的一半——也就是仲夏時節——長成，所以叫半夏。」
 
@@ -145,7 +145,7 @@ excerpt: "痰多、頭昏、身體沉重、腦袋像裹了一層保鮮膜？這�
 
 ### 🍊 陳皮（臣藥）——理氣疏通員
 
-<img src="/assets/images/characters/chenpi.png" alt="陳皮角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/chenpi.webp" alt="陳皮角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「陳皮是[補中益氣湯](/stories/bu-zhong-yi-qi-tang/)裡的老朋友了。在那個方子裡，他負責理氣降濁；在二陳湯裡，他的任務更核心——**理氣健脾、燥濕化痰**。」
 
@@ -159,7 +159,7 @@ excerpt: "痰多、頭昏、身體沉重、腦袋像裹了一層保鮮膜？這�
 
 ### 💧 茯苓（佐藥）——除濕工程師
 
-<img src="/assets/images/characters/fuling.png" alt="茯苓角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/fuling.webp" alt="茯苓角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「茯苓就不用多介紹了吧？」吳醫師笑著看向雅婷，「他是草本故事館出場頻率第二高的角色——從[四君子湯](/stories/sijunzi-tang/)開始就一路跟著，[四神湯](/stories/si-shen-tang/)、[歸脾湯](/stories/gui-pi-tang/)、[六味地黃丸](/stories/liu-wei-di-huang-wan/)、[酸棗仁湯](/stories/suan-zao-ren-tang/)⋯⋯到哪裡都有他。」
 
@@ -171,7 +171,7 @@ excerpt: "痰多、頭昏、身體沉重、腦袋像裹了一層保鮮膜？這�
 
 ### 🌱 炙甘草（使藥）——和事佬
 
-<img src="/assets/images/characters/gancao.png" alt="甘草角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「甘草，出場率最高的角色。」
 

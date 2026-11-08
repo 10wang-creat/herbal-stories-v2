@@ -16,36 +16,36 @@ cover_image: /assets/images/jia-wei-xiao-yao-san-cover.jpg
 ingredients:
   - name: 柴胡
     description: 隊長｜疏肝解鬱，打通情緒堵塞
-    image: chaihu.png
+    image: chaihu.webp
   - name: 當歸
     description: 補血姐姐｜養血活血，滋養肝臟
-    image: danggui.png
+    image: danggui.webp
   - name: 白芍
     description: 柔和妹妹｜養血柔肝，緩解緊繃
-    image: baishao.png
+    image: baishao.webp
   - name: 白朮
     description: 後勤隊長｜健脾益氣，強化消化
-    image: baizhu.png
+    image: baizhu.webp
   - name: 茯苓
     description: 淨化大使｜健脾利濕，排除積水
-    image: fuling.png
+    image: fuling.webp
   - name: 炙甘草
     description: 和事佬｜補氣和中，調和全隊
-    image: gancao.png
+    image: gancao.webp
   - name: 煨薑
     category: 溫裡
     description: 暖心使者｜溫中和胃，促進吸收
-    image: weijiang.png
+    image: weijiang.webp
   - name: 薄荷
     description: 清新精靈｜疏散鬱熱，透達肝氣
-    image: bohe.png
+    image: bohe.webp
   - name: 牡丹皮
     category: 清熱
     description: 涼血消炎官｜清熱涼血，平息血中之火
-    image: mudanpi.png
+    image: mudanpi.webp
   - name: 梔子
     description: 清心降火師｜瀉火除煩，清三焦之熱
-    image: zhizi.png
+    image: zhizi.webp
 effects: 疏肝解鬱、清熱涼血，適用於肝鬱化火、煩躁易怒、潮熱盜汗、口苦咽乾、月經不調
 source: 《內科摘要》
 ---
@@ -322,16 +322,16 @@ Amy 恍然大悟：「難怪我一直覺得有東西在燒⋯⋯」
 ## 🌿 第八章：認識滅火雙俠
 
 <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:18px 0;">
-  <img src="/assets/images/characters/chaihu.png" alt="柴胡" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/danggui.png" alt="當歸" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/baishao.png" alt="白芍" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/baizhu.png" alt="白朮" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/fuling.png" alt="茯苓" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/gancao.png" alt="炙甘草" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/weijiang.png" alt="煨薑" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/bohe.png" alt="薄荷" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/mudanpi.png" alt="牡丹皮" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/zhizi.png" alt="梔子" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/chaihu.webp" alt="柴胡" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/danggui.webp" alt="當歸" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/baishao.webp" alt="白芍" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/baizhu.webp" alt="白朮" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/fuling.webp" alt="茯苓" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/gancao.webp" alt="炙甘草" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/weijiang.webp" alt="煨薑" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/bohe.webp" alt="薄荷" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/mudanpi.webp" alt="牡丹皮" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/zhizi.webp" alt="梔子" style="width:88px; height:auto;">
 </div>
 
 ### 原班人馬回顧

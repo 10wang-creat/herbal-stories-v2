@@ -15,27 +15,27 @@ effects: "寒熱平調、辛開苦降、消痞散結，適用於寒熱錯雜、�
 ingredients:
   - name: 半夏
     description: 開痞隊長｜辛溫開結、和胃降逆止嘔，撬開卡住的中焦
-    image: banxia.png
+    image: banxia.webp
   - name: 黃芩
     description: 降溫官｜苦寒清熱、把上炎的胃熱往下瀉
-    image: huangqin.png
+    image: huangqin.webp
   - name: 黃連
     description: 滅火專員｜苦寒清心胃之火，專消上半身的燥熱
-    image: huanglian.png
+    image: huanglian.webp
   - name: 乾薑
     category: 溫裡
     description: 暖爐戰士｜辛溫散寒、溫中健脾，把下陷的脾寒烘暖
-    image: ganjiang.png
+    image: ganjiang.webp
   - name: 人參
     category: 補氣
     description: 補氣主帥｜大補元氣、健脾扶正，修好主機
-    image: renshen.png
+    image: renshen.webp
   - name: 炙甘草
     description: 和事佬｜益氣和中、調和諸藥，協調這支冷熱混編隊
-    image: gancao.png
+    image: gancao.webp
   - name: 大棗
     description: 暖心後勤｜補中益氣、養血安中，穩固中焦地基
-    image: dazao.png
+    image: dazao.webp
 excerpt: "整天吹冷氣、手搖飲不離手，週末又揪麻辣鍋燒烤——結果上腹脹悶到不行（按下去卻不痛）、又噁心反酸、又動不動拉肚子？這帖張仲景的「和胃消痞」名方，用寒熱同鍋的妙招，把你那台上面噴熱風、下面灌冷氣的腸胃恆溫器重新調好。"
 ---
 
@@ -117,7 +117,7 @@ excerpt: "整天吹冷氣、手搖飲不離手，週末又揪麻辣鍋燒烤—�
 
 ### 半夏（開痞隊長）
 
-<img src="/assets/images/characters/banxia.png" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/banxia.webp" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥·辛溫開結擔當
 - **專長**：辛溫開散、和胃降逆，專門撬開卡在心窩的那團「痞」，順便壓住往上衝的噁心嘔吐
@@ -126,7 +126,7 @@ excerpt: "整天吹冷氣、手搖飲不離手，週末又揪麻辣鍋燒烤—�
 
 ### 黃芩（降溫官）
 
-<img src="/assets/images/characters/huangqin.png" alt="黃芩" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/huangqin.webp" alt="黃芩" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：苦寒清熱擔當
 - **專長**：苦寒沉降，把上炎的胃熱、煩熱往下瀉
@@ -135,7 +135,7 @@ excerpt: "整天吹冷氣、手搖飲不離手，週末又揪麻辣鍋燒烤—�
 
 ### 黃連（滅火專員）🆕（角色回歸）
 
-<img src="/assets/images/characters/huanglian.png" alt="黃連" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/huanglian.webp" alt="黃連" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：苦寒瀉火擔當
 - **專長**：最苦的那一味，專清心、胃的實火——嘴破、反酸、口臭、心煩都是他的守備範圍
@@ -146,7 +146,7 @@ excerpt: "整天吹冷氣、手搖飲不離手，週末又揪麻辣鍋燒烤—�
 
 ### 乾薑（暖爐戰士）🆕
 
-<img src="/assets/images/characters/ganjiang.png" alt="乾薑" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/ganjiang.webp" alt="乾薑" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：辛溫散寒擔當（全新登場）
 - **專長**：火力比生薑更猛更持久的「乾燥版薑」，溫中散寒、烘暖被冰飲凍僵的脾胃
@@ -155,7 +155,7 @@ excerpt: "整天吹冷氣、手搖飲不離手，週末又揪麻辣鍋燒烤—�
 
 ### 人參（補氣主帥）
 
-<img src="/assets/images/characters/renshen.png" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/renshen.webp" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：益氣扶正擔當
 - **專長**：大補元氣、健脾益胃，把空調的「主機」修好、電力補足
@@ -164,7 +164,7 @@ excerpt: "整天吹冷氣、手搖飲不離手，週末又揪麻辣鍋燒烤—�
 
 ### 炙甘草（和事佬）
 
-<img src="/assets/images/characters/gancao.png" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：調和諸藥擔當
 - **專長**：益氣和中，把這支「又寒又熱、又補又瀉」的混編隊調和成一個團隊，不讓他們互相打架
@@ -172,7 +172,7 @@ excerpt: "整天吹冷氣、手搖飲不離手，週末又揪麻辣鍋燒烤—�
 
 ### 大棗（暖心後勤）
 
-<img src="/assets/images/characters/dazao.png" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/dazao.webp" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：補中安中擔當
 - **專長**：補中益氣、養血安中，和人參、甘草一起把中焦的地基墊穩

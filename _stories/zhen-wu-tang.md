@@ -15,23 +15,23 @@ ingredients:
   - name: 附子
     category: 溫裡
     description: 回陽急先鋒｜大辛大熱，溫腎助陽、化氣行水，整棟樓的鍋爐熄了，他負責重新點火，本方君藥
-    image: fuzi.png
+    image: fuzi.webp
   - name: 茯苓
     category: 利濕
     description: 除濕工程師｜甘淡滲利，健脾利水，把積在各層樓的水從小便排出去，臣藥
-    image: fuling.png
+    image: fuling.webp
   - name: 白朮
     category: 補氣
     description: 脾胃管家｜苦甘溫，健脾燥濕，把地板上的水收乾、讓水不再生出來，臣藥
-    image: baizhu.png
+    image: baizhu.webp
   - name: 生薑
     category: 解表
     description: 暖胃急先鋒｜辛溫，溫散水氣、和胃止嘔，附子的副手，幫忙把水氣散開，佐藥
-    image: shengjiang.png
+    image: shengjiang.webp
   - name: 白芍
     category: 補血
     description: 柔和妹妹｜苦酸微寒，利小便、緩急止痛、斂陰，一屋子熱藥旁邊守住不讓燒過頭，佐藥
-    image: baishao.png
+    image: baishao.webp
 excerpt: "美惠的爸爸林阿公七十一歲，退休的水電師傅。小雪前後，他的腳腫到拖鞋穿不下，按下去一個洞半天不回來；怕冷怕到三件毛衣，一站起來天旋地轉，半夜還會抽一下腳。美惠帶他去看自己的中醫師。醫師聽完說：「妳那時候是店裡的抽風機壞了。阿公這個，是整棟樓的鍋爐熄了。」"
 ---
 
@@ -166,7 +166,7 @@ excerpt: "美惠的爸爸林阿公七十一歲，退休的水電師傅。小雪�
 
 #### 附子（回陽急先鋒）
 
-<img src="/assets/images/characters/fuzi.png" alt="附子" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fuzi.webp" alt="附子" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・溫腎助陽、化氣行水擔當
 - **專長**：大辛、大熱，有毒。他是中藥裡**最熱的一味**，古人說他「**走而不守，通行十二經**」——哪裡的陽氣熄了，他就去哪裡點火。腎陽是全身的熱源，他把這口鍋爐重新點起來，水才有辦法被蒸化、推動
@@ -178,7 +178,7 @@ excerpt: "美惠的爸爸林阿公七十一歲，退休的水電師傅。小雪�
 
 #### 茯苓（除濕工程師）
 
-<img src="/assets/images/characters/fuling.png" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fuling.webp" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・健脾利水擔當
 - **專長**：甘、淡，性平。**滲利水濕**，把積在各層樓的水從**小便**排出去。十月在美惠的店裡他當君藥；這一篇鍋爐熄了，他退到第二位——**因為水不化，光抽是抽不完的**，要等附子把火點著
@@ -187,7 +187,7 @@ excerpt: "美惠的爸爸林阿公七十一歲，退休的水電師傅。小雪�
 
 #### 白朮（脾胃管家）
 
-<img src="/assets/images/characters/baizhu.png" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baizhu.webp" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・健脾燥濕擔當
 - **專長**：苦、甘，性溫。**健脾、燥濕**。茯苓把水抽走，他把地板上剩下的水氣**收乾**，而且讓脾胃恢復運作——**水之所以一直積，有一半是脾沒力氣把它運走**。他顧的是「以後不再積」
@@ -198,7 +198,7 @@ excerpt: "美惠的爸爸林阿公七十一歲，退休的水電師傅。小雪�
 
 #### 生薑（暖胃急先鋒）
 
-<img src="/assets/images/characters/shengjiang.png" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shengjiang.webp" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・溫散水氣、和胃止嘔擔當
 - **專長**：辛，微溫。他是**附子的副手**——附子在底下點火，他在中上層把**水氣往外散**。阿公肚子悶、胃口差，也是他顧。注意：這裡用的是**生薑**不是乾薑——生薑走散、乾薑守中，仲景在這裡要的是「散水」
@@ -206,7 +206,7 @@ excerpt: "美惠的爸爸林阿公七十一歲，退休的水電師傅。小雪�
 
 #### 白芍（柔和妹妹）
 
-<img src="/assets/images/characters/baishao.png" alt="白芍" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baishao.webp" alt="白芍" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・利小便、緩急止痛、斂陰擔當
 - **專長**：苦、酸，性微寒。她在這帖方裡**一個人做三件事**。第一，仲景說芍藥能「**利小便**」，幫茯苓開門；第二，**緩急止痛**，阿公的腹痛和那個「身瞤動」肌肉跳動，是她安撫的；第三，**制約附子**——附子大熱燥烈，她酸寒斂陰，**不讓火燒過頭、把陰液燒乾**。一帖溫陽方裡放一味涼藥，這是仲景的手法：「**陽中求陰**」

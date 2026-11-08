@@ -14,23 +14,23 @@ effects: "解肌發表、調和營衛，適用於外感風寒表虛證所致的�
 ingredients:
   - name: 桂枝
     description: 溫陽先鋒｜辛甘散寒，溫通衛陽、解肌祛風，系列的老朋友回到自己的原點
-    image: guizhi.png
+    image: guizhi.webp
     category: 溫裡
   - name: 白芍
     description: 斂陰守將｜酸寒斂陰和營，收住往外跑的營陰，與桂枝一散一收
-    image: baishao.png
+    image: baishao.webp
     category: 補血
   - name: 炙甘草
     description: 和事佬｜益氣和中，與桂枝合則辛甘化陽，與白芍合則酸甘化陰
-    image: gancao.png
+    image: gancao.webp
     category: 補氣
   - name: 生薑
     description: 暖胃急先鋒｜助桂枝發汗解表、溫胃止嘔
-    image: shengjiang.png
+    image: shengjiang.webp
     category: 溫裡
   - name: 大棗
     description: 補脾甜心｜益氣補中，助白芍益陰和營，提供發汗的糧草
-    image: dazao.png
+    image: dazao.webp
     category: 補氣
 excerpt: "怕風、出汗、頭痛、鼻塞流清涕⋯⋯這是最經典的風寒感冒。張仲景《傷寒論》的第一個方子，五味全是老朋友，零新角色，卻被譽為「群方之祖、萬方之冠」。回到原點，才能看見中醫最根本的智慧。"
 ---
@@ -111,7 +111,7 @@ excerpt: "怕風、出汗、頭痛、鼻塞流清涕⋯⋯這是最經典的風�
 
 更特別的是——在草本故事館的系列裡，這五味藥**全部都是老朋友**。它們在前面的文章中各自出過場、各自立過功，現在，終於在第 25 篇回到了它們最初的「家」。
 
-<img src="/assets/images/characters/guizhi.png" alt="桂枝" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/guizhi.webp" alt="桂枝" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **桂枝——溫陽先鋒（君藥）**
 
@@ -119,7 +119,7 @@ excerpt: "怕風、出汗、頭痛、鼻塞流清涕⋯⋯這是最經典的風�
 
 桂枝的任務是幫助衛氣驅散風寒，讓體表的防禦重新正常運作。它不是像麻黃那樣「硬打開毛孔猛發汗」，而是溫和地「解肌」——鬆開被風寒束縛的肌表，讓邪氣自然散去。
 
-<img src="/assets/images/characters/baishao.png" alt="白芍" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baishao.webp" alt="白芍" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **白芍——斂陰守將（臣藥）**
 
@@ -129,13 +129,13 @@ excerpt: "怕風、出汗、頭痛、鼻塞流清涕⋯⋯這是最經典的風�
 
 ### 經典後勤：薑棗草
 
-<img src="/assets/images/characters/shengjiang.png" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shengjiang.webp" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
 
-<img src="/assets/images/characters/dazao.png" alt="大棗" style="float:left; width:100px; margin:0 15px 10px 0;">
+<img src="/assets/images/characters/dazao.webp" alt="大棗" style="float:left; width:100px; margin:0 15px 10px 0;">
 
 **生薑**助桂枝辛散解表，同時溫胃止嘔。**大棗**助白芍益陰和營，同時補中益氣。薑棗搭配，是中醫裡最經典的「調和脾胃、調和營衛」藥對——幾乎在系列的每一帖方子裡都能看到它們的身影。
 
-<img src="/assets/images/characters/gancao.png" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **炙甘草**的角色更妙。它跟桂枝配合是「辛甘化陽」——鞏固衛氣；跟白芍配合是「酸甘化陰」——滋養營血。一味藥同時參與陰陽兩邊的調節，是整個方子的「中樞調度員」。
 

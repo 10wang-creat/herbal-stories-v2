@@ -15,27 +15,27 @@ effects: "養血活血、調經化瘀，適用於血虛兼血瘀證所致的月�
 ingredients:
   - name: 熟地黃
     description: 補血大姐｜甘溫，滋陰補血、填精益髓，為養血奠定基礎，四物湯歸來的老朋友
-    image: shudihuang.png
+    image: shudihuang.webp
     category: 補血
   - name: 當歸
     description: 調度二姐｜甘辛溫，養血活血、調經止痛，補中有行的靈魂人物
-    image: danggui.png
+    image: danggui.webp
     category: 補血
   - name: 白芍
     description: 柔和三妹｜苦酸微寒，養血柔肝、緩急止痛，安撫經期緊繃疼痛
-    image: baishao.png
+    image: baishao.webp
     category: 補血
   - name: 川芎
     description: 活力小妹｜辛溫，血中氣藥、行氣活血、上行頭目，推動全方血行
-    image: chuanxiong.png
+    image: chuanxiong.webp
     category: 補血
   - name: 桃仁
     description: 破瘀先鋒｜苦甘平，破血行滯而潤燥，化開停滯血塊，血府逐瘀湯歸來的老朋友
-    image: taoren.png
+    image: taoren.webp
     category: 活血
   - name: 紅花
     description: 活血女王｜辛溫，活血通經、祛瘀止痛，與桃仁聯手組成「桃紅藥對」
-    image: honghua.png
+    image: honghua.webp
     category: 活血
 excerpt: "月經來時小腹刺痛、經血暗紅還夾著一塊塊血塊，平常又臉色蒼白、容易頭暈手腳冰——這是『血虛』和『血瘀』同時找上門。補血名方四物湯，加上桃仁、紅花兩位活血夥伴，就成了婦科調經的升級版『桃紅四物湯』：一邊把血補回來，一邊把堵住的血塊化開。"
 ---
@@ -104,25 +104,25 @@ excerpt: "月經來時小腹刺痛、經血暗紅還夾著一塊塊血塊，平�
 
 這四位是[四物湯](/stories/si-wu-tang/)歸來的老朋友，負責「把血補足、把血養好」。
 
-<img src="/assets/images/characters/shudihuang.png" alt="熟地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shudihuang.webp" alt="熟地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **熟地黃——補血大姐**
 
 家族裡最踏實的滋養擔當，**滋陰補血、填精益髓**，負責把血液的「量」補回來。她的特點是厚重滋膩，脾胃虛弱的人用量要斟酌。
 
-<img src="/assets/images/characters/danggui.png" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/danggui.webp" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **當歸——調度二姐**
 
 四姊妹的靈魂人物，最特別的是**既補血又活血**——補中帶行。在桃紅四物湯裡，她正好是「補血」和「活血」兩個小隊之間的橋樑。
 
-<img src="/assets/images/characters/baishao.png" alt="白芍" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baishao.webp" alt="白芍" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **白芍——柔和三妹**
 
 專長是**養血柔肝、緩急止痛**。經痛很多時候是子宮缺血而痙攣，白芍就像輕柔的按摩，把緊繃的疼痛安撫下來。
 
-<img src="/assets/images/characters/chuanxiong.png" alt="川芎" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/chuanxiong.webp" alt="川芎" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **川芎——活力小妹**
 
@@ -132,13 +132,13 @@ excerpt: "月經來時小腹刺痛、經血暗紅還夾著一塊塊血塊，平�
 
 這兩位是[血府逐瘀湯](/stories/xue-fu-zhu-yu-tang/)歸來的老朋友，專門負責「清淤泥」。
 
-<img src="/assets/images/characters/taoren.png" alt="桃仁" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/taoren.webp" alt="桃仁" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **桃仁——破瘀先鋒**
 
 桃子的種子，苦甘平，最擅長**破血行滯**——直接打破停滯凝結的血塊。它富含油脂，能潤燥潤腸，避免活血藥太剛猛而傷陰。妳的暗黑血塊，就靠它來化開。
 
-<img src="/assets/images/characters/honghua.png" alt="紅花" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/honghua.webp" alt="紅花" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **紅花——活血女王**
 

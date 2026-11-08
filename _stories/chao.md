@@ -18,11 +18,11 @@ effects: "清炒（不加輔料）：依火候深淺分炒黃、炒焦、炒炭�
 ingredients:
   - name: 山楂
     description: 炒焦代表藥｜生山楂偏活血消食；焦山楂增強消食化積止瀉、緩其酸
-    image: shanzha.png
+    image: shanzha.webp
     category: 消食
   - name: 荊芥
     description: 炒炭代表藥｜生荊芥發表散風；荊芥炭轉而止血，藥性大變
-    image: jingjie.png
+    image: jingjie.webp
     category: 解表
 excerpt: "小宇看老闆娘守著一口鍋，同樣的藥，卻在鍋裡炒出了淺黃、焦褐、烏黑三種顏色。她說：這不是炒壞了，是三種不同的『火候』，各有各的用處。這是炮製系列・火候篇的第一站。"
 ---
@@ -67,14 +67,14 @@ excerpt: "小宇看老闆娘守著一口鍋，同樣的藥，卻在鍋裡炒出�
 
 ### 山楂：活血的，與消食的
 
-<img src="/assets/images/characters/shanzha.png" alt="山楂" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shanzha.webp" alt="山楂" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **生山楂**偏於活血化瘀、兼能消食，酸味也重。
 **焦山楂**炒到焦褐後，消食化積、止瀉的本事被推強，那股酸也緩了下來——吃多了油膩、積食腹脹，找的就是它。[保和丸](/stories/bao-he-wan/) 這帖消食名方裡的山楂，用的常是焦山楂。
 
 ### 荊芥：發表的，與止血的
 
-<img src="/assets/images/characters/jingjie.png" alt="荊芥" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/jingjie.webp" alt="荊芥" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 這是「炒炭改變藥性」最戲劇化的例子。
 **生荊芥**是解表散風的藥，用於感冒初起（[銀翹散](/stories/yin-qiao-san/) 裡就有它）。

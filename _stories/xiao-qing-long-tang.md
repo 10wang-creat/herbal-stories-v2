@@ -16,35 +16,35 @@ ingredients:
   - name: 麻黃
     category: 解表
     description: 撬窗的人｜辛溫，發汗解表、宣肺平喘，去外面把凍住的窗撬開，與桂枝同為君藥
-    image: mahuang.png
+    image: mahuang.webp
   - name: 桂枝
     category: 解表
     description: 溫陽發動機｜辛甘而溫，解表散寒、溫陽化飲，外面推寒、裡面幫忙燒水，與麻黃同為君藥
-    image: guizhi.png
+    image: guizhi.webp
   - name: 乾薑
     category: 溫裡
     description: 暖爐戰士｜大辛大熱，溫肺化飲，把屋裡那灘冰水燒乾，臣藥
-    image: ganjiang.png
+    image: ganjiang.webp
   - name: 細辛
     category: 解表
     description: 解凍專員｜辛溫走竄，溫肺化飲、兼助解表，裡外兩頭跑，臣藥
-    image: xixin.png
+    image: xixin.webp
   - name: 半夏
     category: 化痰
     description: 降逆止嘔員｜辛溫，燥濕化痰、降逆止咳，把抽出來的水送走，佐藥
-    image: banxia.png
+    image: banxia.webp
   - name: 五味子
     category: 收澀
     description: 收斂守門員｜酸溫，斂肺止咳，門開了之後負責把它關好，不讓肺氣跟著散掉，佐藥
-    image: wuweizi.png
+    image: wuweizi.webp
   - name: 白芍
     category: 補血
     description: 柔和妹妹｜苦酸微寒，養血斂陰，一屋子辛溫猛將旁邊，她負責不讓津液被燒乾，佐藥
-    image: baishao.png
+    image: baishao.webp
   - name: 甘草
     category: 補氣
     description: 和事佬｜炙用，益氣和中、調和諸藥，八個人的隊伍一樣由他收尾，佐使藥
-    image: gancao.png
+    image: gancao.webp
 excerpt: "怡萱三十八歲，在苗栗教幼兒園。她從小有過敏性氣喘，每一波寒流準時發作：鼻水像關不緊的水龍頭、咳到喘、痰白白的像泡沫，躺下去更咳。她的吸入劑一直帶在身上。中醫師聽完胸口說：「妳這間房子，外面下著雪，屋裡還淹著水。兩件事要一起處理。」"
 ---
 
@@ -172,7 +172,7 @@ excerpt: "怡萱三十八歲，在苗栗教幼兒園。她從小有過敏性氣�
 
 #### 麻黃（撬窗的人）
 
-<img src="/assets/images/characters/mahuang.png" alt="麻黃" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/mahuang.webp" alt="麻黃" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・發汗解表、宣肺平喘擔當
 - **專長**：上週剛登場，這週就回鍋。辛溫，**發汗解表**是本行；但這一篇他還做一件上週沒講的事——**宣肺利水**。古人說「提壺揭蓋」：茶壺蓋上的小孔塞住了，水倒不出來；肺氣打開了，底下的水才有路走。麻黃就是把那個小孔捅開的人
@@ -181,7 +181,7 @@ excerpt: "怡萱三十八歲，在苗栗教幼兒園。她從小有過敏性氣�
 
 #### 桂枝（溫陽發動機）
 
-<img src="/assets/images/characters/guizhi.png" alt="桂枝" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/guizhi.webp" alt="桂枝" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・解表散寒、溫陽化飲擔當
 - **專長**：辛、甘，性溫。跟麻黃組成「麻桂相須」把寒推出去。但他在這裡還有第二個身分——**[苓桂朮甘湯](/stories/ling-gui-zhu-gan-tang/)** 裡那個「水要有熱才化得開」的桂枝。一個人兩頭忙：**外面推寒，裡面幫忙燒水**
@@ -191,7 +191,7 @@ excerpt: "怡萱三十八歲，在苗栗教幼兒園。她從小有過敏性氣�
 
 #### 乾薑（暖爐戰士）
 
-<img src="/assets/images/characters/ganjiang.png" alt="乾薑" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/ganjiang.webp" alt="乾薑" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・溫肺化飲擔當
 - **專長**：大辛大熱。在 **[理中湯](/stories/li-zhong-tang/)** 裡他燒的是肚子裡那口電鍋；這一篇他**把爐子搬到肺裡**，專門把那一灘冰水燒乾。古人說「**病痰飲者，當以溫藥和之**」——水飲是寒的，一定要用熱才化得開，不能用涼藥去「化痰」
@@ -199,7 +199,7 @@ excerpt: "怡萱三十八歲，在苗栗教幼兒園。她從小有過敏性氣�
 
 #### 細辛（解凍專員）
 
-<img src="/assets/images/characters/xixin.png" alt="細辛" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/xixin.webp" alt="細辛" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・溫肺化飲、兼助解表擔當
 - **專長**：兩週前在 **[當歸四逆湯](/stories/dang-gui-si-ni-tang/)** 登場，他鑽進指尖解凍；這一篇他**鑽進肺裡**。辛溫走竄的本事，讓他在這支隊伍裡**裡外兩頭跑**——外面幫麻黃、桂枝散寒，裡面幫乾薑化飲。他和乾薑是「燒水」的主力
@@ -210,7 +210,7 @@ excerpt: "怡萱三十八歲，在苗栗教幼兒園。她從小有過敏性氣�
 
 #### 半夏（降逆止嘔員）
 
-<img src="/assets/images/characters/banxia.png" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/banxia.webp" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・燥濕化痰、降逆止嘔擔當
 - **專長**：辛，性溫。**[二陳湯](/stories/er-chen-tang/)** 的隊長。乾薑、細辛把水燒成了水氣，總要有人把它**抽走、送下去**——半夏負責化痰、降逆。原文裡那個「乾嘔」，也是他處理的
@@ -218,7 +218,7 @@ excerpt: "怡萱三十八歲，在苗栗教幼兒園。她從小有過敏性氣�
 
 #### 五味子（收斂守門員）
 
-<img src="/assets/images/characters/wuweizi.png" alt="五味子" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/wuweizi.webp" alt="五味子" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・斂肺止咳擔當
 - **專長**：酸、溫。在 **[生脈散](/stories/sheng-mai-san/)** 裡他兜住快要流失的元氣；這一篇他**守在門口**：麻黃、桂枝、乾薑、細辛四個辛溫猛將把門窗都打開了，肺氣會跟著往外散——他的工作是**把門收好，咳久的人才不會越咳越虛**。他跟乾薑、細辛是「一開一收」的鐵三角
@@ -226,7 +226,7 @@ excerpt: "怡萱三十八歲，在苗栗教幼兒園。她從小有過敏性氣�
 
 #### 白芍（柔和妹妹）
 
-<img src="/assets/images/characters/baishao.png" alt="白芍" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baishao.webp" alt="白芍" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・養血斂陰擔當
 - **專長**：苦、酸，性微寒。整帖方八味藥有六味辛溫，**燒得太旺會把津液一起燒乾**——她和五味子一個養陰、一個收斂，是這支隊伍的**防火牆**。她還跟桂枝維持桂枝湯裡那組「調和營衛」的默契
@@ -236,7 +236,7 @@ excerpt: "怡萱三十八歲，在苗栗教幼兒園。她從小有過敏性氣�
 
 #### 甘草（和事佬）
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐使藥・益氣和中、調和諸藥
 - **專長**：炙用。八個人、兩個小隊、辛溫酸寒都有，**沒有他這隊會打架**。順便顧住脾胃，不讓這麼多辛溫藥傷到中焦

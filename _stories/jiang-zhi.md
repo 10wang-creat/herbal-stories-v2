@@ -17,11 +17,11 @@ effects: "薑炙：以生薑汁為輔料炒製。目的在溫中止嘔、化痰�
 ingredients:
   - name: 半夏
     description: 薑炙代表藥｜生半夏有毒、刺激咽喉；薑半夏減其毒與刺激，增強降逆止嘔化痰
-    image: banxia.png
+    image: banxia.webp
     category: 化痰
   - name: 厚朴
     description: 薑炙代表藥｜生厚朴氣味辛烈、刺激咽喉；薑厚朴消除刺激，增強溫中行氣寬中
-    image: houpo.png
+    image: houpo.webp
     category: 理氣
 excerpt: "後場一股薑味撲鼻，小宇以為老闆娘感冒了在煮薑湯。她說：這薑不是給人喝的，是拿來『安撫』藥的——安撫那些又烈又刺激的猛脾氣。這是炮製系列・輔料篇的壓軸。"
 ---
@@ -65,7 +65,7 @@ excerpt: "後場一股薑味撲鼻，小宇以為老闆娘感冒了在煮薑湯�
 
 ### 半夏：帶毒的生手，與安分的薑半夏
 
-<img src="/assets/images/characters/banxia.png" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/banxia.webp" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 還記得總綱裡那位需要「減毒」才敢上場的猛將嗎？**生半夏**有毒，對咽喉刺激很強，不能直接內服。
 經薑（常再配白礬）炮製成**薑半夏**之後，毒性與刺激大幅降低，降逆止嘔、化痰的本事被穩穩留下——這才是 [半夏瀉心湯](/stories/ban-xia-xie-xin-tang/)、[二陳湯](/stories/er-chen-tang/)、[藿香正氣散](/stories/huoxiang-zhengqi-san/) 裡那個安分好用的半夏。
@@ -74,7 +74,7 @@ excerpt: "後場一股薑味撲鼻，小宇以為老闆娘感冒了在煮薑湯�
 
 ### 厚朴：刺喉的，與溫順的薑厚朴
 
-<img src="/assets/images/characters/houpo.png" alt="厚朴" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/houpo.webp" alt="厚朴" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **生厚朴**氣味辛烈，對咽喉有刺激。
 **薑厚朴**（薑炙）消除了這股刺激，還增強了溫中行氣、寬中除滿的作用——[平胃散](/stories/ping-wei-san/) 裡負責化濕行氣的厚朴，用的正是這溫順版。

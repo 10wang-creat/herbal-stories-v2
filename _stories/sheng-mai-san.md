@@ -15,14 +15,14 @@ ingredients:
   - name: 人參
     category: 補氣
     description: 元氣總司令｜大補元氣、益氣生津，把快要見底的能量灌回來
-    image: renshen.png
+    image: renshen.webp
   - name: 麥門冬
     description: 潤澤滋養師｜養陰清熱、潤肺生津，像沙漠裡的綠洲
-    image: maimendong.png
+    image: maimendong.webp
   - name: 五味子
     category: 收澀
     description: 收斂守門員｜斂肺止汗、生津止渴，把快要流失的元氣兜住
-    image: wuweizi.png
+    image: wuweizi.webp
 excerpt: "大汗淋漓、口渴灌水也沒用、整個人像被掏空？這帖只有三味藥的千年名方，一補一清一斂——讓快要斷線的脈搏重新跳回來。"
 ---
 
@@ -125,7 +125,7 @@ excerpt: "大汗淋漓、口渴灌水也沒用、整個人像被掏空？這帖�
 
 ### 🏆 人參（君藥）——元氣總司令
 
-<img src="/assets/images/characters/renshen.png" alt="人參角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/renshen.webp" alt="人參角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「人參你一定聽過吧？草本故事館的老班底了——[四君子湯](/stories/sijunzi-tang/)裡他就是團長，[補中益氣湯](/stories/bu-zhong-yi-qi-tang/)裡也有他，連[玉屏風散](/stories/yu-ping-feng-san/)裡都客串過。但這次的任務很不一樣。」
 
@@ -139,7 +139,7 @@ excerpt: "大汗淋漓、口渴灌水也沒用、整個人像被掏空？這帖�
 
 ### 💧 麥門冬（臣藥）——潤澤滋養師
 
-<img src="/assets/images/characters/maimendong.png" alt="麥門冬角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/maimendong.webp" alt="麥門冬角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「新面孔登場。麥門冬是百合科的植物，用的是它肥嘟嘟的塊根——掰開來裡面是半透明的，水潤水潤的，光看就覺得解渴。」
 
@@ -155,7 +155,7 @@ excerpt: "大汗淋漓、口渴灌水也沒用、整個人像被掏空？這帖�
 
 ### 🔒 五味子（佐藥）——收斂守門員
 
-<img src="/assets/images/characters/wuweizi.png" alt="五味子角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/wuweizi.webp" alt="五味子角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「五味子，顧名思義——酸、甘、苦、辛、鹹，五種味道都有，但以**酸味**為主。它是木蘭科的漿果，一串串小小紅紅的，別看它小，作用可大了。」
 

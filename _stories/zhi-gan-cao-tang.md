@@ -15,39 +15,39 @@ ingredients:
   - name: 炙甘草
     category: 補氣
     description: 和事佬，這次當隊長｜甘溫，益氣補中、復脈，原方四兩、方名用他的名字，第一次當君藥
-    image: gancao.png
+    image: gancao.webp
   - name: 生地黃
     category: 清熱
     description: 滋陰清涼飲｜甘苦寒，滋陰養血、生津，全方用量最重，一斤，幫浦的油由他加，臣藥
-    image: shengdi.png
+    image: shengdi.webp
   - name: 人參
     category: 補氣
     description: 發電廠廠長｜甘微溫，大補元氣、生津，幫浦要有電，臣藥
-    image: renshen.png
+    image: renshen.webp
   - name: 桂枝
     category: 解表
     description: 溫陽發動機｜辛甘溫，溫通心陽、通行血脈，按下啟動鍵的人，佐藥
-    image: guizhi.png
+    image: guizhi.webp
   - name: 阿膠
     category: 補血
     description: 補窯壁的泥｜甘平，滋陰養血，跟生地一起把油箱填滿，佐藥
-    image: ejiao.png
+    image: ejiao.webp
   - name: 麥門冬
     category: 補陰
     description: 慢慢加水的人｜甘微寒，養陰生津、清心除煩，阿嬤的嘴乾和睡不好由他顧，佐藥
-    image: maimendong.png
+    image: maimendong.webp
   - name: 火麻仁
     category: 補陰
     description: 一把麻籽（新角色）｜甘平，潤燥滋陰、潤腸通便，別跟胡麻仁搞混，佐藥
-    image: huomaren.png
+    image: huomaren.webp
   - name: 大棗
     category: 補氣
     description: 補脾甜心｜甘溫，補中益氣、養血，原方三十枚，全隊的油箱備品，佐藥
-    image: dazao.png
+    image: dazao.webp
   - name: 生薑
     category: 解表
     description: 暖胃急先鋒｜辛微溫，溫通、和胃，幫桂枝把陽氣推出去，使藥
-    image: shengjiang.png
+    image: shengjiang.webp
 excerpt: "林阿嬤六十八歲，照顧老伴從小雪到大雪。阿公的水退了、煤堆好了，她自己卻在陪診的時候一直按著胸口。心臟會突然重跳一下、然後像停了半拍；爬樓梯喘、晚上醒來三四次、嘴乾得要起來喝水。心臟科的心電圖說是偶發的早期收縮、心臟結構正常、觀察就好。中醫師說：「阿嬤，妳家的幫浦沒壞，是油燒乾了，所以走走停停。」"
 ---
 
@@ -158,7 +158,7 @@ excerpt: "林阿嬤六十八歲，照顧老伴從小雪到大雪。阿公的水�
 
 #### 炙甘草（和事佬，這次當隊長）
 
-<img src="/assets/images/characters/gancao.png" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・益氣補中、復脈擔當
 - **專長**：甘，溫（炙用）。今年他出場了幾十次，幾乎每次都是「和事佬」——使藥、調和諸藥、站在最後面。**這一篇他是隊長**，用量四兩，方名用他的名字。為什麼？因為「**復脈**」這件事，仲景認為甘草做得到：**甘能補中，中氣足了，脈才有力氣接上**。而且九味藥寒熱不一、滋膩和辛溫並存，**要有一個人把大家調成一帖方**——還是他
@@ -169,7 +169,7 @@ excerpt: "林阿嬤六十八歲，照顧老伴從小雪到大雪。阿公的水�
 
 #### 生地黃（滋陰清涼飲）
 
-<img src="/assets/images/characters/shengdi.png" alt="生地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shengdi.webp" alt="生地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・滋陰養血、生津擔當
 - **專長**：甘、苦，寒。**全方用量最重，一斤**。他是幫浦的**油**——阿嬤的嘴乾、舌光、便乾、瘦，全是油燒乾了，他把油加回去。注意用的是**生地**不是熟地：生地偏涼、偏潤，適合「乾」；熟地偏溫、偏膩，適合「虛寒」。阿嬤不怕冷，所以用生地
@@ -179,7 +179,7 @@ excerpt: "林阿嬤六十八歲，照顧老伴從小雪到大雪。阿公的水�
 
 #### 人參（發電廠廠長）
 
-<img src="/assets/images/characters/renshen.png" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/renshen.webp" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・大補元氣、生津擔當
 - **專長**：甘、微苦，微溫。幫浦要有油，也要有**電**。阿嬤的沒力、喘、煮完飯要坐十分鐘，是氣虛；他把氣補回來。而且他能**生津**，加油也有他一份
@@ -190,7 +190,7 @@ excerpt: "林阿嬤六十八歲，照顧老伴從小雪到大雪。阿公的水�
 
 #### 阿膠（補窯壁的泥）
 
-<img src="/assets/images/characters/ejiao.png" alt="阿膠" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/ejiao.webp" alt="阿膠" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・滋陰養血擔當
 - **專長**：甘，平。驢皮熬的膠，「**血肉有情之品**」——跟上兩週的羊肉、鹿角膠是同一類。生地加的是「水」，他加的是「**血**」，一起把油箱填滿。阿嬤的瘦、臉色灰，是他顧
@@ -200,7 +200,7 @@ excerpt: "林阿嬤六十八歲，照顧老伴從小雪到大雪。阿公的水�
 
 #### 麥門冬（慢慢加水的人）
 
-<img src="/assets/images/characters/maimendong.png" alt="麥門冬" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/maimendong.webp" alt="麥門冬" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・養陰生津、清心除煩擔當
 - **專長**：甘，微寒。他除了加水，還能**清心**——阿嬤晚上虛煩、醒了睡不回去，是心裡的陰不夠、虛火擾著；麥冬把那一點點火安下來
@@ -209,7 +209,7 @@ excerpt: "林阿嬤六十八歲，照顧老伴從小雪到大雪。阿公的水�
 
 #### 火麻仁（一把麻籽）★ 新角色
 
-<img src="/assets/images/characters/huomaren.png" alt="火麻仁" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/huomaren.webp" alt="火麻仁" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・潤燥滋陰、潤腸通便擔當
 - **專長**：甘，平。大麻的種子（藥用品種，不含致幻成分），**油脂豐富**，用最日常的方式補油潤：阿嬤兩三天才解一次的便乾，是他處理；而且他跟生地、阿膠一起，讓整帖方「潤」得更徹底
@@ -218,7 +218,7 @@ excerpt: "林阿嬤六十八歲，照顧老伴從小雪到大雪。阿公的水�
 
 #### 大棗（補脾甜心）
 
-<img src="/assets/images/characters/dazao.png" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/dazao.webp" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・補中益氣、養血擔當
 - **專長**：甘，溫。原方**三十枚**，用量不小。他是全隊的**油箱備品**：補脾、補血、生津，而且甜，讓一斤生地的苦澀好入口
@@ -229,7 +229,7 @@ excerpt: "林阿嬤六十八歲，照顧老伴從小雪到大雪。阿公的水�
 
 #### 桂枝（溫陽發動機）
 
-<img src="/assets/images/characters/guizhi.png" alt="桂枝" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/guizhi.webp" alt="桂枝" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・溫通心陽、通行血脈擔當
 - **專長**：辛、甘，溫。九味藥裡七味在補、在潤——**補進去的油要有人推，不然只是堆在那裡**。桂枝負責**溫通心陽**，把脈接上。他是這帖方裡**唯一真正「動」的藥**，少了他，一斤生地會膩在胃裡
@@ -238,7 +238,7 @@ excerpt: "林阿嬤六十八歲，照顧老伴從小雪到大雪。阿公的水�
 
 #### 生薑（暖胃急先鋒）
 
-<img src="/assets/images/characters/shengjiang.png" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shengjiang.webp" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：使藥・溫通、和胃擔當
 - **專長**：辛，微溫。桂枝的副手——幫他把陽氣推出去，而且**和胃**：一斤生地加阿膠，胃會悶，他顧著讓胃能消化

@@ -17,11 +17,11 @@ effects: "蜜炙：以煉蜜為輔料、文火炒製。目的在緩和藥性與�
 ingredients:
   - name: 甘草
     description: 蜜炙代表藥｜生甘草偏涼，清熱解毒；蜜炙成炙甘草後偏溫，補脾益氣、緩急復脈
-    image: gancao.png
+    image: gancao.webp
     category: 補氣
   - name: 黃耆
     description: 蜜炙代表藥｜生黃耆走表固表；蜜炙成炙黃耆後往裡走，補中益氣、升陽
-    image: huangqi.png
+    image: huangqi.webp
     category: 補氣
 excerpt: "藥單上明明寫的是甘草，怎麼多了一個『炙』字？老闆娘笑著說：那一個字，是有人先幫它裹了一層蜜。這是炮製系列・輔料篇的第一站。"
 ---
@@ -91,7 +91,7 @@ excerpt: "藥單上明明寫的是甘草，怎麼多了一個『炙』字？老�
 
 ### 甘草：退火的，與補氣的
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **生甘草**個性偏涼，是個「退火的」——清熱解毒、祛痰止咳，火氣大、喉嚨痛時找它。
 一旦蜜炙成了**炙甘草**，性子轉溫，搖身變成「補氣的暖男」——補脾和胃、益氣，連幫心臟「接電復脈」都靠它。
@@ -100,7 +100,7 @@ excerpt: "藥單上明明寫的是甘草，怎麼多了一個『炙』字？老�
 
 ### 黃耆：守門的，與補裡的
 
-<img src="/assets/images/characters/huangqi.png" alt="黃耆" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/huangqi.webp" alt="黃耆" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **生黃耆**像個站在大門口的**守衛**——固表止汗、托瘡生肌，力量往體表走，把虛弱的防線守起來（你在 [玉屏風散](/stories/yu-ping-feng-san/) 裡看到的，就是這一面）。
 蜜炙成**炙黃耆**之後，它從門口退回屋裡，改當「**補中益氣**的大內總管」，補的力道往裡、往上托。

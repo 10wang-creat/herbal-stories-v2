@@ -15,14 +15,14 @@ excerpt: 換季必感冒、動不動就被傳染？三人城防小隊幫你打�
 ingredients:
   - name: 黃耆
     description: 城牆建築師｜補氣固表，加厚防護罩
-    image: huangqi.png
+    image: huangqi.webp
   - name: 白朮
     description: 地基工程師｜健脾益氣，鞏固根基
-    image: baizhu.png
+    image: baizhu.webp
   - name: 防風
     category: 解表
     description: 巡邏隊長｜祛風散邪，守衛城門
-    image: fangfeng.png
+    image: fangfeng.webp
 effects: 益氣固表止汗，適用於表虛自汗、反覆感冒、過敏性鼻炎、畏風怕冷、換季易感
 ---
 
@@ -142,7 +142,7 @@ effects: 益氣固表止汗，適用於表虛自汗、反覆感冒、過敏性�
 
 ### 黃耆（城牆建築師）
 
-<img src="/assets/images/characters/huangqi.png" alt="黃耆" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/huangqi.webp" alt="黃耆" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **角色：** 君藥——城防總指揮  
 **專長：** 補氣固表，把城牆加厚加固  
@@ -164,7 +164,7 @@ effects: 益氣固表止汗，適用於表虛自汗、反覆感冒、過敏性�
 
 ### 白朮（地基工程師）
 
-<img src="/assets/images/characters/baizhu.png" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baizhu.webp" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **角色：** 臣藥——後勤支援  
 **專長：** 健脾益氣，讓城牆的根基穩固  
@@ -184,7 +184,7 @@ effects: 益氣固表止汗，適用於表虛自汗、反覆感冒、過敏性�
 
 ### 防風（巡邏隊長）
 
-<img src="/assets/images/characters/fangfeng.png" alt="防風" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fangfeng.webp" alt="防風" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **角色：** 佐使藥——機動偵察  
 **專長：** 祛風散邪，在城牆上巡邏、驅趕入侵者  

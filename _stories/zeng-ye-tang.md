@@ -16,15 +16,15 @@ ingredients:
   - name: 玄參
     category: 清熱
     description: 開閘放水的人（新角色）｜苦鹹而涼，滋陰降火、潤燥軟堅，全方用量最重的君藥
-    image: xuanshen.png
+    image: xuanshen.webp
   - name: 麥門冬
     category: 補陰
     description: 慢慢加水的人｜甘寒養陰生津，滋肺胃之陰，肺與大腸相表裡，上游有雨、下游才有水
-    image: maimendong.png
+    image: maimendong.webp
   - name: 生地黃
     category: 清熱
     description: 滋陰清涼飲｜甘苦而寒，清熱涼血、養陰生津，把地底的水脈補回來
-    image: shengdi.png
+    image: shengdi.webp
 excerpt: "淑芬的外公在安平的舊運河撐過竹筏。退潮的時候，竹筏擱在泥灘上，外公從來不下去推，就坐在筏尾抽菸等水。六十二歲這年秋天，淑芬便秘了三個禮拜，瀉藥越吃越多、肚子越來越乾。中醫師聽完只說了一句話：「妳一直在叫人下去推船，可是河裡沒有水。」"
 ---
 
@@ -149,7 +149,7 @@ excerpt: "淑芬的外公在安平的舊運河撐過竹筏。退潮的時候，�
 
 #### 玄參（開閘放水的人）🆕
 
-<img src="/assets/images/characters/xuanshen.png" alt="玄參" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/xuanshen.webp" alt="玄參" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・滋陰降火、潤燥擔當
 - **專長**：本篇新角色。味苦、鹹，性微寒。**滋陰降火、潤燥軟堅**——「鹹」能軟堅，乾硬的東西遇到他會慢慢鬆開；「寒」能清熱，把還在烤著河床的那點虛火降下來。古人說他能「**壯水以制火**」，把腎水這座最上游的水庫打開
@@ -161,7 +161,7 @@ excerpt: "淑芬的外公在安平的舊運河撐過竹筏。退潮的時候，�
 
 #### 麥門冬（慢慢加水的人）
 
-<img src="/assets/images/characters/maimendong.png" alt="麥門冬" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/maimendong.webp" alt="麥門冬" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・養陰生津擔當
 - **專長**：甘寒滋潤，**養肺胃之陰**。便秘為什麼要顧肺？因為中醫講「**肺與大腸相表裡**」，肺主肅降、布散津液——**肺是天，大腸是河的下游；天上有雨，下游才有水**
@@ -170,7 +170,7 @@ excerpt: "淑芬的外公在安平的舊運河撐過竹筏。退潮的時候，�
 
 #### 生地黃（滋陰清涼飲）
 
-<img src="/assets/images/characters/shengdi.png" alt="生地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shengdi.webp" alt="生地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・清熱涼血、養陰生津擔當
 - **專長**：甘、苦，性寒。**清熱涼血、養陰生津**。他的水來自地底——質地厚重多汁，補的是比較深層的陰液。吳鞠通特別指定用「**細生地**」，取其滋而不膩

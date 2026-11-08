@@ -15,19 +15,19 @@ ingredients:
   - name: 乾薑
     category: 溫裡
     description: 暖爐戰士｜大辛大熱，溫中祛寒，把中焦那把火重新點起來，本方君藥
-    image: ganjiang.png
+    image: ganjiang.webp
   - name: 人參
     category: 補氣
     description: 發電廠廠長｜甘溫益氣、補脾，火點著了，還要有電一直供著
-    image: renshen.png
+    image: renshen.webp
   - name: 白朮
     category: 補氣
     description: 脾胃管家｜苦溫健脾燥濕，把鍋裡多出來的水氣收乾
-    image: baizhu.png
+    image: baizhu.webp
   - name: 甘草
     category: 補氣
     description: 和事佬｜炙用，益氣和中、緩急止痛、調和諸藥，像電鍋的保溫鍵
-    image: gancao.png
+    image: gancao.webp
 excerpt: "承翰三十四歲，在竹科寫程式，一天兩杯冰美式，從五月喝到十月。寒露那個禮拜，他開始每天早上肚子悶痛、拉稀，抱著熱水袋會好一點。他以為是腸胃炎，中醫師卻問他：「你家的電鍋，外鍋沒按下去，米放一整天會熟嗎？」"
 ---
 
@@ -153,7 +153,7 @@ excerpt: "承翰三十四歲，在竹科寫程式，一天兩杯冰美式，從�
 
 #### 乾薑（暖爐戰士）
 
-<img src="/assets/images/characters/ganjiang.png" alt="乾薑" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/ganjiang.webp" alt="乾薑" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・溫中祛寒擔當
 - **專長**：大辛大熱，**溫中祛寒、扶陽抑陰**。他的熱不往外散，是**守在中焦、持久地暖著**。脾胃虛寒的根本是「冷」，所以由他當君藥
@@ -165,7 +165,7 @@ excerpt: "承翰三十四歲，在竹科寫程式，一天兩杯冰美式，從�
 
 #### 人參（發電廠廠長）
 
-<img src="/assets/images/characters/renshen.png" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/renshen.webp" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・補氣健脾擔當
 - **專長**：甘溫，**大補元氣、補脾益肺**。乾薑按下了開關，但如果**根本沒電**，加熱盤一樣不會熱。虛寒的「虛」，就交給他
@@ -176,7 +176,7 @@ excerpt: "承翰三十四歲，在竹科寫程式，一天兩杯冰美式，從�
 
 #### 白朮（脾胃管家）
 
-<img src="/assets/images/characters/baizhu.png" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baizhu.webp" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・健脾燥濕擔當
 - **專長**：苦溫，**健脾、燥濕**。脾一虛寒，水濕就運不走，積在中焦變成腹脹、便溏。白朮的工作是把多出來的水氣收乾，讓鍋裡的水量回到剛剛好
@@ -187,7 +187,7 @@ excerpt: "承翰三十四歲，在竹科寫程式，一天兩杯冰美式，從�
 
 #### 甘草（和事佬）
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐使藥・益氣和中、調和諸藥
 - **專長**：這裡用的是**炙甘草**（蜜炙過的），甘溫，補中益氣的力量更強。他做三件事：幫人參**補氣**、**緩急止痛**（肚子的隱痛靠他緩下來）、把乾薑的辛烈**調得柔和持久**

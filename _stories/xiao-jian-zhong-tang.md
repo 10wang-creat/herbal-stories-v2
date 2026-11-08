@@ -15,22 +15,22 @@ ingredients:
   - name: 飴糖
     category: 補氣
     description: 甜蜜隊長｜溫補中焦、緩急止痛，用最溫柔的甘甜撫平痙攣
-    image: yitang.png
+    image: yitang.webp
   - name: 白芍
     description: 柔肝鎮痛師｜養血柔肝、緩急止痛，安撫暴躁的肝木
-    image: baishao.png
+    image: baishao.webp
   - name: 桂枝
     description: 暖陽先鋒｜溫通陽氣、散寒止痛，把溫暖送進每個角落
-    image: guizhi.png
+    image: guizhi.webp
   - name: 炙甘草
     description: 和事佬｜益氣和中、調和諸藥，全隊的黏合劑
-    image: gancao.png
+    image: gancao.webp
   - name: 生薑
     description: 暖胃急先鋒｜溫胃散寒，幫助脾胃重新暖機
-    image: shengjiang.png
+    image: shengjiang.webp
   - name: 大棗
     description: 補脾甜心｜補中益氣、養血安神，脾胃最忠實的後勤
-    image: dazao.png
+    image: dazao.webp
 excerpt: "一變天就喊肚子痛、一吃冰就拉肚子？這帖張仲景的千年暖胃方，六味藥就能溫中補虛、緩急止痛——幫脾胃裡的小爐火重新旺起來。"
 ---
 
@@ -151,7 +151,7 @@ excerpt: "一變天就喊肚子痛、一吃冰就拉肚子？這帖張仲景的�
 
 ### 🍯 飴糖（君藥）——甜蜜隊長
 
-<img src="/assets/images/characters/yitang.png" alt="飴糖角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/yitang.webp" alt="飴糖角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「飴糖就是麥芽糖，古時候叫**膠飴**。你吃過那種金黃色、可以拉絲的麥芽糖嗎？」
 
@@ -169,7 +169,7 @@ excerpt: "一變天就喊肚子痛、一吃冰就拉肚子？這帖張仲景的�
 
 ### 🌿 白芍（臣藥）——柔肝鎮痛師
 
-<img src="/assets/images/characters/baishao.png" alt="白芍角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/baishao.webp" alt="白芍角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「白芍是草本故事館的老面孔了——在[逍遙散](/stories/xiao-yao-san/)裡，她就是負責安撫肝氣的溫柔角色。」
 
@@ -181,7 +181,7 @@ excerpt: "一變天就喊肚子痛、一吃冰就拉肚子？這帖張仲景的�
 
 ### 🔥 桂枝（臣藥）——暖陽先鋒
 
-<img src="/assets/images/characters/guizhi.png" alt="桂枝角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/guizhi.webp" alt="桂枝角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「新朋友報到。桂枝是肉桂樹的嫩枝，跟我們煮咖啡用的肉桂是親戚，但藥性不太一樣。肉桂用的是樹皮，溫熱的力道很猛；桂枝用的是嫩枝，溫通的力道剛好——像春天的暖陽，不會燙傷人，但能把寒氣慢慢逼走。」
 
@@ -195,7 +195,7 @@ excerpt: "一變天就喊肚子痛、一吃冰就拉肚子？這帖張仲景的�
 
 ### 🫚 生薑（佐藥）——暖胃急先鋒
 
-<img src="/assets/images/characters/shengjiang.png" alt="生薑角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/shengjiang.webp" alt="生薑角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「生薑不用多介紹了吧？[生化湯](/stories/sheng-hua-tang/)裡的老朋友。」
 
@@ -203,7 +203,7 @@ excerpt: "一變天就喊肚子痛、一吃冰就拉肚子？這帖張仲景的�
 
 ### 🫘 大棗（佐藥）——補脾甜心
 
-<img src="/assets/images/characters/dazao.png" alt="大棗角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/dazao.webp" alt="大棗角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「大棗也是系列裡的元老級角色，從[八珍湯](/stories/ba-zhen-tang/)就開始出場了。」
 
@@ -211,7 +211,7 @@ excerpt: "一變天就喊肚子痛、一吃冰就拉肚子？這帖張仲景的�
 
 ### 🌱 炙甘草（佐使藥）——和事佬
 
-<img src="/assets/images/characters/gancao.png" alt="甘草角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草角色" style="max-width: 120px; float: right; margin: 0 0 10px 15px;">
 
 「甘草⋯⋯應該不用介紹了。」陳醫師笑了，「草本故事館出場率最高的角色，沒有之一。」
 

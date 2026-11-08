@@ -17,11 +17,11 @@ effects: "醋炙：以醋為輔料炒製或潤製。目的在引藥入肝、增�
 ingredients:
   - name: 柴胡
     description: 醋炙代表藥｜生柴胡解表升散；醋柴胡增強疏肝解鬱、引藥入肝、緩其升散
-    image: chaihu.png
+    image: chaihu.webp
     category: 解表
   - name: 延胡索
     description: 醋炙代表藥｜醋炙助生物鹼溶出，止痛力明顯增強，行氣活血止痛
-    image: yanhusuo.png
+    image: yanhusuo.webp
     category: 止痛
 excerpt: "後場飄來一股酸嗆味，小宇皺起鼻子。老闆娘說：別小看這口醋，它最會『認路』——認的是肝的路。這是炮製系列・輔料篇的第三站。"
 ---
@@ -66,14 +66,14 @@ excerpt: "後場飄來一股酸嗆味，小宇皺起鼻子。老闆娘說：別�
 
 ### 柴胡：解表的，與疏肝的
 
-<img src="/assets/images/characters/chaihu.png" alt="柴胡" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/chaihu.webp" alt="柴胡" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **生柴胡**擅長解表退熱、和解少陽，性子偏升散、往外走（[小柴胡湯](/stories/xiao-chai-hu-tang/) 裡就是這一面）。
 **醋柴胡**被醋一收、一引，升散之性被收攏，疏肝解鬱的力道被推到前面，專走肝經——用於肝鬱氣滯、胸脅脹痛。[逍遙散](/stories/xiao-yao-san/)、[血府逐瘀湯](/stories/xue-fu-zhu-yu-tang/) 裡負責疏肝理氣的柴胡，要的常是這股收進肝裡的疏泄力。
 
 ### 延胡索：止痛的加強版
 
-<img src="/assets/images/characters/yanhusuo.png" alt="延胡索" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/yanhusuo.webp" alt="延胡索" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 延胡索本就是止痛良藥，一旦**醋炙**，生物鹼更容易溶出，止痛效果再上一階——「氣血凝滯的各種痛，醋延胡索都想插一腳」。記住這位止痛小能手就對了：**醋，是延胡索止痛的放大器。**
 

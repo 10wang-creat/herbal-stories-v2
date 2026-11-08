@@ -16,19 +16,19 @@ ingredients:
   - name: 白朮
     category: 補氣
     description: 後勤隊長｜補脾燥濕，把人手不足的倉庫重新撐起來
-    image: baizhu.png
+    image: baizhu.webp
   - name: 白芍
     category: 補血
     description: 緩急安撫者｜柔肝止痛、酸斂逆氣，把那股急收一收
-    image: baishao.png
+    image: baishao.webp
   - name: 陳皮
     category: 理氣
     description: 協調窗口｜理氣醒脾、炒香燥濕，讓氣行則痛止
-    image: chenpi.png
+    image: chenpi.webp
   - name: 防風
     category: 解表
     description: 引路傳令兵｜散肝舒脾、風能勝濕，理脾引經要藥
-    image: fangfeng.png
+    image: fangfeng.webp
 excerpt: "每次早會前一定要先上一次廁所。肚子先絞痛，然後急著找廁所，瀉完就鬆了——出門前不敢喝東西，長途開車前先禁食。大腸鏡做了兩次都正常，醫師說是大腸激躁症，要放輕鬆。四百多年前有一帖只有四味藥的方，講的正是這件事：不是腸子壞了，是肝和脾在吵架。"
 ---
 
@@ -166,7 +166,7 @@ excerpt: "每次早會前一定要先上一次廁所。肚子先絞痛，然後�
 
 ### 白朮（後勤隊長）
 
-<img src="/assets/images/characters/baizhu.png" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baizhu.webp" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・補脾燥濕擔當
 - **專長**：苦能燥濕、甘能補脾、溫能和中——一個人做三件事。倉管部人手不足，他負責**把人力補齊**；地板一直潮，他負責**把濕氣烘乾**。倉庫站穩了，業務部就吼不動它
@@ -175,7 +175,7 @@ excerpt: "每次早會前一定要先上一次廁所。肚子先絞痛，然後�
 
 ### 白芍（緩急安撫者）
 
-<img src="/assets/images/characters/baishao.png" alt="白芍" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baishao.webp" alt="白芍" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・柔肝止痛擔當
 - **專長**：酸能收、寒能清、柔能緩。她的工作是**安撫那位吼人的主管**——把肝過度亢奮的氣收斂回來，古人稱之為「**緩急止痛**」。那種一陣一陣扭著的絞痛，正是「急」的表現，她負責把它「緩」下來
@@ -185,7 +185,7 @@ excerpt: "每次早會前一定要先上一次廁所。肚子先絞痛，然後�
 
 ### 陳皮（協調窗口）
 
-<img src="/assets/images/characters/chenpi.png" alt="陳皮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/chenpi.webp" alt="陳皮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・理氣醒脾擔當
 - **專長**：辛能行氣、苦能燥濕、香能醒脾。兩個部門吵架最缺的是**中間那個會傳話的人**——陳皮就是那個角色。他把堵住的氣理順，讓訊息重新流動。《醫方集解》說「使氣行則痛止」，五個字講完他的價值
@@ -194,7 +194,7 @@ excerpt: "每次早會前一定要先上一次廁所。肚子先絞痛，然後�
 
 ### 防風（引路傳令兵）
 
-<img src="/assets/images/characters/fangfeng.png" alt="防風" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fangfeng.webp" alt="防風" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：使藥・散肝舒脾擔當
 - **專長**：這一味是全方最令人意外的設計。防風平常是治外感、擋風邪的角色，怎麼會出現在止瀉方裡？《醫方集解》給了三個理由：**辛能散肝**（把鬱住的肝氣往外疏開）、**香能舒脾**（芳香醒脾）、**風能勝濕**（風藥能把濕吹散，就像晾衣服要有風）。而且它是「**理脾引經要藥**」——負責把整隊的藥力帶到該去的地方

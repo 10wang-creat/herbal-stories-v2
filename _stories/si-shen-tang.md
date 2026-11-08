@@ -11,19 +11,19 @@ excerpt: 腸胃不好、容易拉肚子？認識台灣夜市裡的養生智慧�
 ingredients:
   - name: 茯苓
     description: 臣藥｜健脾利濕
-    image: fuling.png
+    image: fuling.webp
   - name: 芡實
     category: 收澀
     description: 固澀守門員｜健脾固腎、收澀止瀉
-    image: qianshi.png
+    image: qianshi.webp
   - name: 蓮子
     category: 安神
     description: 安神哄睡師｜養心安神、補脾止瀉
-    image: lianzi.png
+    image: lianzi.webp
   - name: 山藥
     category: 補氣
     description: 三補拿手｜平補脾肺腎，補而不燥
-    image: shanyao.png
+    image: shanyao.webp
 effects: 健脾養胃、利濕止瀉，適用於脾胃虛弱、食慾不振、消化不良、慢性腹瀉
 ---
 
@@ -72,7 +72,7 @@ effects: 健脾養胃、利濕止瀉，適用於脾胃虛弱、食慾不振、�
 
 ### 茯苓（除濕小幫手）
 
-<img src="/assets/images/characters/fuling.png" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fuling.webp" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 
 **性格**：低調內斂，默默做事  
@@ -89,7 +89,7 @@ effects: 健脾養胃、利濕止瀉，適用於脾胃虛弱、食慾不振、�
 
 ### 芡實（收斂小衛士）
 
-<img src="/assets/images/characters/qianshi.png" alt="芡實" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/qianshi.webp" alt="芡實" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **性格**：穩重踏實，守護力強  
 **專長**：益腎固精，補脾止瀉  
@@ -105,7 +105,7 @@ effects: 健脾養胃、利濕止瀉，適用於脾胃虛弱、食慾不振、�
 
 ### 蓮子（安心小天使）
 
-<img src="/assets/images/characters/lianzi.png" alt="蓮子" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/lianzi.webp" alt="蓮子" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 
 **性格**：溫柔細膩，善解人意  
@@ -122,7 +122,7 @@ effects: 健脾養胃、利濕止瀉，適用於脾胃虛弱、食慾不振、�
 
 ### 山藥（補養小管家）
 
-<img src="/assets/images/characters/shanyao.png" alt="山藥" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shanyao.webp" alt="山藥" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **性格**：溫厚樸實，營養滿滿  
 **專長**：補脾養胃，生津益肺  

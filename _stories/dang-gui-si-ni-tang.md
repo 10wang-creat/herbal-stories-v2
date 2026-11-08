@@ -15,31 +15,31 @@ ingredients:
   - name: 當歸
     category: 補血
     description: 調度二姐｜甘辛溫，補血活血、溫通經脈，管線裡要先有水，熱才送得到末端，本方君藥
-    image: danggui.png
+    image: danggui.webp
   - name: 桂枝
     category: 解表
     description: 溫陽發動機｜辛甘而溫，溫經散寒、通行血脈，把熱水器的火開大，與當歸同為君藥
-    image: guizhi.png
+    image: guizhi.webp
   - name: 白芍
     category: 補血
     description: 柔和妹妹｜苦酸微寒，養血和營、緩急止痛，跟當歸一起把血補足，臣藥
-    image: baishao.png
+    image: baishao.webp
   - name: 細辛
     category: 解表
     description: 解凍專員（新角色）｜辛溫走竄，溫經散寒、通利血脈，專門處理結了冰的末端管線，臣藥
-    image: xixin.png
+    image: xixin.webp
   - name: 通草
     category: 利濕
     description: 細管疏通員｜甘淡微寒，通利血脈關節，把堵住的細管捅開，佐藥
-    image: tongcao.png
+    image: tongcao.webp
   - name: 大棗
     category: 補氣
     description: 補脾甜心｜甘溫補中益氣、養血，原方用了二十五枚，是全隊的水塔，佐藥
-    image: dazao.png
+    image: dazao.webp
   - name: 甘草
     category: 補氣
     description: 和事佬｜炙用，益氣和中、調和諸藥，跟大棗一起守住後勤，佐使藥
-    image: gancao.png
+    image: gancao.webp
 excerpt: "佳穎三十一歲，在竹北的會計事務所做審計。每年一入冬，她的手指就像別人的——先發白、再發紫，打字要先用熱水泡五分鐘。手套、暖暖包、薑茶都試過了，暖得了一時。中醫師問她：「妳家熱水器壞過嗎？」「沒有。」「那妳有沒有遇過熱水器好好的，水龍頭開了半天還是冷水？」"
 ---
 
@@ -164,7 +164,7 @@ excerpt: "佳穎三十一歲，在竹北的會計事務所做審計。每年一�
 
 #### 當歸（調度二姐）
 
-<img src="/assets/images/characters/danggui.png" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/danggui.webp" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・補血活血擔當
 - **專長**：甘、辛，性溫。**補血、活血、調經、止痛**——補中有行。管線裡要先有水，熱才有東西可以載。她不只補，還會「推」，所以血不會補了之後又停在原地
@@ -173,7 +173,7 @@ excerpt: "佳穎三十一歲，在竹北的會計事務所做審計。每年一�
 
 #### 桂枝（溫陽發動機）
 
-<img src="/assets/images/characters/guizhi.png" alt="桂枝" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/guizhi.webp" alt="桂枝" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・溫經散寒、通行血脈擔當
 - **專長**：辛、甘，性溫。**溫通經脈**是他的本行。在 **[桂枝湯](/stories/gui-zhi-tang/)** 裡他負責解肌、在 **[苓桂朮甘湯](/stories/ling-gui-zhu-gan-tang/)** 裡他負責化飲，這一篇他負責**把熱水器的火開大，讓熱順著血管走到手指**
@@ -184,7 +184,7 @@ excerpt: "佳穎三十一歲，在竹北的會計事務所做審計。每年一�
 
 #### 白芍（柔和妹妹）
 
-<img src="/assets/images/characters/baishao.png" alt="白芍" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baishao.webp" alt="白芍" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・養血和營擔當
 - **專長**：苦、酸，性微寒。**養血、斂陰、緩急止痛**。她跟當歸搭檔補血，跟甘草搭檔止痛（芍藥甘草湯），跟桂枝搭檔調和營衛——桂枝湯裡那一組「桂枝＋芍藥」的默契，整個搬過來了
@@ -193,7 +193,7 @@ excerpt: "佳穎三十一歲，在竹北的會計事務所做審計。每年一�
 
 #### 細辛（解凍專員）🆕
 
-<img src="/assets/images/characters/xixin.png" alt="細辛" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/xixin.webp" alt="細辛" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・溫經散寒、通利血脈擔當
 - **專長**：本篇新角色。辛，性溫，**氣味極其辛烈**——嚐一小口舌頭會麻。這股走竄之力，是全隊裡**唯一能鑽到最末端、把結冰那一段解開**的人。桂枝把火開大，細辛把熱送到指尖
@@ -206,7 +206,7 @@ excerpt: "佳穎三十一歲，在竹北的會計事務所做審計。每年一�
 
 #### 通草（細管疏通員）
 
-<img src="/assets/images/characters/tongcao.png" alt="通草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/tongcao.webp" alt="通草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・通利血脈擔當
 - **專長**：甘、淡，性微寒。輕、通、利。在 **[三仁湯](/stories/san-ren-tang/)** 裡，他是通水道的；這一篇他**通的是血脈關節**——當歸、桂枝把水跟熱準備好，他把堵住的細管捅開，讓東西走得過去
@@ -214,7 +214,7 @@ excerpt: "佳穎三十一歲，在竹北的會計事務所做審計。每年一�
 
 #### 大棗（補脾甜心）
 
-<img src="/assets/images/characters/dazao.png" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/dazao.webp" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・補中益氣、養血擔當
 - **專長**：甘、溫。**補脾、益氣、養血**。桂枝湯用她十二枚，這裡用**二十五枚**——仲景很少把一味藥加到這麼重。原因很簡單：這個人血虛，而**血是脾胃做出來的**，水塔要補水，就要從源頭補
@@ -225,7 +225,7 @@ excerpt: "佳穎三十一歲，在竹北的會計事務所做審計。每年一�
 
 #### 甘草（和事佬）
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐使藥・益氣和中、調和諸藥
 - **專長**：炙用。跟大棗一起守住脾胃這個後勤部，跟白芍一起「緩急止痛」，再把七個人調和成一隊

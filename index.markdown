@@ -161,7 +161,7 @@ title: 首頁
         <div class="oracle-card card-shadow-1"></div>
         <div class="oracle-card card-shadow-2"></div>
         <div class="oracle-card card-main">
-          <img src="{{ '/assets/images/oracle-card-back.png' | relative_url }}" alt="本草心語卡牌">
+          <img src="{{ '/assets/images/oracle-card-back.webp' | relative_url }}" alt="本草心語卡牌">
         </div>
       </div>
     </div>

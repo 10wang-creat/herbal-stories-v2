@@ -15,31 +15,31 @@ ingredients:
   - name: 杏仁
     category: 化痰
     description: 頂樓開窗師｜宣利上焦肺氣，氣行則濕化
-    image: xingren.png
+    image: xingren.webp
   - name: 白蔻仁
     category: 化濕
     description: 中層除濕官｜芳香化濕、行氣寬中，暢通中焦
-    image: baidoukou.png
+    image: baidoukou.webp
   - name: 薏苡仁
     category: 利濕
     description: 底層排水工｜滲濕健脾，把濕熱從下焦帶走
-    image: yiyiren.png
+    image: yiyiren.webp
   - name: 滑石
     description: 清涼導流員｜清利濕熱，給下焦降溫
-    image: huashi.png
+    image: huashi.webp
   - name: 通草
     category: 利濕
     description: 細管疏通員｜利水通淋，疏通水道
-    image: tongcao.png
+    image: tongcao.webp
   - name: 淡竹葉
     description: 清熱小幫手｜清心利尿，老朋友再登場
-    image: danzhuye.png
+    image: danzhuye.webp
   - name: 厚朴
     description: 行氣消脹擔當｜下氣除滿，化開胸悶腹脹
-    image: houpo.png
+    image: houpo.webp
   - name: 半夏
     description: 化濕散痞老將｜燥濕和胃、消痞散結
-    image: banxia.png
+    image: banxia.webp
 excerpt: "盛夏悶熱黏膩，午後固定發懶發燒、頭重得像戴了安全帽、四肢沉重又沒胃口？這帖《溫病條辨》的祛濕名方，用「三焦分消」把悶住的濕熱層層化開——而且它教會我們：濕溫發燒，最忌猛發汗、猛攻下、猛進補。"
 ---
 
@@ -99,7 +99,7 @@ excerpt: "盛夏悶熱黏膩，午後固定發懶發燒、頭重得像戴了安�
 
 ### 杏仁（頂樓開窗師）🆕
 
-<img src="/assets/images/characters/xingren.png" alt="杏仁" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/xingren.webp" alt="杏仁" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：宣上焦肺氣擔當
 - **專長**：打開最上層的「氣窗」，肺氣一通，全身的氣就動起來，氣動了濕才化得開
@@ -107,7 +107,7 @@ excerpt: "盛夏悶熱黏膩，午後固定發懶發燒、頭重得像戴了安�
 
 ### 白蔻仁（中層除濕官）🆕
 
-<img src="/assets/images/characters/baidoukou.png" alt="白蔻仁" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baidoukou.webp" alt="白蔻仁" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：暢中焦脾氣擔當
 - **專長**：一身芳香，專門化開卡在中間樓層、黏滯不化的濕濁，順便把胃口找回來
@@ -115,7 +115,7 @@ excerpt: "盛夏悶熱黏膩，午後固定發懶發燒、頭重得像戴了安�
 
 ### 薏苡仁（底層排水工）🆕
 
-<img src="/assets/images/characters/yiyiren.png" alt="薏苡仁" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/yiyiren.webp" alt="薏苡仁" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：滲下焦濕熱擔當
 - **專長**：健脾又利濕，把整理好的濕熱從最底層、順著小便排出去
@@ -125,7 +125,7 @@ excerpt: "盛夏悶熱黏膩，午後固定發懶發燒、頭重得像戴了安�
 
 ### 滑石（清涼導流員）🆕
 
-<img src="/assets/images/characters/huashi.png" alt="滑石" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/huashi.webp" alt="滑石" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：清利濕熱擔當
 - **專長**：性質甘寒滑利，幫過熱的下焦降溫，把濕熱順順地導出去
@@ -133,7 +133,7 @@ excerpt: "盛夏悶熱黏膩，午後固定發懶發燒、頭重得像戴了安�
 
 ### 通草（細管疏通員）🆕
 
-<img src="/assets/images/characters/tongcao.png" alt="通草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/tongcao.webp" alt="通草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：利水通淋擔當
 - **專長**：質地輕通，專門疏通細小的水道，讓水濕排得更順
@@ -141,7 +141,7 @@ excerpt: "盛夏悶熱黏膩，午後固定發懶發燒、頭重得像戴了安�
 
 ### 淡竹葉（清熱小幫手）
 
-<img src="/assets/images/characters/danzhuye.png" alt="淡竹葉" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/danzhuye.webp" alt="淡竹葉" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：清心利尿擔當
 - **專長**：清掉心煩的虛熱、利尿導濕，**[銀翹散](/stories/yin-qiao-san/)** 的老朋友再次登場
@@ -149,7 +149,7 @@ excerpt: "盛夏悶熱黏膩，午後固定發懶發燒、頭重得像戴了安�
 
 ### 厚朴（行氣消脹擔當）
 
-<img src="/assets/images/characters/houpo.png" alt="厚朴" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/houpo.webp" alt="厚朴" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：下氣除滿擔當
 - **專長**：行氣、化開胸悶腹脹，**[平胃散](/stories/ping-wei-san/)** 和 **[藿香正氣散](/stories/huoxiang-zhengqi-san/)** 的資深戰友
@@ -157,7 +157,7 @@ excerpt: "盛夏悶熱黏膩，午後固定發懶發燒、頭重得像戴了安�
 
 ### 半夏（化濕散痞老將）
 
-<img src="/assets/images/characters/banxia.png" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/banxia.webp" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：燥濕和胃擔當
 - **專長**：燥濕、降逆止嘔、消解胸口那團「痞悶」，**[二陳湯](/stories/er-chen-tang/)** 的化痰老手

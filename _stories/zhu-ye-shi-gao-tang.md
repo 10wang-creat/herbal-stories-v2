@@ -14,26 +14,26 @@ effects: "清熱生津、益氣和胃，適用於熱病之後餘熱未清、氣�
 ingredients:
   - name: 淡竹葉
     description: 餘燼巡查員｜清心除煩、輕靈掃除殘火
-    image: danzhuye.png
+    image: danzhuye.webp
   - name: 石膏
     description: 收火的白虎｜清透餘熱，這次收起爪牙、減量出勤
-    image: shigao.png
+    image: shigao.webp
   - name: 麥門冬
     description: 甘露灌溉師｜養陰生津，替燒乾的土地重新補水
-    image: maimendong.png
+    image: maimendong.webp
   - name: 人參
     category: 補氣
     description: 電力搶修長｜大補元氣，把大戰耗掉的電力接回來
-    image: renshen.png
+    image: renshen.webp
   - name: 半夏
     description: 降逆平嘔手｜和胃降逆，壓住往上頂的噁心
-    image: banxia.png
+    image: banxia.webp
   - name: 甘草
     description: 和中調度員｜益氣和中、統籌重建工程
-    image: gancao.png
+    image: gancao.webp
   - name: 粳米
     description: 護城糧官｜養胃生津，重建期的溫柔口糧
-    image: jingmi.png
+    image: jingmi.webp
 excerpt: "燒退了，人卻像被掏空——低熱心煩、口乾、一吃東西就想吐、整個人虛虛的提不起勁？張仲景在《傷寒論》最後留下的這帖「白虎湯溫柔續集」，專門負責大火撲滅後的災後重建。系列首次續集篇：阿豪的故事，下半場開始。"
 ---
 
@@ -109,7 +109,7 @@ excerpt: "燒退了，人卻像被掏空——低熱心煩、口乾、一吃東�
 
 ### 淡竹葉（餘燼巡查員）
 
-<img src="/assets/images/characters/danzhuye.png" alt="淡竹葉" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/danzhuye.webp" alt="淡竹葉" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥之一·清心除煩擔當
 - **專長**：質地輕靈，專掃心頭的殘火餘燼——那種「燒退了卻靜不下來」的煩，就是他的守備範圍
@@ -118,7 +118,7 @@ excerpt: "燒退了，人卻像被掏空——低熱心煩、口乾、一吃東�
 
 ### 石膏（收火的白虎）
 
-<img src="/assets/images/characters/shigao.png" alt="石膏" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shigao.webp" alt="石膏" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥之一·清透餘熱擔當
 - **專長**：上週那頭鎮壓大火的白虎回來了——但這次**減量出勤、收起爪牙**，只負責把殘餘的熱透乾淨
@@ -127,7 +127,7 @@ excerpt: "燒退了，人卻像被掏空——低熱心煩、口乾、一吃東�
 
 ### 麥門冬（甘露灌溉師）
 
-<img src="/assets/images/characters/maimendong.png" alt="麥門冬" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/maimendong.webp" alt="麥門冬" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥·養陰生津擔當
 - **專長**：甘涼滋潤，替被大火烤乾的土地一寸寸補水——口乾、舌燥、津液虧損都靠他灌溉
@@ -136,7 +136,7 @@ excerpt: "燒退了，人卻像被掏空——低熱心煩、口乾、一吃東�
 
 ### 人參（電力搶修長）
 
-<img src="/assets/images/characters/renshen.png" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/renshen.webp" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥·大補元氣擔當
 - **專長**：整片林子斷電了，元氣總司令親自進場搶修——少氣懶言、虛弱疲憊，由他一肩扛起
@@ -147,7 +147,7 @@ excerpt: "燒退了，人卻像被掏空——低熱心煩、口乾、一吃東�
 
 ### 半夏（降逆平嘔手）
 
-<img src="/assets/images/characters/banxia.png" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/banxia.webp" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥·和胃降逆擔當
 - **專長**：把「氣逆欲吐」那股往上頂的勁按下去，讓阿豪重新吃得下飯
@@ -157,7 +157,7 @@ excerpt: "燒退了，人卻像被掏空——低熱心煩、口乾、一吃東�
 
 ### 甘草（和中調度員）
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐使·調和諸藥擔當
 - **專長**：益氣和中，統籌這支「有清有補、有潤有燥」的重建工程隊
@@ -166,7 +166,7 @@ excerpt: "燒退了，人卻像被掏空——低熱心煩、口乾、一吃東�
 
 ### 粳米（護城糧官）
 
-<img src="/assets/images/characters/jingmi.png" alt="粳米" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/jingmi.webp" alt="粳米" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥·養胃生津擔當
 - **專長**：熬成溫潤的米湯，是重建期腸胃最能接受的溫柔口糧，護住胃氣

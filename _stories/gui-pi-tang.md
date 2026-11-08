@@ -16,45 +16,45 @@ ingredients:
   - name: 黨參
     category: 補氣
     description: 補氣主將｜溫厚穩重，默默支持
-    image: dangshen.png
+    image: dangshen.webp
   - name: 黃耆
     description: 元氣推手｜陽光外向，提振士氣
-    image: huangqi.png
+    image: huangqi.webp
   - name: 白朮
     description: 脾胃管家｜務實可靠，整頓後勤
-    image: baizhu.png
+    image: baizhu.webp
   - name: 茯神
     category: 安神
     description: 安神專家｜沉靜內斂，撫平焦慮
-    image: fushen.png
+    image: fushen.webp
   - name: 酸棗仁
     category: 安神
     description: 睡眠守護｜溫柔細膩，哄你入眠
-    image: suanzaoren.png
+    image: suanzaoren.webp
   - name: 龍眼肉
     category: 補血
     description: 暖心甜姐｜甜美療癒，補血安神
-    image: longyanrou.png
+    image: longyanrou.webp
   - name: 遠志
     category: 安神
     description: 心腎信使｜機靈活潑，疏通阻塞
-    image: yuanzhi.png
+    image: yuanzhi.webp
   - name: 當歸
     description: 血液總管｜優雅從容，滋養修復
-    image: danggui.png
+    image: danggui.webp
   - name: 木香
     category: 理氣
     description: 氣機疏導｜俐落果斷，打通鬱結
-    image: muxiang.png
+    image: muxiang.webp
   - name: 炙甘草
     description: 和事佬｜圓融協調，調和諸藥
-    image: gancao.png
+    image: gancao.webp
   - name: 生薑
     description: 暖場開路｜活潑爽朗，助消化吸收
-    image: shengjiang.png
+    image: shengjiang.webp
   - name: 大棗
     description: 甜蜜後援｜親切包容，養脾安中
-    image: dazao.png
+    image: dazao.webp
 effects: 益氣補血、健脾養心，適用於心脾兩虛、氣血不足、失眠健忘、心悸怔忡
 source: 《濟生方》
 ---
@@ -136,18 +136,18 @@ source: 《濟生方》
 ## 🌿 歸脾湯：身心修復的暖心團隊
 
 <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:18px 0;">
-  <img src="/assets/images/characters/dangshen.png" alt="黨參" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/huangqi.png" alt="黃耆" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/baizhu.png" alt="白朮" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/fushen.png" alt="茯神" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/suanzaoren.png" alt="酸棗仁" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/longyanrou.png" alt="龍眼肉" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/yuanzhi.png" alt="遠志" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/danggui.png" alt="當歸" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/muxiang.png" alt="木香" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/gancao.png" alt="炙甘草" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/shengjiang.png" alt="生薑" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/dazao.png" alt="大棗" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/dangshen.webp" alt="黨參" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/huangqi.webp" alt="黃耆" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/baizhu.webp" alt="白朮" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/fushen.webp" alt="茯神" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/suanzaoren.webp" alt="酸棗仁" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/longyanrou.webp" alt="龍眼肉" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/yuanzhi.webp" alt="遠志" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/danggui.webp" alt="當歸" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/muxiang.webp" alt="木香" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/gancao.webp" alt="炙甘草" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/shengjiang.webp" alt="生薑" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/dazao.webp" alt="大棗" style="width:88px; height:auto;">
 </div>
 
 **歸脾湯**出自宋代嚴用和的《濟生方》，距今已有800多年歷史。

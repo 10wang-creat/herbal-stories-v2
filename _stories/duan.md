@@ -17,15 +17,15 @@ effects: "煅：以高溫直接煅燒（明煅、暗煅、煅淬）。多用於�
 ingredients:
   - name: 石膏
     description: 煅法代表藥｜生石膏大寒清熱瀉火（內服退高熱）；煅石膏收濕斂瘡生肌（外用）
-    image: shigao.png
+    image: shigao.webp
     category: 清熱
   - name: 牡蠣
     description: 煅法代表藥｜生牡蠣平肝潛陽、軟堅散結；煅牡蠣收斂固澀、制酸止痛
-    image: muli.png
+    image: muli.webp
     category: 平肝
   - name: 龍骨
     description: 煅法代表藥｜生龍骨鎮驚安神；煅龍骨收斂固澀、斂汗固精
-    image: longgu.png
+    image: longgu.webp
     category: 安神
 excerpt: "小宇看見爐火燒得通紅，一塊藥材在裡頭燒到發白發亮。他嚇了一跳：這樣不會燒壞嗎？老闆娘說：對付石頭和貝殼，就得用這麼猛的火。這是炮製系列・火候篇的第三站。"
 ---
@@ -72,15 +72,15 @@ excerpt: "小宇看見爐火燒得通紅，一塊藥材在裡頭燒到發白發�
 
 這三塊硬傢伙的「生 vs 煅」，最值得記：
 
-<img src="/assets/images/characters/shigao.png" alt="石膏" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shigao.webp" alt="石膏" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **石膏**——生石膏大寒，清熱瀉火，內服退高熱（[白虎湯](/stories/bai-hu-tang/) 裡退大熱的主角就是生石膏）；**煅石膏**失去結晶水後轉為收濕、斂瘡、生肌，主要**外用**。一味石膏，煅前煅後，一個往裡清熱、一個往外收瘡。
 
-<img src="/assets/images/characters/muli.png" alt="牡蠣" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/muli.webp" alt="牡蠣" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **牡蠣**——生牡蠣平肝潛陽、軟堅散結；**煅牡蠣**則增強收斂固澀、制酸止痛，用於自汗盜汗、胃酸過多。
 
-<img src="/assets/images/characters/longgu.png" alt="龍骨" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/longgu.webp" alt="龍骨" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **龍骨**——生龍骨鎮驚安神、平肝潛陽；**煅龍骨**收斂固澀更強，用於斂汗、固精、止帶。
 

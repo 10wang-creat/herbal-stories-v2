@@ -16,35 +16,35 @@ ingredients:
   - name: 桑葉
     category: 解表
     description: 疏風清肺（新角色）｜甘苦性涼，走肺絡、平肝風，把停在窗台的落葉撥開
-    image: sangye.png
+    image: sangye.webp
   - name: 菊花
     category: 解表
     description: 清利頭目（新角色）｜疏散風熱，順手把發脹的頭和乾癢的眼睛一起照顧
-    image: juhua.png
+    image: juhua.webp
   - name: 薄荷
     category: 解表
     description: 清涼助攻｜辛涼疏散，加強兩位君藥往外透的力道
-    image: bohe.png
+    image: bohe.webp
   - name: 杏仁
     category: 化痰
     description: 降氣專員｜肅降肺氣、止咳，把往上衝的咳往下帶
-    image: xingren.png
+    image: xingren.webp
   - name: 桔梗
     category: 化痰
     description: 開窗通風員｜宣肺利咽，跟杏仁一升一降轉動肺氣
-    image: jiegeng.png
+    image: jiegeng.webp
   - name: 連翹
     category: 清熱
     description: 清熱透邪｜清熱解毒又清中有透，把熱往外送
-    image: lianqiao.png
+    image: lianqiao.webp
   - name: 蘆根
     category: 清熱
     description: 補水小工（新角色）｜清熱生津，把被熱烤乾的那一層潤回來
-    image: lugen.png
+    image: lugen.webp
   - name: 甘草
     category: 補氣
     description: 和事佬｜調和諸藥，與桔梗相配善利咽喉
-    image: gancao.png
+    image: gancao.webp
 excerpt: "開學第二週，喉嚨開始癢。不是重感冒——體溫只有三十七度多、精神還好，就是那個乾咳停不下來，講到第三節課聲音就啞了。婆婆說喝薑茶發汗，喝完當天晚上咳得更兇。清代吳鞠通兩百年前就警告過這件事：秋天的風熱咳嗽，用錯了辛溫重劑，會把肺裡的水分燒乾。"
 ---
 
@@ -185,7 +185,7 @@ excerpt: "開學第二週，喉嚨開始癢。不是重感冒——體溫只有�
 
 #### 桑葉（疏風清肺）🆕
 
-<img src="/assets/images/characters/sangye.png" alt="桑葉" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/sangye.webp" alt="桑葉" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・疏散風熱擔當
 - **專長**：本篇新角色。甘苦性涼，**疏散上焦風熱、清透肺經之熱**。她的手法很輕——不是把葉子打下來，是撥開。古人認為桑葉能走「肺絡」，也就是肺最細微的那些分支，所以特別擅長處理這種說不清位置的癢咳
@@ -194,7 +194,7 @@ excerpt: "開學第二週，喉嚨開始癢。不是重感冒——體溫只有�
 
 #### 菊花（清利頭目）🆕
 
-<img src="/assets/images/characters/juhua.png" alt="菊花" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/juhua.webp" alt="菊花" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・清利頭目擔當
 - **專長**：本篇新角色。與桑葉並列為君，**疏散風熱、清利頭目**——那種悶在額頭的脹、看螢幕就發紅的眼睛，是她的守備範圍。菊花性涼而不寒、清而不燥，是最溫和的那一類清熱藥
@@ -207,7 +207,7 @@ excerpt: "開學第二週，喉嚨開始癢。不是重感冒——體溫只有�
 
 #### 薄荷（清涼助攻）
 
-<img src="/assets/images/characters/bohe.png" alt="薄荷" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/bohe.webp" alt="薄荷" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・辛涼疏散擔當
 - **專長**：辛涼芳香，把桑葉菊花往外疏散的力道再推一把。用量非常小（原方八分，約三克），因為她的力道全在香氣裡——**煮久了香氣跑掉，人就白來一趟**
@@ -218,7 +218,7 @@ excerpt: "開學第二週，喉嚨開始癢。不是重感冒——體溫只有�
 
 #### 杏仁（降氣專員）
 
-<img src="/assets/images/characters/xingren.png" alt="杏仁" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/xingren.webp" alt="杏仁" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・肅降肺氣擔當
 - **專長**：**肅降肺氣、止咳**。咳是氣往上衝，杏仁的工作就是把它往下帶回來
@@ -227,7 +227,7 @@ excerpt: "開學第二週，喉嚨開始癢。不是重感冒——體溫只有�
 
 #### 桔梗（開窗通風員）
 
-<img src="/assets/images/characters/jiegeng.png" alt="桔梗" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/jiegeng.webp" alt="桔梗" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・宣肺利咽擔當
 - **專長**：**宣肺、利咽、化痰**。他和杏仁是一組經典搭配——**一升一降**：桔梗往上開，杏仁往下降，肺氣才「轉」得起來。只往下壓叫止咳，能轉起來才叫宣降
@@ -236,7 +236,7 @@ excerpt: "開學第二週，喉嚨開始癢。不是重感冒——體溫只有�
 
 #### 連翹（清熱透邪）
 
-<img src="/assets/images/characters/lianqiao.png" alt="連翹" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/lianqiao.webp" alt="連翹" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・清熱解毒擔當
 - **專長**：清熱解毒，而且**清中有透**——不是把熱壓下去，是把熱往外送出去。這個「透」字很關鍵：熱如果被硬壓在裡面，反而會走得更深
@@ -245,7 +245,7 @@ excerpt: "開學第二週，喉嚨開始癢。不是重感冒——體溫只有�
 
 #### 蘆根（補水小工）🆕
 
-<img src="/assets/images/characters/lugen.png" alt="蘆根" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/lugen.webp" alt="蘆根" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・清熱生津擔當
 - **專長**：本篇新角色。蘆根是蘆葦的地下根莖（原方寫作「葦根」）——長在水邊、整根都含著水氣。它的工作是**清熱生津止渴**，把被熱稍微烤乾的那一層潤回來。你那個「微渴」，就是交給它
@@ -256,7 +256,7 @@ excerpt: "開學第二週，喉嚨開始癢。不是重感冒——體溫只有�
 
 #### 甘草（和事佬）
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：使藥・調和諸藥擔當
 - **專長**：調和諸藥，並且**與桔梗相配特別能利咽喉**——「桔梗甘草」這組藥對，是中醫處理咽喉不適最基本的兩味

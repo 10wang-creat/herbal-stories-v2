@@ -16,47 +16,47 @@ ingredients:
   - name: 蘇葉
     category: 解表
     description: 溫和點火員｜辛溫不燥，發散表邪、宣開肺氣，把涼住的那一層重新推開
-    image: zisu.png
+    image: zisu.webp
   - name: 杏仁
     category: 化痰
     description: 降氣潤肺員｜苦溫而潤，肅降肺氣、潤燥止咳，跟蘇葉一散一降
-    image: xingren.png
+    image: xingren.webp
   - name: 前胡
     category: 化痰
     description: 兩頭幫忙的人（新角色）｜疏風散邪又降氣化痰，兩位君藥的工作都能接手
-    image: qianhu.png
+    image: qianhu.webp
   - name: 桔梗
     category: 化痰
     description: 開窗通風員｜宣肺利咽，與枳殼一升一降轉動肺氣
-    image: jiegeng.png
+    image: jiegeng.webp
   - name: 枳殼
     category: 理氣
     description: 往下鬆開的人｜理氣寬胸，把悶住的胸口鬆一鬆
-    image: zhiqiao.png
+    image: zhiqiao.webp
   - name: 半夏
     category: 化痰
     description: 刮痰師傅｜燥濕化痰、降逆止嘔，處理黏在喉嚨清不掉的那一層
-    image: banxia.png
+    image: banxia.webp
   - name: 陳皮
     category: 理氣
     description: 理氣老手｜理氣行滯、燥濕化痰，讓氣先動起來痰才化得掉
-    image: chenpi.png
+    image: chenpi.webp
   - name: 茯苓
     category: 利水
     description: 源頭管理員｜滲濕健脾，從生痰的源頭把水收乾淨
-    image: fuling.png
+    image: fuling.webp
   - name: 生薑
     category: 解表
     description: 廚房裡的暖爐｜散寒和胃，協助蘇葉把表面的涼透出去
-    image: shengjiang.png
+    image: shengjiang.webp
   - name: 大棗
     category: 補氣
     description: 甜味補給員｜滋脾行津，讓身體有水可以往上送
-    image: dazao.png
+    image: dazao.webp
   - name: 甘草
     category: 補氣
     description: 和事佬｜調和諸藥，合桔梗宣肺利咽
-    image: gancao.png
+    image: gancao.webp
 excerpt: "白露過後的清晨四點，志豪騎車去開早餐店，風從安全帽下面灌進來。三天後開始咳，痰稀稀白白的，鼻子塞、喉嚨乾。他看到「秋天要潤肺」，於是冰水梨汁、川貝枇杷膏、菊花茶一起來——結果咳得更兇。上一篇我們說秋天的咳不能用熱的；這一篇要說的是，秋天還有另一種咳，涼的方法一樣治不好。"
 ---
 
@@ -191,7 +191,7 @@ excerpt: "白露過後的清晨四點，志豪騎車去開早餐店，風從安�
 
 #### 蘇葉（溫和點火員）
 
-<img src="/assets/images/characters/zisu.png" alt="蘇葉" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/zisu.webp" alt="蘇葉" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・發表散邪擔當
 - **專長**：**辛溫而不燥**，這五個字是她被選進來的全部理由。涼燥要溫，可是又不能太燥——太燥就把本來就不夠的津液燒掉了。蘇葉的力道剛剛好，發散表面的涼，同時**宣開肺氣**
@@ -200,7 +200,7 @@ excerpt: "白露過後的清晨四點，志豪騎車去開早餐店，風從安�
 
 #### 杏仁（降氣潤肺員）
 
-<img src="/assets/images/characters/xingren.png" alt="杏仁" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/xingren.webp" alt="杏仁" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・肅降肺氣擔當
 - **專長**：**苦溫而潤**。咳是氣往上衝，杏仁把它往下帶；而「潤」這個字在涼燥特別重要——他一邊降氣，一邊還帶著油潤之性，**不會把喉嚨越降越乾**
@@ -213,7 +213,7 @@ excerpt: "白露過後的清晨四點，志豪騎車去開早餐店，風從安�
 
 #### 前胡（兩頭幫忙的人）🆕
 
-<img src="/assets/images/characters/qianhu.png" alt="前胡" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/qianhu.webp" alt="前胡" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・疏風降氣擔當
 - **專長**：本篇新角色，也是這一隊裡最好用的一位——因為他**兩位君藥的工作都能接手**。往外，他能疏風散邪，幫蘇葉推；往下，他能降氣化痰，幫杏仁帶。中醫說他「**既能宣散風邪，又能下氣消痰**」，在方裡是承上啟下的樞紐
@@ -222,7 +222,7 @@ excerpt: "白露過後的清晨四點，志豪騎車去開早餐店，風從安�
 
 #### 桔梗（開窗通風員）
 
-<img src="/assets/images/characters/jiegeng.png" alt="桔梗" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/jiegeng.webp" alt="桔梗" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・宣肺利咽擔當
 - **專長**：**宣肺、利咽、化痰**，把窗往上開
@@ -231,7 +231,7 @@ excerpt: "白露過後的清晨四點，志豪騎車去開早餐店，風從安�
 
 #### 枳殼（往下鬆開的人）
 
-<img src="/assets/images/characters/zhiqiao.png" alt="枳殼" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/zhiqiao.webp" alt="枳殼" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・理氣寬胸擔當
 - **專長**：**理氣寬胸、行滯**，把悶住的胸口鬆開，往下。他和桔梗是一組——**桔梗往上開、枳殼往下鬆**，一升一降，肺氣才轉得動
@@ -244,7 +244,7 @@ excerpt: "白露過後的清晨四點，志豪騎車去開早餐店，風從安�
 
 #### 半夏（刮痰師傅）
 
-<img src="/assets/images/characters/banxia.png" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/banxia.webp" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・燥濕化痰擔當
 - **專長**：**燥濕化痰、降逆**，處理那層黏在喉嚨清不掉的稀痰
@@ -253,7 +253,7 @@ excerpt: "白露過後的清晨四點，志豪騎車去開早餐店，風從安�
 
 #### 陳皮（理氣老手）
 
-<img src="/assets/images/characters/chenpi.png" alt="陳皮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/chenpi.webp" alt="陳皮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・理氣行滯擔當
 - **專長**：**理氣、燥濕化痰**。中醫有一句老話：「**治痰先治氣，氣順則痰消**」——氣不動的時候，痰是化不掉的。陳皮的工作就是讓氣先動起來
@@ -262,7 +262,7 @@ excerpt: "白露過後的清晨四點，志豪騎車去開早餐店，風從安�
 
 #### 茯苓（源頭管理員）
 
-<img src="/assets/images/characters/fuling.png" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fuling.webp" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・滲濕健脾擔當
 - **專長**：**滲濕健脾，杜生痰之源**。痰是水代謝失常的產物，脾管水；把脾顧好，才不會這批痰化完又來一批
@@ -271,7 +271,7 @@ excerpt: "白露過後的清晨四點，志豪騎車去開早餐店，風從安�
 
 #### 生薑（廚房裡的暖爐）
 
-<img src="/assets/images/characters/shengjiang.png" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shengjiang.webp" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・散寒和胃擔當
 - **專長**：**散寒、和胃**，協助蘇葉把表面那層涼透出去，同時安撫被寒涼傷到的胃
@@ -280,7 +280,7 @@ excerpt: "白露過後的清晨四點，志豪騎車去開早餐店，風從安�
 
 #### 大棗（甜味補給員）
 
-<img src="/assets/images/characters/dazao.png" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/dazao.webp" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・滋脾行津擔當
 - **專長**：與生薑同用**調和營衛**，並且**滋脾行津**——這一味的存在，是杏蘇散處理「燥」的關鍵。全方那麼多溫燥、化痰的藥，需要有人負責**把水補回來、送出去**
@@ -291,7 +291,7 @@ excerpt: "白露過後的清晨四點，志豪騎車去開早餐店，風從安�
 
 #### 甘草（和事佬）
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：使藥・調和諸藥擔當
 - **專長**：調和全隊，並且**與桔梗相配善利咽喉**——「桔梗甘草」這組藥對又出現了，上一篇才剛用過

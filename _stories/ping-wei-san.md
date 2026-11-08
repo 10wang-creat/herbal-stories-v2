@@ -15,27 +15,27 @@ effects: "燥濕運脾、行氣和胃，適用於濕滯脾胃所致的脘腹脹�
 ingredients:
   - name: 蒼朮
     description: 燥濕司令官｜辛香苦溫，入中焦燥濕健脾，是除濕第一主力
-    image: cangzhu.png
+    image: cangzhu.webp
     category: 燥濕
   - name: 厚朴
     description: 行氣推土機｜苦溫芳香，行氣除滿消脹，把堵住的氣機推開
-    image: houpo.png
+    image: houpo.webp
     category: 理氣
   - name: 陳皮
     description: 理氣小管家｜理氣和胃、燥濕化痰，替脾胃恢復運轉節奏
-    image: chenpi.png
+    image: chenpi.webp
     category: 理氣
   - name: 炙甘草
     description: 和事佬｜益氣和中、調和諸藥，確保除濕不傷正氣
-    image: gancao.png
+    image: gancao.webp
     category: 補氣
   - name: 生薑
     description: 暖胃急先鋒｜溫散水濕、和胃止嘔，加強除濕火力
-    image: shengjiang.png
+    image: shengjiang.webp
     category: 溫裡
   - name: 大棗
     description: 補脾甜心｜補中益氣，保護脾胃不被燥藥傷到
-    image: dazao.png
+    image: dazao.webp
     category: 補氣
 excerpt: "肚子脹得像充了氣、吃什麼都沒味道、整個人又重又懶⋯⋯你的脾胃可能被濕氣「泡」住了。這帖古人稱為「治脾聖藥」的千年名方，四味藥就能把脾胃裡的濕氣趕走。"
 ---
@@ -115,7 +115,7 @@ excerpt: "肚子脹得像充了氣、吃什麼都沒味道、整個人又重又�
 
 ### 除濕大隊的四位成員
 
-<img src="/assets/images/characters/cangzhu.png" alt="蒼朮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/cangzhu.webp" alt="蒼朮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **蒼朮——燥濕司令官（君藥）**
 
@@ -123,7 +123,7 @@ excerpt: "肚子脹得像充了氣、吃什麼都沒味道、整個人又重又�
 
 在平胃散裡，蒼朮的用量最大，是當之無愧的君藥。它的工作哲學很簡單：**濕氣不走，我就一直烘，烘到脾土乾爽為止。**
 
-<img src="/assets/images/characters/houpo.png" alt="厚朴" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/houpo.webp" alt="厚朴" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **厚朴——行氣推土機（臣藥）**
 
@@ -133,7 +133,7 @@ excerpt: "肚子脹得像充了氣、吃什麼都沒味道、整個人又重又�
 
 蒼朮＋厚朴，一個燥濕、一個行氣，是平胃散的核心搭檔。中醫有句話：「氣行則濕化」——氣機通暢了，濕氣自然就散了。
 
-<img src="/assets/images/characters/chenpi.png" alt="陳皮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/chenpi.webp" alt="陳皮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **陳皮——理氣小管家（佐藥）**
 
@@ -141,7 +141,7 @@ excerpt: "肚子脹得像充了氣、吃什麼都沒味道、整個人又重又�
 
 如果說厚朴是推土機，陳皮就是那個在旁邊細心打掃的管家——把厚朴推開的殘渣收拾乾淨，讓脾胃的運轉節奏恢復正常。
 
-<img src="/assets/images/characters/gancao.png" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **炙甘草——和事佬（使藥）**
 
@@ -149,9 +149,9 @@ excerpt: "肚子脹得像充了氣、吃什麼都沒味道、整個人又重又�
 
 ### 後勤支援：生薑與大棗
 
-<img src="/assets/images/characters/shengjiang.png" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shengjiang.webp" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
 
-<img src="/assets/images/characters/dazao.png" alt="大棗" style="float:left; width:100px; margin:0 15px 10px 0;">
+<img src="/assets/images/characters/dazao.webp" alt="大棗" style="float:left; width:100px; margin:0 15px 10px 0;">
 
 煎服的時候還要加入**生薑**和**大棗**。生薑溫散水濕、和胃止嘔，替除濕大隊加把火；大棗補中益氣，保護脾胃不被燥藥傷到。這兩位在系列裡已經是「萬年後勤」了——幾乎每帖方子都有他們的身影。
 

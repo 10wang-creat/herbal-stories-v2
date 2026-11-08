@@ -16,15 +16,15 @@ ingredients:
   - name: 當歸
     category: 補血
     description: 調度二姐｜甘辛溫，補血活血、溫通止痛，先把鍋裡的湯底加回來，本方君藥
-    image: danggui.png
+    image: danggui.webp
   - name: 生薑
     category: 解表
     description: 暖胃急先鋒｜辛溫，溫中散寒、和胃止嘔，原方用量最重，一邊把鍋燒暖、一邊去羊肉的羶，臣藥
-    image: shengjiang.png
+    image: shengjiang.webp
   - name: 羊肉
     category: 補氣
     description: 端砂鍋的人（新角色）｜甘溫，溫中補虛、益氣養血，「血肉有情之品」，補的是身體真正缺的那一塊，佐使藥
-    image: yangrou.png
+    image: yangrou.webp
 excerpt: "承翰好了。回家那天，他發現太太佳蓉正抱著熱水袋縮在沙發上。她每個月生理期頭兩天都這樣：小腹像被冰敷著、臉色白、手腳冷，吃止痛藥有時候壓不住。她不想吃藥——「我已經看你喝兩個月了。」中醫師聽完笑了：「那妳這週不領藥，領一張菜單。」"
 ---
 
@@ -136,7 +136,7 @@ excerpt: "承翰好了。回家那天，他發現太太佳蓉正抱著熱水袋�
 
 #### 當歸（調度二姐）
 
-<img src="/assets/images/characters/danggui.png" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/danggui.webp" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・補血活血、溫通止痛擔當
 - **專長**：甘、辛，性溫。**補血**是她的本行，而且她補的血會**動**——補而不滯，順便把小腹那個「冰袋壓著」的痛通開。她是這鍋湯裡唯一的「正式藥材」
@@ -148,7 +148,7 @@ excerpt: "承翰好了。回家那天，他發現太太佳蓉正抱著熱水袋�
 
 #### 生薑（暖胃急先鋒）
 
-<img src="/assets/images/characters/shengjiang.png" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shengjiang.webp" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・溫中散寒、和胃止嘔擔當
 - **專長**：辛，微溫。這鍋湯裡**用量最重**。他做兩件事：**散寒**——小腹那股冷是他處理；**去羶止嘔**——羊肉的味道他壓得住，吃了想吐也是他顧。仲景說「寒多者，加生薑成一斤」，冷得厲害可以再加
@@ -160,7 +160,7 @@ excerpt: "承翰好了。回家那天，他發現太太佳蓉正抱著熱水袋�
 
 #### 羊肉（端砂鍋的人）★ 新角色
 
-<img src="/assets/images/characters/yangrou.png" alt="羊肉" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/yangrou.webp" alt="羊肉" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐使藥・溫中補虛、益氣養血擔當
 - **專長**：甘，性溫。中醫把動物來源的補品叫「**血肉有情之品**」——意思是它跟人的身體最接近，補的是**形**，不只是氣。羊肉性溫，冬天吃它暖；而且它讓這帖「方」變成一頓**飯**——佳蓉不想喝藥，但她可以喝湯

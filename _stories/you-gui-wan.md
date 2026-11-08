@@ -16,43 +16,43 @@ ingredients:
   - name: 附子
     category: 溫裡
     description: 回陽急先鋒｜炮製，大辛大熱，溫腎助陽，鍋爐的火種，君藥
-    image: fuzi.png
+    image: fuzi.webp
   - name: 肉桂
     category: 溫裡
     description: 暖爐點火官｜辛甘大熱，補火助陽、引火歸元，把火穩穩留在鍋爐裡，君藥
-    image: rougui.png
+    image: rougui.webp
   - name: 鹿角膠
     category: 補陽
     description: 修鍋爐的人（新角色）｜甘鹹溫，溫腎壯陽、益精養血，血肉有情之品，補的是鍋爐本體，君藥
-    image: lujiaojiao.png
+    image: lujiaojiao.webp
   - name: 熟地黃
     category: 補血
     description: 滋陰補腎總管｜甘微溫，滋陰補血、益精填髓，全方用量最重，整個冬天的煤，臣藥
-    image: shudihuang.png
+    image: shudihuang.webp
   - name: 山藥
     category: 補氣
     description: 補脾固腎的人｜甘平，補脾益腎、固精，煤要有人搬，臣藥
-    image: shanyao.png
+    image: shanyao.webp
   - name: 山茱萸
     category: 補腎
     description: 收斂守門員｜酸微溫，補益肝腎、澀精固脫，不讓補進去的東西漏掉，臣藥
-    image: shanzhuyu.png
+    image: shanzhuyu.webp
   - name: 枸杞子
     category: 補陰
     description: 紅色小燈籠（新角色）｜甘平，滋補肝腎、益精明目，陰陽都補一點，臣藥
-    image: gouqizi.png
+    image: gouqizi.webp
   - name: 菟絲子
     category: 補陽
     description: 攀著走的人（新角色）｜辛甘平，補腎益精、固精縮尿，陰陽平補，夜尿多是他顧，臣藥
-    image: tusizi.png
+    image: tusizi.webp
   - name: 杜仲
     category: 補陽
     description: 腰的支架（新角色）｜甘溫，補肝腎、強筋骨，阿公的腰膝酸軟由他撐，臣藥
-    image: duzhong.png
+    image: duzhong.webp
   - name: 當歸
     category: 補血
     description: 調度二姐｜甘辛溫，養血和血，讓補進去的東西能流動，佐藥
-    image: danggui.png
+    image: danggui.webp
 excerpt: "林阿公的真武湯喝了三週，腳消了、拖鞋穿得下了。可是人還是冷，腰像沒了支架，晚上要起來三四次，白天坐著就打瞌睡。美惠問醫師：「水不是退了嗎？」醫師說：「水是抽乾了。可是整個冬天還很長，鍋爐要有煤。」他一邊寫方，一邊注意到旁邊陪診的阿嬤，一直按著胸口。"
 ---
 
@@ -167,7 +167,7 @@ excerpt: "林阿公的真武湯喝了三週，腳消了、拖鞋穿得下了。�
 
 #### 附子（回陽急先鋒）
 
-<img src="/assets/images/characters/fuzi.png" alt="附子" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fuzi.webp" alt="附子" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・溫腎助陽擔當
 - **專長**：大辛、大熱，有毒。鍋爐的**火種**。這是他連續第三週登場——真武湯裡獨自點火、附子理中湯裡跟乾薑並肩、這一篇他退回「漸加」的小劑量，**跟肉桂、鹿角膠一起，把火穩穩留在腎裡**
@@ -176,7 +176,7 @@ excerpt: "林阿公的真武湯喝了三週，腳消了、拖鞋穿得下了。�
 
 #### 肉桂（暖爐點火官）
 
-<img src="/assets/images/characters/rougui.png" alt="肉桂" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/rougui.webp" alt="肉桂" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・補火助陽、引火歸元擔當
 - **專長**：辛、甘，大熱。跟附子的差別：附子**走**，通行全身；肉桂**守**，而且會「**引火歸元**」——把浮上來的火**收回腎裡**。阿公那種白天打瞌睡、晚上又睡不好，有一部分是火沒有歸位，他負責把火帶回鍋爐
@@ -185,7 +185,7 @@ excerpt: "林阿公的真武湯喝了三週，腳消了、拖鞋穿得下了。�
 
 #### 鹿角膠（修鍋爐的人）★ 新角色
 
-<img src="/assets/images/characters/lujiaojiao.png" alt="鹿角膠" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/lujiaojiao.webp" alt="鹿角膠" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・溫腎壯陽、益精養血擔當
 - **專長**：甘、鹹，性溫。鹿角熬成的膠，跟上週的羊肉一樣是「**血肉有情之品**」。他跟附子、肉桂不同：附子肉桂是**火**，他是**連鍋爐本體一起補**——溫陽的同時**填精養血**。張景岳特別看重他，因為「陰中求陽」要的就是這種**陽裡帶陰**的藥
@@ -196,7 +196,7 @@ excerpt: "林阿公的真武湯喝了三週，腳消了、拖鞋穿得下了。�
 
 #### 熟地黃（滋陰補腎總管）
 
-<img src="/assets/images/characters/shudihuang.png" alt="熟地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shudihuang.webp" alt="熟地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・滋陰補血、益精填髓擔當
 - **專長**：甘，微溫。**全方用量最重**，八兩。他是鍋爐裡的**煤**——沒有他，附子、肉桂的火燒不了多久。「陰中求陽」的「陰」，主要就是他
@@ -206,7 +206,7 @@ excerpt: "林阿公的真武湯喝了三週，腳消了、拖鞋穿得下了。�
 
 #### 山藥（補脾固腎的人）
 
-<img src="/assets/images/characters/shanyao.png" alt="山藥" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shanyao.webp" alt="山藥" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・補脾益腎、固精擔當
 - **專長**：甘，平。他**同時補脾和腎**——煤要有人搬進鍋爐，脾就是搬煤的人。而且他能**固**，讓補進去的不要漏
@@ -214,7 +214,7 @@ excerpt: "林阿公的真武湯喝了三週，腳消了、拖鞋穿得下了。�
 
 #### 山茱萸（收斂守門員）
 
-<img src="/assets/images/characters/shanzhuyu.png" alt="山茱萸" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shanzhuyu.webp" alt="山茱萸" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・補益肝腎、澀精固脫擔當
 - **專長**：酸，微溫。**補中帶澀**——阿公夜尿多，是腎關不住水；他把門守住。跟山藥一起，是地黃丸家族的「**三補**」裡的兩位
@@ -222,7 +222,7 @@ excerpt: "林阿公的真武湯喝了三週，腳消了、拖鞋穿得下了。�
 
 #### 枸杞子（紅色小燈籠）★ 新角色
 
-<img src="/assets/images/characters/gouqizi.png" alt="枸杞子" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gouqizi.webp" alt="枸杞子" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・滋補肝腎、益精明目擔當
 - **專長**：甘，平。大家最熟的補腎藥，泡茶、煮湯都看得到。性平，**陰陽都補一點**，所以左歸丸、右歸丸兩邊他都在。阿公看電視打瞌睡、眼睛也容易花，是他顧
@@ -231,7 +231,7 @@ excerpt: "林阿公的真武湯喝了三週，腳消了、拖鞋穿得下了。�
 
 #### 菟絲子（攀著走的人）★ 新角色
 
-<img src="/assets/images/characters/tusizi.png" alt="菟絲子" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/tusizi.webp" alt="菟絲子" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・補腎益精、固精縮尿擔當
 - **專長**：辛、甘，平。菟絲子是一種攀在別的植物上生長的藤的種子，中醫說它「**平補陰陽**」——不偏溫也不偏涼，補腎而不燥。而且他能**縮尿**：阿公晚上起來三四次，他和山茱萸一起把膀胱的門關緊
@@ -240,7 +240,7 @@ excerpt: "林阿公的真武湯喝了三週，腳消了、拖鞋穿得下了。�
 
 #### 杜仲（腰的支架）★ 新角色
 
-<img src="/assets/images/characters/duzhong.png" alt="杜仲" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/duzhong.webp" alt="杜仲" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・補肝腎、強筋骨擔當
 - **專長**：甘，溫。杜仲是樹皮，折斷的時候會拉出**白色的絲**——古人覺得像筋，所以用它**強筋骨**。阿公說「腰像沒了支架」，杜仲就是那個支架：**補肝腎、強腰膝**，是中醫治腰酸最常用的藥之一
@@ -251,7 +251,7 @@ excerpt: "林阿公的真武湯喝了三週，腳消了、拖鞋穿得下了。�
 
 #### 當歸（調度二姐）
 
-<img src="/assets/images/characters/danggui.png" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/danggui.webp" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・養血和血擔當
 - **專長**：甘、辛，溫。十味藥裡九味在補，補多了會**滯**——她負責讓血動起來，補進去的東西才送得到腰、膝、腳。上週她在羊肉湯裡當君藥；這一篇她是配角，但少了她整帖方會太「悶」

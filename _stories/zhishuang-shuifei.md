@@ -17,7 +17,7 @@ effects: "制霜與水飛：兩種把藥做到極致純淨的功夫。制霜以�
 ingredients:
   - name: 滑石
     description: 水飛代表藥｜經水飛研成極細粉，粉細純淨不刺激，利水通淋、外用收濕
-    image: huashi.png
+    image: huashi.webp
     category: 利水
 excerpt: "老闆娘在一盆水裡磨著白粉，上層的細粉隨水漂走、粗的沉底。小宇問這是在做什麼。她說：在淘藥——把最細、最純的那一層，用水淘出來。這是炮製系列的最後一站。"
 ---
@@ -73,7 +73,7 @@ excerpt: "老闆娘在一盆水裡磨著白粉，上層的細粉隨水漂走、�
 
 ## 水飛的代表
 
-<img src="/assets/images/characters/huashi.png" alt="滑石" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/huashi.webp" alt="滑石" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **滑石**是水飛最好的例子。經水飛研成極細粉後，內服利水通淋、清熱，外用收濕斂瘡、爽身不刺激。你在 [六一散](/stories/liu-yi-san/)（滑石配甘草）這帖清暑利濕名方裡，用的正是水飛滑石；[三仁湯](/stories/san-ren-tang/) 這類清利濕熱的方子裡也有它。
 

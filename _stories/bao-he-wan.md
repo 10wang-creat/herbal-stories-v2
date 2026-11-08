@@ -14,31 +14,31 @@ effects: "消食和胃，適用於食積內停所致的脘腹痞滿脹痛、噯�
 ingredients:
   - name: 山楂
     description: 消食總隊長｜酸甘性溫，善消肉食油膩之積，是開路先鋒
-    image: shanzha.png
+    image: shanzha.webp
     category: 消食
   - name: 神麴
     description: 發酵老師傅｜辛溫蒸窨而成，善消酒食陳腐之積
-    image: shenqu.png
+    image: shenqu.webp
     category: 消食
   - name: 萊菔子
     description: 下氣小鋼砲｜辛甘下氣，善消麵食痰濁之積
-    image: laifuzi.png
+    image: laifuzi.webp
     category: 消食
   - name: 半夏
     description: 降逆止嘔員｜和胃降逆、燥濕化痰，壓住噁心
-    image: banxia.png
+    image: banxia.webp
     category: 化痰
   - name: 陳皮
     description: 理氣小管家｜理氣和胃、燥濕化痰，恢復脾胃節奏
-    image: chenpi.png
+    image: chenpi.webp
     category: 理氣
   - name: 茯苓
     description: 除濕暖男｜健脾利濕，幫助脾胃恢復運化
-    image: fuling.png
+    image: fuling.webp
     category: 利濕
   - name: 連翹
     description: 清熱偵查兵｜苦寒散結、清解食積鬱熱，防止積食化火
-    image: lianqiao.png
+    image: lianqiao.webp
     category: 清熱
 excerpt: "大餐後肚子脹到不行、打嗝都是昨晚的味道、看到食物就想吐⋯⋯你的胃裡塞了太多東西，需要一支專業清潔隊來收拾殘局。這帖元代名醫朱丹溪的消食名方，七味藥各有專攻，堪稱中醫界的消化特攻隊。"
 ---
@@ -112,7 +112,7 @@ excerpt: "大餐後肚子脹到不行、打嗝都是昨晚的味道、看到食�
 
 ### 消食三劍客
 
-<img src="/assets/images/characters/shanzha.png" alt="山楂" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shanzha.webp" alt="山楂" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **山楂——消食總隊長（君藥）**
 
@@ -120,7 +120,7 @@ excerpt: "大餐後肚子脹到不行、打嗝都是昨晚的味道、看到食�
 
 山楂的消食能力來自它的酸性——酸能收縮、能分解，就像天然的「胃酸加強劑」。在保和丸裡用量最重，是當之無愧的總隊長。
 
-<img src="/assets/images/characters/shenqu.png" alt="神麴" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shenqu.webp" alt="神麴" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **神麴——發酵老師傅（臣藥）**
 
@@ -128,7 +128,7 @@ excerpt: "大餐後肚子脹到不行、打嗝都是昨晚的味道、看到食�
 
 如果說山楂是消「新鮮肉」的專家，神麴就是消「陳年老醬」的行家。
 
-<img src="/assets/images/characters/laifuzi.png" alt="萊菔子" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/laifuzi.webp" alt="萊菔子" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **萊菔子——下氣小鋼砲（臣藥）**
 
@@ -138,10 +138,10 @@ excerpt: "大餐後肚子脹到不行、打嗝都是昨晚的味道、看到食�
 
 ### 後勤支援組
 
-<img src="/assets/images/characters/banxia.png" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/banxia.webp" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
 
-<img src="/assets/images/characters/chenpi.png" alt="陳皮" style="float:left; width:100px; margin:0 15px 10px 0;">
-<img src="/assets/images/characters/fuling.png" alt="茯苓" style="float:left; width:100px; margin:0 15px 10px 0;">
+<img src="/assets/images/characters/chenpi.webp" alt="陳皮" style="float:left; width:100px; margin:0 15px 10px 0;">
+<img src="/assets/images/characters/fuling.webp" alt="茯苓" style="float:left; width:100px; margin:0 15px 10px 0;">
 
 **半夏 + 陳皮 + 茯苓——二陳湯班底歸隊**
 
@@ -149,7 +149,7 @@ excerpt: "大餐後肚子脹到不行、打嗝都是昨晚的味道、看到食�
 
 為什麼消食方裡要放化痰的藥？因為**食積容易生濕、生痰**。吃太多油膩的東西，脾胃運化不動，就會產生痰濕——喉嚨黏黏的、肚子咕嚕咕嚕的，都是痰濕在作怪。二陳湯班底負責打掃這些「副產品」。
 
-<img src="/assets/images/characters/lianqiao.png" alt="連翹" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/lianqiao.webp" alt="連翹" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **連翹——清熱偵查兵（佐藥）**
 

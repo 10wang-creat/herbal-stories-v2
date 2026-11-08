@@ -17,15 +17,15 @@ effects: "發酵與發芽：藉微生物作用或種子萌發，讓原料產生�
 ingredients:
   - name: 神麴
     description: 發酵代表藥｜由麵粉、麥麩等混合藥料發酵而成，本身就是發酵造出的新藥，消食和胃
-    image: shenqu.png
+    image: shenqu.webp
     category: 消食
   - name: 淡豆豉
     description: 發酵代表藥｜黑大豆蒸熟後發酵而成，賦予解表除煩的新功能
-    image: dandouchi.png
+    image: dandouchi.webp
     category: 解表
   - name: 麥芽
     description: 發芽代表藥｜大麥發芽而成，種子「醒過來」後消食健胃、又能回乳
-    image: maiya.png
+    image: maiya.webp
     category: 消食
 excerpt: "後場有個東西在盆裡『發』著，聞起來像酒釀、又像麵團。小宇問是不是壞了。老闆娘說：這不是壞，是活過來了——正在長出新本事。這是炮製系列・水火篇的第二站。"
 ---
@@ -74,19 +74,19 @@ excerpt: "後場有個東西在盆裡『發』著，聞起來像酒釀、又像�
 
 ### 神麴：發酵造出的新藥
 
-<img src="/assets/images/characters/shenqu.png" alt="神麴" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shenqu.webp" alt="神麴" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **神麴**不是採來的，是「做」出來的——由麵粉、麥麩，加上杏仁、赤小豆、青蒿等藥料混合，經發酵而成。發酵賦予它消食和胃、尤善化解酒食陳腐積滯的本事。它是「發酵造出一味新藥」最好的例子。[保和丸](/stories/bao-he-wan/) 這帖消食名方裡，神麴正是要角。
 
 ### 淡豆豉：黑豆的華麗轉身
 
-<img src="/assets/images/characters/dandouchi.png" alt="淡豆豉" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/dandouchi.webp" alt="淡豆豉" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **淡豆豉**是黑大豆蒸熟後，經桑葉、青蒿等發酵而成。原本平凡的黑豆，發酵後竟長出**解表、除煩**的新功能——用於外感初起、心中煩悶。[銀翹散](/stories/yin-qiao-san/) 裡就有它的身影。
 
 ### 麥芽：醒過來的種子
 
-<img src="/assets/images/characters/maiya.png" alt="麥芽" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/maiya.webp" alt="麥芽" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 前兩位是「發酵」造出來的，麥芽則是「發芽」醒過來的。**麥芽**是大麥在適當溫濕下發芽而成——種子一發芽，就長出了新本事：消食健胃，還能回乳。同樣是「種子醒來」的，還有穀芽（稻穀發芽，消食和中）、大豆黃卷（黑豆發芽，清熱利濕）——都是種子發芽後才長出來的本事。
 

@@ -14,20 +14,20 @@ effects: "活血化瘀、溫經止痛，適用於產後惡露不行、小腹冷�
 ingredients:
   - name: 當歸
     description: 產後恢復總指揮｜養血活血，修復子宮、促進新生
-    image: danggui.png
+    image: danggui.webp
   - name: 川芎
     description: 血路開道先鋒｜行氣活血，推動瘀血排出
-    image: chuanxiong.png
+    image: chuanxiong.webp
   - name: 桃仁
     description: 瘀血清除專家｜破血祛瘀，清理殘留血塊
-    image: taoren.png
+    image: taoren.webp
   - name: 炮薑
     category: 溫裡
     description: 溫暖守護者｜溫經散寒，防止出血過多
-    image: paojiang.png
+    image: paojiang.webp
   - name: 炙甘草
     description: 和事佬｜調和諸藥，緩急止痛
-    image: gancao.png
+    image: gancao.webp
 excerpt: "產後坐月子一定要喝生化湯嗎？這帖被稱為「產後第一方」的千古名方，五味藥就能做到「生新血、化舊瘀」——但喝錯時機，反而會傷身體。"
 ---
 
@@ -107,7 +107,7 @@ excerpt: "產後坐月子一定要喝生化湯嗎？這帖被稱為「產後第�
 
 ### 當歸（隊長）——產後恢復總指揮
 
-<img src="/assets/images/characters/danggui.png" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/danggui.webp" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 
 如果你從第一篇就開始追我們的故事，當歸一定不陌生。
@@ -128,7 +128,7 @@ excerpt: "產後坐月子一定要喝生化湯嗎？這帖被稱為「產後第�
 
 ### 川芎（副隊長）——血路開道先鋒
 
-<img src="/assets/images/characters/chuanxiong.png" alt="川芎" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/chuanxiong.webp" alt="川芎" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 
 川芎在[四物湯](/stories/si-wu-tang/)裡是最活潑的小妹，專門負責推動血液循環。到了生化湯裡，她的角色升級了——從「推動」變成「開道」。
@@ -143,7 +143,7 @@ excerpt: "產後坐月子一定要喝生化湯嗎？這帖被稱為「產後第�
 
 ### 桃仁（突擊手）——瘀血清除專家
 
-<img src="/assets/images/characters/taoren.png" alt="桃仁" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/taoren.webp" alt="桃仁" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 每支特遣隊都需要一位專門處理「硬骨頭」的成員。
 
@@ -161,7 +161,7 @@ excerpt: "產後坐月子一定要喝生化湯嗎？這帖被稱為「產後第�
 
 ### 炮薑（守護者）——溫暖的後盾
 
-<img src="/assets/images/characters/paojiang.png" alt="炮薑" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/paojiang.webp" alt="炮薑" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 
 炮薑是這支隊伍裡最容易被忽略、卻最不能缺少的成員。
@@ -180,7 +180,7 @@ excerpt: "產後坐月子一定要喝生化湯嗎？這帖被稱為「產後第�
 
 ### 炙甘草（協調員）——永遠的和事佬
 
-<img src="/assets/images/characters/gancao.png" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 每一篇故事裡都少不了他。從[四君子湯](/stories/sijunzi-tang/)到[補中益氣湯](/stories/bu-zhong-yi-qi-tang/)，炙甘草永遠是那個在團隊裡默默調和的存在。
 

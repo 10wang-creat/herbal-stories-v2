@@ -14,10 +14,10 @@ effects: "清暑利濕，適用於暑濕證之身熱煩渴、小便短赤不利�
 ingredients:
   - name: 滑石
     description: 清涼滑水道長｜甘寒滑利、清暑利濕，把暑熱順著小便溜出去
-    image: huashi.png
+    image: huashi.webp
   - name: 甘草
     description: 護胃和事佬｜甘緩和中、調和藥性，幫寒涼的隊長踩剎車
-    image: gancao.png
+    image: gancao.webp
 excerpt: "盛夏在大太陽下奔波，熱到猛灌水，卻覺得尿變少、顏色深，整個人悶熱煩躁排不掉？這帖只有兩味藥、比例剛好六比一的極簡名方，靠一條「清涼滑水道」把體內的暑熱濕氣溜出去——它可能是整個系列裡，組成最簡單的方劑。"
 ---
 
@@ -90,7 +90,7 @@ excerpt: "盛夏在大太陽下奔波，熱到猛灌水，卻覺得尿變少、�
 
 ### 滑石（清涼滑水道長）
 
-<img src="/assets/images/characters/huashi.png" alt="滑石" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/huashi.webp" alt="滑石" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥·清暑利濕擔當
 - **專長**：質地滑溜、性味甘寒，像在體內架起一條清涼滑水道——把暑熱和濕氣「咻——」地順著小便溜出去，一趟帶走熱、順便通水路
@@ -99,7 +99,7 @@ excerpt: "盛夏在大太陽下奔波，熱到猛灌水，卻覺得尿變少、�
 
 ### 甘草（護胃和事佬）
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐使·和中護胃擔當
 - **專長**：甘甜和緩，一邊幫滑石踩剎車（防止太寒涼傷胃），一邊生津止渴、穩住中焦

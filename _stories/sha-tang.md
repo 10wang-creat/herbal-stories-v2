@@ -16,19 +16,19 @@ effects: "砂燙：以燒熱的潔淨河砂為導熱介質翻燙藥材。目的�
 ingredients:
   - name: 雞內金
     description: 砂燙代表藥｜砂燙後質地酥脆、便於粉碎，健脾消食化積更好發揮
-    image: jineijin.png
+    image: jineijin.webp
     category: 消食
   - name: 骨碎補
     description: 砂燙代表藥｜砂燙去毛、質地酥脆，補肝腎、續筋接骨
-    image: gusuibu.png
+    image: gusuibu.webp
     category: 補腎
   - name: 龜板
     description: 砂燙代表藥｜砂燙醋淬後酥脆易煎、去腥，滋陰潛陽
-    image: guiban.png
+    image: guiban.webp
     category: 滋陰
   - name: 鱉甲
     description: 砂燙代表藥｜砂燙醋淬後酥脆，滋陰軟堅散結、退虛熱
-    image: biejia.png
+    image: biejia.webp
     category: 滋陰
 excerpt: "老闆娘端出一鍋燒得發燙的砂子，把藥材倒進去翻。小宇看傻了：拿砂子炒藥？她說：對付又硬又厚的藥，砂子比火更聽話。這是炮製系列・火候篇的第四站。"
 ---
@@ -72,23 +72,23 @@ excerpt: "老闆娘端出一鍋燒得發燙的砂子，把藥材倒進去翻。�
 
 ## 砂燙的常客
 
-<img src="/assets/images/characters/jineijin.png" alt="雞內金" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/jineijin.webp" alt="雞內金" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **雞內金**——砂燙後質地酥脆、便於粉碎，健脾消食的作用也更好發揮。
 
-<img src="/assets/images/characters/gusuibu.png" alt="骨碎補" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gusuibu.webp" alt="骨碎補" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **骨碎補**——表面帶毛，砂燙後毛易去除、質地酥脆，方便入藥。
 
-<img src="/assets/images/characters/guiban.png" alt="龜板" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/guiban.webp" alt="龜板" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **龜板**——質地堅硬的動物藥，砂燙後再醋淬，變得酥脆、去腥、易煎出，滋陰潛陽之效更好利用。
 
-<img src="/assets/images/characters/biejia.png" alt="鱉甲" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/biejia.webp" alt="鱉甲" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **鱉甲**——與龜板是一對，砂燙醋淬後同樣酥脆易煎，長於滋陰軟堅散結、退虛熱。
 
-<img src="/assets/images/characters/maqianzi.png" alt="馬錢子（有大毒，須專業炮製）" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/maqianzi.webp" alt="馬錢子（有大毒，須專業炮製）" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **馬錢子**——這是砂燙「減毒」的代表（牠有大毒，連卡面都特意帶了警示標記）。生馬錢子毒性很強，砂燙的高溫能降低其毒性。
 

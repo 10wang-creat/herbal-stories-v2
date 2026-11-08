@@ -15,55 +15,55 @@ effects: "解表化濕、理氣和中，適用於外感風寒、內傷濕滯證�
 ingredients:
   - name: 藿香
     description: 芳香化濕（君藥）｜辛微溫，化濕醒脾、和中止嘔、發表解暑，全方的芳香主帥
-    image: huoxiang.png
+    image: huoxiang.webp
     category: 化濕
   - name: 紫蘇
     description: 解表行氣（臣藥）｜辛溫，發散風寒、行氣寬中，協助藿香解表
-    image: zisu.png
+    image: zisu.webp
     category: 解表
   - name: 白芷
     description: 散寒止痛（臣藥）｜辛溫，解表散寒、化濕止痛，緩解頭痛
-    image: baizhi.png
+    image: baizhi.webp
     category: 解表
   - name: 半夏
     description: 燥濕止嘔｜辛溫，燥濕和胃、降逆止嘔，二陳湯歸來的老朋友
-    image: banxia.png
+    image: banxia.webp
     category: 化痰
   - name: 厚朴
     description: 行氣除滿｜苦辛溫，行氣化濕、寬中除脹，平胃散歸來的老朋友
-    image: houpo.png
+    image: houpo.webp
     category: 理氣
   - name: 大腹皮
     description: 行氣利水（新角色）｜辛微溫，下氣寬中、利水消脹，化解腹脹
-    image: dafupi.png
+    image: dafupi.webp
     category: 理氣
   - name: 陳皮
     description: 理氣和胃｜辛苦溫，理氣健脾、燥濕和胃，二陳湯歸來的老朋友
-    image: chenpi.png
+    image: chenpi.webp
     category: 理氣
   - name: 茯苓
     description: 健脾滲濕｜甘淡平，健脾利水滲濕，從下焦把濕導出
-    image: fuling.png
+    image: fuling.webp
     category: 利水
   - name: 白朮
     description: 健脾燥濕｜苦甘溫，補氣健脾、燥濕，扶正杜絕生濕之源
-    image: baizhu.png
+    image: baizhu.webp
     category: 補氣
   - name: 桔梗
     description: 宣肺利膈｜苦辛平，宣肺利氣、寬胸，銀翹散歸來的老朋友
-    image: jiegeng.png
+    image: jiegeng.webp
     category: 化痰
   - name: 甘草
     description: 調和諸藥｜甘平，調和藥性、益氣和中
-    image: gancao.png
+    image: gancao.webp
     category: 補氣
   - name: 生薑
     description: 和胃止嘔｜辛微溫，散寒和胃、降逆止嘔，桂枝湯歸來的老朋友
-    image: shengjiang.png
+    image: shengjiang.webp
     category: 解表
   - name: 大棗
     description: 補脾和中｜甘溫，補中益氣、顧護脾胃，與生薑相配調和營衛
-    image: dazao.png
+    image: dazao.webp
     category: 補氣
 excerpt: "夏天最常見的『腸胃型感冒』：吹了一整天冷氣、灌了冰飲、又淋到西北雨，結果又吐又拉、頭重身困、噁心沒胃口。這不是普通感冒，而是『外有寒、內有濕』的夾擊。一帖芳香的藿香正氣散，正是台灣夏天該認識的腸胃救兵——也是旅行常備藥的本尊。"
 ---
@@ -124,19 +124,19 @@ excerpt: "夏天最常見的『腸胃型感冒』：吹了一整天冷氣、灌�
 
 ### 第一隊：芳香解表化濕（先鋒）
 
-<img src="/assets/images/characters/huoxiang.png" alt="藿香" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/huoxiang.webp" alt="藿香" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **藿香——芳香主帥（君藥）**
 
 本篇的新角色，也是全方的靈魂。藿香氣味芳香，**既能化濕醒脾、和中止嘔，又能發表解暑**——一身兼顧「解表」與「化濕」兩件事，正是這帖方的核心。夏天那種昏沉、噁心、沒胃口，最需要它的芳香把濁氣「叫醒」。
 
-<img src="/assets/images/characters/zisu.png" alt="紫蘇" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/zisu.webp" alt="紫蘇" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **紫蘇——解表行氣（臣藥）**
 
 新角色。紫蘇辛溫，**發散風寒、行氣寬中**——幫藿香把束在體表的寒邪散掉，同時理順鬱滯的氣機。
 
-<img src="/assets/images/characters/baizhi.png" alt="白芷" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baizhi.webp" alt="白芷" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **白芷——散寒止痛（臣藥）**
 
@@ -144,25 +144,25 @@ excerpt: "夏天最常見的『腸胃型感冒』：吹了一整天冷氣、灌�
 
 ### 第二隊：理氣化濕和胃（主力）
 
-<img src="/assets/images/characters/banxia.png" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/banxia.webp" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **半夏——燥濕止嘔**
 
 [二陳湯](/stories/er-chen-tang/)歸來的老朋友。**燥濕和胃、降逆止嘔**——專治那股往上頂的噁心嘔吐。
 
-<img src="/assets/images/characters/houpo.png" alt="厚朴" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/houpo.webp" alt="厚朴" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **厚朴——行氣除滿**
 
 [平胃散](/stories/ping-wei-san/)歸來的老朋友。**行氣化濕、寬中除脹**，把堵在中焦的濕氣與脹悶往下疏通。
 
-<img src="/assets/images/characters/dafupi.png" alt="大腹皮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/dafupi.webp" alt="大腹皮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **大腹皮——行氣利水（新角色）**
 
 新角色。大腹皮**下氣寬中、利水消脹**，名字裡的「大腹」正好對應它的專長——消除腹部的脹滿，把多餘的水濕往下導。
 
-<img src="/assets/images/characters/chenpi.png" alt="陳皮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/chenpi.webp" alt="陳皮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **陳皮——理氣和胃**
 
@@ -170,37 +170,37 @@ excerpt: "夏天最常見的『腸胃型感冒』：吹了一整天冷氣、灌�
 
 ### 第三隊：健脾扶正（後盾）
 
-<img src="/assets/images/characters/fuling.png" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fuling.webp" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **茯苓——健脾滲濕**
 
 [四君子湯](/stories/sijunzi-tang/)、[五苓散](/stories/wu-ling-san/)的常客。**健脾利水滲濕**，從下焦把濕邪悄悄導出去。
 
-<img src="/assets/images/characters/baizhu.png" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baizhu.webp" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **白朮——健脾燥濕**
 
 **補氣健脾、燥濕**——脾是「生濕」也是「制濕」的關鍵。把脾顧好，才能從源頭杜絕濕氣再生。
 
-<img src="/assets/images/characters/jiegeng.png" alt="桔梗" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/jiegeng.webp" alt="桔梗" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **桔梗——宣肺利膈**
 
 [銀翹散](/stories/yin-qiao-san/)、[血府逐瘀湯](/stories/xue-fu-zhu-yu-tang/)歸來的老朋友。**宣肺利氣、寬胸**，肺氣一開，全身氣機更順暢。
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **甘草——調和諸藥**
 
 調和藥性、益氣和中，統合三隊的步調。
 
-<img src="/assets/images/characters/shengjiang.png" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shengjiang.webp" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **生薑——和胃止嘔**
 
 [桂枝湯](/stories/gui-zhi-tang/)歸來的老朋友。**散寒和胃、降逆止嘔**，與藿香、半夏聯手壓下那股噁心嘔吐，也助體表散寒。
 
-<img src="/assets/images/characters/dazao.png" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/dazao.webp" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **大棗——補脾和中**
 

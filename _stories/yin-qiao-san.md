@@ -14,39 +14,39 @@ effects: "辛涼透表、清熱解毒，適用於溫病初起所致的發熱微�
 ingredients:
   - name: 金銀花
     description: 清熱解毒女王｜甘寒芳香，清熱解毒又能透表散邪，溫病剋星
-    image: jinyinhua.png
+    image: jinyinhua.webp
     category: 清熱
   - name: 連翹
     description: 清熱偵查兵｜苦寒散結，輕宣透表，保和丸歸來的老朋友
-    image: lianqiao.png
+    image: lianqiao.webp
     category: 清熱
   - name: 薄荷
     description: 涼風使者｜辛涼疏散，清利頭目咽喉，一陣涼風帶走熱邪
-    image: bohe.png
+    image: bohe.webp
     category: 解表
   - name: 牛蒡子
     description: 利咽大將｜辛平潤肺，疏散風熱、利咽消腫，喉嚨痛的救星
-    image: niubangzi.png
+    image: niubangzi.webp
     category: 解表
   - name: 荊芥穗
     description: 透表尖兵｜辛溫但不燥，協助辛涼藥透散表邪
-    image: jingjie.png
+    image: jingjie.webp
     category: 解表
   - name: 淡豆豉
     description: 解表暗號兵｜辛甘微苦，宣散鬱熱，從內部配合解表
-    image: dandouchi.png
+    image: dandouchi.webp
     category: 解表
   - name: 桔梗
     description: 宣肺快遞員｜宣肺利咽、祛痰止咳，把藥力往上送到咽喉
-    image: jiegeng.png
+    image: jiegeng.webp
     category: 化痰
   - name: 淡竹葉
     description: 清心涼茶｜清上焦之熱，除煩生津
-    image: danzhuye.png
+    image: danzhuye.webp
     category: 清熱
   - name: 甘草
     description: 和事佬｜調和諸藥、解毒護胃，與桔梗合用化痰利咽
-    image: gancao.png
+    image: gancao.webp
     category: 補氣
 excerpt: "喉嚨又乾又痛、發燒但不太怕冷、口渴想喝水、咳嗽痰黏黃⋯⋯這不是普通的「著涼」，而是風熱感冒。清代溫病大師吳鞠通的這帖辛涼名方，九味藥就能把入侵的熱邪從皮毛透散出去。"
 ---
@@ -126,7 +126,7 @@ excerpt: "喉嚨又乾又痛、發燒但不太怕冷、口渴想喝水、咳嗽�
 
 ### 清熱雙君王
 
-<img src="/assets/images/characters/jinyinhua.png" alt="金銀花" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/jinyinhua.webp" alt="金銀花" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **金銀花——清熱解毒女王（君藥）**
 
@@ -134,7 +134,7 @@ excerpt: "喉嚨又乾又痛、發燒但不太怕冷、口渴想喝水、咳嗽�
 
 金銀花的名字來自它的花——初開時白色（銀），開久了轉黃色（金），所以叫「金銀花」。
 
-<img src="/assets/images/characters/lianqiao.png" alt="連翹" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/lianqiao.webp" alt="連翹" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **連翹——清熱偵查兵（君藥）**
 
@@ -144,7 +144,7 @@ excerpt: "喉嚨又乾又痛、發燒但不太怕冷、口渴想喝水、咳嗽�
 
 ### 疏散表邪小隊
 
-<img src="/assets/images/characters/bohe.png" alt="薄荷" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/bohe.webp" alt="薄荷" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **薄荷——涼風使者（臣藥）**
 
@@ -152,14 +152,14 @@ excerpt: "喉嚨又乾又痛、發燒但不太怕冷、口渴想喝水、咳嗽�
 
 薄荷在[逍遙散](/stories/xiao-yao-san/)裡也出現過，那次它負責「疏肝透鬱」。這次的任務是「疏風透熱」——同一個角色，不同的專長面。
 
-<img src="/assets/images/characters/niubangzi.png" alt="牛蒡子" style="float:left; width:100px; margin:0 15px 10px 0;">
+<img src="/assets/images/characters/niubangzi.webp" alt="牛蒡子" style="float:left; width:100px; margin:0 15px 10px 0;">
 
 **牛蒡子——利咽大將（臣藥）**
 
 牛蒡子辛平潤肺，最拿手的是**疏散風熱、利咽消腫**。喉嚨紅腫痛？牛蒡子是你的救星。它不只消腫，還能潤肺祛痰，是專門針對咽喉問題的重要藥物。
 
-<img src="/assets/images/characters/jingjie.png" alt="荊芥穗" style="float:right; width:100px; margin:0 0 10px 15px;">
-<img src="/assets/images/characters/dandouchi.png" alt="淡豆豉" style="float:left; width:100px; margin:0 15px 10px 0;">
+<img src="/assets/images/characters/jingjie.webp" alt="荊芥穗" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/dandouchi.webp" alt="淡豆豉" style="float:left; width:100px; margin:0 15px 10px 0;">
 
 **荊芥穗 + 淡豆豉——溫中有涼的搭檔**
 
@@ -168,9 +168,9 @@ excerpt: "喉嚨又乾又痛、發燒但不太怕冷、口渴想喝水、咳嗽�
 ### 佐使支援
 
 <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:10px 0 16px;">
-  <img src="/assets/images/characters/jiegeng.png" alt="桔梗" style="width:90px; height:auto;">
-  <img src="/assets/images/characters/danzhuye.png" alt="淡竹葉" style="width:90px; height:auto;">
-  <img src="/assets/images/characters/gancao.png" alt="甘草" style="width:90px; height:auto;">
+  <img src="/assets/images/characters/jiegeng.webp" alt="桔梗" style="width:90px; height:auto;">
+  <img src="/assets/images/characters/danzhuye.webp" alt="淡竹葉" style="width:90px; height:auto;">
+  <img src="/assets/images/characters/gancao.webp" alt="甘草" style="width:90px; height:auto;">
 </div>
 
 **桔梗** 宣肺利咽、祛痰止咳，像快遞員一樣把藥力往上送到咽喉；**淡竹葉** 清上焦之熱、除煩生津；**甘草** 調和諸藥，跟桔梗合用還能化痰利咽。煎服時另加**蘆根**，清熱生津止渴。

@@ -17,11 +17,11 @@ effects: "鹽炙：以食鹽水為輔料炒製。目的在引藥下行入腎、�
 ingredients:
   - name: 知母
     description: 鹽炙代表藥｜生知母清肺胃火；鹽知母引藥入腎，增強滋腎陰、降相火、退虛熱
-    image: zhimu.png
+    image: zhimu.webp
     category: 清熱
   - name: 澤瀉
     description: 鹽炙代表藥｜生澤瀉利水滲濕；鹽澤瀉引藥入腎，增強瀉腎濁、瀉相火
-    image: zexie.png
+    image: zexie.webp
     category: 利水
 excerpt: "老闆娘在藥裡撒鹽，小宇以為她在醃蘿蔔。她笑：這撮鹽不是要醃的，是要幫藥『沉』下去——沉到腎裡。這是炮製系列・輔料篇的第四站。"
 ---
@@ -66,14 +66,14 @@ excerpt: "老闆娘在藥裡撒鹽，小宇以為她在醃蘿蔔。她笑：這�
 
 ### 知母：清上焦的，與降腎火的
 
-<img src="/assets/images/characters/zhimu.png" alt="知母" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/zhimu.webp" alt="知母" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **生知母**清的是肺胃之火，偏上、偏中焦。
 **鹽知母**被鹽一引，往下沉進腎經，增強滋腎陰、降相火的本事——特別用於陰虛火旺、骨蒸潮熱這類「下焦虛火」。中醫著名的「知柏」配伍（知母配黃柏滋陰降火），用的常是鹽炙版。
 
 ### 澤瀉：利水的，與瀉腎濁的
 
-<img src="/assets/images/characters/zexie.png" alt="澤瀉" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/zexie.webp" alt="澤瀉" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **生澤瀉**擅長利水滲濕，把多餘的水濕排掉。
 **鹽澤瀉**被鹽引入腎，增強瀉腎濁、瀉相火的力道。[六味地黃丸](/stories/liu-wei-di-huang-wan/) 裡「三瀉」之一的澤瀉，[五苓散](/stories/wu-ling-san/) 裡負責利水的澤瀉，背後常有鹽的引路。

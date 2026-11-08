@@ -15,19 +15,19 @@ ingredients:
   - name: 麻黃
     category: 解表
     description: 撬窗的人（新角色）｜辛微苦而溫，發汗解表、宣肺平喘，寒氣把門窗全凍住了，他負責撬開，本方君藥
-    image: mahuang.png
+    image: mahuang.webp
   - name: 桂枝
     category: 解表
     description: 溫陽發動機｜辛甘而溫，解肌發表、溫通經脈，站在麻黃後面把熱往外推，臣藥
-    image: guizhi.png
+    image: guizhi.webp
   - name: 杏仁
     category: 化痰
     description: 降氣專員｜苦溫，肅降肺氣、止咳平喘，窗一開，氣得有人往下順，佐藥
-    image: xingren.png
+    image: xingren.webp
   - name: 甘草
     category: 補氣
     description: 和事佬｜炙用，益氣和中、調和諸藥，三位猛將旁邊一定要站一個穩的人，使藥
-    image: gancao.png
+    image: gancao.webp
 excerpt: "志豪四十二歲，在新竹跑外送。立冬那天晚上下了整夜的雨，他跑到十一點才收工，回家時整件雨衣是冰的。半夜開始發冷，蓋兩條棉被還在抖，全身像被打過，可是一滴汗也沒有。中醫師看完說：「你不是火不夠。你家現在是暖氣開到最大，可是門窗全被凍住了。」"
 ---
 
@@ -150,7 +150,7 @@ excerpt: "志豪四十二歲，在新竹跑外送。立冬那天晚上下了整�
 
 #### 麻黃（撬窗的人）🆕
 
-<img src="/assets/images/characters/mahuang.png" alt="麻黃" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/mahuang.webp" alt="麻黃" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・發汗解表、宣肺平喘擔當
 - **專長**：本篇新角色。味辛、微苦，性溫。他是中藥裡**發汗力最強**的一位，專長是**打開被寒氣關死的毛孔**。除了發汗，他還能**宣肺**——肺氣悶住的喘和咳，他一併處理；也能**利水**——這一點我們下一篇再說
@@ -163,7 +163,7 @@ excerpt: "志豪四十二歲，在新竹跑外送。立冬那天晚上下了整�
 
 #### 桂枝（溫陽發動機）
 
-<img src="/assets/images/characters/guizhi.png" alt="桂枝" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/guizhi.webp" alt="桂枝" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・解肌發表、溫通經脈擔當
 - **專長**：辛、甘，性溫。在自己的 **[桂枝湯](/stories/gui-zhi-tang/)** 裡他是隊長，這一篇他退到第二位——**麻黃負責撬開毛孔，桂枝負責從裡面把寒往外推**。一個開門、一個送客，合起來叫「**麻桂相須**」，發汗力比任何一個人單獨上都強
@@ -174,7 +174,7 @@ excerpt: "志豪四十二歲，在新竹跑外送。立冬那天晚上下了整�
 
 #### 杏仁（降氣專員）
 
-<img src="/assets/images/characters/xingren.png" alt="杏仁" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/xingren.webp" alt="杏仁" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・肅降肺氣、止咳平喘擔當
 - **專長**：苦，性溫。**降氣、平喘**。麻黃讓肺氣「宣」（往上往外開），杏仁讓肺氣「降」（往下順），**一宣一降，肺才轉得動**——跟 **[止嗽散](/stories/zhi-sou-san/)** 裡桔梗配白前是一樣的道理
@@ -185,7 +185,7 @@ excerpt: "志豪四十二歲，在新竹跑外送。立冬那天晚上下了整�
 
 #### 甘草（和事佬）
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：使藥・益氣和中、調和諸藥
 - **專長**：炙用。前面三位都是動作很大的人，**麻黃撬窗、桂枝推熱、杏仁降氣**，他的工作是**讓發汗不要過頭**——「緩麻黃、桂枝之峻」，順便顧住脾胃，別讓一帖辛溫藥把人散虛了

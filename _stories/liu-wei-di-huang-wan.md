@@ -11,25 +11,25 @@ excerpt: 腰痠、掉髮、耳鳴、記憶力下降？認識中醫補腎第一�
 ingredients:
   - name: 熟地黃
     description: 君藥｜滋補腎陰
-    image: shudihuang.png
+    image: shudihuang.webp
   - name: 山茱萸
     category: 補腎
     description: 固本收藏家｜補益肝腎、收斂固澀
-    image: shanzhuyu.png
+    image: shanzhuyu.webp
   - name: 山藥
     category: 補氣
     description: 臣藥｜補脾固腎
-    image: shanyao.png
+    image: shanyao.webp
   - name: 澤瀉
     description: 排濁清道夫｜利水滲濕、瀉腎濁
-    image: zexie.png
+    image: zexie.webp
   - name: 牡丹皮
     category: 清熱
     description: 佐藥｜清肝火
-    image: mudanpi.png
+    image: mudanpi.webp
   - name: 茯苓
     description: 佐藥｜滲脾濕
-    image: fuling.png
+    image: fuling.webp
 effects: 滋陰補腎，適用於腎陰虧損、腰膝痠軟、頭暈耳鳴、盜汗遺精、手足心熱、口乾舌燥
 ---
 
@@ -191,12 +191,12 @@ effects: 滋陰補腎，適用於腎陰虧損、腰膝痠軟、頭暈耳鳴、�
 ## 🎭 認識這六位成員
 
 <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:18px 0;">
-  <img src="/assets/images/characters/shudihuang.png" alt="熟地黃" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/shanzhuyu.png" alt="山茱萸" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/shanyao.png" alt="山藥" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/zexie.png" alt="澤瀉" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/mudanpi.png" alt="牡丹皮" style="width:88px; height:auto;">
-  <img src="/assets/images/characters/fuling.png" alt="茯苓" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/shudihuang.webp" alt="熟地黃" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/shanzhuyu.webp" alt="山茱萸" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/shanyao.webp" alt="山藥" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/zexie.webp" alt="澤瀉" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/mudanpi.webp" alt="牡丹皮" style="width:88px; height:auto;">
+  <img src="/assets/images/characters/fuling.webp" alt="茯苓" style="width:88px; height:auto;">
 </div>
 
 六味地黃丸只有六味藥，但配伍精妙，體現了中醫「三補三瀉」的智慧。

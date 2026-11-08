@@ -15,43 +15,43 @@ effects: "瀉肝膽實火、清下焦濕熱，適用於肝膽實火上炎所致�
 ingredients:
   - name: 龍膽草
     description: 瀉火總司令｜大苦大寒，上瀉肝膽實火、下清下焦濕熱，火場裡的滅火隊長
-    image: longdancao.png
+    image: longdancao.webp
     category: 清熱
   - name: 黃芩
     description: 清熱鎮守官｜苦寒瀉火，從小柴胡湯回歸，協助清肝膽之熱
-    image: huangqin.png
+    image: huangqin.webp
     category: 清熱
   - name: 梔子
     description: 導火下行兵｜苦寒清熱瀉火、涼血解毒，把火氣往下導從小便排出
-    image: zhizi.png
+    image: zhizi.webp
     category: 清熱
   - name: 澤瀉
     description: 利水總指揮｜從五苓散歸來，利水滲濕，引濕熱從小便而出
-    image: zexie.png
+    image: zexie.webp
     category: 利濕
   - name: 車前子
     description: 清利急行軍｜利尿通淋、清肝明目，加速濕熱排出
-    image: cheqianzi.png
+    image: cheqianzi.webp
     category: 利濕
   - name: 木通
     description: 通淋疏導員｜清熱利尿，疏通小腸與膀胱的水道
-    image: mutong.png
+    image: mutong.webp
     category: 利濕
   - name: 當歸
     description: 血液大總管｜養血滋陰，防止苦寒藥傷害肝血
-    image: danggui.png
+    image: danggui.webp
     category: 補血
   - name: 生地黃
     description: 滋陰清涼飲｜滋陰涼血，保護肝腎陰血不被實火燒傷
-    image: shengdi.png
+    image: shengdi.webp
     category: 補血
   - name: 柴胡
     description: 疏散先鋒｜疏暢肝膽氣機，兼作引經藥帶領諸藥直達肝膽
-    image: chaihu.png
+    image: chaihu.webp
     category: 解表
   - name: 甘草
     description: 和事佬｜調和諸藥、緩中護胃，防止苦寒藥傷脾胃
-    image: gancao.png
+    image: gancao.webp
     category: 補氣
 excerpt: "嘴巴苦得像吞了黃連、眼睛紅得像兔子、耳朵嗡嗡叫、脾氣一點就炸⋯⋯你的肝火可能燒太旺了。這帖專門瀉肝膽實火的猛方，十味藥組成一支精密的消防隊：一邊滅火、一邊排水、一邊護血，瀉中有補，猛而不傷。"
 ---
@@ -126,7 +126,7 @@ excerpt: "嘴巴苦得像吞了黃連、眼睛紅得像兔子、耳朵嗡嗡叫�
 
 ### 滅火組
 
-<img src="/assets/images/characters/longdancao.png" alt="龍膽草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/longdancao.webp" alt="龍膽草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **龍膽草——瀉火總司令（君藥）**
 
@@ -134,48 +134,48 @@ excerpt: "嘴巴苦得像吞了黃連、眼睛紅得像兔子、耳朵嗡嗡叫�
 
 龍膽草的「苦」不是一般的苦。據說它是中藥裡最苦的藥材之一，苦到名字都要帶個「膽」字——膽汁有多苦，它就有多苦。但正是這份極致的苦寒，讓它能直入肝膽經，把熊熊烈火一舉撲滅。
 
-<img src="/assets/images/characters/huangqin.png" alt="黃芩" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/huangqin.webp" alt="黃芩" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **黃芩 + 梔子——清熱雙將（臣藥）**
 
 黃芩從[小柴胡湯](/stories/xiao-chai-hu-tang/)回歸了！在小柴胡湯裡它負責「清泄少陽半裡之熱」，這次在龍膽瀉肝湯裡任務升級：跟梔子聯手，**全面清瀉肝膽和三焦的火熱**。
 
-<img src="/assets/images/characters/zhizi.png" alt="梔子" style="float:left; width:100px; margin:0 15px 10px 0;">
+<img src="/assets/images/characters/zhizi.webp" alt="梔子" style="float:left; width:100px; margin:0 15px 10px 0;">
 
 黃芩清上焦之熱，梔子能導火下行——把火氣引導到小便排出去。兩人配合龍膽草，形成三重滅火網。
 
 ### 排水組
 
-<img src="/assets/images/characters/zexie.png" alt="澤瀉" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/zexie.webp" alt="澤瀉" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **澤瀉 + 車前子 + 木通——利濕三人組（佐藥）**
 
 光滅火不夠，還要把濕熱排出去。怎麼排？**從小便走。**
 
-<img src="/assets/images/characters/cheqianzi.png" alt="車前子" style="float:left; width:100px; margin:0 15px 10px 0;">
-<img src="/assets/images/characters/mutong.png" alt="木通" style="float:left; width:100px; margin:0 15px 10px 0;">
+<img src="/assets/images/characters/cheqianzi.webp" alt="車前子" style="float:left; width:100px; margin:0 15px 10px 0;">
+<img src="/assets/images/characters/mutong.webp" alt="木通" style="float:left; width:100px; margin:0 15px 10px 0;">
 
 澤瀉從[五苓散](/stories/wu-ling-san/)歸來，依然擔任利水的重任。車前子利尿通淋、清肝明目。木通清熱利尿，疏通水道。三人聯手，把肝膽的濕熱從小腸、膀胱引導排出，確保火滅之後殘渣不留。
 
 ### 善後組
 
-<img src="/assets/images/characters/danggui.png" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/danggui.webp" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **當歸 + 生地黃——養血護陰（佐藥）**
 
 這是龍膽瀉肝湯最精妙的設計。前面六味藥都是苦寒清瀉的猛將，如果沒人善後，火是滅了，但肝的陰血也會被燒傷或被苦寒藥消耗掉。
 
-<img src="/assets/images/characters/shengdi.png" alt="生地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shengdi.webp" alt="生地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 當歸養血活血，生地黃滋陰涼血——兩者聯手保護肝的陰血。古人說：**「瀉邪必兼顧正，否則邪去正傷。」** 這兩味藥就是「戰勝之後的撫綏」，確保滅完火之後，家園還能重建。
 
-<img src="/assets/images/characters/chaihu.png" alt="柴胡" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/chaihu.webp" alt="柴胡" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **柴胡——引經嚮導（使藥）**
 
 柴胡是老朋友了，從[逍遙散](/stories/xiao-yao-san/)到[補中益氣湯](/stories/bu-zhong-yi-qi-tang/)到[小柴胡湯](/stories/xiao-chai-hu-tang/)，它在系列裡已經出場多次。這次在龍膽瀉肝湯裡，柴胡的角色是**引經藥**——帶領所有藥物精準抵達肝膽經，同時疏暢肝氣，讓鬱結的火有出路。
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **甘草——和事佬（使藥）**
 

@@ -15,47 +15,47 @@ effects: "活血化瘀、行氣止痛，適用於胸中血瘀證所致的胸痛�
 ingredients:
   - name: 桃仁
     description: 破瘀先鋒｜苦甘平，破血行滯而潤燥，活血化瘀的雙君藥之一
-    image: taoren.png
+    image: taoren.webp
     category: 活血
   - name: 紅花
     description: 活血女王｜辛溫，活血通經、祛瘀止痛，與桃仁聯手攻破瘀血
-    image: honghua.png
+    image: honghua.webp
     category: 活血
   - name: 赤芍
     description: 涼血戰將｜苦微寒，清熱涼血、散瘀止痛，與白芍是同源不同性的姊妹
-    image: chishao.png
+    image: chishao.webp
     category: 活血
   - name: 川芎
     description: 血中氣藥｜辛溫，行氣活血、上行頭目，四物湯歸來的老朋友
-    image: chuanxiong.png
+    image: chuanxiong.webp
     category: 補血
   - name: 當歸
     description: 補血暖陽｜甘辛溫，養血活血、祛瘀生新，讓活血不傷陰血
-    image: danggui.png
+    image: danggui.webp
     category: 補血
   - name: 生地黃
     description: 涼血滋陰｜甘苦寒，清熱涼血、養陰生津，制衡溫燥
-    image: shengdi.png
+    image: shengdi.webp
     category: 補血
   - name: 牛膝
     description: 引血下行｜苦酸平，活血通經、補肝腎、引藥下行，避免氣血上衝
-    image: niuxi.png
+    image: niuxi.webp
     category: 活血
   - name: 柴胡
     description: 疏肝先生｜苦微寒，疏肝理氣、升舉陽氣，小柴胡湯歸來的老朋友
-    image: chaihu.png
+    image: chaihu.webp
     category: 解表
   - name: 枳殼
     description: 寬胸調度員｜苦辛微寒，理氣寬中、行滯消脹，與柴胡升降相應
-    image: zhiqiao.png
+    image: zhiqiao.webp
     category: 理氣
   - name: 桔梗
     description: 開胸載舟｜苦辛平，宣肺利氣、開胸散結，銀翹散歸來的老朋友
-    image: jiegeng.png
+    image: jiegeng.webp
     category: 化痰
   - name: 甘草
     description: 和事佬｜甘平，調和諸藥，緩和方中辛烈與苦寒之性
-    image: gancao.png
+    image: gancao.webp
     category: 補氣
 excerpt: "胸口悶悶痛痛、頭痛了好幾年都治不好、晚上心悸失眠、舌頭一伸出來顏色暗紅還有黑斑⋯⋯妳的身體可能在喊一個被忽略的訊號：瘀血。清代王清任的傳世名方，十一味藥三條戰線——活血、理氣、調和升降，把堵在胸中的瘀血徹底清掃乾淨。"
 ---
@@ -164,31 +164,31 @@ excerpt: "胸口悶悶痛痛、頭痛了好幾年都治不好、晚上心悸失�
 
 ### 第一線：活血化瘀部隊
 
-<img src="/assets/images/characters/taoren.png" alt="桃仁" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/taoren.webp" alt="桃仁" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **桃仁——破瘀先鋒（君藥）**
 
 桃仁是桃子的種子，苦甘平，最擅長**破血行滯**。它能直接打破停滯的血塊，讓凝結的瘀血重新化開。同時桃仁富含油脂，能潤腸通便——避免活血藥太過剛猛而傷及陰液。
 
-<img src="/assets/images/characters/honghua.png" alt="紅花" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/honghua.webp" alt="紅花" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **紅花——活血女王（君藥）**
 
 紅花辛溫，是**活血通經、祛瘀止痛**的代表藥。桃仁主「破」，紅花主「行」——一個負責打破舊瘀，一個負責讓血液流動起來。兩者搭配，是中醫活血藥的黃金組合，被稱為「**桃紅藥對**」。
 
-<img src="/assets/images/characters/chishao.png" alt="赤芍" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/chishao.webp" alt="赤芍" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **赤芍——涼血戰將（臣藥）**
 
 赤芍跟[四物湯](/stories/si-wu-tang/)裡的白芍是同一種植物（芍藥），但功效完全不同：白芍**養血斂陰**（補的），赤芍**清熱涼血、散瘀止痛**（瀉的）。瘀血日久會「化熱」，赤芍剛好能處理瘀熱問題。
 
-<img src="/assets/images/characters/chuanxiong.png" alt="川芎" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/chuanxiong.webp" alt="川芎" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **川芎——血中氣藥（臣藥）**
 
 川芎是[四物湯](/stories/si-wu-tang/)歸來的老朋友。它有「**血中氣藥**」的稱號——既能活血又能行氣，而且擅長**上行頭目**，是治頭痛的要藥。妳的偏頭痛，川芎是關鍵。
 
-<img src="/assets/images/characters/niuxi.png" alt="牛膝" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/niuxi.webp" alt="牛膝" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **牛膝——引血下行（臣藥）**
 
@@ -196,19 +196,19 @@ excerpt: "胸口悶悶痛痛、頭痛了好幾年都治不好、晚上心悸失�
 
 ### 第二線：行氣理氣部隊
 
-<img src="/assets/images/characters/chaihu.png" alt="柴胡" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/chaihu.webp" alt="柴胡" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **柴胡——疏肝先生（佐藥）**
 
 柴胡是[小柴胡湯](/stories/xiao-chai-hu-tang/)和[逍遙散](/stories/xiao-yao-san/)的核心人物。在這裡，它的任務是**疏肝解鬱、升舉陽氣**——讓被瘀血壓抑的肝氣重新流暢。
 
-<img src="/assets/images/characters/zhiqiao.png" alt="枳殼" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/zhiqiao.webp" alt="枳殼" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **枳殼——寬胸調度員（佐藥）**
 
 枳殼**理氣寬中、行滯消脹**。胸悶、脅脹、消化不良——都靠它疏通。
 
-<img src="/assets/images/characters/jiegeng.png" alt="桔梗" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/jiegeng.webp" alt="桔梗" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **桔梗——開胸載舟（使藥）**
 
@@ -223,19 +223,19 @@ excerpt: "胸口悶悶痛痛、頭痛了好幾年都治不好、晚上心悸失�
 
 ### 第三線：養血護陰部隊
 
-<img src="/assets/images/characters/danggui.png" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/danggui.webp" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **當歸——補血暖陽（佐藥）**
 
 當歸是[四物湯](/stories/si-wu-tang/)、[歸脾湯](/stories/gui-pi-tang/)、[生化湯](/stories/sheng-hua-tang/)等多帖方的核心。在這裡，它的任務是**養血活血、祛瘀生新**——確保活血的時候不會把陰血也耗掉。
 
-<img src="/assets/images/characters/shengdi.png" alt="生地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shengdi.webp" alt="生地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **生地黃——涼血滋陰（佐藥）**
 
 生地黃**清熱涼血、養陰生津**——制衡桃仁、紅花、川芎等溫性活血藥，避免方子整體偏燥熱。
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **甘草——和事佬（使藥）**
 

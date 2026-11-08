@@ -17,11 +17,11 @@ effects: "蒸：隔水蒸製（清蒸、酒蒸、反覆蒸曬）。目的在改�
 ingredients:
   - name: 生地黃
     description: 蒸製前｜性寒，清熱涼血、養陰生津
-    image: shengdi.png
+    image: shengdi.webp
     category: 清熱
   - name: 熟地黃
     description: 蒸製後｜生地經九蒸九曬轉為性溫，補血滋陰、益精填髓
-    image: shudihuang.png
+    image: shudihuang.webp
     category: 補血
 excerpt: "小宇問老闆娘：這味藥蒸了曬、曬了又蒸，都第幾回了？她說：九回。同一味藥反覆蒸九次、曬九次，它就不再是原來那味藥了。這是炮製系列・水火篇的第一站。"
 ---
@@ -67,11 +67,11 @@ excerpt: "小宇問老闆娘：這味藥蒸了曬、曬了又蒸，都第幾回�
 
 ## 生 vs 熟：地黃的兩張臉
 
-<img src="/assets/images/characters/shengdi.png" alt="生地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shengdi.webp" alt="生地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **生地黃**性寒，清熱涼血、養陰生津。哪裡有血熱、陰虛內熱，找它去清、去涼。你在一些清熱、涼血的方子裡會遇到這一面。
 
-<img src="/assets/images/characters/shudihuang.png" alt="熟地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shudihuang.webp" alt="熟地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **熟地黃**經九蒸九曬後性轉溫，補血滋陰、益精填髓——成了補血滋陰的頭號主角。[四物湯](/stories/si-wu-tang/) 的補血、[六味地黃丸](/stories/liu-wei-di-huang-wan/) 的滋腎、[金匱腎氣丸](/stories/jin-kui-shen-qi-wan/) 的填精，靠的都是這烏黑油潤的熟地。
 

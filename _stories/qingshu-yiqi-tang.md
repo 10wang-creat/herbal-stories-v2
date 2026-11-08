@@ -15,43 +15,43 @@ effects: "清暑益氣、養陰生津，適用於暑熱耗傷氣津證——身�
 ingredients:
   - name: 西瓜翠衣
     description: 清暑解熱（君藥）｜甘涼，清暑解熱、生津止渴，夏日天然的消暑高手
-    image: xiguacuiyi.png
+    image: xiguacuiyi.webp
     category: 祛暑
   - name: 西洋參
     description: 涼補氣陰（君藥）｜甘苦涼，益氣養陰、清熱生津，補氣而不上火的夏日人參
-    image: xiyangshen.png
+    image: xiyangshen.webp
     category: 補氣
   - name: 荷梗
     description: 清暑通氣（臣藥）｜苦平，清暑解熱、通氣寬胸，引清氣上行
-    image: hegeng.png
+    image: hegeng.webp
     category: 祛暑
   - name: 石斛
     description: 養陰生津（臣藥）｜甘微寒，養胃陰、生津液、清虛熱
-    image: shihu.png
+    image: shihu.webp
     category: 補陰
   - name: 麥門冬
     description: 潤養生津（臣藥）｜甘微苦寒，養陰潤肺、清心除煩，生脈散歸來的老朋友
-    image: maimendong.png
+    image: maimendong.webp
     category: 補陰
   - name: 黃連
     description: 清心瀉火（佐藥・新角色）｜苦寒，清熱燥濕、瀉火除煩，撲滅暑熱之火
-    image: huanglian.png
+    image: huanglian.webp
     category: 清熱
   - name: 知母
     description: 清熱滋陰（佐藥）｜苦甘寒，清熱瀉火、滋陰潤燥，清熱又護陰
-    image: zhimu.png
+    image: zhimu.webp
     category: 清熱
   - name: 淡竹葉
     description: 清心利尿（佐藥）｜甘淡寒，清心除煩、利尿導熱，讓暑熱從小便走
-    image: danzhuye.png
+    image: danzhuye.webp
     category: 清熱
   - name: 粳米
     description: 和胃護中（佐藥・新角色）｜甘平，益胃和中、護養脾胃，防苦寒傷胃
-    image: jingmi.png
+    image: jingmi.webp
     category: 補氣
   - name: 甘草
     description: 調和諸藥（使藥）｜甘平，調和藥性、益氣和中
-    image: gancao.png
+    image: gancao.webp
     category: 補氣
 excerpt: "夏天在外面跑了一整天，回家後整個人虛脫——身上發熱、汗流不止、口渴心煩、累到不想動、連話都懶得講。這是暑熱把你的『氣』和『津液』一起曬乾了。清代王孟英的清暑益氣湯，一手遮陽降溫、一手補水加氣，是夏季『暑傷氣陰』的對證良方。"
 ---
@@ -127,13 +127,13 @@ excerpt: "夏天在外面跑了一整天，回家後整個人虛脫——身上�
 
 ### 第一隊：清暑解熱（遮陽）
 
-<img src="/assets/images/characters/xiguacuiyi.png" alt="西瓜翠衣" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/xiguacuiyi.webp" alt="西瓜翠衣" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **西瓜翠衣——清暑主帥（君藥）**
 
 新角色！西瓜翠衣就是**西瓜的綠色外皮（瓜皮與瓜瓤之間的青白層）**。俗話說「夏天一片瓜，藥物不用抓」，西瓜本就是天然的「白虎湯」。它甘涼，**清暑解熱、生津止渴**，是夏季消暑最親民的食藥兩用之品。
 
-<img src="/assets/images/characters/hegeng.png" alt="荷梗" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/hegeng.webp" alt="荷梗" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **荷梗——清暑通氣（臣藥）**
 
@@ -141,19 +141,19 @@ excerpt: "夏天在外面跑了一整天，回家後整個人虛脫——身上�
 
 ### 第二隊：清心瀉火除煩（滅火）
 
-<img src="/assets/images/characters/huanglian.png" alt="黃連" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/huanglian.webp" alt="黃連" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **黃連——清心瀉火（佐藥・新角色）**
 
 新角色，也是中藥界出了名的「**苦**」（「啞巴吃黃連，有苦說不出」）。黃連苦寒，**清熱燥濕、瀉火除煩**——專門撲滅那把擾亂心神的暑火，讓煩躁、睡不好的狀況平靜下來。用量很輕，苦寒之性點到為止。
 
-<img src="/assets/images/characters/zhimu.png" alt="知母" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/zhimu.webp" alt="知母" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **知母——清熱滋陰（佐藥）**
 
 知母苦甘寒，**清熱瀉火又能滋陰潤燥**——它的特別在於「清熱的同時不傷陰」，邊降溫邊補水，和暑熱「傷津」的特性正好對症。
 
-<img src="/assets/images/characters/danzhuye.png" alt="淡竹葉" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/danzhuye.webp" alt="淡竹葉" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **淡竹葉——清心利尿（佐藥）**
 
@@ -161,7 +161,7 @@ excerpt: "夏天在外面跑了一整天，回家後整個人虛脫——身上�
 
 ### 第三隊：益氣養陰生津（補給）
 
-<img src="/assets/images/characters/xiyangshen.png" alt="西洋參" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/xiyangshen.webp" alt="西洋參" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **西洋參——涼補氣陰（君藥）**
 
@@ -169,25 +169,25 @@ excerpt: "夏天在外面跑了一整天，回家後整個人虛脫——身上�
 
 > 🔥 **冷補 vs 溫補**：同樣是補氣，[黃耆](/stories/yu-ping-feng-san/)、人參偏「溫補」，夏天暑熱當頭時用，可能火上加油；西洋參是「涼補」，補氣又能清熱生津，正是炎夏補氣的首選。一個是暖金色的戰士，一個是清涼沉穩的學者——這就是它們的分工。
 
-<img src="/assets/images/characters/maimendong.png" alt="麥門冬" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/maimendong.webp" alt="麥門冬" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **麥門冬——潤養生津（臣藥）**
 
 生脈散歸來的老朋友。甘微寒，**養陰潤肺、清心除煩、生津**，是補充被暑熱蒸乾的津液的主力之一。
 
-<img src="/assets/images/characters/shihu.png" alt="石斛" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shihu.webp" alt="石斛" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **石斛——養陰生津（臣藥）**
 
 新角色。石斛甘微寒，**養胃陰、生津液、清虛熱**——專補那種「口乾舌燥、津液被掏空」的狀態。
 
-<img src="/assets/images/characters/jingmi.png" alt="粳米" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/jingmi.webp" alt="粳米" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **粳米——和胃護中（佐藥・新角色）**
 
 新角色。粳米就是我們吃的**白米**，甘平，**益胃和中**。方中有黃連、知母等苦寒藥，粳米和甘草在這裡像「鋪了一層保護墊」，**護住脾胃，避免苦寒傷胃**。
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **甘草——調和諸藥（使藥）**
 

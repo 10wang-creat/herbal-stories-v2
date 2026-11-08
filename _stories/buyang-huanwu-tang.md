@@ -16,31 +16,31 @@ effects: "補氣、活血、通絡，適用於氣虛血瘀證所致的中風後�
 ingredients:
   - name: 黃耆
     description: 大補元氣（君藥）｜甘溫，重用大補脾肺元氣，氣旺則血行，是全方的引擎
-    image: huangqi.png
+    image: huangqi.webp
     category: 補氣
   - name: 當歸尾
     description: 養血活血（臣藥）｜甘辛溫，活血祛瘀而不傷血，四物湯歸來的老朋友
-    image: danggui.png
+    image: danggui.webp
     category: 補血
   - name: 赤芍
     description: 涼血散瘀（佐藥）｜苦微寒，活血散瘀，血府逐瘀湯歸來的老朋友
-    image: chishao.png
+    image: chishao.webp
     category: 活血
   - name: 川芎
     description: 血中氣藥（佐藥）｜辛溫，行氣活血、暢通血脈
-    image: chuanxiong.png
+    image: chuanxiong.webp
     category: 補血
   - name: 桃仁
     description: 破瘀先鋒（佐藥）｜苦甘平，破血行滯，化開停滯瘀血
-    image: taoren.png
+    image: taoren.webp
     category: 活血
   - name: 紅花
     description: 活血女王（佐藥）｜辛溫，活血通經、祛瘀，與桃仁聯手
-    image: honghua.png
+    image: honghua.webp
     category: 活血
   - name: 地龍
     description: 通經先鋒（佐使藥）｜鹹寒，通經活絡、引藥力周行全身，打通堵塞的經絡
-    image: dilong.png
+    image: dilong.webp
     category: 活血
 excerpt: "中風之後，半邊身體軟綿綿使不上力、嘴角歪斜、話講不清楚⋯⋯西醫做完急性治療，剩下的『後遺症』怎麼辦？清代王清任提出一個顛覆性的想法：這不是血堵住，而是『氣太虛、推不動血』。一帖重用黃耆的補陽還五湯，把沒油的引擎重新加滿、把停下的血液重新推動。"
 ---
@@ -114,7 +114,7 @@ excerpt: "中風之後，半邊身體軟綿綿使不上力、嘴角歪斜、話�
 
 ### 引擎：補氣主力
 
-<img src="/assets/images/characters/huangqi.png" alt="黃耆" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/huangqi.webp" alt="黃耆" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **黃耆——大補元氣（君藥）**
 
@@ -122,37 +122,37 @@ excerpt: "中風之後，半邊身體軟綿綿使不上力、嘴角歪斜、話�
 
 ### 部隊：活血通絡
 
-<img src="/assets/images/characters/danggui.png" alt="當歸尾" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/danggui.webp" alt="當歸尾" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **當歸尾——養血活血（臣藥）**
 
 [四物湯](/stories/si-wu-tang/)、[桃紅四物湯](/stories/taohong-si-wu-tang/)歸來的老朋友。這裡用的是「當歸尾」——當歸的尾端部位，**活血祛瘀的力道更強**，又能養血，做到「祛瘀而不傷血」。
 
-<img src="/assets/images/characters/chishao.png" alt="赤芍" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/chishao.webp" alt="赤芍" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **赤芍——涼血散瘀（佐藥）**
 
 [血府逐瘀湯](/stories/xue-fu-zhu-yu-tang/)歸來的老朋友。**活血散瘀**，協助打開瘀阻的血脈。
 
-<img src="/assets/images/characters/chuanxiong.png" alt="川芎" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/chuanxiong.webp" alt="川芎" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **川芎——血中氣藥（佐藥）**
 
 既活血又行氣，讓血脈暢通，協助黃耆推動氣血周行。
 
-<img src="/assets/images/characters/taoren.png" alt="桃仁" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/taoren.webp" alt="桃仁" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **桃仁——破瘀先鋒（佐藥）**
 
 破血行滯，化開停滯已久的瘀血。和紅花一樣，都是「桃紅藥對」的成員。
 
-<img src="/assets/images/characters/honghua.png" alt="紅花" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/honghua.webp" alt="紅花" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **紅花——活血女王（佐藥）**
 
 活血通經、祛瘀止痛，與桃仁聯手帶動血流。
 
-<img src="/assets/images/characters/dilong.png" alt="地龍" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/dilong.webp" alt="地龍" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **地龍——通經先鋒（佐使藥）**
 

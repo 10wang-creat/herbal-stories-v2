@@ -17,11 +17,11 @@ effects: "麩炒：以麥麩為輔料同炒。麥麩先焦、替藥吸掉一部�
 ingredients:
   - name: 蒼朮
     description: 麩炒代表藥｜生蒼朮辛燥太過；麩炒蒼朮緩其燥性、增強健脾燥濕之和緩
-    image: cangzhu.png
+    image: cangzhu.webp
     category: 化濕
   - name: 枳殼
     description: 麩炒代表藥｜生枳殼破氣力峻；麩炒枳殼緩其峻烈、偏於理氣和胃
-    image: zhiqiao.png
+    image: zhiqiao.webp
     category: 理氣
 excerpt: "老闆娘往熱鍋裡撒了一把金黃的麥麩，煙一下就冒起來。小宇以為她在做麵食。她說：這把麩不是要吃的，是要替藥『擋火』的。這是炮製系列・火候篇的第二站。"
 ---
@@ -66,14 +66,14 @@ excerpt: "老闆娘往熱鍋裡撒了一把金黃的麥麩，煙一下就冒起�
 
 ### 蒼朮：太燥的，與和緩的
 
-<img src="/assets/images/characters/cangzhu.png" alt="蒼朮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/cangzhu.webp" alt="蒼朮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **生蒼朮**燥濕健脾的本事很強，但也「辛燥太過」，用久容易傷陰。
 **麩炒蒼朮**經麥麩緩火之後，那股過烈的燥性被收柔，健脾燥濕變得更和緩、更好搭配。[平胃散](/stories/ping-wei-san/) 這帖燥濕和胃的方子裡，蒼朮常用麩炒版，正是要它「燥而不過」。
 
 ### 枳殼：破氣的，與和胃的
 
-<img src="/assets/images/characters/zhiqiao.png" alt="枳殼" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/zhiqiao.webp" alt="枳殼" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **生枳殼**破氣消積，力道偏峻，對氣虛的人容易「破太過」。
 **麩炒枳殼**緩和了那股峻烈的破氣之性，變得偏於理氣和胃、行氣寬中，用起來更溫和。

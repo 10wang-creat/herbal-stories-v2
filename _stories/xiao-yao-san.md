@@ -14,29 +14,29 @@ cover_image: /assets/images/xiao-yao-san-cover.jpg
 ingredients:
   - name: 柴胡
     description: 隊長｜疏肝解鬱，打通情緒的堵塞
-    image: chaihu.png
+    image: chaihu.webp
   - name: 當歸
     description: 補血姐姐｜養血活血，給肝臟營養
-    image: danggui.png
+    image: danggui.webp
   - name: 白芍
     description: 柔和妹妹｜養血柔肝，緩解緊繃
-    image: baishao.png
+    image: baishao.webp
   - name: 白朮
     description: 後勤隊長｜健脾益氣，強化消化
-    image: baizhu.png
+    image: baizhu.webp
   - name: 茯苓
     description: 淨化大使｜健脾利濕，排除積水
-    image: fuling.png
+    image: fuling.webp
   - name: 炙甘草
     description: 和事佬｜補氣和中，調和全隊
-    image: gancao.png
+    image: gancao.webp
   - name: 煨薑
     category: 溫裡
     description: 暖心使者｜溫中和胃，促進運化
-    image: weijiang.png
+    image: weijiang.webp
   - name: 薄荷
     description: 清新小精靈｜疏散鬱熱，透達肝氣
-    image: bohe.png
+    image: bohe.webp
 effects: 疏肝解鬱、養血健脾，適用於肝鬱血虛、情緒不暢、月經不調、胸脅脹痛
 source: 《太平惠民和劑局方》
 ---
@@ -93,7 +93,7 @@ Amy 最近變得很不像自己。
 
 ### 柴胡（隊長）
 
-<img src="/assets/images/characters/chaihu.png" alt="柴胡" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/chaihu.webp" alt="柴胡" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：疏肝解鬱擔當
 - **專長**：打開情緒的「堵塞」，讓氣機重新流動
@@ -102,7 +102,7 @@ Amy 最近變得很不像自己。
 
 ### 當歸（補血姐姐）
 
-<img src="/assets/images/characters/danggui.png" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/danggui.webp" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：養血活血擔當
 - **專長**：為肝臟補充營養，讓它有力氣運作
@@ -111,7 +111,7 @@ Amy 最近變得很不像自己。
 
 ### 白芍（柔和妹妹）
 
-<img src="/assets/images/characters/baishao.png" alt="白芍" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baishao.webp" alt="白芍" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：養血柔肝擔當
 - **專長**：緩解緊繃的情緒，讓心情柔軟下來
@@ -120,7 +120,7 @@ Amy 最近變得很不像自己。
 
 ### 白朮（後勤隊長）
 
-<img src="/assets/images/characters/baizhu.png" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baizhu.webp" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：健脾益氣擔當
 - **專長**：強化脾胃功能，讓營養吸收更好
@@ -129,7 +129,7 @@ Amy 最近變得很不像自己。
 
 ### 茯苓（淨化大使）
 
-<img src="/assets/images/characters/fuling.png" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fuling.webp" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：健脾利濕擔當
 - **專長**：排出體內多餘水濕，讓身體清爽
@@ -138,7 +138,7 @@ Amy 最近變得很不像自己。
 
 ### 炙甘草（和事佬）
 
-<img src="/assets/images/characters/gancao.png" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：調和擔當
 - **專長**：協調所有藥材，讓團隊合作更順暢
@@ -147,7 +147,7 @@ Amy 最近變得很不像自己。
 
 ### 煨薑（暖心使者）
 
-<img src="/assets/images/characters/weijiang.png" alt="煨薑" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/weijiang.webp" alt="煨薑" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：溫中和胃擔當
 - **專長**：溫暖脾胃，幫助藥效吸收
@@ -156,7 +156,7 @@ Amy 最近變得很不像自己。
 
 ### 薄荷（清新小精靈）
 
-<img src="/assets/images/characters/bohe.png" alt="薄荷" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/bohe.webp" alt="薄荷" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：疏散鬱熱擔當
 - **專長**：透達肝經鬱熱，帶來清新感

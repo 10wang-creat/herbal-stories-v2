@@ -17,11 +17,11 @@ effects: "酒炙：以酒為輔料炒製或潤製。目的在升提引藥上行�
 ingredients:
   - name: 黃連
     description: 酒炙代表藥｜生黃連大苦大寒清中焦火；酒黃連借酒升提，善清上焦頭目之火，並緩其過寒
-    image: huanglian.png
+    image: huanglian.webp
     category: 清熱
   - name: 當歸
     description: 酒炙代表藥｜當歸身偏補血；酒當歸增強活血、行血、通經之力
-    image: danggui.png
+    image: danggui.webp
     category: 補血
 excerpt: "後場飄來一股酒香，小宇以為老闆娘在偷喝酒。她笑著說：這不是要喝的，是要拿來『帶路』的——帶著藥往上跑。這是炮製系列・輔料篇的第二站。"
 ---
@@ -72,7 +72,7 @@ excerpt: "後場飄來一股酒香，小宇以為老闆娘在偷喝酒。她笑�
 
 ### 黃連：清中焦的，與清頭目的
 
-<img src="/assets/images/characters/huanglian.png" alt="黃連" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/huanglian.webp" alt="黃連" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **生黃連**大苦大寒，是清熱燥濕、瀉火解毒的猛將，主攻中焦與心火。但它太寒了，用多容易傷胃。
 **酒黃連**（酒炒）借著酒的升提，把清火的力量「帶上樓」——特別善於清上焦、頭目的火，像目赤、口舌生瘡；同時酒的溫性緩了它的過寒，對胃也和氣一點。
@@ -81,7 +81,7 @@ excerpt: "後場飄來一股酒香，小宇以為老闆娘在偷喝酒。她笑�
 
 ### 當歸：偏補的，與偏行的
 
-<img src="/assets/images/characters/danggui.png" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/danggui.webp" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **當歸**本是補血聖藥（你在 [四物湯](/stories/si-wu-tang/) 見過它）。但補血的當歸偏「守」。
 **酒當歸**（酒洗、酒炒）被酒一激，行血、活血、通經的力道就被推了上來，偏「行」——用於血瘀、經閉、跌打這類需要把血「推動起來」的情況。[桃紅四物湯](/stories/taohong-si-wu-tang/)、[補陽還五湯](/stories/buyang-huanwu-tang/) 裡那個負責活血的當歸，要的就是這股被酒帶出來的行勁。

@@ -16,23 +16,23 @@ ingredients:
   - name: 半夏
     category: 化痰
     description: 化痰總司令｜燥濕化痰、降逆散結，清掉喉間那團路障
-    image: banxia.png
+    image: banxia.webp
   - name: 厚朴
     category: 理氣
     description: 行氣大將｜下氣除滿、燥濕消痰，把堵住的氣往下疏通
-    image: houpo.png
+    image: houpo.webp
   - name: 茯苓
     category: 利濕
     description: 除濕工程師｜健脾利水滲濕，從源頭斷絕痰的原料
-    image: fuling.png
+    image: fuling.webp
   - name: 紫蘇葉
     category: 解表
     description: 芳香開窗手｜芳香行氣、開鬱散結，並引藥上行到咽喉
-    image: zisu.png
+    image: zisu.webp
   - name: 生薑
     category: 解表
     description: 和胃止嘔｜辛溫散結、降逆止嘔，兼制半夏之偏性
-    image: shengjiang.png
+    image: shengjiang.webp
 excerpt: "喉嚨卡了一顆看不見的梅子——咳不出來、吞不下去，空嚥口水時最明顯，吃飯反而順。看了兩間耳鼻喉科都說「沒有東西」，照了胃鏡也正常。這不是想像出來的：張仲景在一千八百年前就把它寫進《金匱要略》，只用五味藥。"
 ---
 
@@ -156,7 +156,7 @@ excerpt: "喉嚨卡了一顆看不見的梅子——咳不出來、吞不下去�
 
 ### 半夏（化痰總司令）
 
-<img src="/assets/images/characters/banxia.png" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/banxia.webp" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・化痰散結擔當
 - **專長**：上週她在頭上處理被風攪動的痰，這週戰場移到了喉嚨。**燥濕化痰、降逆散結**——那團堵在咽喉的路障，由她一鏟一鏟清掉
@@ -165,7 +165,7 @@ excerpt: "喉嚨卡了一顆看不見的梅子——咳不出來、吞不下去�
 
 ### 厚朴（行氣大將）
 
-<img src="/assets/images/characters/houpo.png" alt="厚朴" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/houpo.webp" alt="厚朴" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・下氣除滿擔當
 - **專長**：苦辛而溫，**行氣除滿、燥濕消痰**。半夏清路障，厚朴負責疏導車流——把該往下走的氣重新推下去，胸口那股悶就是這樣鬆開的
@@ -174,7 +174,7 @@ excerpt: "喉嚨卡了一顆看不見的梅子——咳不出來、吞不下去�
 
 ### 茯苓（除濕工程師）
 
-<img src="/assets/images/characters/fuling.png" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fuling.webp" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・健脾滲濕擔當
 - **專長**：清路障是治標，**不讓垃圾繼續產生**才是治本。茯苓健脾利濕，從源頭減少痰的原料——脾為生痰之源，這句話在這帖方裡同樣成立
@@ -183,7 +183,7 @@ excerpt: "喉嚨卡了一顆看不見的梅子——咳不出來、吞不下去�
 
 ### 紫蘇葉（芳香開窗手）
 
-<img src="/assets/images/characters/zisu.png" alt="紫蘇葉" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/zisu.webp" alt="紫蘇葉" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・芳香行氣擔當
 - **專長**：這一味是全方最溫柔也最關鍵的設計。紫蘇葉**芳香行氣、開鬱散結**——芳香的藥能「醒」被鬱悶壓住的氣機；更重要的是，它能**引藥上行**，把整隊的力量往上帶到咽喉那個點
@@ -193,7 +193,7 @@ excerpt: "喉嚨卡了一顆看不見的梅子——咳不出來、吞不下去�
 
 ### 生薑（和胃止嘔）
 
-<img src="/assets/images/characters/shengjiang.png" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shengjiang.webp" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・散結止嘔擔當
 - **專長**：辛溫散結、降逆止嘔，處理那股一陣一陣的噁心；同時**制約半夏的偏性**——古人說生薑能「解半夏毒」，這對搭檔從《傷寒論》一路合作到現在

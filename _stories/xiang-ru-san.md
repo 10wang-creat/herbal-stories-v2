@@ -14,15 +14,15 @@ effects: "祛暑解表、化濕和中，適用於外寒內濕之陰暑證所致�
 ingredients:
   - name: 香薷
     description: 夏月之麻黃｜辛溫芳香，發汗解表、祛暑化濕，是夏季解表的第一要藥
-    image: xiangru.png
+    image: xiangru.webp
     category: 解表
   - name: 厚朴
     description: 行氣大將｜苦辛溫，行氣除滿、燥濕化滯，平胃散歸來的老朋友
-    image: houpo.png
+    image: houpo.webp
     category: 理氣
   - name: 白扁豆
     description: 健脾甜豆｜甘平和緩，健脾化濕、消暑和中，溫和地穩住腸胃
-    image: baibiandou.png
+    image: baibiandou.webp
     category: 補氣
 excerpt: "冷氣房十八度、手搖飲半糖去冰、淋雨後直接吹電風扇⋯⋯夏天的感冒跟冬天完全不一樣。這帖宋代名方只用三味藥就解決『陰暑』——夏天乘涼飲冷導致的怕冷、頭重、肚子痛、上吐下瀉。香薷被李時珍稱為『夏月之麻黃』，是夏天解表的第一選擇。"
 ---
@@ -100,7 +100,7 @@ excerpt: "冷氣房十八度、手搖飲半糖去冰、淋雨後直接吹電風�
 
 香薷散只有三味藥，**精簡到不能再精簡**。但每一味都有清楚的角色分工。
 
-<img src="/assets/images/characters/xiangru.png" alt="香薷" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/xiangru.webp" alt="香薷" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **香薷——夏月之麻黃（君藥）**
 
@@ -114,7 +114,7 @@ excerpt: "冷氣房十八度、手搖飲半糖去冰、淋雨後直接吹電風�
 
 但要特別注意——香薷雖然叫「夏月之麻黃」，**只適合無汗的陰暑**。如果妳是陽暑（大汗淋漓、口渴煩躁），絕對不能用香薷，會越喝越糟。這也是為什麼古人說：「香薷乃夏月解表之藥，**如冬月之用麻黃**，氣虛者尤不可多服。」
 
-<img src="/assets/images/characters/houpo.png" alt="厚朴" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/houpo.webp" alt="厚朴" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **厚朴——行氣大將（臣藥）**
 
@@ -122,7 +122,7 @@ excerpt: "冷氣房十八度、手搖飲半糖去冰、淋雨後直接吹電風�
 
 夏天乘涼飲冷導致的胃脘脹悶、腹痛、嘔吐、下利——都是濕邪困住中焦、氣機升降失常造成的。厚朴的行氣能力，就像在堵塞的水管裡疏通氣流，讓脾胃重新運轉起來。
 
-<img src="/assets/images/characters/baibiandou.png" alt="白扁豆" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baibiandou.webp" alt="白扁豆" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **白扁豆——健脾甜豆（佐使）**
 

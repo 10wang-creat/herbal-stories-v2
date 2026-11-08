@@ -11,16 +11,16 @@ excerpt: 臉色蒼白、手腳冰冷、月經不調？四位溫柔的姊妹來�
 ingredients:
   - name: 熟地黃
     description: 大姐｜深層補血，製造新血液
-    image: shudihuang.png
+    image: shudihuang.webp
   - name: 當歸
     description: 二姐｜活血補血，調節月經
-    image: danggui.png
+    image: danggui.webp
   - name: 白芍
     description: 三妹｜養血止痛，緩解痙攣
-    image: baishao.png
+    image: baishao.webp
   - name: 川芎
     description: 小妹｜行氣活血，推動血循環
-    image: chuanxiong.png
+    image: chuanxiong.webp
 effects: 補血活血、調經止痛，適用於血虛證、月經不調、面色蒼白
 ---
 
@@ -58,7 +58,7 @@ effects: 補血活血、調經止痛，適用於血虛證、月經不調、面�
 
 ### 熟地黃（大姐）
 
-<img src="/assets/images/characters/shudihuang.png" alt="熟地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shudihuang.webp" alt="熟地黃" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **角色：** 滋養擔當  
 **專長：** 深層補血，製造新的血液  
@@ -74,7 +74,7 @@ effects: 補血活血、調經止痛，適用於血虛證、月經不調、面�
 
 ### 當歸（二姐）
 
-<img src="/assets/images/characters/danggui.png" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/danggui.webp" alt="當歸" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **角色：** 調度擔當  
 **專長：** 活血補血，調節月經  
@@ -90,7 +90,7 @@ effects: 補血活血、調經止痛，適用於血虛證、月經不調、面�
 
 ### 白芍（三妹）
 
-<img src="/assets/images/characters/baishao.png" alt="白芍" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baishao.webp" alt="白芍" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **角色：** 柔和擔當  
 **專長：** 養血止痛，緩解痙攣  
@@ -106,7 +106,7 @@ effects: 補血活血、調經止痛，適用於血虛證、月經不調、面�
 
 ### 川芎（小妹）
 
-<img src="/assets/images/characters/chuanxiong.png" alt="川芎" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/chuanxiong.webp" alt="川芎" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **角色：** 活力擔當  
 **專長：** 行氣活血，特別是「上行頭部」  

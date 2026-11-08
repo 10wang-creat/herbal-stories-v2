@@ -14,16 +14,16 @@ effects: "清熱生津，適用於陽明氣分熱盛之大熱、大渴、大汗�
 ingredients:
   - name: 石膏
     description: 白虎鎮火主帥｜辛甘大寒、清氣分大熱，一掌鎮壓燎原烈焰
-    image: shigao.png
+    image: shigao.webp
   - name: 知母
     description: 滋潤滅火副手｜苦寒質潤、清熱又滋陰，滅火同時防止燒乾
-    image: zhimu.png
+    image: zhimu.webp
   - name: 粳米
     description: 護城糧官｜益胃生津，在大寒藥陣中護住脾胃城牆
-    image: jingmi.png
+    image: jingmi.webp
   - name: 甘草
     description: 和中調度員｜益氣和中、調和寒藥，讓猛將不傷自家人
-    image: gancao.png
+    image: gancao.webp
 excerpt: "大暑正日，熱浪裡燒到 39 度半——臉紅得發燙、汗狂流、冰水一杯接一杯還是渴到不行？張仲景在《傷寒論》裡為這種「燒到最旺」的時刻，留下了一頭傳說中的神獸：白虎湯。四味藥，鎮壓氣分大熱，也開啟本系列全新的「清氣分熱」篇章。"
 ---
 
@@ -94,7 +94,7 @@ excerpt: "大暑正日，熱浪裡燒到 39 度半——臉紅得發燙、汗狂
 
 ### 石膏（白虎鎮火主帥）🆕
 
-<img src="/assets/images/characters/shigao.png" alt="石膏" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shigao.webp" alt="石膏" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥·清氣分大熱擔當（全新登場）
 - **專長**：辛甘大寒的礦物猛將，是中藥裡清「氣分實熱」的第一把交椅——辛能透熱外達、甘寒能清能潤，大火燒得越旺，越是他的主場
@@ -103,7 +103,7 @@ excerpt: "大暑正日，熱浪裡燒到 39 度半——臉紅得發燙、汗狂
 
 ### 知母（滋潤滅火副手）
 
-<img src="/assets/images/characters/zhimu.png" alt="知母" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/zhimu.webp" alt="知母" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥·清熱滋陰擔當
 - **專長**：苦寒卻**質潤**，是寒涼藥裡少見的「帶水滅火」型選手——幫石膏加強火力的同時，滋潤被大火烤乾的津液，斷絕死灰復燃的機會
@@ -114,7 +114,7 @@ excerpt: "大暑正日，熱浪裡燒到 39 度半——臉紅得發燙、汗狂
 
 ### 粳米（護城糧官）
 
-<img src="/assets/images/characters/jingmi.png" alt="粳米" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/jingmi.webp" alt="粳米" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥·益胃生津擔當
 - **專長**：就是我們每天吃的白米！在藥陣裡負責熬出米湯般的稠潤，保護胃氣、補充津液，讓大寒之藥「寒而不傷中」
@@ -123,7 +123,7 @@ excerpt: "大暑正日，熱浪裡燒到 39 度半——臉紅得發燙、汗狂
 
 ### 甘草（和中調度員）
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：使藥·調和諸藥擔當
 - **專長**：益氣和中，和粳米組成「護胃二人組」，同時調度整個隊伍，讓猛將的寒氣不誤傷友軍

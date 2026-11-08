@@ -15,23 +15,23 @@ ingredients:
   - name: 附子
     category: 溫裡
     description: 回陽急先鋒｜大辛大熱，溫腎助陽、散寒止痛，電鍋一直跳電，他負責把總電源接回來，與乾薑同為君藥
-    image: fuzi.png
+    image: fuzi.webp
   - name: 乾薑
     category: 溫裡
     description: 暖爐戰士｜大辛大熱，溫中祛寒，守在中焦不走，把電鍋重新加熱，與附子同為君藥
-    image: ganjiang.png
+    image: ganjiang.webp
   - name: 人參
     category: 補氣
     description: 發電廠廠長｜甘溫益氣、補脾，火點著了，還要有電一直供著，臣藥
-    image: renshen.png
+    image: renshen.webp
   - name: 白朮
     category: 補氣
     description: 脾胃管家｜苦溫健脾燥濕，把鍋裡多出來的水氣收乾，佐藥
-    image: baizhu.png
+    image: baizhu.webp
   - name: 甘草
     category: 補氣
     description: 和事佬｜炙用，益氣和中、緩急止痛、調和諸藥，像電鍋的保溫鍵，佐使藥
-    image: gancao.png
+    image: gancao.webp
 excerpt: "還記得十月那篇、在竹科喝了五個月冰美式的承翰嗎？理中湯之後他好了兩個月。小雪前後趕年底專案，連熬兩個禮拜，拉肚子又回來了——這次不只肚子涼，是整個人冷到膝蓋，早上要在棉被裡縮半小時才起得來。他把上次的方拿去問，中醫師說：「電鍋開關按下去了，可是你家一直跳電。」"
 ---
 
@@ -144,7 +144,7 @@ excerpt: "還記得十月那篇、在竹科喝了五個月冰美式的承翰嗎�
 
 #### 附子（回陽急先鋒）
 
-<img src="/assets/images/characters/fuzi.png" alt="附子" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fuzi.webp" alt="附子" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・溫腎助陽、散寒止痛擔當
 - **專長**：大辛、大熱，有毒。中藥裡**最熱的一味**，「走而不守，通行十二經」——哪裡的陽氣熄了，他就去哪裡點火。這一篇他負責的是**總電源**：把腎陽接回來，中焦的電鍋才有電可以燒。承翰那個「冷過膝蓋」，就是他要處理的
@@ -154,7 +154,7 @@ excerpt: "還記得十月那篇、在竹科喝了五個月冰美式的承翰嗎�
 
 #### 乾薑（暖爐戰士）
 
-<img src="/assets/images/characters/ganjiang.png" alt="乾薑" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/ganjiang.webp" alt="乾薑" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・溫中祛寒擔當
 - **專長**：大辛、大熱。**守而不走**，熱力留在脾胃不動，像電鍋底下的加熱盤。十月理中湯裡他一個人當君藥就夠了；這一篇火已經虛到底下去，**他需要附子在外面接電，他在裡面燒**。承翰的肚子冷痛、吐清水，是他顧的
@@ -165,7 +165,7 @@ excerpt: "還記得十月那篇、在竹科喝了五個月冰美式的承翰嗎�
 
 #### 人參（發電廠廠長）
 
-<img src="/assets/images/characters/renshen.png" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/renshen.webp" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・益氣補脾擔當
 - **專長**：甘、微苦，微溫。**大補元氣**。火點著了，電鍋要有電一直供著；而且承翰拉了兩個禮拜，氣已經虛了——拉完頭暈、早上起不來，是氣虛。他負責**把電補回去**。有附子、乾薑在，他補的氣才能變成熱
@@ -176,7 +176,7 @@ excerpt: "還記得十月那篇、在竹科喝了五個月冰美式的承翰嗎�
 
 #### 白朮（脾胃管家）
 
-<img src="/assets/images/characters/baizhu.png" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baizhu.webp" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・健脾燥濕擔當
 - **專長**：苦、甘，性溫。**健脾燥濕**。拉稀、吐清水、舌苔白滑——鍋裡都是水氣，他把它**收乾**，而且讓脾胃重新恢復運作，以後不再積
@@ -185,7 +185,7 @@ excerpt: "還記得十月那篇、在竹科喝了五個月冰美式的承翰嗎�
 
 #### 甘草（和事佬）
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐使藥・益氣和中、緩急止痛、調和諸藥擔當
 - **專長**：甘，平；炙用後偏溫。他做三件事：**補中益氣**幫人參；**緩急止痛**，承翰那個像一塊冰在裡面的痛，他安撫；**調和**——附子、乾薑兩味大熱藥同場，他是中間那個緩衝，讓火燒得穩、不燥。另外他**能減附子的毒性**，是千年來附子配甘草的標準做法

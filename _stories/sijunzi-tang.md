@@ -12,16 +12,16 @@ ingredients:
   - name: 人參
     category: 補氣
     description: 團長｜大補元氣，給身體充電
-    image: renshen.png
+    image: renshen.webp
   - name: 白朮
     description: 後勤隊長｜健脾胃，讓營養吸收更好
-    image: baizhu.png
+    image: baizhu.webp
   - name: 茯苓
     description: 淨化大使｜排出多餘水濕
-    image: fuling.png
+    image: fuling.webp
   - name: 炙甘草
     description: 和事佬｜調和所有藥材
-    image: gancao.png
+    image: gancao.webp
 effects: 補氣健脾，適用於脾胃氣虛、疲倦乏力、食慾不振
 ---
 
@@ -58,7 +58,7 @@ effects: 補氣健脾，適用於脾胃氣虛、疲倦乏力、食慾不振
 
 ### 人參（團長）
 
-<img src="/assets/images/characters/renshen.png" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/renshen.webp" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **角色：** 主唱擔當  
 **專長：** 大補元氣，就像給身體充電  
@@ -76,7 +76,7 @@ effects: 補氣健脾，適用於脾胃氣虛、疲倦乏力、食慾不振
 
 ### 白朮（後勤隊長）
 
-<img src="/assets/images/characters/baizhu.png" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baizhu.webp" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **角色：** 健脾擔當  
 **專長：** 強化脾胃，讓營養吸收更好  
@@ -94,7 +94,7 @@ effects: 補氣健脾，適用於脾胃氣虛、疲倦乏力、食慾不振
 
 ### 茯苓（淨化大使）
 
-<img src="/assets/images/characters/fuling.png" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fuling.webp" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **角色：** 利濕擔當  
 **專長：** 排出體內多餘水濕  
@@ -112,7 +112,7 @@ effects: 補氣健脾，適用於脾胃氣虛、疲倦乏力、食慾不振
 
 ### 炙甘草（和事佬）
 
-<img src="/assets/images/characters/gancao.png" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="炙甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 **角色：** 調和擔當  
 **專長：** 協調所有藥材，增加甜味  

@@ -15,47 +15,47 @@ ingredients:
   - name: 人參
     category: 補氣
     description: 元氣總司令｜大補元氣，替耗空的身體重新供電
-    image: renshen.png
+    image: renshen.webp
   - name: 白朮
     category: 補氣
     description: 後勤隊長｜補氣健脾、燥濕，把漏水的桶子修好
-    image: baizhu.png
+    image: baizhu.webp
   - name: 茯苓
     category: 利濕
     description: 除濕工程師｜健脾利水滲濕，從源頭把積水導走
-    image: fuling.png
+    image: fuling.webp
   - name: 山藥
     category: 補氣
     description: 三補拿手｜平補脾肺腎，補而不燥的老管家
-    image: shanyao.png
+    image: shanyao.webp
   - name: 蓮子
     category: 安神
     description: 安神哄睡師｜補脾止瀉、養心安神，四神湯歸來的老朋友
-    image: lianzi.png
+    image: lianzi.webp
   - name: 白扁豆
     category: 補氣
     description: 健脾甜豆｜甘平和緩，健脾化濕、消暑和中，香薷散歸來的老朋友
-    image: baibiandou.png
+    image: baibiandou.webp
   - name: 薏苡仁
     category: 利濕
     description: 底層排水工｜滲濕健脾，三仁湯歸來的排水老手
-    image: yiyiren.png
+    image: yiyiren.webp
   - name: 砂仁
     category: 化濕
     description: 醒脾香氣師（新角色）｜芳香化濕、行氣醒脾，把睡著的脾胃叫醒
-    image: sharen.png
+    image: sharen.webp
   - name: 桔梗
     category: 化痰
     description: 開窗通風員｜宣肺利氣、通調水道，也負責載藥上行
-    image: jiegeng.png
+    image: jiegeng.webp
   - name: 甘草
     category: 補氣
     description: 和事佬｜益氣和中、調和諸藥，工程隊的排班組長
-    image: gancao.png
+    image: gancao.webp
   - name: 大棗
     category: 補氣
     description: 補脾和中｜甘溫顧護脾胃，煎湯調服的溫柔配角
-    image: dazao.png
+    image: dazao.webp
 excerpt: "整個夏天靠冰飲和便當過活，立秋一到，大便就再也不成形了——一天跑三四趟廁所、吃兩口就脹、體重掉了四公斤、爬個樓梯就沒力。這帖宋代官方藥典裡的名方，是四君子湯的長夏升級版：補氣之外，還替脾胃裝了一整套排水系統。"
 ---
 
@@ -165,7 +165,7 @@ excerpt: "整個夏天靠冰飲和便當過活，立秋一到，大便就再也�
 
 #### 人參（元氣總司令）
 
-<img src="/assets/images/characters/renshen.png" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/renshen.webp" alt="人參" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・大補元氣擔當
 - **專長**：直接把耗空的元氣接回來——那種「講話講到後面沒聲音」的虛，是他的守備範圍
@@ -174,7 +174,7 @@ excerpt: "整個夏天靠冰飲和便當過活，立秋一到，大便就再也�
 
 #### 白朮（後勤隊長）
 
-<img src="/assets/images/characters/baizhu.png" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baizhu.webp" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・健脾燥濕擔當
 - **專長**：補氣健脾又能燥濕——一手修好漏水的桶子，一手把牆面的濕氣烘乾。補進去的氣不再漏掉，就是他的功勞
@@ -183,7 +183,7 @@ excerpt: "整個夏天靠冰飲和便當過活，立秋一到，大便就再也�
 
 #### 茯苓（除濕工程師）
 
-<img src="/assets/images/characters/fuling.png" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fuling.webp" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・利水滲濕擔當
 - **專長**：性質甘淡平和，用最溫和的方式把水濕從小便導出去，不會把人利到虛脫
@@ -196,7 +196,7 @@ excerpt: "整個夏天靠冰飲和便當過活，立秋一到，大便就再也�
 
 #### 山藥（三補拿手）
 
-<img src="/assets/images/characters/shanyao.png" alt="山藥" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shanyao.webp" alt="山藥" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・平補脾肺腎擔當
 - **專長**：藥食兩用的老管家，補而不燥、滋而不膩，把脾的底子一層一層養厚
@@ -205,7 +205,7 @@ excerpt: "整個夏天靠冰飲和便當過活，立秋一到，大便就再也�
 
 #### 蓮子（安神哄睡師）
 
-<img src="/assets/images/characters/lianzi.png" alt="蓮子" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/lianzi.webp" alt="蓮子" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・補脾止瀉擔當
 - **專長**：既能補脾止瀉，又能養心安神——腸胃一直鬧，心也定不下來，兩件事她一起顧
@@ -214,7 +214,7 @@ excerpt: "整個夏天靠冰飲和便當過活，立秋一到，大便就再也�
 
 #### 白扁豆（健脾甜豆）
 
-<img src="/assets/images/characters/baibiandou.png" alt="白扁豆" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baibiandou.webp" alt="白扁豆" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・健脾化濕擔當
 - **專長**：甘平和緩，健脾化濕還能消暑和中，是專門對付「夏天濕氣傷脾」的能手
@@ -223,7 +223,7 @@ excerpt: "整個夏天靠冰飲和便當過活，立秋一到，大便就再也�
 
 #### 薏苡仁（底層排水工）
 
-<img src="/assets/images/characters/yiyiren.png" alt="薏苡仁" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/yiyiren.webp" alt="薏苡仁" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・滲濕健脾擔當
 - **專長**：健脾又利濕，把整理好的濕氣從最底層順著小便帶走
@@ -234,7 +234,7 @@ excerpt: "整個夏天靠冰飲和便當過活，立秋一到，大便就再也�
 
 #### 砂仁（醒脾香氣師）🆕
 
-<img src="/assets/images/characters/sharen.png" alt="砂仁" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/sharen.webp" alt="砂仁" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・行氣醒脾擔當
 - **專長**：本篇新角色。砂仁是薑科植物的種子，一咬開就是滿口辛香。它的工作是**芳香化濕、行氣醒脾**——把被濕氣悶到「睡著」的脾胃叫醒，順手把脹氣往下推
@@ -243,7 +243,7 @@ excerpt: "整個夏天靠冰飲和便當過活，立秋一到，大便就再也�
 
 #### 桔梗（開窗通風員）
 
-<img src="/assets/images/characters/jiegeng.png" alt="桔梗" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/jiegeng.webp" alt="桔梗" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・宣肺利氣擔當
 - **專長**：明明是治咳嗽的藥，為什麼會出現在止瀉方裡？因為桔梗能**宣肺利氣、通調水道**——把上面的窗戶打開，下面的水才排得順。他同時還負責「**載藥上行**」，把整隊的藥力往上帶一點，讓肺也一起受益
@@ -257,7 +257,7 @@ excerpt: "整個夏天靠冰飲和便當過活，立秋一到，大便就再也�
 
 #### 甘草（和事佬）
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：使藥・益氣和中擔當
 - **專長**：益氣和中、調和諸藥，替這支十一人的工程隊排班分工
@@ -266,7 +266,7 @@ excerpt: "整個夏天靠冰飲和便當過活，立秋一到，大便就再也�
 
 #### 大棗（補脾和中）
 
-<img src="/assets/images/characters/dazao.png" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/dazao.webp" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐使・顧護脾胃擔當
 - **專長**：傳統上參苓白朮散是研成細末、用**大棗湯**調服——甘溫的棗湯本身就是護胃的第一道緩衝

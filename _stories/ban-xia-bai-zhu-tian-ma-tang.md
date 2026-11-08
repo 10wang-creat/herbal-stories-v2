@@ -15,35 +15,35 @@ ingredients:
   - name: 半夏
     category: 化痰
     description: 化痰總司令｜燥濕化痰、降逆止嘔，二陳湯歸來的主將
-    image: banxia.png
+    image: banxia.webp
   - name: 天麻
     category: 平肝
     description: 定風的手（新角色）｜平肝熄風、止頭眩，專門按住那股「轉」
-    image: tianma.png
+    image: tianma.webp
   - name: 白朮
     category: 補氣
     description: 後勤隊長｜補氣健脾、燥濕，從源頭減少淤泥
-    image: baizhu.png
+    image: baizhu.webp
   - name: 茯苓
     category: 利濕
     description: 除濕工程師｜健脾利水滲濕，把積水導出去
-    image: fuling.png
+    image: fuling.webp
   - name: 陳皮
     category: 理氣
     description: 理氣疏通員｜理氣健脾、燥濕化痰，氣行則痰行
-    image: chenpi.png
+    image: chenpi.webp
   - name: 生薑
     category: 解表
     description: 和胃止嘔｜散寒和胃、降逆止嘔，兼制半夏之偏性
-    image: shengjiang.png
+    image: shengjiang.webp
   - name: 大棗
     category: 補氣
     description: 補脾和中｜甘溫顧護脾胃，與生薑組成薑棗藥對
-    image: dazao.png
+    image: dazao.webp
   - name: 甘草
     category: 補氣
     description: 和事佬｜益氣和中、調和諸藥
-    image: gancao.png
+    image: gancao.webp
 excerpt: "早上翻個身，整個房間就轉起來——頭重得像戴了濕毛巾、噁心想吐、胸口悶悶的，去醫院檢查卻說「沒什麼大問題」。中醫講「無痰不作眩」：這種暈不是血不夠，是痰太多、還被風攪動了。拆開來看，這帖方其實是二陳湯請來了一位外援。"
 ---
 
@@ -163,7 +163,7 @@ excerpt: "早上翻個身，整個房間就轉起來——頭重得像戴了濕�
 
 ### 半夏（化痰總司令）
 
-<img src="/assets/images/characters/banxia.png" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/banxia.webp" alt="半夏" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・燥濕化痰擔當
 - **專長**：辛溫而燥，把黏在身體裡的痰濕打散化開；同時**降逆止嘔**——那股一陣一陣往上頂的噁心，是她按下去的
@@ -172,7 +172,7 @@ excerpt: "早上翻個身，整個房間就轉起來——頭重得像戴了濕�
 
 ### 天麻（定風的手）🆕
 
-<img src="/assets/images/characters/tianma.png" alt="天麻" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/tianma.webp" alt="天麻" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：君藥・平肝熄風擔當
 - **專長**：本篇新角色，也是這帖方的靈魂。天麻**平肝熄風、止頭眩**——古人說得很直接：「**眼黑頭旋，風虛內作，非天麻不能除**」。那股讓世界轉起來的力量，由他按住
@@ -181,7 +181,7 @@ excerpt: "早上翻個身，整個房間就轉起來——頭重得像戴了濕�
 
 ### 白朮（後勤隊長）
 
-<img src="/assets/images/characters/baizhu.png" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/baizhu.webp" alt="白朮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・健脾燥濕擔當
 - **專長**：上週才在 **[參苓白朮散](/stories/shen-ling-bai-zhu-san/)** 當君藥的他，這次退到臣位，任務不變——**顧脾、燥濕**。脾為生痰之源，源頭關得緊，痰才不會一直長回來
@@ -190,7 +190,7 @@ excerpt: "早上翻個身，整個房間就轉起來——頭重得像戴了濕�
 
 ### 茯苓（除濕工程師）
 
-<img src="/assets/images/characters/fuling.png" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/fuling.webp" alt="茯苓" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：臣藥・利水滲濕擔當
 - **專長**：健脾滲濕，把還沒變成痰的水濕先導出去——痰的原料少了，半夏要處理的量自然就少
@@ -199,7 +199,7 @@ excerpt: "早上翻個身，整個房間就轉起來——頭重得像戴了濕�
 
 ### 陳皮（理氣疏通員）
 
-<img src="/assets/images/characters/chenpi.png" alt="陳皮" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/chenpi.webp" alt="陳皮" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・理氣化痰擔當
 - **專長**：**理氣健脾、燥濕化痰**。中醫說「**氣行則痰行**」——痰是黏的、不會自己走，得靠氣去推。陳皮就是那股推力
@@ -208,7 +208,7 @@ excerpt: "早上翻個身，整個房間就轉起來——頭重得像戴了濕�
 
 ### 生薑（和胃止嘔）
 
-<img src="/assets/images/characters/shengjiang.png" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/shengjiang.webp" alt="生薑" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・降逆止嘔擔當
 - **專長**：散寒和胃、降逆止嘔，跟半夏一起壓下噁心；同時**制約半夏的偏性**，讓辛燥不至於太過
@@ -217,7 +217,7 @@ excerpt: "早上翻個身，整個房間就轉起來——頭重得像戴了濕�
 
 ### 大棗（補脾和中）
 
-<img src="/assets/images/characters/dazao.png" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/dazao.webp" alt="大棗" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：佐藥・顧護脾胃擔當
 - **專長**：甘溫補中，與生薑組成經典的「**薑棗藥對**」——一散一補，讓整帖偏燥的方子有個柔軟的墊底
@@ -226,7 +226,7 @@ excerpt: "早上翻個身，整個房間就轉起來——頭重得像戴了濕�
 
 ### 炙甘草（和事佬）
 
-<img src="/assets/images/characters/gancao.png" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
+<img src="/assets/images/characters/gancao.webp" alt="甘草" style="float:right; width:100px; margin:0 0 10px 15px;">
 
 - **角色**：使藥・調和諸藥擔當
 - **專長**：益氣和中、協合諸藥，把辛燥的半夏陳皮、甘平的白朮茯苓、專攻的天麻調成一支步調一致的隊伍
