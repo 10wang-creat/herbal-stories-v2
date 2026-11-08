@@ -183,25 +183,28 @@ function GameHub({onSelect,totalScore}) {
 }
 
 /* ─── Match ─── */
+var MATCH_ROUND = Math.min(8, FORMULAS.length);
 function MatchGame({onScoreAdd}) {
+  var _r=useState(function(){return _shuffle(FORMULAS).slice(0,MATCH_ROUND);}),ROUND=_r[0],setRound=_r[1];
   var _s=useState(0),fi=_s[0],setFi=_s[1];var _s2=useState([]),slots=_s2[0],setSlots=_s2[1];var _s3=useState(null),selHerb=_s3[0],setSelHerb=_s3[1];var _s4=useState([]),placed=_s4[0],setPlaced=_s4[1];var _s5=useState(false),checked=_s5[0],setChecked=_s5[1];var _s6=useState(false),isOk=_s6[0],setIsOk=_s6[1];var _s7=useState(0),score=_s7[0],setScore=_s7[1];var _s8=useState(false),done=_s8[0],setDone=_s8[1];var _s9=useState([]),pool=_s9[0],setPool=_s9[1];
-  var f=FORMULAS[fi];
-  useEffect(function(){reset()},[fi]);
-  function reset(){var ff=FORMULAS[fi];setSlots(new Array(ff.herbNames.length).fill(null));setPlaced([]);setSelHerb(null);setChecked(false);setIsOk(false);var correct=ff.herbNames.map(function(n){return HERBS.find(function(h){return h.name===n})}).filter(Boolean);var others=HERBS.filter(function(h){return!ff.herbNames.includes(h.name)}).sort(function(){return Math.random()-.5}).slice(0,Math.max(3,Math.min(8,12-ff.herbNames.length)));setPool([].concat(correct,others).sort(function(){return Math.random()-.5}))}
+  var f=ROUND[fi];
+  useEffect(function(){reset()},[fi,ROUND]);
+  function reset(){var ff=ROUND[fi];setSlots(new Array(ff.herbNames.length).fill(null));setPlaced([]);setSelHerb(null);setChecked(false);setIsOk(false);var correct=ff.herbNames.map(function(n){return HERBS.find(function(h){return h.name===n})}).filter(Boolean);var others=HERBS.filter(function(h){return!ff.herbNames.includes(h.name)}).sort(function(){return Math.random()-.5}).slice(0,Math.max(3,Math.min(8,12-ff.herbNames.length)));setPool([].concat(correct,others).sort(function(){return Math.random()-.5}))}
   function clickHerb(h){if(checked||placed.includes(h.name))return;setSelHerb(h)}
   function clickSlot(si){if(checked)return;if(selHerb){var ns=[].concat(slots);if(ns[si])setPlaced(function(p){return p.filter(function(n){return n!==ns[si].name})});ns[si]=selHerb;setSlots(ns);setPlaced(function(p){return[].concat(p.filter(function(n){return n!==selHerb.name}),[selHerb.name])});setSelHerb(null)}else if(slots[si]){setPlaced(function(p){return p.filter(function(n){return n!==slots[si].name})});var ns2=[].concat(slots);ns2[si]=null;setSlots(ns2)}}
   function check(){var ok=slots.every(function(s){return s})&&slots.map(function(s){return s.name}).sort().join(",")===[].concat(f.herbNames).sort().join(",");setChecked(true);setIsOk(ok);if(ok){setScore(function(s){return s+20});onScoreAdd(20)}}
-  function next(){if(fi<FORMULAS.length-1)setFi(function(i){return i+1});else setDone(true)}
-  if(done)return React.createElement('div',{className:"animate-in",style:{maxWidth:500,margin:"40px auto",textAlign:"center",background:"white",borderRadius:20,padding:40,boxShadow:"0 2px 12px rgba(52,67,94,0.1)"}},React.createElement('div',{style:{fontSize:60,marginBottom:16}},"🎊"),React.createElement('h2',{className:"serif",style:{marginBottom:8}},"組方挑戰完成！"),React.createElement('p',{style:{color:"#7c8194",marginBottom:24,fontSize:16}},"你獲得了 ",React.createElement('strong',{style:{color:"#9aa6b8"}},score)," 分"),React.createElement('button',{className:"game-btn game-btn-primary",onClick:function(){setFi(0);setScore(0);setDone(false)}},"再玩一次"));
+  function next(){if(fi<ROUND.length-1)setFi(function(i){return i+1});else setDone(true)}
+  function replay(){setRound(_shuffle(FORMULAS).slice(0,MATCH_ROUND));setFi(0);setScore(0);setDone(false)}
+  if(done)return React.createElement('div',{className:"animate-in",style:{maxWidth:500,margin:"40px auto",textAlign:"center",background:"white",borderRadius:20,padding:40,boxShadow:"0 2px 12px rgba(52,67,94,0.1)"}},React.createElement('div',{style:{fontSize:60,marginBottom:16}},"🎊"),React.createElement('h2',{className:"serif",style:{marginBottom:8}},"組方挑戰完成！"),React.createElement('p',{style:{color:"#7c8194",marginBottom:24,fontSize:16}},"你獲得了 ",React.createElement('strong',{style:{color:"#9aa6b8"}},score)," 分"),React.createElement('button',{className:"game-btn game-btn-primary",onClick:replay},"再玩一次（隨機出題）"));
   var allFilled=slots.every(function(s){return s!==null});
-  return React.createElement('div',{className:"animate-in",style:{maxWidth:640,margin:"30px auto",padding:"0 20px"}},React.createElement('div',{style:{marginBottom:20}},React.createElement('div',{style:{display:"flex",justifyContent:"space-between",marginBottom:6,fontSize:13,color:"#7c8194"}},React.createElement('span',null,"方劑 "+(fi+1)+" / "+FORMULAS.length),React.createElement('span',null,"得分 "+score)),React.createElement('div',{className:"progress-bar"},React.createElement('div',{className:"progress-fill",style:{width:(fi+1)/FORMULAS.length*100+"%"}}))),React.createElement('div',{style:{background:"white",borderRadius:16,padding:24,boxShadow:"0 2px 12px rgba(52,67,94,0.1)",marginBottom:20}},React.createElement('div',{style:{textAlign:"center",marginBottom:20}},React.createElement('h2',{className:"serif",style:{fontSize:24,color:"#6f9083",marginBottom:6}},f.name),React.createElement('p',{style:{fontSize:13,color:"#7c8194",maxWidth:500,margin:"0 auto",lineHeight:1.6}},f.effects)),React.createElement('div',{style:{marginBottom:24}},React.createElement('p',{style:{fontSize:13,color:"#7c8194",marginBottom:10}},"📦 請選擇 "+f.herbNames.length+" 味藥材放入方劑："),React.createElement('div',{style:{display:"grid",gridTemplateColumns:"repeat("+Math.min(f.herbNames.length,4)+",1fr)",gap:10}},slots.map(function(s,i){var ss={};if(checked&&s){ss=f.herbNames.includes(s.name)?{borderColor:"#6f9083",background:"#eaf1ec"}:{borderColor:"#C75B5B",background:"#FDE8E8"}}return React.createElement('div',{key:i,className:"match-slot"+(selHerb?" active":"")+(s?" filled":""),onClick:function(){clickSlot(i)},style:Object.assign({cursor:checked?"default":"pointer"},ss)},s?React.createElement('span',null,s.name):React.createElement('span',{style:{color:"#C0B8AC",fontSize:13}},"點此放入"))}))),React.createElement('div',null,React.createElement('p',{style:{fontSize:13,color:"#7c8194",marginBottom:10}},"🌿 可選藥材："),React.createElement('div',{style:{display:"flex",flexWrap:"wrap",gap:8}},pool.map(function(h){return React.createElement('span',{key:h.name,className:"draggable-herb"+(selHerb&&selHerb.name===h.name?" selected":"")+(placed.includes(h.name)?" placed":""),onClick:function(){clickHerb(h)}},h.name)})))),checked&&React.createElement('div',{className:"animate-in",style:{background:isOk?"#eaf1ec":"#FFF5F0",borderRadius:12,padding:18,marginBottom:20,border:"1px solid "+(isOk?"#b6cdbf":"#F0C8B8"),lineHeight:1.8,fontSize:14}},isOk?React.createElement('span',null,"🎉 ",React.createElement('strong',null,"完美組方！"),"你成功組出了 "+f.name+"！",f.link&&React.createElement('a',{href:f.link,style:{color:"#6f9083",marginLeft:8}},"📖 閱讀故事")):React.createElement('span',null,"💡 ",React.createElement('strong',null,"正確答案："),f.herbNames.join("、"))),React.createElement('div',{style:{textAlign:"center"}},!checked?React.createElement('button',{className:"game-btn game-btn-primary",disabled:!allFilled,onClick:check,style:{opacity:allFilled?1:.5}},"確認組方 ✓"):React.createElement('button',{className:"game-btn game-btn-primary",onClick:next},fi<FORMULAS.length-1?"下一個方劑 →":"查看結果 🎯")));
+  return React.createElement('div',{className:"animate-in",style:{maxWidth:640,margin:"30px auto",padding:"0 20px"}},React.createElement('div',{style:{marginBottom:20}},React.createElement('div',{style:{display:"flex",justifyContent:"space-between",marginBottom:6,fontSize:13,color:"#7c8194"}},React.createElement('span',null,"方劑 "+(fi+1)+" / "+ROUND.length),React.createElement('span',null,"得分 "+score)),React.createElement('div',{className:"progress-bar"},React.createElement('div',{className:"progress-fill",style:{width:(fi+1)/ROUND.length*100+"%"}}))),React.createElement('div',{style:{background:"white",borderRadius:16,padding:24,boxShadow:"0 2px 12px rgba(52,67,94,0.1)",marginBottom:20}},React.createElement('div',{style:{textAlign:"center",marginBottom:20}},React.createElement('h2',{className:"serif",style:{fontSize:24,color:"#6f9083",marginBottom:6}},f.name),React.createElement('p',{style:{fontSize:13,color:"#7c8194",maxWidth:500,margin:"0 auto",lineHeight:1.6}},f.effects)),React.createElement('div',{style:{marginBottom:24}},React.createElement('p',{style:{fontSize:13,color:"#7c8194",marginBottom:10}},"📦 請選擇 "+f.herbNames.length+" 味藥材放入方劑："),React.createElement('div',{style:{display:"grid",gridTemplateColumns:"repeat("+Math.min(f.herbNames.length,4)+",1fr)",gap:10}},slots.map(function(s,i){var ss={};if(checked&&s){ss=f.herbNames.includes(s.name)?{borderColor:"#6f9083",background:"#eaf1ec"}:{borderColor:"#C75B5B",background:"#FDE8E8"}}return React.createElement('div',{key:i,className:"match-slot"+(selHerb?" active":"")+(s?" filled":""),onClick:function(){clickSlot(i)},style:Object.assign({cursor:checked?"default":"pointer"},ss)},s?React.createElement('span',null,s.name):React.createElement('span',{style:{color:"#C0B8AC",fontSize:13}},"點此放入"))}))),React.createElement('div',null,React.createElement('p',{style:{fontSize:13,color:"#7c8194",marginBottom:10}},"🌿 可選藥材："),React.createElement('div',{style:{display:"flex",flexWrap:"wrap",gap:8}},pool.map(function(h){return React.createElement('span',{key:h.name,className:"draggable-herb"+(selHerb&&selHerb.name===h.name?" selected":"")+(placed.includes(h.name)?" placed":""),onClick:function(){clickHerb(h)}},h.name)})))),checked&&React.createElement('div',{className:"animate-in",style:{background:isOk?"#eaf1ec":"#FFF5F0",borderRadius:12,padding:18,marginBottom:20,border:"1px solid "+(isOk?"#b6cdbf":"#F0C8B8"),lineHeight:1.8,fontSize:14}},isOk?React.createElement('span',null,"🎉 ",React.createElement('strong',null,"完美組方！"),"你成功組出了 "+f.name+"！",f.link&&React.createElement('a',{href:f.link,style:{color:"#6f9083",marginLeft:8}},"📖 閱讀故事")):React.createElement('span',null,"💡 ",React.createElement('strong',null,"正確答案："),f.herbNames.join("、"))),React.createElement('div',{style:{textAlign:"center"}},!checked?React.createElement('button',{className:"game-btn game-btn-primary",disabled:!allFilled,onClick:check,style:{opacity:allFilled?1:.5}},"確認組方 ✓"):React.createElement('button',{className:"game-btn game-btn-primary",onClick:next},fi<ROUND.length-1?"下一個方劑 →":"查看結果 🎯")));
 }
 
 /* ─── Memory ─── */
 function MemoryGame({onScoreAdd}) {
-  var _s=useState([]),cards=_s[0],setCards=_s[1];var _s2=useState([]),flipped=_s2[0],setFlipped=_s2[1];var _s3=useState([]),matched=_s3[0],setMatched=_s3[1];var _s4=useState(0),moves=_s4[0],setMoves=_s4[1];var _s5=useState(false),done=_s5[0],setDone=_s5[1];var lock=useRef(false);var PC=Math.min(8,HERBS.length);
+  var _s=useState([]),cards=_s[0],setCards=_s[1];var _s2=useState([]),flipped=_s2[0],setFlipped=_s2[1];var _s3=useState([]),matched=_s3[0],setMatched=_s3[1];var _s4=useState(0),moves=_s4[0],setMoves=_s4[1];var _s5=useState(false),done=_s5[0],setDone=_s5[1];var lock=useRef(false);var PC=Math.min(8,HERBS.filter(function(h){return h.effect&&h.effect.length>=4;}).length);
   useEffect(function(){init()},[]);
-  function init(){var sel=HERBS.sort(function(){return Math.random()-.5}).slice(0,PC);var pairs=[];sel.forEach(function(h){pairs.push({id:h.name+"_n",pid:h.name,type:"name",content:h.name});var eff=h.effect.length>10?h.effect.slice(0,10):h.effect;pairs.push({id:h.name+"_e",pid:h.name,type:"eff",content:eff})});setCards(pairs.sort(function(){return Math.random()-.5}));setFlipped([]);setMatched([]);setMoves(0);setDone(false);lock.current=false}
+  function init(){var usable=HERBS.filter(function(h){return h.effect&&h.effect.length>=4;});var sel=_shuffle(usable).slice(0,PC);var pairs=[];sel.forEach(function(h){pairs.push({id:h.name+"_n",pid:h.name,type:"name",content:h.name});var eff=h.effect.length>12?h.effect.slice(0,12)+"…":h.effect;pairs.push({id:h.name+"_e",pid:h.name,type:"eff",content:eff})});setCards(pairs.sort(function(){return Math.random()-.5}));setFlipped([]);setMatched([]);setMoves(0);setDone(false);lock.current=false}
   function flip(idx){if(lock.current||flipped.includes(idx)||matched.includes(cards[idx].pid))return;var nf=[].concat(flipped,[idx]);setFlipped(nf);if(nf.length===2){lock.current=true;setMoves(function(m){return m+1});var a=nf[0],b=nf[1];if(cards[a].pid===cards[b].pid&&cards[a].type!==cards[b].type){setTimeout(function(){setMatched(function(m){return[].concat(m,[cards[a].pid])});setFlipped([]);lock.current=false;onScoreAdd(5);if(matched.length+1===PC)setTimeout(function(){setDone(true)},600)},600)}else{setTimeout(function(){setFlipped([]);lock.current=false},800)}}}
   if(done){var stars=moves<=PC*1.5?3:moves<=PC*2?2:1;return React.createElement('div',{className:"animate-in",style:{maxWidth:500,margin:"40px auto",textAlign:"center",background:"white",borderRadius:20,padding:40,boxShadow:"0 2px 12px rgba(52,67,94,0.1)"}},React.createElement('div',{style:{fontSize:48,marginBottom:12}},"⭐".repeat(stars)),React.createElement('h2',{className:"serif",style:{marginBottom:8}},"翻翻樂完成！"),React.createElement('p',{style:{color:"#7c8194",marginBottom:24}},"共用了 ",React.createElement('strong',null,moves)," 步完成 "+PC+" 組配對"),React.createElement('button',{className:"game-btn game-btn-primary",onClick:init},"再玩一次（隨機出題）"))}
   return React.createElement('div',{className:"animate-in",style:{maxWidth:560,margin:"30px auto",padding:"0 20px"}},React.createElement('div',{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:20}},React.createElement('span',{style:{fontSize:14,color:"#7c8194"}},"步數："+moves),React.createElement('span',{style:{fontSize:14,color:"#7c8194"}},"配對："+matched.length+" / "+PC)),React.createElement('div',{style:{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10}},cards.map(function(c,idx){var isF=flipped.includes(idx),isM=matched.includes(c.pid),show=isF||isM;return React.createElement('div',{key:c.id,className:"card-flip",onClick:function(){flip(idx)},style:{cursor:show&&!isF?"default":"pointer"}},React.createElement('div',{className:"card-flip-inner"+(show?" flipped":""),style:{height:80}},React.createElement('div',{className:"card-flip-front",style:{background:"linear-gradient(135deg,#6f9083,#4f6f62)",display:"flex",alignItems:"center",justifyContent:"center",color:"white",fontSize:22}},React.createElement('img',{src:"/assets/images/site-logo.png",alt:"",style:{width:30,height:30,borderRadius:"50%"}})),React.createElement('div',{className:"card-flip-back",style:{background:isM?"#eaf1ec":"white",border:"2px solid "+(isM?"#6f9083":"#9aa6b8"),display:"flex",alignItems:"center",justifyContent:"center",padding:6,fontSize:c.type==="eff"?11:14,fontWeight:c.type==="name"?600:400,textAlign:"center",lineHeight:1.3}},c.content)))})),React.createElement('div',{style:{marginTop:20,textAlign:"center",fontSize:13,color:"#7c8194",lineHeight:1.6}},"💡 提示：藥材名稱和功效要配成一對唷！每次遊戲隨機出題"));
@@ -219,18 +222,44 @@ function _progress(cur,total,correct){ return el('div',{style:{marginBottom:24}}
 function _letter(i,sel,ans){ var bg=sel!==null&&i===ans?"#6f9083":sel===i&&i!==ans?"#C75B5B":"#dcd9e6"; var col=sel!==null&&(i===ans||i===sel)?"white":"#333b4a"; var txt=sel!==null&&i===ans?"✓":sel===i&&i!==ans?"✗":String.fromCharCode(65+i); return el('span',{style:{width:28,height:28,borderRadius:"50%",background:bg,color:col,display:"inline-flex",alignItems:"center",justifyContent:"center",fontSize:13,fontWeight:700,flexShrink:0}},txt); }
 
 /* 出題器：方劑 / 炮製 / 藥材找家 */
+function formulaClue(f){
+  // 方名去掉劑型字（湯/散/丸/飲…）後若出現在功效裡（補中益氣湯 → 補中益氣），遮成 ◯
+  var base = f.name.replace(/[（(].*$/, "").replace(/(加減|加味)?(湯|散|丸|飲|膏|丹|煎|方)$/, "");
+  var text = f.effects || "";
+  if (base.length >= 2 && text.indexOf(base) !== -1) text = text.split(base).join("◯".repeat(base.length));
+  return text;
+}
 function buildFormulaQ(){
   return _shuffle(FORMULAS).slice(0,Math.min(8,FORMULAS.length)).map(function(f){
     var others=_shuffle(FORMULAS.filter(function(x){return x.name!==f.name;})).slice(0,3).map(function(x){return x.name;});
     var opts=_shuffle(others.concat([f.name]));
-    return {clue:"📋 "+f.effects, q:"這是哪一帖方劑的功效？", options:opts, answer:opts.indexOf(f.name), link:f.link};
+    return {clue:"📋 "+formulaClue(f), q:"這是哪一帖方劑的功效？", options:opts, answer:opts.indexOf(f.name), link:f.link};
   });
 }
+/* 炮製題：effects 開頭就是「醋炙：以醋為輔料…」，會直接洩題。
+   出題前先切掉「名稱：」前綴，再把答案的關鍵字（醋炙、醋）遮成 ◯。 */
+var PAO_GENERIC = "炙炒製法與和九曬制清水發";   // 太常見、不能單字遮罩的字
+function paoKeywords(name){
+  var base = name.replace(/[（(].*?[）)]/g, "");          // 去掉括號補充：清炒（炒黃・炒焦・炒炭）→ 清炒
+  var inner = (name.match(/[（(](.*?)[）)]/) || [,""])[1]; // 括號裡的別名：炒黃・炒焦・炒炭
+  var parts = (base + "・" + inner).split(/[・、與和]/).map(function(t){return t.trim();}).filter(Boolean);
+  var kws = [name, base].concat(parts);
+  parts.forEach(function(t){
+    if (t.length <= 2) t.split("").forEach(function(c){ if (PAO_GENERIC.indexOf(c) === -1) kws.push(c); });
+  });
+  return kws.filter(function(k,i,a){ return k && a.indexOf(k) === i; }).sort(function(a,b){ return b.length - a.length; });
+}
+function paoClue(p){
+  var text = p.effects.replace(/^[^：:]{1,14}[：:]\s*/, "");   // 切掉「醋炙：」
+  paoKeywords(p.name).forEach(function(k){ text = text.split(k).join("◯"); });
+  return text.replace(/◯{2,}/g, "◯◯");
+}
 function buildPaozhiQ(){
-  return _shuffle(PAOZHI).slice(0,Math.min(8,PAOZHI.length)).map(function(p){
-    var others=_shuffle(PAOZHI.filter(function(x){return x.name!==p.name;})).slice(0,3).map(function(x){return x.name;});
+  var pool = PAOZHI.filter(function(x){ return x.name.indexOf("總綱") === -1; });
+  return _shuffle(pool).slice(0,Math.min(8,pool.length)).map(function(p){
+    var others=_shuffle(pool.filter(function(x){return x.name!==p.name;})).slice(0,3).map(function(x){return x.name;});
     var opts=_shuffle(others.concat([p.name]));
-    return {clue:"🔥 "+p.effects, q:"這是哪一種炮製法？", options:opts, answer:opts.indexOf(p.name), link:p.link};
+    return {clue:"🔥 "+paoClue(p), q:"這段在描述哪一種炮製法？（◯ 是被遮住的關鍵字）", options:opts, answer:opts.indexOf(p.name), link:p.link};
   });
 }
 function buildHerbQ(){
@@ -240,7 +269,8 @@ function buildHerbQ(){
     var belongs=map[hn]; var cf=belongs[Math.floor(Math.random()*belongs.length)];
     var notC=_shuffle(FORMULAS.filter(function(f){return f.herbNames.indexOf(hn)===-1;})).slice(0,3).map(function(f){return f.name;});
     var opts=_shuffle(notC.concat([cf.name]));
-    return {clue:"🌿 藥材：「"+hn+"」", q:"它是下列哪一帖方劑的成員？", options:opts, answer:opts.indexOf(cf.name), link:cf.link};
+    var herb=HERBS.find(function(h){return h.name===hn;});
+    return {clue:"🌿 藥材：「"+hn+"」"+(herb&&herb.role&&herb.role.length<=8?"（"+herb.role+"）":""), image:herb&&herb.image?"/assets/images/characters/"+herb.image:null, q:"它是下列哪一帖方劑的成員？", options:opts, answer:opts.indexOf(cf.name), link:cf.link};
   });
 }
 
@@ -266,7 +296,9 @@ function OptionQuiz(props){
   return el('div',{className:"animate-in",style:{maxWidth:640,margin:"30px auto",padding:"0 20px"}},
     _progress(cur,qs.length,correct),
     el('div',{style:_cardBox},
-      el('div',{style:_scenario},q.clue),
+      el('div',{style:Object.assign({},_scenario,q.image?{display:"flex",alignItems:"center",gap:16}:{})},
+        q.image?el('img',{src:q.image,alt:"",loading:"lazy",style:{width:72,height:72,borderRadius:"50%",objectFit:"contain",background:"white",flexShrink:0,boxShadow:"0 2px 8px rgba(52,67,94,0.15)"}}):null,
+        el('span',null,q.clue)),
       el('h3',{className:"serif",style:{fontSize:18,marginBottom:16}},q.q),
       el('div',{style:{display:"flex",flexDirection:"column",gap:10}},
         q.options.map(function(opt,i){
@@ -310,8 +342,8 @@ function FlashcardGame(){
 /* ─── Main App ─── */
 function App() {
   var _s=useState(null),cur=_s[0],setCur=_s[1];
-  var _s2=useState(0),total=_s2[0],setTotal=_s2[1];
-  var add=useCallback(function(p){setTotal(function(s){return s+p})},[]);
+  var _s2=useState(function(){ try { return parseInt(localStorage.getItem("hs_game_score"),10)||0; } catch(e){ return 0; } }),total=_s2[0],setTotal=_s2[1];
+  var add=useCallback(function(p){setTotal(function(s){ var n=s+p; try { localStorage.setItem("hs_game_score",String(n)); } catch(e){} return n; })},[]);
   var game=null;
   if(cur==="effquiz")game=React.createElement(OptionQuiz,{build:buildFormulaQ,onScoreAdd:add});
   else if(cur==="paozhi")game=React.createElement(OptionQuiz,{build:buildPaozhiQ,onScoreAdd:add});
