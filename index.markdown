@@ -41,7 +41,7 @@ title: 首頁
     <a href="{{ '/formulas/' | relative_url }}" class="explore-tile t-formula">
       <span class="explore-ic">💊</span>
       <strong>方劑故事</strong>
-      <span class="explore-sub">{{ formula_count }} 帖方劑，一帖就是一支團隊</span>
+      <span class="explore-sub">知識文章｜用故事讀懂 {{ formula_count }} 帖方的組成與用法</span>
     </a>
     <a href="{{ '/paozhi/' | relative_url }}" class="explore-tile t-paozhi">
       <span class="explore-ic">🔥</span>
@@ -65,8 +65,8 @@ title: 首頁
     </a>
     <a href="https://vocus.cc/salon/herbalstories" target="_blank" rel="noopener noreferrer" class="explore-tile t-novel">
       <span class="explore-ic">📖</span>
-      <strong>小說《四時堂》</strong>
-      <span class="explore-sub">連載中，已更新 {{ ss_count }} 章</span>
+      <strong>療癒小說《四時堂》</strong>
+      <span class="explore-sub">不講藥理，只說心事｜連載 {{ ss_count }} 章</span>
     </a>
     <a href="https://open.spotify.com/show/6k6qAkTg8nX7k4FMU32hgT" target="_blank" rel="noopener noreferrer" class="explore-tile t-podcast">
       <span class="explore-ic">🎙️</span>
@@ -180,11 +180,12 @@ title: 首頁
   {%- assign ssc_salon = site.data.sishitang.salon | default: "https://vocus.cc/salon/herbalstories" -%}
   <div class="sishitang-inner">
     <div class="sishitang-text">
-      <span class="sishitang-badge">📖 小說連載中 · 已更新 {{ ssc_total }} 章</span>
+      <span class="sishitang-badge">📖 療癒小說連載中 · 已更新 {{ ssc_total }} 章</span>
       <h2 class="sishitang-title" id="sishitangTitle">四時堂</h2>
       <p class="sishitang-tagline">抓的不是藥，是心事</p>
       <p class="sishitang-desc">一條快被遺忘的老街上，有一間中藥行。老闆娘抓的不是藥，是心事——一章一味藥，一個帶著症狀走進來的人，一段藏在身體底下的故事。跟著節氣走，慢慢說給你聽。</p>
       <p class="sishitang-seasons">🌱 春祛濕 · ☀️ 夏清暑 · 🍂 秋潤燥 · ❄️ 冬溫補</p>
+      <p class="sishitang-note">這是小說，不是用藥建議。想認識書裡出現的藥，可以到<a href="{{ '/characters/' | relative_url }}">藥材圖鑑</a>；想讀懂方劑怎麼用，請看<a href="{{ '/formulas/' | relative_url }}">方劑故事</a>。</p>
       <div class="sishitang-actions">
         {%- if ssc_latest.first %}
         <a href="{{ ssc_latest.first.url }}" target="_blank" rel="noopener noreferrer" class="sishitang-cta">讀最新一章〈{{ ssc_latest.first.herb }}〉→</a>
@@ -366,7 +367,9 @@ title: 首頁
 .sishitang-title { font-family: var(--serif); font-size: 2.4rem; color: #8f3a52; margin: 12px 0 4px; letter-spacing: 6px; }
 .sishitang-tagline { font-size: 1.1rem; color: #a3506a; font-style: italic; margin-bottom: 16px; }
 .sishitang-desc { color: var(--ink-soft); line-height: 1.85; margin-bottom: 14px; }
-.sishitang-seasons { color: var(--muted); font-size: 0.95rem; margin-bottom: 22px; }
+.sishitang-seasons { color: var(--muted); font-size: 0.95rem; margin-bottom: 10px; }
+.sishitang-note { color: var(--muted); font-size: 0.86rem; line-height: 1.7; margin-bottom: 22px; }
+.sishitang-note a { color: #a3506a; }
 .sishitang-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 .sishitang-cta { display: inline-block; background: linear-gradient(135deg, #8f3a52, #b0546e); color: #fff; padding: 12px 26px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(143,58,82,0.25); }
 .sishitang-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(143,58,82,0.3); }

@@ -47,7 +47,7 @@ permalink: /about/
         <a href="https://vocus.cc/salon/herbalstories" target="_blank" rel="noopener noreferrer" class="eco-card">
           <div class="eco-emoji">📕</div>
           <h3>四時堂</h3>
-          <p>中藥療癒小說，在方格子連載中</p>
+          <p>療癒小說（不是用藥建議），在方格子連載中</p>
         </a>
         <a href="https://www.instagram.com/meet.the.herbs/" target="_blank" rel="noopener noreferrer" class="eco-card">
           <div class="eco-emoji">📸</div>
