@@ -14,6 +14,9 @@
   {%- else -%}
     {%- assign page_desc = site.description | strip_newlines -%}
   {%- endif -%}
+  {%- comment -%} 社群分享（FB/LINE）：文章頁優先用故事引言 excerpt；搜尋引擎用 page_desc {%- endcomment -%}
+  {%- assign share_desc = page_desc -%}
+  {%- if page.layout == 'story' and page.excerpt -%}{%- assign share_desc = page.excerpt | strip_html | strip_newlines | truncate: 160 -%}{%- endif -%}
   {%- assign canonical_url = page.url | replace: 'index.html', '' | absolute_url -%}
 
   {%- comment -%} 分享縮圖：文章頁優先用自動產生的專屬圖 assets/images/og/<slug>.jpg，沒有就退回品牌圖 {%- endcomment -%}
@@ -43,7 +46,7 @@
   <meta property="og:type" content="{% if page.layout == 'story' %}article{% else %}website{% endif %}">
   <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:title" content="{{ page_title }}">
-  <meta property="og:description" content="{{ page_desc }}">
+  <meta property="og:description" content="{{ share_desc }}">
   <meta property="og:image" content="{{ og_image }}">
   <meta property="og:image:secure_url" content="{{ og_image }}">
   <meta property="og:image:type" content="{{ og_type }}">
@@ -63,7 +66,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ page_title }}">
-  <meta name="twitter:description" content="{{ page_desc }}">
+  <meta name="twitter:description" content="{{ share_desc }}">
   <meta name="twitter:image" content="{{ og_image }}">
   <meta name="twitter:image:alt" content="{{ page_title }}">
 
