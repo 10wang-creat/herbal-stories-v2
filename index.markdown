@@ -68,6 +68,16 @@ title: 首頁
       <strong>小說《四時堂》</strong>
       <span class="explore-sub">連載中，已更新 {{ ss_count }} 章</span>
     </a>
+    <a href="https://open.spotify.com/show/6k6qAkTg8nX7k4FMU32hgT" target="_blank" rel="noopener noreferrer" class="explore-tile t-podcast">
+      <span class="explore-ic">🎙️</span>
+      <strong>Podcast 草本夜話</strong>
+      <span class="explore-sub">跟著節氣，聽一味藥草的故事</span>
+    </a>
+    <a href="https://tcm-mindfulness-calendar.vercel.app/" target="_blank" rel="noopener noreferrer" class="explore-tile t-calendar">
+      <span class="explore-ic">🧘</span>
+      <strong>中藥正念日曆</strong>
+      <span class="explore-sub">每日一藥一冥想，給自己一個停頓</span>
+    </a>
   </div>
 </section>
 
@@ -254,6 +264,10 @@ title: 首頁
 .explore-tile.t-oracle strong { color: #4a4f7a; }
 .explore-tile.t-novel { border-top-color: #8f3a52; }
 .explore-tile.t-novel strong { color: #8f3a52; }
+.explore-tile.t-podcast { border-top-color: #1DB954; }
+.explore-tile.t-calendar { border-top-color: var(--green-700); }
+.explore-grid { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1000px) { .explore-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 720px) {
   .explore-section { margin: 20px auto 28px; }
   .explore-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
