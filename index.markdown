@@ -31,35 +31,42 @@ title: 首頁
   </div>
 </section>
 
-<!-- ===== 站內搜尋 ===== -->
-<section class="section home-search-section">
-  <h2 class="section-title">🔍 直接搜尋</h2>
-  <p class="section-subtitle">輸入方劑名、藥材或症狀，馬上找到想讀的文章</p>
-  {% include search-widget.html %}
-</section>
-
-<!-- ===== 兩大系列分流 ===== -->
-<section class="section">
-  <h2 class="section-title">兩大主題系列</h2>
-  <p class="section-subtitle">從「方」到「藥」，兩條路線帶你讀懂中藥</p>
-
-  <div class="series-split">
-    <a href="{{ '/formulas/' | relative_url }}" class="series-card formula">
-      <span class="series-emoji">💊</span>
-      <h3>方劑系列</h3>
-      {% assign formula_count = site.stories | where_exp: "s", "s.date <= site.time" | where_exp: "s", "s.series == nil" | size %}
-      <span class="series-count">{{ formula_count }} 帖方劑</span>
-      <p>一帖方劑就是一支團隊。讓每味藥材化身角色，用故事讀懂君臣佐使如何搭配、為何有效。</p>
-      <span class="series-go">進入方劑系列 →</span>
+<!-- ===== 探索入口（手機第一屏就看得到全站有什麼） ===== -->
+{%- assign formula_count = site.stories | where_exp: "s", "s.date <= site.time" | where_exp: "s", "s.series == nil" | size -%}
+{%- assign paozhi_count = site.stories | where_exp: "s", "s.date <= site.time" | where_exp: "s", "s.series == '炮製'" | size -%}
+{%- assign ss_count = site.data.sishitang.chapters | size -%}
+{%- include oracle-today.html -%}
+<section class="section explore-section" aria-label="探索草本故事館">
+  <div class="explore-grid">
+    <a href="{{ '/formulas/' | relative_url }}" class="explore-tile t-formula">
+      <span class="explore-ic">💊</span>
+      <strong>方劑故事</strong>
+      <span class="explore-sub">{{ formula_count }} 帖方劑，一帖就是一支團隊</span>
     </a>
-
-    <a href="{{ '/paozhi/' | relative_url }}" class="series-card paozhi">
-      <span class="series-emoji">🔥</span>
-      <h3>炮製系列</h3>
-      {% assign paozhi_count = site.stories | where_exp: "s", "s.date <= site.time" | where_exp: "s", "s.series == '炮製'" | size %}
-      <span class="series-count">{{ paozhi_count }} 篇炮製</span>
-      <p>同一把火，炒出三種命運。炒、炙、蒸、煆……看懂中藥入方前的「變身術」，就看懂藥性如何被轉化。</p>
-      <span class="series-go">進入炮製系列 →</span>
+    <a href="{{ '/paozhi/' | relative_url }}" class="explore-tile t-paozhi">
+      <span class="explore-ic">🔥</span>
+      <strong>炮製系列</strong>
+      <span class="explore-sub">{{ paozhi_count }} 篇，看中藥入方前的變身術</span>
+    </a>
+    <a href="{{ '/characters/' | relative_url }}" class="explore-tile t-chars">
+      <span class="explore-ic">🎭</span>
+      <strong>藥材圖鑑</strong>
+      <span class="explore-sub">上百位藥材角色，依功效找</span>
+    </a>
+    <a href="{{ '/games/' | relative_url }}" class="explore-tile t-games">
+      <span class="explore-ic">🎮</span>
+      <strong>遊樂園</strong>
+      <span class="explore-sub">猜方劑、組方、翻翻樂，邊玩邊記</span>
+    </a>
+    <a href="{{ '/oracle/' | relative_url }}" class="explore-tile t-oracle">
+      <span class="explore-ic"><img src="{{ oracle_today_img }}" alt="" width="48" height="48" loading="lazy" decoding="async"></span>
+      <strong>本草心語</strong>
+      <span class="explore-sub">今日一卡：{{ oracle_today.n }}。抽一張屬於你的</span>
+    </a>
+    <a href="https://vocus.cc/salon/herbalstories" target="_blank" rel="noopener noreferrer" class="explore-tile t-novel">
+      <span class="explore-ic">📖</span>
+      <strong>小說《四時堂》</strong>
+      <span class="explore-sub">連載中，已更新 {{ ss_count }} 章</span>
     </a>
   </div>
 </section>
@@ -67,11 +74,11 @@ title: 首頁
 <!-- ===== 最新故事 ===== -->
 <section class="section">
   <h2 class="section-title">📚 最新故事</h2>
-  <p class="section-subtitle">最近上架的草本故事</p>
+  <p class="section-subtitle">每週更新，最近上架的三篇</p>
 
-  <div class="story-grid">
+  <div class="story-grid latest-grid">
     {% assign published_stories = site.stories | where_exp: "story", "story.date <= site.time" | sort: 'date' | reverse %}
-    {% for story in published_stories limit:6 %}
+    {% for story in published_stories limit:3 %}
       <article class="story-card{% if story.series %} paozhi{% endif %}">
         {% if story.series %}
           <span class="series-badge paozhi">🔥 炮製</span>
@@ -95,6 +102,40 @@ title: 首頁
   <div style="text-align:center; margin-top:40px;">
     <a href="{{ '/stories/' | relative_url }}" class="btn btn-primary">📖 查看全部故事</a>
   </div>
+</section>
+
+<!-- ===== 本草心語抽卡 ===== -->
+{%- include oracle-today.html -%}
+<section class="oracle-section" aria-labelledby="oracleHomeTitle">
+  <div class="oracle-content">
+    <div class="oracle-text">
+      <span class="oracle-badge">🔮 本草心語 · 今日一卡 {{ site.time | date: "%-m/%-d" }}</span>
+      <h2 class="oracle-title" id="oracleHomeTitle">{{ oracle_today.n }}</h2>
+      <p class="oracle-subtitle">{{ oracle_today.cat }} · {{ oracle_today.fn }}</p>
+      <p class="oracle-desc oracle-quote">{{ oracle_today.mo }}</p>
+      <p class="oracle-detail">{{ oracle_today.af }}。81 味本草、81 句話——這是今天全站共同翻開的一張。想問自己的問題？再抽一張屬於你的。</p>
+      <div class="oracle-actions">
+        <a href="{{ oracle_today_link }}" target="_blank" rel="noopener noreferrer" class="oracle-cta">讀〈{{ oracle_today.n }}〉的解讀 →</a>
+        <a href="{{ '/oracle/' | relative_url }}" class="oracle-cta ghost">什麼是本草心語？</a>
+      </div>
+    </div>
+    <div class="oracle-visual">
+      <a class="oracle-card-stack" href="{{ oracle_today_link }}" target="_blank" rel="noopener noreferrer" aria-label="翻開今日一卡：{{ oracle_today.n }}">
+        <div class="oracle-card card-shadow-1"></div>
+        <div class="oracle-card card-shadow-2"></div>
+        <div class="oracle-card card-main">
+          <img src="{{ oracle_today_img }}" alt="{{ oracle_today.n }} 心語卡" width="400" height="400" loading="lazy" decoding="async">
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 站內搜尋 ===== -->
+<section class="section home-search-section compact">
+  <h2 class="section-title">🔍 直接搜尋</h2>
+  <p class="section-subtitle">輸入方劑名、藥材或症狀，馬上找到想讀的文章</p>
+  {% include search-widget.html %}
 </section>
 
 <!-- ===== 草本夜話 Podcast ===== -->
@@ -169,33 +210,6 @@ title: 首頁
   </div>
 </section>
 
-<!-- ===== 本草心語抽卡 ===== -->
-{%- include oracle-today.html -%}
-<section class="oracle-section" aria-labelledby="oracleHomeTitle">
-  <div class="oracle-content">
-    <div class="oracle-text">
-      <span class="oracle-badge">🔮 本草心語 · 今日一卡 {{ site.time | date: "%-m/%-d" }}</span>
-      <h2 class="oracle-title" id="oracleHomeTitle">{{ oracle_today.n }}</h2>
-      <p class="oracle-subtitle">{{ oracle_today.cat }} · {{ oracle_today.fn }}</p>
-      <p class="oracle-desc oracle-quote">{{ oracle_today.mo }}</p>
-      <p class="oracle-detail">{{ oracle_today.af }}。81 味本草、81 句話——這是今天全站共同翻開的一張。想問自己的問題？再抽一張屬於你的。</p>
-      <div class="oracle-actions">
-        <a href="{{ oracle_today_link }}" target="_blank" rel="noopener noreferrer" class="oracle-cta">讀〈{{ oracle_today.n }}〉的解讀 →</a>
-        <a href="{{ '/oracle/' | relative_url }}" class="oracle-cta ghost">什麼是本草心語？</a>
-      </div>
-    </div>
-    <div class="oracle-visual">
-      <a class="oracle-card-stack" href="{{ oracle_today_link }}" target="_blank" rel="noopener noreferrer" aria-label="翻開今日一卡：{{ oracle_today.n }}">
-        <div class="oracle-card card-shadow-1"></div>
-        <div class="oracle-card card-shadow-2"></div>
-        <div class="oracle-card card-main">
-          <img src="{{ oracle_today_img }}" alt="{{ oracle_today.n }} 心語卡" width="400" height="400" loading="lazy" decoding="async">
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- ===== 中藥正念日曆 ===== -->
 <section class="meditation-section">
   <div class="meditation-inner">
@@ -218,6 +232,49 @@ title: 首頁
 </section>
 
 <style>
+/* 探索入口 */
+.explore-section { margin: 28px auto 40px; }
+.explore-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.explore-tile {
+  display: flex; flex-direction: column; gap: 4px; padding: 18px 18px 16px;
+  background: #fff; border-radius: 14px; text-decoration: none; color: var(--ink);
+  border: 1px solid var(--line); border-top: 4px solid var(--accent-500);
+  box-shadow: var(--shadow-sm); transition: transform 0.25s, box-shadow 0.25s;
+}
+.explore-tile:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.explore-tile strong { font-family: var(--serif); font-size: 1.12rem; color: var(--green-900); }
+.explore-sub { color: var(--ink-soft); font-size: 0.88rem; line-height: 1.5; }
+.explore-ic { font-size: 1.7rem; line-height: 1; margin-bottom: 4px; display: inline-flex; align-items: center; height: 36px; }
+.explore-ic img { width: 36px; height: 36px; border-radius: 8px; box-shadow: 0 2px 6px rgba(90,100,130,0.3); }
+.explore-tile.t-paozhi { border-top-color: var(--fire-500); }
+.explore-tile.t-paozhi strong { color: var(--fire-900); }
+.explore-tile.t-chars { border-top-color: #c15c7a; }
+.explore-tile.t-games { border-top-color: #7B6BA5; }
+.explore-tile.t-oracle { border-top-color: #5f6f9e; }
+.explore-tile.t-oracle strong { color: #4a4f7a; }
+.explore-tile.t-novel { border-top-color: #8f3a52; }
+.explore-tile.t-novel strong { color: #8f3a52; }
+@media (max-width: 720px) {
+  .explore-section { margin: 20px auto 28px; }
+  .explore-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .explore-tile { padding: 14px 14px 12px; }
+  .explore-tile strong { font-size: 1.02rem; }
+  .explore-sub { font-size: 0.8rem; }
+}
+
+/* 最新故事：手機改橫向滑動，只佔一屏高 */
+@media (max-width: 720px) {
+  .latest-grid { display: flex; overflow-x: auto; gap: 14px; padding: 4px 4px 14px; margin: 0 -4px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .latest-grid::-webkit-scrollbar { display: none; }
+  .latest-grid .story-card { flex: 0 0 84%; scroll-snap-align: start; }
+  .latest-grid .story-excerpt { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+}
+
+/* 搜尋：縮小 */
+.home-search-section.compact { margin-top: 32px; }
+.home-search-section.compact .section-title { font-size: 1.4rem; }
+.home-search-section.compact .section-subtitle { margin-bottom: 18px; }
+
 /* ===== 首頁專屬樣式 ===== */
 .home-hero {
   text-align: center;
