@@ -312,8 +312,14 @@ title: 首頁
 .social-button.vocus { background: #e8505b; }
 .social-icon { width: 21px; height: 21px; fill: currentColor; }
 @media (max-width: 640px) {
-  .hero-social { flex-direction: column; padding: 0 16px; }
-  .social-button { width: 100%; justify-content: center; }
+  /* 手機：Hero 縮短、社群按鈕改 2×2 小膠囊，整個 Hero 控制在一屏內 */
+  .home-hero { padding: 36px 20px 32px; }
+  .home-hero > .wrapper > div:first-child img { height: 72px !important; width: 72px !important; }
+  .home-hero h1 { font-size: 2rem; margin-bottom: 8px; }
+  .home-hero-sub { font-size: 1rem; }
+  .hero-social { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 4px; max-width: 420px; margin-left: auto; margin-right: auto; }
+  .social-button { width: 100%; justify-content: center; padding: 10px 12px; font-size: 0.92rem; gap: 7px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+  .social-icon { width: 18px; height: 18px; }
 }
 
 /* Podcast */
