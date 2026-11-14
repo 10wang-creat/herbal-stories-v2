@@ -24,4 +24,13 @@ sitemap: false
   </url>
 {%- endif -%}
 {%- endfor %}
+{%- assign zl_docs = site.zhengliao | sort: "date" -%}
+{%- for s in zl_docs -%}
+{%- if s.date <= site.time %}
+  <url>
+    <loc>{{ s.url | absolute_url | xml_escape }}</loc>
+    <lastmod>{{ s.date | date_to_xmlschema }}</lastmod>
+  </url>
+{%- endif -%}
+{%- endfor %}
 </urlset>

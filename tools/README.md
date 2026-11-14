@@ -60,3 +60,23 @@ python tools/sync_oracle.py
 - App 的卡片文字或圖片檔名有改，跑一次再 commit 網站即可。
 - `alias:` 區塊是「文章裡的藥材名 → 卡名」對照（炙甘草→甘草、麥冬→麥門冬…），手動維護，同步時不會被覆蓋。
 - 卡圖直接連 `https://tcm-oracle-cards.vercel.app/images/<img>.webp`，網站 repo 不另存一份。
+
+---
+
+# tools：整聊系列（IG 圖卡 → 網站）
+
+`/zhengliao/` 總覽頁和每集頁面，由 `ig2site.py` 從「IG中藥整聊」資料夾產生：
+文案讀 `00/` 裡的四份 .md（前兩季的逐張卡片文字從圖卡產生器 .html 取），圖卡讀 `01. 陳皮/`～`12. 黃耆/` 這類編號資料夾。
+
+## 平常怎麼用
+1. 新一集的 9 張圖卡匯出後，照編號放進新資料夾：13 生薑、14 肉桂 … 24 當歸（例：`13. 生薑`）。
+2. 在 repo 根目錄跑：`python tools/ig2site.py`
+   （路徑不是預設的 `OneDrive\桌面\創作素材\IG中藥整聊` 時，在後面加上資料夾路徑）
+3. commit。頁面日期就是 IG 發布日，每天早上 8 點的自動重建會讓它當天上線。
+
+## 說明
+- 還沒放圖卡的集數，網站會用米色紙卡顯示該集的卡片文字，之後補圖再跑一次就會換成圖。
+- 文案 .md 改了也是重跑一次；已轉過、沒變動的圖不會重轉。
+- 輸出：`_zhengliao/*.md`、`_data/zhengliao.yml`、`assets/images/zhengliao/`、`assets/images/og/zl-*.jpg`。這些都是自動產生的，要改內容請改 IG 文案 .md。
+- 新系列：在 `ig2site.py` 最上面的 `SERIES` 加一段（系列名、文案檔名、每集的拼音與藥材）。
+- 需要：`pip install pillow`

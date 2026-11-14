@@ -1,0 +1,20 @@
+{%- comment -%} 方劑故事頁：列出含同一味藥的「整聊」單集 {%- endcomment -%}
+{%- assign zlk_hits = "" | split: "" -%}
+{%- assign zlk_pub = site.zhengliao | where_exp: "z", "z.date <= site.time" | sort: "date" -%}
+{%- for z in zlk_pub -%}
+  {%- for ing in page.ingredients -%}
+    {%- include herb-normalize.html ing=ing -%}
+    {%- assign zlk_n = hn_name | remove: "炙" -%}
+    {%- if z.site_herbs contains zlk_n -%}{%- assign zlk_hits = zlk_hits | push: z -%}{%- break -%}{%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+{%- if zlk_hits.size > 0 %}
+<section class="zl-from-story">
+  <div class="section-header"><span class="section-icon">🗂️</span><h2>整聊：這味藥的生活篇</h2></div>
+  <div class="zl-from-list">
+  {%- for z in zlk_hits limit: 4 %}
+    <a href="{{ z.url | relative_url }}"><span>{{ z.herb }}｜{{ z.concept }}</span><strong>{{ z.title | truncate: 30 }}</strong></a>
+  {%- endfor %}
+  </div>
+</section>
+{%- endif %}

@@ -29,6 +29,9 @@ collections:
   stories:
     output: true
     permalink: /stories/:name/
+  zhengliao:
+    output: true
+    permalink: /zhengliao/:name/
 
 # Defaults
 defaults:
@@ -37,6 +40,12 @@ defaults:
       type: "stories"
     values:
       layout: "story"
+  - scope:
+      path: ""
+      type: "zhengliao"
+    values:
+      layout: "zhengliao"
+      body_class: "theme-zhengliao"
 
 # 導航欄設定
 header_pages:

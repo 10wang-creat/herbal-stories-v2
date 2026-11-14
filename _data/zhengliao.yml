@@ -1,0 +1,53 @@
+# 由 tools/ig2site.py 自動產生，請勿手改
+- key: things
+  no: 1
+  name: "丟不掉的東西"
+  full: "丟不掉的東西 × 中醫情志學"
+  emoji: "📦"
+  sub: "衣櫃、書架、抽屜裡，那些捨不得的東西"
+  episodes:
+    - {slug: "things-01-chenpi", ep: 1, date: "2026-06-13", herb: "陳皮", concept: "思傷脾", organ: "脾", jieqi: "", has_img: true}
+    - {slug: "things-02-longyanrou", ep: 2, date: "2026-06-27", herb: "龍眼肉", concept: "恐傷腎", organ: "腎", jieqi: "", has_img: true}
+    - {slug: "things-03-meigui-bohe", ep: 3, date: "2026-07-11", herb: "玫瑰薄荷", concept: "肝氣鬱結", organ: "肝", jieqi: "", has_img: true}
+    - {slug: "things-04-baihe", ep: 4, date: "2026-07-25", herb: "百合", concept: "悲傷肺", organ: "肺", jieqi: "", has_img: true}
+    - {slug: "things-05-foshou", ep: 5, date: "2026-08-08", herb: "佛手", concept: "思則氣結", organ: "脾", jieqi: "", has_img: true}
+    - {slug: "things-06-lianzixin", ep: 6, date: "2026-08-22", herb: "蓮子心", concept: "心火", organ: "心", jieqi: "", has_img: true}
+- key: habits
+  no: 2
+  name: "戒不掉的習慣"
+  full: "戒不掉的習慣 × 中醫情志學"
+  emoji: "🔁"
+  sub: "滑手機、生悶氣、靠咖啡硬撐的那些日常"
+  episodes:
+    - {slug: "habits-01-suanzaoren", ep: 1, date: "2026-09-05", herb: "酸棗仁", concept: "心神不寧", organ: "心", jieqi: "", has_img: true}
+    - {slug: "habits-02-juhua", ep: 2, date: "2026-09-19", herb: "菊花", concept: "怒傷肝", organ: "肝", jieqi: "", has_img: true}
+    - {slug: "habits-03-fuling", ep: 3, date: "2026-10-03", herb: "茯苓", concept: "思傷脾", organ: "脾", jieqi: "", has_img: true}
+    - {slug: "habits-04-jiegeng", ep: 4, date: "2026-10-17", herb: "桔梗", concept: "憂傷肺", organ: "肺", jieqi: "", has_img: true}
+    - {slug: "habits-05-yuanzhi", ep: 5, date: "2026-10-31", herb: "遠志", concept: "恐傷腎", organ: "腎", jieqi: "", has_img: true}
+    - {slug: "habits-06-huangqi", ep: 6, date: "2026-11-14", herb: "黃耆", concept: "氣虛硬撐", organ: "脾", jieqi: "", has_img: true}
+- key: winter
+  no: 3
+  name: "收不起來的冬天"
+  full: "收不起來的冬天 × 節氣整理學"
+  emoji: "❄️"
+  sub: "跟著六個節氣，整理冬天收不起來的東西"
+  episodes:
+    - {slug: "winter-01-shengjiang", ep: 1, date: "2026-11-28", herb: "生薑", concept: "陽氣不足", organ: "脾", jieqi: "小雪", has_img: false}
+    - {slug: "winter-02-rougui", ep: 2, date: "2026-12-12", herb: "肉桂", concept: "命門火衰", organ: "腎", jieqi: "大雪", has_img: false}
+    - {slug: "winter-03-hongzao", ep: 3, date: "2026-12-26", herb: "紅棗", concept: "虛不受補", organ: "脾", jieqi: "冬至", has_img: false}
+    - {slug: "winter-04-shanzha", ep: 4, date: "2027-01-09", herb: "山楂", concept: "食積", organ: "脾", jieqi: "小寒", has_img: false}
+    - {slug: "winter-05-heizhima", ep: 5, date: "2027-01-23", herb: "黑芝麻", concept: "冬藏", organ: "腎", jieqi: "大寒", has_img: false}
+    - {slug: "winter-06-gouqi", ep: 6, date: "2027-02-06", herb: "枸杞", concept: "肝主疏泄", organ: "肝", jieqi: "立春", has_img: false}
+- key: people
+  no: 4
+  name: "放不下的人"
+  full: "放不下的人 × 中醫情志學"
+  emoji: "🤝"
+  sub: "已讀、群組、通訊錄，和最放不下的自己"
+  episodes:
+    - {slug: "people-01-hehuanhua", ep: 1, date: "2027-02-20", herb: "合歡花", concept: "驚則氣亂", organ: "心", jieqi: "", has_img: false}
+    - {slug: "people-02-molihua", ep: 2, date: "2027-03-06", herb: "茉莉花", concept: "肝氣鬱結", organ: "肝", jieqi: "", has_img: false}
+    - {slug: "people-03-baiziren", ep: 3, date: "2027-03-20", herb: "柏子仁", concept: "心血暗耗", organ: "心", jieqi: "", has_img: false}
+    - {slug: "people-04-gancao", ep: 4, date: "2027-04-03", herb: "甘草", concept: "憂思傷脾", organ: "脾", jieqi: "", has_img: false}
+    - {slug: "people-05-xiakucao", ep: 5, date: "2027-04-17", herb: "夏枯草", concept: "肝火上炎", organ: "肝", jieqi: "", has_img: false}
+    - {slug: "people-06-danggui", ep: 6, date: "2027-05-01", herb: "當歸", concept: "氣血歸位", organ: "肝", jieqi: "", has_img: false}

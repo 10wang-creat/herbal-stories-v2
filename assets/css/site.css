@@ -460,3 +460,95 @@ a { color: var(--green-500); }
   .footer-content { grid-template-columns: 1fr; gap: 28px; }
   .site-footer { padding: 40px 20px 20px; margin-top: 56px; }
 }
+
+/* =========================================================
+   整聊系列（IG 圖卡）— 品牌色：米 #F6F2E5、鼠尾草綠 #819879、赭紅 #AA583A
+   ========================================================= */
+.nav-dot.zhengliao { background: #c98a6f; }
+.theme-zhengliao {
+  --accent-900: #4f5f49;
+  --accent-700: #66795f;
+  --accent-500: #819879;
+  --accent-400: #a9b9a2;
+  --accent-050: #f6f2e5;
+  --zl-cream: #F6F2E5;
+  --zl-sage: #819879;
+  --zl-terra: #AA583A;
+}
+.theme-zhengliao .series-hero { background: linear-gradient(135deg, #5d6f56 0%, #819879 55%, #b07a5e 100%); }
+
+/* 單集頁 */
+.zl-story .story-category { color: var(--zl-terra); }
+.zl-concept { margin: 6px 0 2px; color: var(--accent-700); font-weight: 600; letter-spacing: .06em; }
+.zl-jieqi { display: inline-block; margin-right: 8px; padding: 1px 10px; border-radius: 12px; background: var(--zl-terra); color: #fff; font-size: .85em; }
+.zl-hook { line-height: 1.5; }
+.zl-ig-link { color: var(--accent-700); text-decoration: none; font-size: .92rem; }
+.zl-ig-link:hover { text-decoration: underline; }
+
+.zl-carousel { max-width: 560px; margin: 26px auto 34px; }
+.zl-track {
+  display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-md); background: var(--zl-cream);
+  scrollbar-width: none; outline: none;
+}
+.zl-track::-webkit-scrollbar { display: none; }
+.zl-track:focus-visible { box-shadow: 0 0 0 3px var(--zl-sage); }
+.zl-card { flex: 0 0 100%; margin: 0; scroll-snap-align: center; aspect-ratio: 1 / 1; }
+.zl-card img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.zl-paper {
+  position: relative; height: 100%; box-sizing: border-box; padding: 11% 10%;
+  display: flex; flex-direction: column; justify-content: center;
+  background: var(--zl-cream); border: 10px solid #fff; color: #3e3a33;
+  font-family: var(--serif);
+}
+.zl-eyebrow { position: absolute; top: 7%; left: 10%; right: 10%; font-family: var(--sans); font-size: .8rem; letter-spacing: .12em; color: var(--zl-terra); }
+.zl-text { font-size: clamp(1.05rem, 4.2vw, 1.5rem); line-height: 1.75; }
+.zl-seal { position: absolute; right: 7%; bottom: 6%; font-size: .72rem; letter-spacing: .2em; color: var(--zl-sage); border: 1px solid var(--zl-sage); padding: 3px 7px; border-radius: 3px; }
+.zl-ctrl { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 14px; }
+.zl-btn {
+  width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--zl-sage); background: #fff;
+  color: var(--accent-700); font-size: 1.4rem; line-height: 1; cursor: pointer;
+}
+.zl-btn:hover { background: var(--zl-cream); }
+.zl-count { color: var(--muted); font-size: .95rem; }
+.zl-count b { color: var(--accent-700); }
+
+.zl-pinned { display: flex; gap: 10px; align-items: flex-start; margin: 28px 0 0; padding: 14px 18px; background: var(--zl-cream); border-left: 4px solid var(--zl-terra); border-radius: 10px; }
+.zl-pinned p { margin: 0; }
+.zl-note { margin: 22px 0 0; font-size: .85rem; color: var(--muted); line-height: 1.7; }
+.zl-more { margin: 16px 0 0; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.zl-more a { color: var(--accent-700); font-weight: 600; text-decoration: none; }
+.zl-series-nav { margin: 40px 0 10px; padding: 22px; background: var(--zl-cream); border-radius: var(--radius); text-align: center; }
+.zl-series-title { font-family: var(--serif); font-weight: 700; color: var(--accent-900); margin-bottom: 12px; }
+.zl-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 14px; }
+.zl-pill { padding: 6px 14px; border-radius: 18px; background: #fff; border: 1.5px solid var(--accent-400); color: var(--accent-700); text-decoration: none; font-size: .92rem; }
+.zl-pill.is-current { background: var(--zl-sage); border-color: var(--zl-sage); color: #fff; }
+.zl-back { color: var(--zl-terra); text-decoration: none; font-weight: 600; }
+
+/* 總覽頁 */
+.zl-organ-tabs .filter-tab.is-active { background: var(--zl-sage); border-color: var(--zl-sage); }
+.zl-shelf { margin: 0 0 54px; }
+.zl-shelf.is-hidden, .zl-tile.is-hidden { display: none; }
+.zl-shelf-head { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 2px solid var(--line); }
+.zl-shelf-emoji { font-size: 2.2rem; }
+.zl-shelf-head h2 { margin: 0; font-size: 1.3rem; color: var(--accent-900); }
+.zl-shelf-head p { margin: 4px 0 0; color: var(--muted); font-size: .92rem; }
+.zl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: 18px; }
+.zl-tile { display: block; background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); text-decoration: none; color: inherit; transition: transform .2s, box-shadow .2s; }
+a.zl-tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.zl-thumb { aspect-ratio: 1 / 1; background: var(--zl-cream); }
+.zl-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.zl-thumb.is-text { display: flex; align-items: center; justify-content: center; padding: 14px; box-sizing: border-box; text-align: center; font-family: var(--serif); color: #4a453c; font-size: .95rem; line-height: 1.6; }
+.zl-tile-body { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 2px; }
+.zl-tile-ep { font-size: .78rem; color: var(--zl-terra); letter-spacing: .04em; }
+.zl-tile-body strong { font-family: var(--serif); color: var(--accent-900); font-size: 1.05rem; }
+.zl-tile-body time { font-size: .78rem; color: var(--muted); }
+.zl-tile.is-soon { opacity: .55; box-shadow: none; border: 1.5px dashed var(--accent-400); }
+.zl-tile.is-soon .zl-thumb { color: var(--accent-700); font-family: var(--sans); font-weight: 600; }
+
+/* 方劑頁 → 整聊 */
+.zl-from-story { margin: 30px 0; }
+.zl-from-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.zl-from-list a { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 12px; background: #F6F2E5; border-left: 4px solid #AA583A; text-decoration: none; color: #3e3a33; }
+.zl-from-list a span { font-size: .8rem; color: #AA583A; }
+.zl-from-list a strong { font-family: var(--serif); font-size: 1rem; line-height: 1.5; }

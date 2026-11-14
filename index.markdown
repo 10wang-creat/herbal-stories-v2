@@ -34,6 +34,7 @@ title: 首頁
 <!-- ===== 探索入口（手機第一屏就看得到全站有什麼） ===== -->
 {%- assign formula_count = site.stories | where_exp: "s", "s.date <= site.time" | where_exp: "s", "s.series == nil" | size -%}
 {%- assign paozhi_count = site.stories | where_exp: "s", "s.date <= site.time" | where_exp: "s", "s.series == '炮製'" | size -%}
+{%- assign zl_count = site.zhengliao | where_exp: "z", "z.date <= site.time" | size -%}
 {%- assign ss_count = site.data.sishitang.chapters | size -%}
 {%- include oracle-today.html -%}
 <section class="section explore-section" aria-label="探索草本故事館">
@@ -47,6 +48,11 @@ title: 首頁
       <span class="explore-ic">🔥</span>
       <strong>炮製系列</strong>
       <span class="explore-sub">{{ paozhi_count }} 篇，看中藥入方前的變身術</span>
+    </a>
+    <a href="{{ '/zhengliao/' | relative_url }}" class="explore-tile t-zhengliao">
+      <span class="explore-ic">🗂️</span>
+      <strong>整聊</strong>
+      <span class="explore-sub">丟不掉、戒不掉、放不下的事，配一味草本慢慢聊開｜{{ zl_count }} 集</span>
     </a>
     <a href="{{ '/characters/' | relative_url }}" class="explore-tile t-chars">
       <span class="explore-ic">🎭</span>
@@ -259,6 +265,8 @@ title: 首頁
 .explore-ic img { width: 36px; height: 36px; border-radius: 8px; box-shadow: 0 2px 6px rgba(90,100,130,0.3); }
 .explore-tile.t-paozhi { border-top-color: var(--fire-500); }
 .explore-tile.t-paozhi strong { color: var(--fire-900); }
+.explore-tile.t-zhengliao { border-top-color: #AA583A; }
+.explore-tile.t-zhengliao strong { color: #7d3f29; }
 .explore-tile.t-chars { border-top-color: #c15c7a; }
 .explore-tile.t-games { border-top-color: #7B6BA5; }
 .explore-tile.t-oracle { border-top-color: #5f6f9e; }

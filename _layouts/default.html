@@ -24,6 +24,7 @@
   {%- if page.og_image -%}
     {%- assign og_image = site.url | append: site.baseurl | append: '/assets/images/' | append: page.og_image -%}
     {%- if page.og_image contains '.png' -%}{%- assign og_type = 'image/png' -%}{%- assign og_w = 2400 -%}{%- assign og_h = 1260 -%}{%- endif -%}
+    {%- if page.layout == 'zhengliao' -%}{%- assign og_w = 1080 -%}{%- assign og_h = 1080 -%}{%- endif -%}
   {%- elsif page.layout == 'story' and page.slug -%}
     {%- assign og_path = '/assets/images/og/' | append: page.slug | append: '.jpg' -%}
     {%- assign og_file = site.static_files | where: 'path', og_path | first -%}
@@ -155,6 +156,7 @@
 {%- if page.layout == 'story' -%}
   {%- if page.series -%}{%- assign nav_section = '/paozhi/' -%}{%- else -%}{%- assign nav_section = '/formulas/' -%}{%- endif -%}
 {%- endif %}
+{%- if page.layout == 'zhengliao' -%}{%- assign nav_section = '/zhengliao/' -%}{%- endif %}
 <body class="{{ page.body_class }}{% if page.layout == 'story' and page.series %} theme-paozhi{% endif %}">
   <!-- 網站 Header -->
   <header class="site-header">
@@ -169,6 +171,7 @@
         <a href="{{ site.baseurl }}/"{% if page.url == '/' %} class="is-active" aria-current="page"{% endif %}>首頁</a>
         <a href="{{ site.baseurl }}/formulas/"{% if nav_section == '/formulas/' %} class="is-active"{% endif %}><span class="nav-dot formula"></span>方劑系列</a>
         <a href="{{ site.baseurl }}/paozhi/"{% if nav_section == '/paozhi/' %} class="is-active"{% endif %}><span class="nav-dot paozhi"></span>炮製系列</a>
+        <a href="{{ site.baseurl }}/zhengliao/"{% if nav_section == '/zhengliao/' %} class="is-active"{% endif %}><span class="nav-dot zhengliao"></span>整聊</a>
         <a href="{{ site.baseurl }}/characters/"{% if page.url == '/characters/' %} class="is-active"{% endif %}>圖鑑</a>
         <a href="{{ site.baseurl }}/oracle/"{% if page.url == '/oracle/' %} class="is-active"{% endif %}>🔮 心語卡</a>
         <a href="{{ site.baseurl }}/games/"{% if page.url == '/games/' %} class="is-active"{% endif %}>遊樂園</a>

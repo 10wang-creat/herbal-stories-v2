@@ -1,0 +1,116 @@
+---
+layout: default
+---
+{%- comment -%} 整聊單集頁：9 張圖卡（沒有圖時顯示卡片文字）＋貼文文案＋相關方劑 {%- endcomment -%}
+<article class="story zl-story">
+  <header class="story-header">
+    <div class="story-category">🗂️ 整聊｜{{ page.series_name }} {{ page.ep_mark }}</div>
+    <p class="zl-concept">{% if page.jieqi != "" %}<span class="zl-jieqi">{{ page.jieqi }}</span>{% endif %}{{ page.concept }} × {{ page.herb }}</p>
+    <h1 class="zl-hook">{{ page.hook | newline_to_br }}</h1>
+    <div class="meta">
+      <time class="date" datetime="{{ page.date | date_to_xmlschema }}">📅 {{ page.date | date: "%Y年%m月%d日" }}</time>
+      <a class="zl-ig-link" href="https://www.instagram.com/meet.the.herbs/" target="_blank" rel="noopener noreferrer">📷 IG 同步刊出</a>
+    </div>
+  </header>
+
+  <section class="zl-carousel" aria-label="圖卡">
+    <div class="zl-track" id="zlTrack">
+      {%- for c in page.cards %}
+      <figure class="zl-card{% if c.img == '' %} is-text{% endif %}" data-i="{{ forloop.index }}">
+        {%- if c.img != '' %}
+        <img src="{{ c.img | relative_url }}" alt="{{ c.eyebrow }} {{ c.text | strip_newlines | escape }}" width="1080" height="1080" {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
+        {%- else %}
+        <div class="zl-paper">
+          {% if c.eyebrow != '' %}<div class="zl-eyebrow">{{ c.eyebrow }}</div>{% endif %}
+          <div class="zl-text">{{ c.text | newline_to_br }}</div>
+          <div class="zl-seal">草本故事館</div>
+        </div>
+        {%- endif %}
+      </figure>
+      {%- endfor %}
+    </div>
+    <div class="zl-ctrl">
+      <button type="button" class="zl-btn" id="zlPrev" aria-label="上一張">‹</button>
+      <span class="zl-count"><b id="zlNow">1</b> / {{ page.cards | size }}</span>
+      <button type="button" class="zl-btn" id="zlNext" aria-label="下一張">›</button>
+    </div>
+  </section>
+
+  <div class="story-content zl-copy">
+    {{ content }}
+  </div>
+
+  {% if page.pinned != "" %}
+  <aside class="zl-pinned"><span>📌</span><p>{{ page.pinned }}</p></aside>
+  {% endif %}
+
+  <p class="zl-note">文中藥材是常見的養生用材，用法、份量因體質而異；身體不舒服請先就醫，長期調理可以請中醫師看過再用。</p>
+
+  {%- comment -%} 這味藥出現在哪些方劑故事 {%- endcomment -%}
+  {% assign zl_pub = site.stories | where_exp: "s", "s.date <= site.time" | sort: "date" | reverse %}
+  {% assign zl_rel = "" | split: "" %}
+  {% assign zl_found = "" | split: "" %}
+  {% for s in zl_pub %}
+    {% for ing in s.ingredients %}
+      {% include herb-normalize.html ing=ing %}
+      {% assign zl_n = hn_name | remove: "炙" %}
+      {% if page.site_herbs contains zl_n %}
+        {% assign zl_rel = zl_rel | push: s %}
+        {% unless zl_found contains zl_n %}{% assign zl_found = zl_found | push: zl_n %}{% endunless %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  {% if zl_rel.size > 0 %}
+  <section class="related-stories zl-related" aria-labelledby="zlRelHeading">
+    <div class="section-header">
+      <span class="section-icon">💊</span>
+      <h2 id="zlRelHeading">{{ page.herb }}也在這些方劑裡</h2>
+    </div>
+    <div class="related-grid">
+    {% for rel in zl_rel limit: 6 %}
+      <a class="related-card{% if rel.series %} paozhi{% endif %}" href="{{ rel.url | relative_url }}">
+        <span class="series-badge {% if rel.series %}paozhi{% else %}formula{% endif %}">{% if rel.series %}🔥 炮製{% else %}💊 方劑{% endif %}</span>
+        <strong class="related-title">{{ rel.title }}</strong>
+        {% if rel.effects %}<span class="related-effects">{{ rel.effects | truncate: 56 }}</span>{% endif %}
+      </a>
+    {% endfor %}
+    </div>
+    <p class="zl-more">
+    {% for h in zl_found %}<a href="{{ '/characters/' | relative_url }}#herb-{{ h | url_encode }}">到圖鑑看「{{ h }}」的角色與全部方劑 →</a>{% endfor %}
+    </p>
+  </section>
+  {% endif %}
+
+  {%- comment -%} 同系列其他集 {%- endcomment -%}
+  {% assign zl_series = site.zhengliao | where_exp: "z", "z.date <= site.time" | where: "series_key", page.series_key | sort: "ep" %}
+  <nav class="zl-series-nav" aria-label="{{ page.series_name }}其他集">
+    <div class="zl-series-title">{{ page.series_full }}</div>
+    <div class="zl-pills">
+    {% for z in zl_series %}
+      <a href="{{ z.url | relative_url }}" class="zl-pill{% if z.url == page.url %} is-current{% endif %}">{{ z.ep_mark }} {{ z.herb }}</a>
+    {% endfor %}
+    </div>
+    <a class="zl-back" href="{{ '/zhengliao/' | relative_url }}">← 回整聊總覽</a>
+  </nav>
+
+  {% include oracle-cta.html %}
+  {% include share-buttons.html %}
+</article>
+
+{% include disqus.html %}
+
+<script>
+(function () {
+  var track = document.getElementById('zlTrack');
+  if (!track) return;
+  var cards = track.querySelectorAll('.zl-card'), now = document.getElementById('zlNow');
+  function idx() { return Math.round(track.scrollLeft / track.clientWidth); }
+  function go(d) { var i = Math.max(0, Math.min(cards.length - 1, idx() + d)); track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' }); }
+  document.getElementById('zlPrev').addEventListener('click', function () { go(-1); });
+  document.getElementById('zlNext').addEventListener('click', function () { go(1); });
+  track.addEventListener('scroll', function () { now.textContent = idx() + 1; }, { passive: true });
+  track.setAttribute('tabindex', '0');
+  track.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') { go(1); e.preventDefault(); } if (e.key === 'ArrowLeft') { go(-1); e.preventDefault(); } });
+})();
+</script>
