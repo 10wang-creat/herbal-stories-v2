@@ -69,8 +69,8 @@ description: 草本故事館的藥材角色大集合！每味藥材都有獨特�
 /* 角色卡片網格 */
 .characters-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 20px;
   padding: 0 20px;
   max-width: 1200px;
   margin: 0 auto 60px;
@@ -83,8 +83,9 @@ description: 草本故事館的藥材角色大集合！每味藥材都有獨特�
   border: 2px solid #eaf1ec;
   box-shadow: 0 2px 12px rgba(45, 80, 22, 0.08);
   transition: all 0.3s ease;
-  cursor: default;
+  cursor: pointer;
 }
+.character-card:focus-visible { outline: 3px solid var(--accent-500, #6f9083); outline-offset: 3px; }
 
 .character-card:hover {
   transform: translateY(-6px);
@@ -115,8 +116,16 @@ description: 草本故事館的藥材角色大集合！每味藥材都有獨特�
 }
 
 .character-card .card-info {
-  padding: 16px 18px 20px;
+  padding: 12px 14px 14px;
+  text-align: center;
 }
+
+/* 卡片只留圖、名字、篇數；功效與方劑清單點開才看（仍留在頁面裡供搜尋用） */
+.characters-grid .herb-role,
+.characters-grid .herb-effect,
+.characters-grid .herb-formulas { display: none; }
+.herb-count { margin: 0; font-size: 0.82em; color: #7b9b8a; }
+.character-card:hover .herb-count { color: #3b564c; }
 
 .character-card .herb-name {
   font-size: 1.2em;
@@ -139,7 +148,7 @@ description: 草本故事館的藥材角色大集合！每味藥材都有獨特�
   margin: 0 0 12px;
 }
 
-.character-card .herb-formulas {
+.herb-formulas {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -162,6 +171,34 @@ a.formula-tag:hover {
   border-color: #b6cdbf;
   color: #3b564c;
 }
+
+/* 角色介紹彈窗 */
+.herb-dialog {
+  width: min(92vw, 460px); max-height: 88vh; overflow-y: auto;
+  margin: auto; /* site.css 把 margin 歸零了，這裡要補回來才會置中 */
+  padding: 0; border: 0; border-radius: 20px; background: #fff; color: #33302b;
+  box-shadow: 0 24px 60px rgba(30,45,40,0.35);
+}
+.herb-dialog::backdrop { background: rgba(30,45,40,0.55); }
+.herb-dialog-close {
+  position: sticky; top: 10px; float: right; margin: 10px 10px -46px 0; z-index: 2;
+  width: 36px; height: 36px; border-radius: 50%; border: 0; cursor: pointer;
+  background: rgba(255,255,255,0.92); color: #3b564c; font-size: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.herb-dialog-close:hover { background: #eaf1ec; }
+.herb-dialog-img {
+  background: linear-gradient(135deg, #eef1f0 0%, #eef2ee 100%);
+  display: flex; align-items: center; justify-content: center; padding: 20px; min-height: 120px;
+}
+.herb-dialog-img img { width: min(100%, 300px); height: auto; aspect-ratio: 1 / 1; object-fit: contain; }
+.herb-dialog-body { padding: 20px 24px 26px; }
+.herb-dialog-name { font-size: 1.6rem; color: #3b564c; margin: 0 0 6px; }
+.herb-dialog .herb-role { font-size: 0.95rem; color: #7a7f8f; margin: 0 0 8px; font-weight: 500; }
+.herb-dialog .herb-effect { font-size: 1rem; color: #4f6f62; line-height: 1.7; margin: 0 0 4px; }
+.herb-dialog .herb-role:empty, .herb-dialog .herb-effect:empty { display: none; }
+.herb-dialog-sub { font-size: 1rem; color: #3b564c; margin: 18px 0 10px; padding-top: 16px; border-top: 1px solid #e3ebe5; }
+.herb-dialog .herb-formulas { gap: 8px; }
+.herb-dialog .formula-tag { font-size: 0.95rem; padding: 7px 14px; border-radius: 16px; }
 
 /* 空狀態 */
 .no-results {
@@ -191,13 +228,13 @@ a.formula-tag:hover {
   }
 
   .characters-grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 14px;
     padding: 0 16px;
   }
 
   .character-card .card-info {
-    padding: 12px 14px 16px;
+    padding: 10px 10px 12px;
   }
 
   .character-card .herb-name {
@@ -207,13 +244,19 @@ a.formula-tag:hover {
 
 @media (max-width: 480px) {
   .characters-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 0 12px;
   }
-
-  .character-card .herb-effect {
-    display: none;
-  }
+  .character-card { border-radius: 12px; }
+  .character-card .card-image { padding: 8px; }
+  .character-card .card-info { padding: 8px 6px 10px; }
+  .character-card .herb-name { font-size: 0.95em; }
+  .herb-count { font-size: 0.75em; }
+  /* 手機彈窗：圖縮小，方劑清單不用滑就看得到 */
+  .herb-dialog-img { padding: 14px; }
+  .herb-dialog-img img { width: min(100%, 190px); }
+  .herb-dialog-body { padding: 16px 20px 22px; }
 }
 </style>
 
@@ -338,7 +381,7 @@ a.formula-tag:hover {
     {% endif %}
   {% endfor %}
 
-  <div class="character-card" id="herb-{{ h_name }}" data-category="{{ h_category }}" data-name="{{ h_name }}">
+  <div class="character-card" id="herb-{{ h_name }}" data-category="{{ h_category }}" data-name="{{ h_name }}" role="button" tabindex="0" aria-haspopup="dialog" aria-label="{{ h_name }}：看介紹與出現的方劑">
     <div class="card-image">
       {% if h_image != "" %}
         <img src="{{ site.baseurl }}/assets/images/characters/{{ h_image }}" alt="{{ h_name }}" width="1024" height="1024" loading="lazy" decoding="async">
@@ -357,6 +400,7 @@ a.formula-tag:hover {
           <p class="herb-effect">{{ h_desc }}</p>
         {% endif %}
       {% endif %}
+      <p class="herb-count">{{ appeared_in | size }} 篇故事 ›</p>
       <div class="herb-formulas">
         {% for fi in appeared_in %}
           {% assign fi_parts = fi | split: "|||" %}
@@ -372,6 +416,19 @@ a.formula-tag:hover {
   </div>
 </div>
 
+<!-- 點卡片後的角色介紹彈窗（內容由下方 script 從卡片帶入） -->
+<dialog class="herb-dialog" id="herb-dialog" aria-labelledby="herb-dialog-name">
+  <button type="button" class="herb-dialog-close" id="herb-dialog-close" aria-label="關閉">✕</button>
+  <div class="herb-dialog-img" id="herb-dialog-img"></div>
+  <div class="herb-dialog-body">
+    <h2 class="herb-dialog-name" id="herb-dialog-name"></h2>
+    <p class="herb-role" id="herb-dialog-role"></p>
+    <p class="herb-effect" id="herb-dialog-effect"></p>
+    <h3 class="herb-dialog-sub">📖 出現在這些故事</h3>
+    <div class="herb-formulas" id="herb-dialog-formulas"></div>
+  </div>
+</dialog>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // 統計數字
@@ -383,7 +440,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
   totalEl.textContent = cards.length;
 
-  // 從文章頁的藥材名連過來（/characters/#herb-當歸）：高亮該卡片
+  // 點卡片：開彈窗看介紹與出現的故事
+  var dlg = document.getElementById('herb-dialog');
+  var lastCard = null;
+  function txt(card, sel){ var el = card.querySelector(sel); return el ? el.textContent.trim() : ''; }
+  function openHerb(card){
+    if (!dlg) return;
+    lastCard = card;
+    var imgBox = document.getElementById('herb-dialog-img');
+    var img = card.querySelector('.card-image img');
+    imgBox.innerHTML = '';
+    if (img) {
+      var big = document.createElement('img');
+      big.src = img.currentSrc || img.src; big.alt = img.alt; big.width = 300; big.height = 300;
+      imgBox.appendChild(big);
+    } else { imgBox.innerHTML = '<div style="font-size:4em;opacity:0.3">🌿</div>'; }
+    document.getElementById('herb-dialog-name').textContent = card.getAttribute('data-name') || '';
+    document.getElementById('herb-dialog-role').textContent = txt(card, '.herb-role');
+    document.getElementById('herb-dialog-effect').textContent = txt(card, '.herb-effect');
+    var src = card.querySelector('.herb-formulas');
+    document.getElementById('herb-dialog-formulas').innerHTML = src ? src.innerHTML : '';
+    if (dlg.open) return;
+    if (typeof dlg.showModal === 'function') { dlg.showModal(); } else { dlg.setAttribute('open', ''); }
+    document.documentElement.style.overflow = 'hidden';
+    dlg.scrollTop = 0;
+  }
+  function closeHerb(){ if (typeof dlg.close === 'function') { dlg.close(); } else { dlg.removeAttribute('open'); onClosed(); } }
+  function onClosed(){ document.documentElement.style.overflow = ''; if (lastCard) lastCard.focus({ preventScroll: true }); }
+  if (dlg) {
+    dlg.addEventListener('close', onClosed);
+    dlg.addEventListener('click', function(e){ if (e.target === dlg) closeHerb(); }); // 點背景關閉
+    document.getElementById('herb-dialog-close').addEventListener('click', closeHerb);
+  }
+  cards.forEach(function(card){
+    card.addEventListener('click', function(){ openHerb(card); });
+    card.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openHerb(card); }
+    });
+  });
+
+  // 從文章頁的藥材名連過來（/characters/#herb-當歸）：高亮該卡片並直接打開介紹
   function highlightFromHash(){
     var id = decodeURIComponent(location.hash || '').slice(1);
     if (!id) return;
@@ -391,7 +487,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!target || !target.classList.contains('character-card')) return;
     document.querySelectorAll('.character-card.is-target').forEach(function(c){ c.classList.remove('is-target'); });
     target.classList.add('is-target');
-    setTimeout(function(){ target.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 50);
+    target.scrollIntoView({ block: 'center' });
+    openHerb(target);
   }
   highlightFromHash();
   window.addEventListener('hashchange', highlightFromHash);
