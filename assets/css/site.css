@@ -552,3 +552,25 @@ a.zl-tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .zl-from-list a { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 12px; background: #F6F2E5; border-left: 4px solid #AA583A; text-decoration: none; color: #3e3a33; }
 .zl-from-list a span { font-size: .8rem; color: #AA583A; }
 .zl-from-list a strong { font-family: var(--serif); font-size: 1rem; line-height: 1.5; }
+
+/* 整聊：五臟篩選列（樣式原本只寫在 stories.html 裡，這裡補一份）與每排 6 格 */
+.zl-organ-tabs { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 38px; }
+.zl-organ-tabs .filter-tab {
+  font-family: var(--sans); font-size: 1rem; font-weight: 600; cursor: pointer;
+  padding: 9px 20px; border-radius: 24px; border: 2px solid var(--line);
+  background: #fff; color: var(--ink-soft); transition: all .25s;
+}
+.zl-organ-tabs .filter-tab span { opacity: .6; font-size: .85em; margin-left: 3px; }
+.zl-organ-tabs .filter-tab:hover { border-color: var(--zl-sage); }
+.zl-organ-tabs .filter-tab.is-active { background: var(--zl-sage); border-color: var(--zl-sage); color: #fff; }
+.zl-grid { grid-template-columns: repeat(6, 1fr); gap: 16px; }
+@media (max-width: 900px) { .zl-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 480px) { .zl-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } }
+.zl-story .story-header .meta { justify-content: center; }
+/* 整聊單集頁首：深色漸層底上的文字改用淺色 */
+.zl-story .story-header { background: linear-gradient(135deg, #5d6f56 0%, #819879 60%, #b07a5e 100%); margin-bottom: 30px; }
+.zl-story .story-header .story-category { color: #fff; }
+.zl-story .story-header .zl-concept { color: #f6f2e5; font-size: 1.15em; margin: 0; }
+.zl-story .story-header .zl-jieqi { background: rgba(255,255,255,.25); }
+.zl-story .story-header h1.zl-hook { font-size: clamp(1.45em, 4.4vw, 2.2em); line-height: 1.55; margin: 14px 0; }
+.zl-story .story-header .zl-ig-link { color: #fff; text-decoration: underline; font-size: 1em; }

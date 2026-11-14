@@ -138,7 +138,7 @@
 
   <!-- 共用樣式 -->
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M' }}">
-  {%- if page.layout == 'story' %}
+  {%- if page.layout == 'story' or page.layout == 'zhengliao' %}
   <link rel="stylesheet" href="{{ '/assets/css/story.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M' }}">
   {%- endif %}
 
