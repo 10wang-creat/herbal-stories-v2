@@ -1,11 +1,21 @@
 {% if page.tags and page.tags.size > 0 %}
+{%- comment -%} 只有已發布文章數 >= min_count 的標籤才連到標籤總覽；單篇標籤顯示為純文字，同義重複標籤不顯示（設定在 _data/tag_groups.yml） {%- endcomment -%}
+{%- assign pt_cfg = site.data.tag_groups -%}
+{%- assign pt_min = pt_cfg.min_count | default: 2 -%}
+{%- assign pt_pub = site.stories | where_exp: "s", "s.date <= site.time" -%}
 <div class="post-tags-container">
   <h3 class="tags-heading">
     <span class="tags-icon">🏷️</span> 相關標籤
   </h3>
   <div class="tags-list">
     {% for tag in page.tags %}
+      {%- if pt_cfg.hidden contains tag -%}{%- continue -%}{%- endif -%}
+      {%- assign pt_n = pt_pub | where_exp: "s", "s.tags contains tag" | size -%}
+      {%- if pt_n >= pt_min -%}
       <a class="post-tag" href="{{ '/tags/' | relative_url }}#tag-{{ tag | url_encode }}" title="看所有「{{ tag }}」相關文章">{{ tag }}</a>
+      {%- else -%}
+      <span class="post-tag post-tag-plain">{{ tag }}</span>
+      {%- endif -%}
     {% endfor %}
   </div>
 </div>

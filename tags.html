@@ -1,10 +1,16 @@
 ---
 layout: default
 title: 標籤總覽
-description: 依主題標籤瀏覽草本故事館全部文章：補氣、補血、安神、祛濕、解表……從你關心的方向找到對應的方劑與炮製故事。
+description: 依主題標籤瀏覽草本故事館文章：功效治法、症狀調理、節氣季節、典籍出處、炮製……從你關心的方向找到對應的方劑與炮製故事。
 permalink: /tags/
 ---
 
+{%- comment -%}
+  只顯示「已發布文章數 >= min_count」的標籤，並依 _data/tag_groups.yml 分組。
+  單篇標籤仍留在文章 front matter（供站內搜尋），只是不列在這一頁。
+{%- endcomment -%}
+{%- assign cfg = site.data.tag_groups -%}
+{%- assign min_count = cfg.min_count | default: 2 -%}
 {%- assign tag_pub = site.stories | where_exp: "s", "s.date <= site.time" -%}
 {%- assign tag_all = "" | split: "" -%}
 {%- for s in tag_pub -%}
@@ -13,30 +19,65 @@ permalink: /tags/
 {%- assign tag_uniq = tag_all | uniq -%}
 {%- assign tag_keys = "" | split: "" -%}
 {%- for t in tag_uniq -%}
+  {%- if cfg.hidden contains t -%}{%- continue -%}{%- endif -%}
   {%- assign n = tag_pub | where_exp: "s", "s.tags contains t" | size -%}
+  {%- if n < min_count -%}{%- continue -%}{%- endif -%}
   {%- assign key = n | prepend: "000" | slice: -3, 3 | append: "|" | append: t -%}
   {%- assign tag_keys = tag_keys | push: key -%}
 {%- endfor -%}
 {%- assign tag_keys = tag_keys | sort | reverse -%}
+{%- assign grouped = "" | split: "" -%}
+{%- for g in cfg.groups -%}{%- assign grouped = grouped | concat: g.tags -%}{%- endfor -%}
 
 <section class="page-hero">
   <div class="page-emoji">🏷️</div>
   <h1>標籤總覽</h1>
   <p class="subtitle">從主題找文章。點一個標籤，就會跳到該標籤底下的所有故事。</p>
   <div class="page-hero-stats">
-    <div><span class="stat-number">{{ tag_uniq | size }}</span><span class="stat-label">個標籤</span></div>
+    <div><span class="stat-number">{{ tag_keys | size }}</span><span class="stat-label">個主題標籤</span></div>
     <div><span class="stat-number">{{ tag_pub | size }}</span><span class="stat-label">篇文章</span></div>
   </div>
 </section>
 
 <div class="inner-page">
-  <nav class="tag-cloud" aria-label="所有標籤">
-    {%- for key in tag_keys -%}
-      {%- assign parts = key | split: "|" -%}
-      {%- assign t = parts[1] -%}
-      {%- assign n = parts[0] | plus: 0 -%}
-      <a class="tag-chip{% if n >= 5 %} tag-chip-lg{% elsif n >= 3 %} tag-chip-md{% endif %}" href="#tag-{{ t | url_encode }}">{{ t }}<span>{{ n }}</span></a>
+  <nav class="tag-index" aria-label="標籤分類">
+    {%- for g in cfg.groups -%}
+      {%- capture chips -%}
+        {%- for key in tag_keys -%}
+          {%- assign parts = key | split: "|" -%}
+          {%- assign t = parts[1] -%}
+          {%- assign n = parts[0] | plus: 0 -%}
+          {%- if g.tags contains t -%}
+            <a class="tag-chip{% if n >= 5 %} tag-chip-lg{% elsif n >= 3 %} tag-chip-md{% endif %}" href="#tag-{{ t | url_encode }}">{{ t }}<span>{{ n }}</span></a>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endcapture -%}
+      {%- assign chips = chips | strip -%}
+      {%- if chips != "" -%}
+      <div class="tag-index-group">
+        <h2 class="tag-index-title">{{ g.icon }} {{ g.name }}</h2>
+        <div class="tag-cloud">{{ chips }}</div>
+      </div>
+      {%- endif -%}
     {%- endfor -%}
+
+    {%- capture chips -%}
+      {%- for key in tag_keys -%}
+        {%- assign parts = key | split: "|" -%}
+        {%- assign t = parts[1] -%}
+        {%- assign n = parts[0] | plus: 0 -%}
+        {%- unless grouped contains t -%}
+          <a class="tag-chip{% if n >= 5 %} tag-chip-lg{% elsif n >= 3 %} tag-chip-md{% endif %}" href="#tag-{{ t | url_encode }}">{{ t }}<span>{{ n }}</span></a>
+        {%- endunless -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+    {%- assign chips = chips | strip -%}
+    {%- if chips != "" -%}
+    <div class="tag-index-group">
+      <h2 class="tag-index-title">🏷️ 其他主題</h2>
+      <div class="tag-cloud">{{ chips }}</div>
+    </div>
+    {%- endif -%}
   </nav>
 
   {%- for key in tag_keys -%}
@@ -63,7 +104,10 @@ permalink: /tags/
 </div>
 
 <style>
-.tag-cloud { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0 auto 48px; max-width: 900px; }
+.tag-index { max-width: 900px; margin: 0 auto 48px; }
+.tag-index-group { margin-bottom: 26px; }
+.tag-index-title { text-align: center; color: var(--green-700); font-size: 1.05rem; margin-bottom: 12px; }
+.tag-cloud { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
 .tag-chip {
   display: inline-flex; align-items: center; gap: 6px;
   padding: 7px 14px; border-radius: 20px; text-decoration: none;

@@ -673,6 +673,18 @@
   box-shadow: 0 4px 8px rgba(52, 67, 94, 0.2);
 }
 
+/* 單篇標籤：不連結，純文字顯示 */
+.post-tag-plain,
+.post-tag-plain:hover {
+  background: transparent;
+  border: 2px dashed #ddd9e6;
+  color: #8a90a4;
+  font-weight: 400;
+  transform: none;
+  box-shadow: none;
+  cursor: default;
+}
+
 /* ===== 來源：_includes/share-buttons.html ===== */
 .share-buttons {
   background: linear-gradient(135deg, #f0eef3 0%, #ffffff 100%);
