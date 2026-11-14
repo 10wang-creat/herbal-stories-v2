@@ -574,3 +574,26 @@ a.zl-tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .zl-story .story-header .zl-jieqi { background: rgba(255,255,255,.25); }
 .zl-story .story-header h1.zl-hook { font-size: clamp(1.45em, 4.4vw, 2.2em); line-height: 1.55; margin: 14px 0; }
 .zl-story .story-header .zl-ig-link { color: #fff; text-decoration: underline; font-size: 1em; }
+
+/* 整聊總覽頁：版面調整 */
+.series-hero.zl-hero { padding: 46px 20px 40px; }
+.series-hero.zl-hero .series-emoji { font-size: 2.4rem; }
+.series-hero.zl-hero p { max-width: 720px; font-size: 1.05rem; line-height: 1.9; }
+.series-hero.zl-hero .hero-count { font-weight: 500; font-size: .95rem; }
+.zl-index { margin-top: 40px; }
+.zl-organ-tabs { align-items: center; margin-bottom: 44px; }
+.zl-tabs-label { color: var(--muted); font-size: .92rem; margin-right: 4px; }
+.zl-organ-tabs .filter-tab { min-width: 58px; padding: 8px 18px; }
+.zl-shelf { margin-bottom: 60px; }
+.zl-shelf-head { border-bottom: 0; padding-bottom: 0; margin-bottom: 20px; gap: 16px; }
+.zl-shelf-emoji { width: 54px; height: 54px; flex: none; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; background: var(--zl-cream); border-radius: 50%; }
+.zl-shelf-head h2 { font-size: 1.45rem; font-family: var(--serif); }
+.zl-shelf-head p { font-size: .98rem; }
+.zl-tile { border: 1px solid #ece6d6; }
+.zl-tile-body { padding: 12px 14px 14px; gap: 4px; }
+.zl-tile-ep { font-size: .82rem; }
+.zl-tile-body strong { font-size: 1.15rem; }
+@media (max-width: 600px) {
+  .zl-tabs-label { width: 100%; text-align: center; margin: 0 0 2px; }
+  .zl-shelf-head h2 { font-size: 1.2rem; }
+}

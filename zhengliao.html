@@ -6,37 +6,39 @@ description: 整聊——把丟不掉的東西、戒不掉的習慣、放不下�
 body_class: theme-zhengliao
 ---
 {% assign zl_pub = site.zhengliao | where_exp: "z", "z.date <= site.time" %}
-<section class="series-hero">
+<section class="series-hero zl-hero">
   <div class="series-emoji">🗂️</div>
   <h1>整聊</h1>
-  <p>整理，是把東西放回該在的位置；整聊，是把心事也聊開。每一集挑一件丟不掉、戒不掉、放不下的事，配一個中醫情志觀念、一味草本、一個今天就做得到的小行動。</p>
-  <div class="hero-count">已上架 {{ zl_pub | size }} 集｜每隔週六與 IG <a href="https://www.instagram.com/meet.the.herbs/" target="_blank" rel="noopener noreferrer" style="color:#fff">@meet.the.herbs</a> 同步</div>
+  <p>整理，是把東西放回該在的位置；整聊，是把心事也聊開。<br>每一集挑一件丟不掉、戒不掉、放不下的事，配一個中醫情志觀念、一味草本、一個今天就做得到的小行動。</p>
+  <div class="hero-count">每隔週六與 IG <a href="https://www.instagram.com/meet.the.herbs/" target="_blank" rel="noopener noreferrer" style="color:#fff">@meet.the.herbs</a> 同步更新</div>
 </section>
 
-<div class="section">
+<div class="section zl-index">
   <div class="filter-tabs zl-organ-tabs" role="group" aria-label="依五臟篩選">
+    <span class="zl-tabs-label">依五臟找</span>
     <button class="filter-tab is-active" data-organ="all">全部</button>
     {% assign organs = "心,肝,脾,肺,腎" | split: "," %}
     {% for o in organs %}
       {% assign oc = zl_pub | where: "organ", o | size %}
-      {% if oc > 0 %}<button class="filter-tab" data-organ="{{ o }}">{{ o }} <span>{{ oc }}</span></button>{% endif %}
+      {% if oc > 0 %}<button class="filter-tab" data-organ="{{ o }}">{{ o }}</button>{% endif %}
     {% endfor %}
   </div>
 
-  {% for s in site.data.zhengliao %}
-  {% assign s_pub = zl_pub | where: "series_key", s.key | size %}
+  {%- comment -%} 只列出已到發布日的集數；整個系列都還沒開始就不顯示。最新的系列排最上面。 {%- endcomment -%}
+  {% assign zl_series_list = site.data.zhengliao | reverse %}
+  {% for s in zl_series_list %}
+  {% assign s_docs = zl_pub | where: "series_key", s.key | sort: "ep" %}
+  {% if s_docs.size == 0 %}{% continue %}{% endif %}
   <section class="zl-shelf" id="{{ s.key }}">
     <header class="zl-shelf-head">
       <span class="zl-shelf-emoji">{{ s.emoji }}</span>
       <div>
         <h2>{{ s.full }}</h2>
-        <p>{{ s.sub }}｜{{ s.episodes.first.date | date: "%Y.%m" }}–{{ s.episodes.last.date | date: "%Y.%m" }}・已上架 {{ s_pub }} / {{ s.episodes | size }}</p>
+        <p>{{ s.sub }}</p>
       </div>
     </header>
     <div class="zl-grid">
-      {% for e in s.episodes %}
-        {% assign doc = zl_pub | where: "slug", e.slug | first %}
-        {% if doc %}
+      {% for doc in s_docs %}
         <a class="zl-tile" href="{{ doc.url | relative_url }}" data-organ="{{ doc.organ }}">
           <div class="zl-thumb{% if doc.cards[0].img == '' %} is-text{% endif %}">
             {% if doc.cards[0].img != '' %}<img src="{{ doc.cards[0].img | relative_url }}" alt="" width="1080" height="1080" loading="lazy" decoding="async">
@@ -45,19 +47,8 @@ body_class: theme-zhengliao
           <div class="zl-tile-body">
             <span class="zl-tile-ep">{{ doc.ep_mark }} {% if doc.jieqi != "" %}{{ doc.jieqi }}・{% endif %}{{ doc.concept }}</span>
             <strong>{{ doc.herb }}</strong>
-            <time>{{ doc.date | date: "%Y.%m.%d" }}</time>
           </div>
         </a>
-        {% else %}
-        <div class="zl-tile is-soon" data-organ="{{ e.organ }}">
-          <div class="zl-thumb is-text"><span>{{ e.date | date: "%-m/%-d" }}<br>上架</span></div>
-          <div class="zl-tile-body">
-            <span class="zl-tile-ep">{% if e.jieqi != "" %}{{ e.jieqi }}・{% endif %}{{ e.concept }}</span>
-            <strong>{{ e.herb }}</strong>
-            <time>即將上架</time>
-          </div>
-        </div>
-        {% endif %}
       {% endfor %}
     </div>
   </section>
