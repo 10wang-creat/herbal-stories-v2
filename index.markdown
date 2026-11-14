@@ -74,6 +74,11 @@ title: 首頁
       <strong>療癒小說《四時堂》</strong>
       <span class="explore-sub">不講藥理，只說心事｜連載 {{ ss_count }} 章</span>
     </a>
+    <a href="https://www.instagram.com/meet.the.herbs" target="_blank" rel="noopener noreferrer" class="explore-tile t-ig">
+      <span class="explore-ic">📷</span>
+      <strong>IG 遇見中藥</strong>
+      <span class="explore-sub">一週一味藥，週一到週五每天換一個角度</span>
+    </a>
     <a href="https://open.spotify.com/show/6k6qAkTg8nX7k4FMU32hgT" target="_blank" rel="noopener noreferrer" class="explore-tile t-podcast">
       <span class="explore-ic">🎙️</span>
       <strong>Podcast 草本夜話</strong>
@@ -144,6 +149,42 @@ title: 首頁
         </div>
       </a>
     </div>
+  </div>
+</section>
+
+<!-- ===== IG 遇見中藥 ===== -->
+{%- comment -%} 縮圖是靜態精選（assets/images/ig/），想換圖就覆蓋同名檔或改下面這份清單 {%- endcomment -%}
+<section class="ig-section" aria-labelledby="igHomeTitle">
+  <div class="ig-head">
+    <span class="ig-badge">📷 週一到週五 · 每天更新</span>
+    <h2 class="ig-title" id="igHomeTitle">遇見中藥</h2>
+    <p class="ig-tagline">一週一味藥，五天五個角度</p>
+    <p class="ig-desc">網站說的是一帖方，IG 說的是一味藥。每週請一位藥材當主角，從它的個性、上班族的日常、炮製的工序、古今的對照，到週五的一句話，五天慢慢認識它。</p>
+  </div>
+  <div class="ig-grid">
+    <a class="ig-tile" href="https://www.instagram.com/meet.the.herbs" target="_blank" rel="noopener noreferrer">
+      <img src="{{ '/assets/images/ig/ig-mon-tianma.webp' | relative_url }}" alt="IG 貼文：天麻姐姐的角色介紹" width="640" height="640" loading="lazy" decoding="async">
+      <span class="ig-cap"><b>週一</b>角色登場</span>
+    </a>
+    <a class="ig-tile" href="https://www.instagram.com/meet.the.herbs" target="_blank" rel="noopener noreferrer">
+      <img src="{{ '/assets/images/ig/ig-tue-rougui.webp' | relative_url }}" alt="IG 貼文：肉桂哥哥在辦公室，上半身在上班、膝蓋以下在過冬" width="640" height="640" loading="lazy" decoding="async">
+      <span class="ig-cap"><b>週二</b>上班日常</span>
+    </a>
+    <a class="ig-tile" href="https://www.instagram.com/meet.the.herbs" target="_blank" rel="noopener noreferrer">
+      <img src="{{ '/assets/images/ig/ig-wed-heshouwu.webp' | relative_url }}" alt="IG 貼文：何首烏爺爺的九蒸九曬" width="640" height="640" loading="lazy" decoding="async">
+      <span class="ig-cap"><b>週三</b>炮製工序</span>
+    </a>
+    <a class="ig-tile" href="https://www.instagram.com/meet.the.herbs" target="_blank" rel="noopener noreferrer">
+      <img src="{{ '/assets/images/ig/ig-thu-maiya.webp' | relative_url }}" alt="IG 貼文：麥芽弟弟穿越日記，古今對照" width="640" height="640" loading="lazy" decoding="async">
+      <span class="ig-cap"><b>週四</b>古今對照</span>
+    </a>
+    <a class="ig-tile" href="https://www.instagram.com/meet.the.herbs" target="_blank" rel="noopener noreferrer">
+      <img src="{{ '/assets/images/ig/ig-fri-ejiao.webp' | relative_url }}" alt="IG 貼文：阿膠的一句話，熬得夠久的才透得出光" width="640" height="640" loading="lazy" decoding="async">
+      <span class="ig-cap"><b>週五</b>一句話</span>
+    </a>
+  </div>
+  <div class="ig-foot">
+    <a href="https://www.instagram.com/meet.the.herbs" target="_blank" rel="noopener noreferrer" class="ig-cta">追蹤 @meet.the.herbs →</a>
   </div>
 </section>
 
@@ -329,6 +370,36 @@ title: 首頁
   .hero-social { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 4px; max-width: 420px; margin-left: auto; margin-right: auto; }
   .social-button { width: 100%; justify-content: center; padding: 10px 12px; font-size: 0.92rem; gap: 7px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
   .social-icon { width: 18px; height: 18px; }
+}
+
+/* IG 遇見中藥 */
+.explore-tile.t-ig { border-top-color: #dc2743; }
+.ig-section {
+  background: linear-gradient(135deg, #fdf5f0 0%, #f9ebf0 100%);
+  border-radius: var(--radius-lg); padding: 46px 40px; margin: 56px auto; max-width: 1080px;
+  box-shadow: 0 6px 30px rgba(188,24,136,0.08); border: 1px solid #f1dde3;
+}
+.ig-head { max-width: 680px; margin: 0 auto 28px; text-align: center; }
+.ig-badge { display: inline-block; background: linear-gradient(45deg, #f09433 0%, #dc2743 55%, #bc1888 100%); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; letter-spacing: 1px; }
+.ig-title { font-family: var(--serif); font-size: 2.2rem; color: #a12a55; margin: 14px 0 6px; letter-spacing: 4px; }
+.ig-tagline { font-size: 1.1rem; color: #b8506f; font-style: italic; margin-bottom: 14px; }
+.ig-desc { color: var(--ink-soft); line-height: 1.85; }
+.ig-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.ig-tile { display: block; background: #fff; border-radius: 14px; overflow: hidden; text-decoration: none; color: var(--ink); box-shadow: var(--shadow-sm); transition: transform 0.25s, box-shadow 0.25s; }
+.ig-tile:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.ig-tile img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; }
+.ig-cap { display: block; padding: 9px 10px 11px; text-align: center; font-size: 0.9rem; color: var(--ink-soft); }
+.ig-cap b { color: #a12a55; margin-right: 6px; }
+.ig-foot { text-align: center; margin-top: 26px; }
+.ig-cta { display: inline-block; background: linear-gradient(45deg, #f09433 0%, #dc2743 55%, #bc1888 100%); color: #fff; padding: 13px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(220,39,67,0.25); }
+.ig-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(220,39,67,0.3); }
+@media (max-width: 768px) {
+  .ig-section { padding: 36px 20px 32px; margin: 40px 20px; }
+  .ig-title { font-size: 1.9rem; }
+  /* 手機：橫向滑動，露出下一張的邊提示可以滑 */
+  .ig-grid { display: flex; overflow-x: auto; gap: 12px; padding: 4px 4px 12px; margin: 0 -4px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .ig-grid::-webkit-scrollbar { display: none; }
+  .ig-tile { flex: 0 0 62%; scroll-snap-align: start; }
 }
 
 /* Podcast */

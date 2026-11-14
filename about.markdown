@@ -52,7 +52,7 @@ permalink: /about/
         <a href="https://www.instagram.com/meet.the.herbs/" target="_blank" rel="noopener noreferrer" class="eco-card">
           <div class="eco-emoji">📸</div>
           <h3>Instagram</h3>
-          <p>@meet.the.herbs 藥材角色日常</p>
+          <p>@meet.the.herbs｜一週一味藥，週一到週五每天更新</p>
         </a>
         <a href="https://www.facebook.com/MeettheHerbs" target="_blank" rel="noopener noreferrer" class="eco-card">
           <div class="eco-emoji">💬</div>
